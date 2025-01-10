@@ -2366,6 +2366,9 @@
           "f005c67a-6ceb-470e-ab9d-74d074fce369",
           "7103db59-1792-421b-88d6-2bbcb96d0981"
         ]
+      },
+      "@openmrs/esm-patient-orders-app": {
+       "orderEncounterType": "a9ef19d1-8875-11ea-8c74-7a7919290ad6"
       }
     ]
   }
