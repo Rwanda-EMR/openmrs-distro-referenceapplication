@@ -1,0 +1,672 @@
+{
+  "name": "Auto Admission Form 2.0",
+  "description": "Auto admission form",
+  "version": "2.0",
+  "published": true,
+  "retired": false,
+  "processor": "EncounterFormProcessor",
+  "encounter": "admission Clinical and Bill",
+  "referencedForms": [],
+  "uuid": "adbbdbe6-a76a-4662-94b9-2ca220c92ca4",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Visit Particulars",
+          "isExpanded": true,
+          "questions": [
+            {
+              "value": [
+                "**This form is used to:** Start and billable clinical service"
+              ],
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "id": "heading"
+            },
+            {
+              "label": "Encounter & Datetime",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "datetime"
+              },
+              "required": "true",
+              "default": "",
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ],
+              "questionInfo": "Date the encounter took place"
+            },
+            {
+              "type": "encounterProvider",
+              "label": "Encounter Provider:",
+              "id": "provider",
+              "required": "true",
+              "default": "",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "type": "encounterLocation",
+              "label": "Encounter Location",
+              "id": "location",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Admission",
+      "sections": [
+        {
+          "label": "Admission Info",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Is Admitted",
+              "type": "obs",
+              "id": "is_addmitted",
+              "required": "true",
+              "questionOptions": {
+                "concept": "f0dc3f2d-4d75-4f92-8831-ea3847fe679b",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                    "label": "No"
+                  },
+                  {
+                    "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                    "label": "Yes"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Disease Type",
+              "type": "obs",
+              "id": "disease_type",
+              "required": "true",
+              "questionOptions": {
+                "concept": "90029723-7058-40bd-b20a-e369524cb355",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "90415a9a-2d85-4581-b6fb-433e9cf6b54b",
+                    "label": "Natural Disease"
+                  },
+                  {
+                    "concept": "3cccd076-26fe-102b-80cb-0017a47871b2",
+                    "Label": "Accident Motor Vehicle"
+                  },
+                  {
+                    "concept": "3cee7fb4-26fe-102b-80cb-0017a47871b2",
+                    "label": "Other Non-coded"
+                  },
+                  {
+                    "concept": "7d17c0dc-2208-4acc-868d-556551b3fde9",
+                    "label": "Professional Disease"
+                  },
+                  {
+                    "concept": "55acced3-fffc-4a6e-ad76-10ba9bf3de8d",
+                    "label": "Work Accident"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Consultation Type",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "d6dafc4b-9ad8-4467-94a9-0eca78648254",
+                "answers": [
+                  {
+                    "concept": "6a0a452a-e9d0-415d-90e4-c799f96655e3",
+                    "label": "Consultation médicale malade (non référé)",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "b1ebf22b-1fa4-4538-8b07-abc33dd05ea8",
+                    "label": "Consultation infirmier spécialisé A1",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "d6413ccb-c2fd-4b71-ad58-9fc043a9555e",
+                    "label": "Consultation d'un médecin spécialiste(référé) : tous les jours",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "888b282b-41f7-4406-a68c-24aced60f267",
+                    "label": "Consultation d'un médecin généraliste (non référé) / nuit, week end et jours fériés",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "7f7d8472-cb98-4b7a-9e5e-29804ddc97ce",
+                    "label": "Consultation médecin généraliste (référé) : tous les jours",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "59bb1a32-a36a-4766-b47c-eb9c580bb0ad",
+                    "label": "Consultation paramédicale, Spécialiste A1(référé) : tous les jours",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "0d3517fd-891e-405d-b1d1-6669ad05aa9f",
+                    "label": "Consultation paramédicale, Spécialiste A0(non référé) /nuit, week end, jours fériés",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "fecab067-fb65-4d0e-96bf-8c42dd123353",
+                    "label": "Consultation paramédicale, Spécialiste A0(référé) : tous les jours",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "433f21dc-c3be-4dc0-9e94-1ace7c8bcc66",
+                    "label": "Consultation infirmier de garde",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "aee6b62b-e173-4e10-92b4-ad576ec02938",
+                    "label": "Consultation d'un médecin spécialiste (non référé) / nuit, week end et jours fériés",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "8fee77af-6973-4e5b-b586-7a6c3ad5226b",
+                    "label": "Consultation infirmier/nuit, weekend, jours fériés",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "82ce723b-1914-4e70-a66f-df40f5a56039",
+                    "label": "Visite par le medecin generaliste en hospitalisation",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "120f4fba-06aa-4c56-9e74-eb2dcdd54404",
+                    "label": "Visite par le medecin specialiste en hospitalisation",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "df54a8e3-cf9e-46c3-9efd-92bb5e4ef7f9",
+                    "label": "Consultation paramédicale, Spécialiste A1(non référé) /nuit, week end, jours fériés",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "29ce8244-5251-4c76-8e99-bbad280be2ef",
+                    "label": "Consultation ANC",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "2554e8da-eed3-42c9-ada5-ae304b2b5587",
+                    "label": "Consultation FP",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "e6e56e93-7fac-44f1-a3c1-2ec8e371bd71",
+                    "label": "Visite pre anesthesique par A1",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "995d6a5b-c3e4-4f75-9b7e-dd1ac2f7282d",
+                    "label": "Consultation pré-anesthésique par le médecin spécialiste (tous les jours)",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "ef28be91-c35b-4d28-9eb1-8afa952d54a5",
+                    "label": "Nutrition Consultation",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "b329cf9e-c61f-49c4-bfe6-8c6b5873e8fe",
+                    "label": "Consultation/MDR-TB2",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "7f968ad4-4030-47f4-890c-176d92779b20",
+                    "label": "Consultation candidat specialiste référé (tous les jours)",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "e027a13d-ee4f-48f3-88da-3ec679aee2ba",
+                    "label": "OPHTHALMOLOGUE",
+                    "conceptMappings": [
+                      {
+                        "type": "PIH",
+                        "value": "OPHTHALMOLOGIST"
+                      },
+                      {
+                        "type": "PIH",
+                        "value": "6322"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "id": "consultationType",
+              "required": "true"
+            },
+            {
+              "label": "Department",
+              "type": "obs",
+              "id": "clinical_department",
+              "required": "true",
+              "questionOptions": {
+                "concept": "9b42e3b9-c648-4025-95db-8b72757e57d1",
+                "rendering": "select",
+                "answers": [
+                  {
+                    "concept": "adeb8d27-726c-442d-ba3c-521514f9913c",
+                    "label": "Anesthesie"
+                  },
+                  {
+                    "concept": "3cd0032c-26fe-102b-80cb-0017a47871b2",
+                    "label": "ARV"
+                  },
+                  {
+                    "concept": "c3eea300-843a-4b09-b5ae-a760019d3a1e",
+                    "label": "Chirurgie"
+                  },
+                  {
+                    "concept": "9ffaf0b6-09a2-4f5f-a934-ac6c698b8f66",
+                    "label": "Dermatologie"
+                  },
+                  {
+                    "concept": "d47c7282-cd6c-4c25-8ad7-1a93333553a8",
+                    "label": "DCP"
+                  },
+                  {
+                    "concept": "1b9d950f-cf58-4c4a-a303-a04a6d568d5e",
+                    "label": "Echographie"
+                  },
+                  {
+                    "concept": "fe351ac8-550a-42d1-aaa4-409a2be28cb0",
+                    "label": "Emergency"
+                  },
+                  {
+                    "concept": "9f14056d-f58d-4e60-8d5f-c944a990ea9e",
+                    "label": "GBV"
+                  },
+                  {
+                    "concept": "75dc6a31-e5c5-4490-92a4-907cb8374f68",
+                    "label": "Laboratory"
+                  },
+                  {
+                    "concept": "2c143158-4444-4c8a-b9bc-dea6e9acc09e",
+                    "label": "Maternite"
+                  },
+                  {
+                    "concept": "11b815b5-1b1e-480b-ab2b-1f76051a2815",
+                    "label": "Medecine Interne"
+                  },
+                  {
+                    "concept": "dfba0519-dbf3-4c55-bb9d-2a929c801f72",
+                    "label": "Neonatologie"
+                  },
+                  {
+                    "concept": "3274bc44-60cb-444b-b6b1-0bfe6c68d89d",
+                    "label": "NCDs"
+                  },
+                  {
+                    "concept": "0b9ec1eb-49ca-48dc-9aa6-63366b2104b3",
+                    "label": "Nutrition"
+                  },
+                  {
+                    "concept": "3b3946c4-32e3-4db7-b6f3-0ec8c52c6585",
+                    "label": "Orthopedie"
+                  },
+                  {
+                    "concept": "f6dc88e5-a536-45fb-a343-8b76c9abe834",
+                    "label": "Pediatrie"
+                  },
+                  {
+                    "concept": "09c7bdef-116f-4143-a58b-452799d51032",
+                    "label": "Pharmacy"
+                  },
+                  {
+                    "concept": "f568dae5-2b47-4fb3-b823-e438e347cb00",
+                    "label": "Physiotherapy"
+                  },
+                  {
+                    "concept": "c2009d50-0ce9-4b73-9908-6de79d9b2f2e",
+                    "label": "Ophtalmology"
+                  },
+                  {
+                    "concept": "9e5e7ffc-6eb8-4d0f-a1a8-319eed6399fb",
+                    "label": "OPD"
+                  },
+                  {
+                    "concept": "1defceb5-def5-4b4e-bd7f-0d79c601169b",
+                    "label": "OPD Chirurgie"
+                  },
+                  {
+                    "concept": "1f83cbb7-3e94-41d4-a721-6a1b5a3ee6a1",
+                    "label": "Radiology"
+                  },
+                  {
+                    "concept": "dd67f196-d0bf-4323-9e08-822fe4138b8b",
+                    "label": "Sante Mentale"
+                  },
+                  {
+                    "concept": "e65de509-f9dc-4219-bba2-129e6dd65d01",
+                    "label": "Stomatologie"
+                  },
+                  {
+                    "concept": "4ba40ee0-8328-4895-8bab-912a7055aabb",
+                    "label": "TBMR"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Provenance /Catchment Area Population",
+              "type": "obs",
+              "id": "catchment_area",
+              "questionOptions": {
+                "concept": "f8c17ed2-38e4-4010-bd10-e27c99185eb4",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "94efe7f2-9b74-4c38-b017-f77b9874d88b",
+                    "label": "Residence outside catchment"
+                  },
+                  {
+                    "concept": "1aa519c4-ce19-4c2f-baa4-fb9808164f47",
+                    "label": "Residence within catchment"
+                  },
+                  {
+                    "concept": "a5701f65-8a41-4904-aa9c-be0a0fabcc88",
+                    "label": "Residence outside district"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Transfer(CS)/Transfer From:",
+              "type": "obs",
+              "id": "transfer_in_from",
+              "questionOptions": {
+                "concept": "3cda3efa-26fe-102b-80cb-0017a47871b2",
+                "rendering": "text"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Guardian & Emergency Contact",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Coinjoint(e) a avertir /Name of guardian:",
+              "type": "obs",
+              "id": "guardian;_name_and_first_names",
+              "questionOptions": {
+                "concept": "3cde7204-26fe-102b-80cb-0017a47871b2",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Contact Person",
+              "type": "obs",
+              "id": "emergency_contact_person",
+              "questionOptions": {
+                "concept": "a7da2d17-0fc9-478e-8de9-2291f38b0989",
+                "rendering": "text"
+              }
+            },
+            {
+              "label": "Emergency Contact Phone Number:",
+              "type": "obs",
+              "id": "emergency_contact_phone_number",
+              "questionOptions": {
+                "concept": "bcddbe7e-04dc-4494-a330-d5b54c4a4dd0",
+                "rendering": "text"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Admission Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Admission Date:",
+              "type": "obs",
+              "id": "admission_datetime",
+              "questionOptions": {
+                "concept": "48a34794-66f3-46c9-91c7-b35d03f4690f",
+                "rendering": "datetime"
+              }
+            },
+            {
+              "label": "Room Number",
+              "type": "obs",
+              "id": "number_of_rooms_in_house",
+              "questionOptions": {
+                "concept": "3cd99112-26fe-102b-80cb-0017a47871b2",
+                "rendering": "number"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Clinical Information",
+      "sections": [
+        {
+          "label": "Health Status",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Blood Group",
+              "type": "obs",
+              "id": "blood_group",
+              "questionOptions": {
+                "concept": "3ccf4090-26fe-102b-80cb-0017a47871b2",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "3cd392b2-26fe-102b-80cb-0017a47871b2",
+                    "label": "A Positive"
+                  },
+                  {
+                    "concept": "3cd39686-26fe-102b-80cb-0017a47871b2",
+                    "label": "A Negative"
+                  },
+                  {
+                    "concept": "3cd39988-26fe-102b-80cb-0017a47871b2",
+                    "label": "B Positive"
+                  },
+                  {
+                    "concept": "3cd39ca8-26fe-102b-80cb-0017a47871b2",
+                    "label": "B Negative"
+                  },
+                  {
+                    "concept": "3cd8f716-26fe-102b-80cb-0017a47871b2",
+                    "label": "AB Positive"
+                  },
+                  {
+                    "concept": "3cd8f8b0-26fe-102b-80cb-0017a47871b2",
+                    "label": "AB Negative"
+                  },
+                  {
+                    "concept": "3cd3a144-26fe-102b-80cb-0017a47871b2",
+                    "label": "O Positive"
+                  },
+                  {
+                    "concept": "3cd3a464-26fe-102b-80cb-0017a47871b2",
+                    "label": "O Negative"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Known Allegies",
+              "type": "obs",
+              "id": "allergy_comment",
+              "questionOptions": {
+                "concept": "38b0118c-1cf4-40a9-a508-15c48d9586ac",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Known Chronic Disease/Conditions",
+              "type": "obs",
+              "required": false,
+              "id": "knownChronicDisease",
+              "questionOptions": {
+                "rendering": "multiCheckbox",
+                "concept": "e20ab8c4-bd53-4f9f-b2e1-04fe7cb667ea",
+                "answers": [
+                  {
+                    "concept": "3ccc4bf6-26fe-102b-80cb-0017a47871b2",
+                    "label": "ASTHMA"
+                  },
+                  {
+                    "concept": "22e045f9-a880-416f-a6b2-0e0706d585bf",
+                    "label": "Cancer"
+                  },
+                  {
+                    "concept": "111103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Cerebrovascular Accident"
+                  },
+                  {
+                    "concept": "be7adab0-2ed5-44d7-972e-586911b08c8e",
+                    "label": "CHRONIC OBSTRUCTIVE PULMONARY DISEASE"
+                  },
+                  {
+                    "concept": "8611a721-9f01-484d-9405-5d88efdd9ce7",
+                    "label": "chronical kidney disease"
+                  },
+                  {
+                    "concept": "3cce629c-26fe-102b-80cb-0017a47871b2",
+                    "label": "DIABETES MELLITUS"
+                  },
+                  {
+                    "concept": "36200521-676e-48c8-a6f9-f101bf4a691b",
+                    "label": "Dialysis"
+                  },
+                  {
+                    "concept": "0670f6b9-5456-4bd3-86b1-846abc4fe2ba",
+                    "label": "HEART FAILURE"
+                  },
+                  {
+                    "concept": "3cd4dca8-26fe-102b-80cb-0017a47871b2",
+                    "label": "HUMAN IMMUNODEFICIENCY VIRUS"
+                  },
+                  {
+                    "concept": "3cd50188-26fe-102b-80cb-0017a47871b2",
+                    "label": "HYPERTENSION"
+                  },
+                  {
+                    "concept": "7018a636-4e28-4681-969d-9caf98178abb",
+                    "label": "LIVER FAILURE"
+                  },
+                  {
+                    "concept": "3ccca7cc-26fe-102b-80cb-0017a47871b2",
+                    "label": "TUBERCULOSIS"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Other Diseases",
+              "type": "obs",
+              "required": false,
+              "id": "otherDisease",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "f9e8e946-d177-4ca9-8004-779ae6abe9df"
+              },
+              "validators": []
+            },
+            {
+              "label": "Hospitalisation",
+              "type": "obs",
+              "id": "hospitalisation",
+              "questionOptions": {
+                "concept": "3168fee2-92aa-451b-b143-e46b56fe1e6f",
+                "rendering": "radio",
+                "answers": [
+                  {
+                    "concept": "470f56f5-83a5-4cb2-a9ba-8714d585b63d",
+                    "label": "Hospitalisation salle commune/jr"
+                  },
+                  {
+                    "concept": "10f7ceb6-9a61-4374-80d4-70b0560eb84e",
+                    "label": "Hospitalisation chambre à un lit avec toilette à l'intérieur"
+                  },
+                  {
+                    "concept": "fff2ed9d-3835-4299-b7a8-89b3945f4c07",
+                    "label": "Hospitalisation chambre à deux lits avec toilette à l'intérieur"
+                  },
+                  {
+                    "concept": "ae6e54a3-d344-408c-9b95-c85ee7d72582",
+                    "label": "Hospitalisation chambre à deux lits avec toilette à l'extérieur"
+                  },
+                  {
+                    "concept": "47a206ab-6ce8-48e9-83ad-d076cb151889",
+                    "label": "Hospitalisation chambre à un lit avec toilette à l'extérieur"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "First Admission",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Clinical summary:",
+              "type": "obs",
+              "id": "clinican_notes",
+              "questionOptions": {
+                "concept": "6602a73b-b8d3-40bc-bae8-f00ff3b9cceb",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Final Diagnosis:",
+              "type": "obs",
+              "id": "primary_digno",
+              "questionOptions": {
+                "concept": "2dce81f9-3874-4247-b441-6369ca0725c2",
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "label": "Investigation Summary:",
+              "type": "obs",
+              "id": "progress_note,_investigation/treatment",
+              "questionOptions": {
+                "concept": "6a329c3c-b15f-418d-b3d6-74e9b95b5d85",
+                "rendering": "textarea"
+              }
+            },
+            {
+              "label": "Other Diagnosis:",
+              "type": "obs",
+              "id": "diagnosis_or_problem,_non-coded",
+              "questionOptions": {
+                "concept": "970d41ce-5098-47a4-8872-4dd843c0df3f",
+                "rendering": "textarea"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "8e3c016e-cfca-407a-8214-2f071b3d8da2"
+}
