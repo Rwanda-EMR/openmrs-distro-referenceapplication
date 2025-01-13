@@ -332,7 +332,7 @@
     ],
     "labTestsWithOrderReasons": [],
     "orders": {
-      "labOrderableConcepts": ["3cd937e4-26fe-102b-80cb-0017a47871b2"],
+      "labOrderableConcepts": ["91380981-bb09-46cc-999f-533d78a8e6bc"],
       "careSettingUuid": "6f0c9a92-6f24-11e3-af88-005056821db0",
       "labOrderTypeUuid": "89da4d80-f1a3-11e1-bf88-bc305be7bdd2"
     },
@@ -2366,9 +2366,21 @@
           "f005c67a-6ceb-470e-ab9d-74d074fce369",
           "7103db59-1792-421b-88d6-2bbcb96d0981"
         ]
+      }
+    ]
+  },
+  "@openmrs/esm-patient-orders-app": {
+    "orderEncounterType": "a9ef19d1-8875-11ea-8c74-7a7919290ad6",
+    "orderTypes": [
+      {
+        "label": "Procedures",
+        "orderTypeUuid": "67a92e56-0f88-11ea-8d71-362b9e155667",
+        "orderableConceptSets": ["e44f17a3-28bd-4fe1-a4e1-1bb94779a1fd"]
       },
-      "@openmrs/esm-patient-orders-app": {
-       "orderEncounterType": "a9ef19d1-8875-11ea-8c74-7a7919290ad6"
+      {
+        "label": "Medical Supplies",
+        "orderTypeUuid": "67a92e56-0f88-11ea-8d71-362b9e155667",
+        "orderableConceptSets": ["a9e74556-a544-4ef9-9826-09fa42fee296"]
       }
     ]
   }
