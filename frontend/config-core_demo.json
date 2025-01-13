@@ -1,40 +1,2387 @@
 {
-  "@openmrs/esm-patient-chart-app": {
-    "restrictByVisitLocationTag": true,
-    "showUpcomingAppointments": true
+  "@amuj/esm-patient-registration-app": {
+    "defaultPatientIdentifierTypes": [],
+    "sections": [
+      "demographics",
+      "contact",
+      "person_attributes",
+      "relationships"
+    ],
+    "sectionDefinitions": [
+      {
+        "id": "person_attributes",
+        "name": "Person Attributes",
+        "fields": ["religion", "maritalStatus", "occupation", "education"]
+      },
+      {
+        "id": "contact",
+        "name": "Contact Details",
+        "fields": ["address", "phone", "email"]
+      }
+    ],
+    "fieldDefinitions": [
+      {
+        "id": "email",
+        "type": "person attribute",
+        "uuid": "54d9edc3-c4b9-11ec-bd0f-80b65553bd85",
+        "label": "Email address",
+        "validation": {
+          "matches": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
+        }
+      },
+      {
+        "id": "religion",
+        "type": "obs",
+        "uuid": "8940ffb5-b52d-4bd4-a526-8b4e202f5279",
+        "label": "Religion",
+        "validation": {
+          "required": false
+        },
+        "customConceptAnswers": [
+          {
+            "uuid": "9816f1d0-3e6e-4815-a5b7-c30228e4f04e",
+            "label": "Catholic"
+          },
+          {
+            "uuid": "cc888b7b-c6c6-4e31-bf83-13847cf91aca",
+            "label": "Christian/Other Protestants"
+          },
+          {
+            "uuid": "cc25ccdb-2b40-4d90-9fc8-af633b8470f2",
+            "label": "ADEPR/Pentecostals"
+          },
+          {
+            "uuid": "edd36070-bfc2-46ea-88c3-0a28baefb371",
+            "label": "SDA/Adventists"
+          },
+          {
+            "uuid": "978af45c-3d7a-4566-b39a-e636e1828bb5",
+            "label": "Muslim"
+          },
+          {
+            "uuid": "f67cad13-b776-40a2-86cb-434234317572",
+            "label": "Traditional v2"
+          },
+          {
+            "uuid": "bff60b54-20b6-46a6-8ea8-99fb543c0abe",
+            "label": "Buddhist"
+          },
+          {
+            "uuid": "ed151c4a-0bc0-4596-9159-b09d8337c461",
+            "label": "Hindu"
+          },
+          {
+            "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2",
+            "label": "None"
+          },
+          {
+            "uuid": "3d863739-47ca-411f-9dca-f4b3b602e04e",
+            "label": "Temoin de Jehova"
+          }
+        ]
+      },
+      {
+        "id": "maritalStatus",
+        "type": "obs",
+        "uuid": "2e00481d-9e6e-4740-9dc0-ab6232dff21c",
+        "label": "Marital status",
+        "validation": {
+          "required": true
+        },
+        "customConceptAnswers": [
+          {
+            "uuid": "3cee0aca-26fe-102b-80cb-0017a47871b2",
+            "label": "Married"
+          },
+          {
+            "uuid": "df488243-d1d5-4b50-ae04-40b4ffdcf934",
+            "label": "Single/Child"
+          },
+          {
+            "uuid": "3cd6e6f6-26fe-102b-80cb-0017a47871b2",
+            "label": "Widowed"
+          },
+          {
+            "uuid": "3cd6e55c-26fe-102b-80cb-0017a47871b2",
+            "label": "Divorced"
+          },
+          {
+            "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
+            "label": "Unknown"
+          }
+        ]
+      },
+      {
+        "id": "occupation",
+        "type": "obs",
+        "uuid": "3cd97286-26fe-102b-80cb-0017a47871b2",
+        "label": "Occupation",
+        "validation": {
+          "required": true
+        },
+        "customConceptAnswers": [
+          {
+            "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2",
+            "label": "None"
+          },
+          {
+            "uuid": "3cd9786c-26fe-102b-80cb-0017a47871b2",
+            "label": "Trader"
+          },
+          {
+            "uuid": "3cd9757e-26fe-102b-80cb-0017a47871b2",
+            "label": "Farmer"
+          },
+          {
+            "uuid": "3cd976f0-26fe-102b-80cb-0017a47871b2",
+            "label": "Student"
+          },
+          {
+            "uuid": "3cd979de-26fe-102b-80cb-0017a47871b2",
+            "label": "Unemployed"
+          },
+          {
+            "uuid": "3cd995ae-26fe-102b-80cb-0017a47871b2",
+            "label": "Manual Laborer"
+          },
+          {
+            "uuid": "3cdcc170-26fe-102b-80cb-0017a47871b2",
+            "label": "Shepherd"
+          },
+          {
+            "uuid": "3cdcc2ec-26fe-102b-80cb-0017a47871b2",
+            "label": "Brewer"
+          },
+          {
+            "uuid": "3cdcc468-26fe-102b-80cb-0017a47871b2",
+            "label": "Shop Owner"
+          },
+          {
+            "uuid": "3cdcbff4-26fe-102b-80cb-0017a47871b2",
+            "label": "Fruit/Veggie Seller"
+          },
+          {
+            "uuid": "3cdcbd06-26fe-102b-80cb-0017a47871b2",
+            "label": "Miner"
+          },
+          {
+            "uuid": "3cdcbe78-26fe-102b-80cb-0017a47871b2",
+            "label": "Factory Worker"
+          },
+          {
+            "uuid": "3cda14e8-26fe-102b-80cb-0017a47871b2",
+            "label": "Housework"
+          },
+          {
+            "uuid": "3ce40fca-26fe-102b-80cb-0017a47871b2",
+            "label": "Housework/Fieldwork"
+          },
+          {
+            "uuid": "3ce4113c-26fe-102b-80cb-0017a47871b2",
+            "label": "Retired"
+          },
+          {
+            "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
+            "label": "Unknown"
+          },
+          {
+            "uuid": "a2c0bdcf-f4ba-4e10-9af4-d9ad7dcc2ca4",
+            "label": "Too Sick To Work"
+          },
+          {
+            "uuid": "1ed2c51d-7d4d-44df-9257-48eaf61a2f7a",
+            "label": "School Age But Not In School"
+          },
+          {
+            "uuid": "f15d07f0-be62-44d4-89ef-0e17e0aa480e",
+            "label": "Driver"
+          },
+          {
+            "uuid": "907716b4-1852-404a-9ee1-beff998f9461",
+            "label": "Professional"
+          },
+          {
+            "uuid": "c78455ab-91e4-4dfb-8743-b7b623f258e9",
+            "label": "Teacher/assistant"
+          },
+          {
+            "uuid": "5a786df9-844c-4cd4-913f-ccea2ccaa66d",
+            "label": "Lab Worker"
+          },
+          {
+            "uuid": "3ce0d008-26fe-102b-80cb-0017a47871b2",
+            "label": "Traditional Healer"
+          },
+          {
+            "uuid": "4df79c98-c340-43b6-a028-f7e060adfff2",
+            "label": "Butcher"
+          },
+          {
+            "uuid": "4fee9b1a-0b0d-4ffd-8d66-ebe15b920772",
+            "label": "Veterinarian"
+          },
+          {
+            "uuid": "2be8ecd3-d15a-4e01-a3fc-a052030d9cfa",
+            "label": "Airline/Airport Worker"
+          },
+          {
+            "uuid": "54c51e4a-4d54-467f-b067-ca682c8f3ecc",
+            "label": "Office Worker"
+          },
+          {
+            "uuid": "57bc7645-8347-4d26-aa3a-8adb2dc8fa3c",
+            "label": "Child Care"
+          },
+          {
+            "uuid": "3ce41a38-26fe-102b-80cb-0017a47871b2",
+            "label": "Main Activity, Non-Coded"
+          }
+        ]
+      },
+      {
+        "id": "education",
+        "type": "obs",
+        "uuid": "3cdcc5e4-26fe-102b-80cb-0017a47871b2",
+        "label": "Education Level",
+        "validation": {
+          "required": true
+        },
+        "customConceptAnswers": [
+          {
+            "uuid": "7cee1a26-5092-4373-b5cd-7bad591d0c73",
+            "label": "University Education Complete"
+          },
+          {
+            "uuid": "10766ed0-e458-42d2-8c49-f318271d6fd5",
+            "label": "Some University Education"
+          },
+          {
+            "uuid": "2aa11f5e-6478-4ba0-b8ab-89cea5e5e66e",
+            "label": "Secondary Education Complete"
+          },
+          {
+            "uuid": "1aa2351d-c0df-4809-9ee1-885c5cbc5a70",
+            "label": "Some Secondary Education"
+          },
+          {
+            "uuid": "4e64f4b8-d71c-43e6-a603-265f7464a633",
+            "label": "Primary Education Complete"
+          },
+          {
+            "uuid": "5ad8d7bb-e54b-452e-b404-1405cb8384dc",
+            "label": "Some Primary Education"
+          },
+          {
+            "uuid": "3ce3e48c-26fe-102b-80cb-0017a47871b2",
+            "label": "Did Not Answer"
+          },
+          {
+            "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2",
+            "label": "None"
+          },
+          {
+            "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
+            "label": "Unknown"
+          }
+        ]
+      }
+    ],
+    "registrationObs": {
+      "encounterTypeUuid": "ea69f8a2-0d0e-48db-854d-e88ef04f4acb",
+      "registrationFormUuid": "add7abdc-59d1-11e8-9c2d-fa7ae01bbebc"
+    },
+    "fieldConfigurations": {
+      "phone": {
+        "personAttributeUuid": "8b908adf-c964-4959-ad43-e2c7aeaa9c67",
+        "validation": {
+          "required": true
+        }
+      }
+    }
+  },
+  "@openmrs/esm-patient-vitals-app": {
+    "vitals": {
+      "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd"
+    },
+    "concepts": {
+      "systolicBloodPressureUuid": "3ce934fa-26fe-102b-80cb-0017a47871b2",
+      "diastolicBloodPressureUuid": "3ce93694-26fe-102b-80cb-0017a47871b2",
+      "pulseUuid": "3ce93824-26fe-102b-80cb-0017a47871b2",
+      "temperatureUuid": "3ce939d2-26fe-102b-80cb-0017a47871b2",
+      "oxygenSaturationUuid": "3ce9401c-26fe-102b-80cb-0017a47871b2",
+      "weightUuid": "3ce93b62-26fe-102b-80cb-0017a47871b2",
+      "respiratoryRateUuid": "3ceb11f8-26fe-102b-80cb-0017a47871b2",
+      "heightUuid": "3ce93cf2-26fe-102b-80cb-0017a47871b2",
+      "generalPatientNoteUuid": "6602a73b-b8d3-40bc-bae8-f00ff3b9cceb"
+    }
   },
   "@openmrs/esm-service-queues-app": {
-    "priorityConfigs": [
-      {
-        "conceptUuid": "04f6f7e0-e3cb-4e13-a133-4479f759574e",
-        "tagClassName": "tag",
-        "tagType": "red"
-      }
-    ],
-    "statusConfigs": [
-      {
-        "conceptUuid": "51ae5e4d-b72b-4912-bf31-a17efb690aeb",
-        "iconComponent": "InProgress"
-      },
-      {
-        "conceptUuid": "ca7494ae-437f-4fd0-8aae-b88b9a2ba47d",
-        "iconComponent": "Group"
-      },
-      {
-        "conceptUuid": "b559fb77-4e1e-4285-b9b7-1d03e0ba983f",
-        "iconComponent": "Group"
-      }
-    ],
-    "concepts": {
-      "defaultPriorityConceptUuid": "f4620bfa-3625-4883-bd3f-84c2cce14470",
-      "emergencyPriorityConceptUuid": "04f6f7e0-e3cb-4e13-a133-4479f759574e",
-      "defaultStatusConceptUuid": "51ae5e4d-b72b-4912-bf31-a17efb690aeb",
-      "defaultTransitionStatus": "ca7494ae-437f-4fd0-8aae-b88b9a2ba47d"
-    },
-    "visitQueueNumberAttributeUuid": "",
-    "defaultFacilityUrl": ""
+    "vitals": {
+      "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd"
+    }
   },
-  "@openmrs/esm-styleguide": {
-    "Brand color #1": "#005d5d"
+  "@openmrs/esm-patient-tests-app": {
+    "concepts": [
+      {
+        "conceptUuid": "3cd4a882-26fe-102b-80cb-0017a47871b2",
+        "defaultOpen": false
+      },
+      {
+        "conceptUuid": "3ceda710-26fe-102b-80cb-0017a47871b2"
+      }
+    ],
+    "labTestsWithOrderReasons": [],
+    "orders": {
+      "labOrderableConcepts": ["91380981-bb09-46cc-999f-533d78a8e6bc"],
+      "careSettingUuid": "6f0c9a92-6f24-11e3-af88-005056821db0",
+      "labOrderTypeUuid": "89da4d80-f1a3-11e1-bf88-bc305be7bdd2"
+    },
+    "resultsViewerConcepts": [
+      {
+        "conceptUuid": "3cd4a882-26fe-102b-80cb-0017a47871b2"
+      }
+    ]
+  },
+  "@openmrs/esm-patient-medications-app": {
+    "drugOrderTypeUUID": "8a71a0da-c5fe-102f-9170-eb149ddb709e"
+  },
+  "@openmrs/esm-patient-forms-app": {
+    "htmlFormEntryForms": [
+      {
+        "formUuid": "5c3c9e94-d6a8-42aa-91c9-4e02607e4f90",
+        "formName": "auto Ophthalmology acts",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ophthalmology_acts.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "41db7721-1ce0-4e6f-8875-630343652e18",
+        "formName": "General Followup",
+        "formUiResource": "file:configuration/htmlformentryforms/general_followup.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "4c050aba-665b-4d5e-aed9-18ae159b0784",
+        "formName": "Anaesthesia Record sheet",
+        "formUiResource": "file:configuration/htmlformentryforms/anaesthesia_record_sheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7112c87c-b132-462b-9b46-561974a2c20d",
+        "formName": "IPD Followup",
+        "formUiResource": "file:configuration/htmlformentryforms/ipd_followup.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a4d59540-9c55-4cda-8e0d-0337a743540e",
+        "formName": "OPD",
+        "formUiResource": "file:configuration/htmlformentryforms/opd.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "510bd60d-10d9-44aa-bb16-b6ac93ed9989",
+        "formName": "Radiology Request_Result Form",
+        "formUiResource": "file:configuration/htmlformentryforms/radiology_request_result_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "41d411dc-547f-4279-8eb9-99e80767e547",
+        "formName": "IPD Admission Form",
+        "formUiResource": "file:configuration/htmlformentryforms/ipd_admission_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a29168c1-6608-4d33-bc10-fd0909bd7413",
+        "formName": "IPD Discharge Form",
+        "formUiResource": "file:configuration/htmlformentryforms/ipd_discharge_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d0321de5-0470-4326-9681-072f67668f01",
+        "formName": "Auto Final Diagnosis",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_final_diagnosis.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "8a2b4c3c-682f-47bf-b8d7-706537bb5f73",
+        "formName": "ORL Acts form",
+        "formUiResource": "file:configuration/htmlformentryforms/orl_acts_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "0e3869e8-40a9-4ce4-af42-3e828072cfae",
+        "formName": "Immunization Data Entry Form",
+        "formUiResource": "file:configuration/htmlformentryforms/immunization_data_entry_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d92e8d14-ff7f-454f-80ea-3dd68193c830",
+        "formName": "Pedi HIV Flowsheet - New Allergy",
+        "formUiResource": "file:configuration/htmlformentryforms/pedi_hiv_flowsheet_-_new_allergy.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "99db0aa2-785b-4c5c-8ec0-e549ec33c996",
+        "formName": "Pedi HIV Flowsheet - New Hospitalization",
+        "formUiResource": "file:configuration/htmlformentryforms/pedi_hiv_flowsheet_-_new_hospitalization.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "2395adce-a713-45ce-80df-c5d228f79a3e",
+        "formName": "Pedi HIV Flowsheet - New Image",
+        "formUiResource": "file:configuration/htmlformentryforms/pedi_hiv_flowsheet_-_new_image.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "4b4a0c3f-66dc-4b9a-ab16-e4ffd1aa0fb2",
+        "formName": "Pedi HIV Flowsheet - New Lab",
+        "formUiResource": "file:configuration/htmlformentryforms/pedi_hiv_flowsheet_-_new_lab.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b1f1015e-15c9-4e31-a9ab-6a4f3916a585",
+        "formName": "Pedi HIV Flowsheet - New OI",
+        "formUiResource": "file:configuration/htmlformentryforms/pedi_hiv_flowsheet_-_new_oi.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "21aaf714-f8de-418b-b23f-c6394b7aeb3b",
+        "formName": "Pedi HIV Flowsheet - New Problem",
+        "formUiResource": "file:configuration/htmlformentryforms/pedi_hiv_flowsheet_-_new_problem.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "aae6ea6e-d59c-452c-bb57-9f408203eeff",
+        "formName": "Pedi HIV Flowsheet - New Visit",
+        "formUiResource": "file:configuration/htmlformentryforms/pedi_hiv_flowsheet_-_new_visit.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "1259e348-0238-4e18-b951-b4db677fe7ea",
+        "formName": "Auto Discharge",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_discharge.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "de8061cb-f7cb-433a-8525-62ecbfb4e37b",
+        "formName": "auto Blood Transfusion consent form",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_blood_transfusion_consent_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c7aff454-1154-4a8f-82c2-177b5d140dbc",
+        "formName": "Auto IPD Surgery followup",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ipd_surgery_followup.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c7eeb0fd-bf4b-43e3-91a3-0d450f67385a",
+        "formName": "prepex and Surgical Consultation Form",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_and_surgical_consultation_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "0dbac4dc-f3cb-48de-a34b-338fe4f9f12a",
+        "formName": "Prepex Placement Procedure Form",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_placement_procedure_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "13694a74-d995-4088-8e67-f6d5248541a8",
+        "formName": "Prepex Post Placement discharge session",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_post_placement_discharge_session.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "74b9fb5f-369e-4e12-b4b2-7d1e33889d11",
+        "formName": "Prepex removal Procedure",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_removal_procedure.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5300ca0f-aeba-4fa2-98fa-9323b3981c30",
+        "formName": "MC Operative notes",
+        "formUiResource": "file:configuration/htmlformentryforms/mc_operative_notes.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a5c3e33f-c7df-491c-98ba-f41d5b233e5e",
+        "formName": "MC (Post-Operative review)",
+        "formUiResource": "file:configuration/htmlformentryforms/mc_(post-operative_review).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "359571b4-bff1-4890-90bb-9daa4994d782",
+        "formName": "Prepex Complication (AE) information",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_complication_(ae)_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3e466f6c-85b1-4333-8a5d-2cb68e933e4b",
+        "formName": "PrePex Unscheduled visit",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_unscheduled_visit.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "02b009e5-f398-4cb4-b822-6c8602410c1d",
+        "formName": "PrePex Data Base (Entry)",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_data_base_(entry).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d47e7a21-6842-4dcc-bec9-bb987f3fb881",
+        "formName": "MC Follow visit",
+        "formUiResource": "file:configuration/htmlformentryforms/mc_follow_visit.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "45a3f074-e246-4691-aad4-bd7ea17d031d",
+        "formName": "MC Follow visit at 7 Days",
+        "formUiResource": "file:configuration/htmlformentryforms/mc_follow_visit_at_7_days.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c87121b4-c12b-4519-9d25-c9db18aa1c87",
+        "formName": "MC Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/mc_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "9cc2fed9-fa57-497d-abe6-c7342380128b",
+        "formName": "Prepex Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "1d9befb4-9c2d-43c4-bed3-45afe64b1c7c",
+        "formName": "Prepex form fin",
+        "formUiResource": "file:configuration/htmlformentryforms/prepex_form_fin.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "4a531f30-5ea0-4751-aaea-e3740cde235f",
+        "formName": "MC surgical form fin",
+        "formUiResource": "file:configuration/htmlformentryforms/mc_surgical_form_fin.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "aead8db1-b0a8-448e-b097-d73cac09eaee",
+        "formName": "MC flowsheet fin (All in One)",
+        "formUiResource": "file:configuration/htmlformentryforms/mc_flowsheet_fin_(all_in_one).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "8044a84b-c013-499f-a42d-a0af49719fcd",
+        "formName": "Pharmacovigilance",
+        "formUiResource": "file:configuration/htmlformentryforms/pharmacovigilance.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "845a3b17-82b4-4d68-86d5-e43c17e259ea",
+        "formName": "Adult HIV Flowsheet - New Allergy",
+        "formUiResource": "file:configuration/htmlformentryforms/adult_hiv_flowsheet_-_new_allergy.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6b31ff3f-c9fb-44a7-8955-064e8993d9ee",
+        "formName": "Adult HIV Flowsheet - New Hospitalization",
+        "formUiResource": "file:configuration/htmlformentryforms/adult_hiv_flowsheet_-_new_hospitalization.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "8f564ae2-2a16-437c-b01d-d2d4d4d3ae69",
+        "formName": "Adult HIV Flowsheet - New Image",
+        "formUiResource": "file:configuration/htmlformentryforms/adult_hiv_flowsheet_-_new_image.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3cfa4d45-7556-4c59-abdc-836452a36714",
+        "formName": "Adult HIV Flowsheet - New Lab",
+        "formUiResource": "file:configuration/htmlformentryforms/adult_hiv_flowsheet_-_new_lab.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "04a6da20-31cc-4aa7-a658-fd42ca2d5e9a",
+        "formName": "Adult HIV Flowsheet - New OI",
+        "formUiResource": "file:configuration/htmlformentryforms/adult_hiv_flowsheet_-_new_oi.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6e48f89d-9903-455c-8467-8d7af74c46d9",
+        "formName": "Adult HIV Flowsheet - New Problem",
+        "formUiResource": "file:configuration/htmlformentryforms/adult_hiv_flowsheet_-_new_problem.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6f304bf7-0c4c-48bb-9bea-5642cc333676",
+        "formName": "Adult HIV Flowsheet - New Visit",
+        "formUiResource": "file:configuration/htmlformentryforms/adult_hiv_flowsheet_-_new_visit.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7b226d48-c500-4d07-b018-340198dfe380",
+        "formName": "PMTCT Back to ID Clinic Transfer Form",
+        "formUiResource": "file:configuration/htmlformentryforms/pmtct_back_to_id_clinic_transfer_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b7423993-f928-4320-8787-955f18e8086c",
+        "formName": "PMTCT Pregnancy to Combined Clinic Transfer form",
+        "formUiResource": "file:configuration/htmlformentryforms/pmtct_pregnancy_to_combined_clinic_transfer_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5a06e998-ed3c-4f4c-b909-f202182b14ae",
+        "formName": "PMTCT Pregnancy Transfer Form (From Any HF or Depart) to PMTCT)",
+        "formUiResource": "file:configuration/htmlformentryforms/pmtct_pregnancy_transfer_form_(from_any_hf_or_depart)_to_pmtct).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f87528fb-6bdf-4145-b918-f6cb20d72e65",
+        "formName": "ExposedInfantDdB(Filled after delivery)",
+        "formUiResource": "file:configuration/htmlformentryforms/exposedinfantddb(filled_after_delivery).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3ecf2354-c586-4296-b356-c6b77700145c",
+        "formName": "Discordent couple (Negative)",
+        "formUiResource": "file:configuration/htmlformentryforms/discordent_couple_(negative).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b4dd2801-697e-4772-806b-425949df0322",
+        "formName": "CBS HIV CASE-BASED SURVEILLANCE Form - Index testing, partner notification, recency testing information",
+        "formUiResource": "file:configuration/htmlformentryforms/cbs_hiv_case-based_surveillance_form_-_index_testing,_partner_notification,_recency_testing_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ea547162-7214-4096-9f18-d76ec5b55d00",
+        "formName": "CBS Confidential HIV CRF - SECTION 1: Enrollment Information",
+        "formUiResource": "file:configuration/htmlformentryforms/cbs_confidential_hiv_crf_-_section_1:_enrollment_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b6b80525-af95-4a59-b254-6af295559990",
+        "formName": "CBS Confidential HIV CRF - SECTION II: Follow up Information",
+        "formUiResource": "file:configuration/htmlformentryforms/cbs_confidential_hiv_crf_-_section_ii:_follow_up_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "cad4fef7-d937-478b-802d-6dfb8976dc8f",
+        "formName": "CBS Recency VL",
+        "formUiResource": "file:configuration/htmlformentryforms/cbs_recency_vl.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a4b77098-d910-4170-8744-3a34b3b4d8e2",
+        "formName": "CBS contact information",
+        "formUiResource": "file:configuration/htmlformentryforms/cbs_contact_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "88cdf288-7f3d-4be4-9d85-41cb13c678af",
+        "formName": "triage auto",
+        "formUiResource": "file:configuration/htmlformentryforms/triage_auto.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "fdfd2737-6874-4a33-8dd6-12086fcee790",
+        "formName": "HIV NEW_LAB ERROR",
+        "formUiResource": "file:configuration/htmlformentryforms/hiv_new_lab_error.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3529cade-a3d1-4494-b614-fc5c8f6be0f1",
+        "formName": "NCD CKD: Exit from Care Information",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_ckd:_exit_from_care_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "34c827cc-da35-485d-8a1d-f05312422f53",
+        "formName": "NCD CKD: Enrollment form",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_ckd:_enrollment_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c9e2b656-7b79-40ca-b15b-8283045fd4a4",
+        "formName": "PF Consultation Form",
+        "formUiResource": "file:configuration/htmlformentryforms/pf_consultation_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "390134e1-9d66-49e1-9e93-de73d609f957",
+        "formName": "PF Individual Followup Form",
+        "formUiResource": "file:configuration/htmlformentryforms/pf_individual_followup_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "37ffa2f8-4698-4b32-bbab-13a49e67101b",
+        "formName": "Oncology Cervical Screening Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/oncology_cervical_screening_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7889be39-1f17-4c2e-8083-5b6cac2118c2",
+        "formName": "Oncology Breast Screening Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/oncology_breast_screening_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d7e4f3e6-2462-427d-83df-97d8488a53aa",
+        "formName": "Oncology Screening Lab Results",
+        "formUiResource": "file:configuration/htmlformentryforms/oncology_screening_lab_results.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c4ab7a71-0ff0-46dd-9c47-44fe5fa6509d",
+        "formName": "Oncology Screening Call log or CHW Visit",
+        "formUiResource": "file:configuration/htmlformentryforms/oncology_screening_call_log_or_chw_visit.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d1ffff6a-a11c-4128-a9d5-0485203910b9",
+        "formName": "Oncology Screening Diagnosis",
+        "formUiResource": "file:configuration/htmlformentryforms/oncology_screening_diagnosis.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "9de98350-bc86-4012-a559-fcce13fc10c5",
+        "formName": "Oncology Cervical Procedure Screening Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/oncology_cervical_procedure_screening_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "448e6910-8170-4377-84ac-25cda4740e7f",
+        "formName": "xray",
+        "formUiResource": "file:configuration/htmlformentryforms/xray.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "099c27a5-1236-47bc-9f2f-6a5fa0bc41a9",
+        "formName": "Partogram",
+        "formUiResource": "file:configuration/htmlformentryforms/partogram.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "781458f9-1629-4eaa-a311-5890f59086ac",
+        "formName": "NCD HEART FAILURE Exit From Care Information",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_heart_failure_exit_from_care_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5abddc60-4981-4940-9d3c-1144b81b5fe0",
+        "formName": "NCD HEART FAILURE: Enrollment form",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_heart_failure:_enrollment_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ced90b95-368e-4187-92fd-8248682d90ba",
+        "formName": "auto inpatient Monitoring (Dossier infirmier)",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_inpatient_monitoring_(dossier_infirmier).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b806b18a-785a-47db-a3f3-93e2c1cdfaa9",
+        "formName": "Neo_daily evaluation and orders",
+        "formUiResource": "file:configuration/htmlformentryforms/neo_daily_evaluation_and_orders.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a2c7d231-e9b1-415c-808f-94c27b917ec9",
+        "formName": "Auto Drug administration",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_drug_administration.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "e0657dfa-f74e-42b5-8e83-c2831d7b96e0",
+        "formName": "Neo_admission infant bellow 1 month",
+        "formUiResource": "file:configuration/htmlformentryforms/neo_admission_infant_bellow_1_month.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d802f168-5051-4016-a5b3-8bd2e5329869",
+        "formName": "NCD HF/HTN/CKD Other Studies",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hf_htn_ckd_other_studies.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "06659b6b-1a30-4d69-a50d-50900f574dd9",
+        "formName": "NCD HF/HTN/CKD EXAM LABORATORY TEST",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hf_htn_ckd_exam_laboratory_test.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "009585ff-d5aa-46f1-a959-b91219684733",
+        "formName": "NCD HF/HTN/CKD Echochardiography",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hf_htn_ckd_echochardiography.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "802fa3cd-1823-439a-b7e6-970297f8eb28",
+        "formName": "NCD HF/HTN/CKD Diagnosis and Problem List",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hf_htn_ckd_diagnosis_and_problem_list.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d9d135f9-7540-4b47-bf48-73c8441f58d1",
+        "formName": "NCD HF/HTN/CKD Clinic Visits",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hf_htn_ckd_clinic_visits.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f59ee986-a08f-4ddb-8f83-764481e29943",
+        "formName": "NCD HF/HTN/CKD Medication List",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hf_htn_ckd_medication_list.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a25ee651-9616-4ddf-8bb3-332f9ceb5554",
+        "formName": "NCD HF/HTN/CKD flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hf_htn_ckd_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "45c084b2-adff-43dd-a8e9-b25a67a7b8e3",
+        "formName": "auto Anestesia consent form",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_anestesia_consent_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "326aad65-e28a-41ca-b61e-76c6cc673f46",
+        "formName": "IPD auto Observation or general followup",
+        "formUiResource": "file:configuration/htmlformentryforms/ipd_auto_observation_or_general_followup.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "442beac2-c6da-43e4-95a8-eca907610ccc",
+        "formName": "MH PHQ-9 Score",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_phq-9_score.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7ba52bec-c952-4b26-b71a-d7204a65cb62",
+        "formName": "MH suicide safety plan",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_suicide_safety_plan.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5fb1cbd4-6998-49b8-9fa4-edfcf925779e",
+        "formName": "MH Suicide Risk Assessment",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_suicide_risk_assessment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "0e0eefce-8bf6-48ee-9d40-59f2c2c409eb",
+        "formName": "MH Medication List",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_medication_list.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "37b06e9d-7341-4a69-860e-278aaff902d9",
+        "formName": "MH Investigations",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_investigations.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "1dae19e4-7a80-4fad-821e-c3728f11ac76",
+        "formName": "MH Initial Encounter",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_initial_encounter.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "79cae8d0-c799-4cbb-b0f3-36c04731b4cf",
+        "formName": "MH Diagnosis",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_diagnosis.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "1cda6620-6c2a-4ab6-8f55-4b53a782b5ff",
+        "formName": "MH Routine encounter -  Pharmacotherapy",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_routine_encounter_-__pharmacotherapy.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "8e43fa83-8892-4b52-9dd7-4af953661289",
+        "formName": "MH Routine encounter - Psychotherapy approach visit",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_routine_encounter_-_psychotherapy_approach_visit.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b4ce5d72-8d07-482f-85b9-2f3035295c21",
+        "formName": "MH DIAGNOSES,MEDICATIONS,INVESTIGATIONS flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_diagnoses,medications,investigations_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ab813f0e-ee7f-42b4-b946-76056a703ebf",
+        "formName": "COVID Registration form",
+        "formUiResource": "file:configuration/htmlformentryforms/covid_registration_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f9d920d5-fdf0-4eb2-b963-2a21957509c1",
+        "formName": "COVID test form",
+        "formUiResource": "file:configuration/htmlformentryforms/covid_test_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "61104d11-3b09-4e67-8389-091bc6a51804",
+        "formName": "Covid Hospitalization form",
+        "formUiResource": "file:configuration/htmlformentryforms/covid_hospitalization_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "db27f8e7-8db5-4b16-96e8-85abcbc3d0d2",
+        "formName": "Covid-19 Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/covid-19_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "dac034ee-a701-46cd-85de-d1e6d29e3ea3",
+        "formName": "MH missed visit form",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_missed_visit_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "e287ef3c-2892-4b30-99e5-ab34969e57a4",
+        "formName": "MH Exit form",
+        "formUiResource": "file:configuration/htmlformentryforms/mh_exit_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "151c5ac3-7469-40c8-be01-f035600d97b9",
+        "formName": "CBS_enrollement",
+        "formUiResource": "file:configuration/htmlformentryforms/cbs_enrollement.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a2ae6e60-4152-4a3e-bb6a-196451359227",
+        "formName": "Umurwayi",
+        "formUiResource": "file:configuration/htmlformentryforms/umurwayi.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "699a81d0-2e0d-4579-ac5d-3746909c054c",
+        "formName": "Oxygene Sheet",
+        "formUiResource": "file:configuration/htmlformentryforms/oxygene_sheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "eb6e718c-409f-425e-b545-e1bd2bf6ef83",
+        "formName": "Nutrition followup",
+        "formUiResource": "file:configuration/htmlformentryforms/nutrition_followup.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f8761260-3323-4bad-88fc-87edb5d7fb56",
+        "formName": "Nutrition Status Monitoring",
+        "formUiResource": "file:configuration/htmlformentryforms/nutrition_status_monitoring.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "025fe228-9495-4a23-b101-e2e0cc90331b",
+        "formName": "Nutrition Demogaphics",
+        "formUiResource": "file:configuration/htmlformentryforms/nutrition_demogaphics.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "12d57bcf-9585-4fa4-86e9-9e4b352baf27",
+        "formName": "Nutrition Flowsheet Forms",
+        "formUiResource": "file:configuration/htmlformentryforms/nutrition_flowsheet_forms.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "62747162-f46a-4136-a303-e1c9e523db9c",
+        "formName": "Nutrition Discharge",
+        "formUiResource": "file:configuration/htmlformentryforms/nutrition_discharge.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6f0b23ed-07d6-4497-8518-247ed1246353",
+        "formName": "Auto Hospitalisation and Visit form",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_hospitalisation_and_visit_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "16caf65d-bd99-4eab-9c37-f29e951eb675",
+        "formName": "Consommables",
+        "formUiResource": "file:configuration/htmlformentryforms/consommables.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ec4e4184-c44b-416e-bf9a-c871822e156b",
+        "formName": "NCD Diabetes: rendez-vous",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_rendez-vous.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "eb0ee4ea-0a3c-431d-a461-8b5cac492f9a",
+        "formName": "NCD Diabetes: Other Investigations",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_other_investigations.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "49bfb16d-0b91-42d0-a403-403e3cb916cd",
+        "formName": "NCD Diabetes: EXAM LABORATORY TEST",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_exam_laboratory_test.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "bb15ac86-a604-4277-a476-2cca5a0c5dc8",
+        "formName": "NCD Diabetes: Insulin List",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_insulin_list.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "36aa298d-9677-44dc-b528-90936ca43f1e",
+        "formName": "NCD DIABETES: Exit from Care Information",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_exit_from_care_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "12570698-360c-4a16-8b85-4ae50a698756",
+        "formName": "NCD Diabetes: Diagnosis and Problems",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_diagnosis_and_problems.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ce1aa1c1-f284-45f9-b62c-b18c26bc2ef0",
+        "formName": "NCD Diabetes: Medication List",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_medication_list.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a13944dc-e7ec-4676-aa6a-3b85e3cd7d1e",
+        "formName": "NCD Diabetes: Enrollment form",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes:_enrollment_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "2a400973-96db-4ba2-93c6-e32e17f5edbd",
+        "formName": "NCD DIABETES FLOW SHEET",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_diabetes_flow_sheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "596d0e36-2468-4ce3-a0a3-940bf0751e24",
+        "formName": "Neo Progress note",
+        "formUiResource": "file:configuration/htmlformentryforms/neo_progress_note.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "2af4fdc8-4468-4541-8a3a-36317525c5ae",
+        "formName": "PIT CONSELING AND TESTING",
+        "formUiResource": "file:configuration/htmlformentryforms/pit_conseling_and_testing.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "2d54e7bd-9ad6-449a-a15c-3a6dac2a5f5d",
+        "formName": "PIT PATIENT ENROLLMENT",
+        "formUiResource": "file:configuration/htmlformentryforms/pit_patient_enrollment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6bd756b6-a305-4365-b835-a874b71c430a",
+        "formName": "PIT RECEPTION",
+        "formUiResource": "file:configuration/htmlformentryforms/pit_reception.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6d8e534a-4525-4b40-a5e1-250ea486a836",
+        "formName": "PIT RESULTS",
+        "formUiResource": "file:configuration/htmlformentryforms/pit_results.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "0c529945-bb56-4c30-9e38-54edf860147e",
+        "formName": "PIT TESTING",
+        "formUiResource": "file:configuration/htmlformentryforms/pit_testing.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7dea265d-0803-4b05-8fdb-3617432c2f27",
+        "formName": "PIT flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/pit_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ae81a78d-9f9c-4ee0-ad69-544f7ac63b7b",
+        "formName": "auto IPD consultation",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ipd_consultation.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6453a487-07c3-404b-ab12-8f0b5ee87f9a",
+        "formName": "Medical Acts/ICHI",
+        "formUiResource": "file:configuration/htmlformentryforms/medical_acts_ichi.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "508620f1-1f37-4910-8663-61b34af0d71c",
+        "formName": "hc_opd_consultation_form",
+        "formUiResource": "file:configuration/htmlformentryforms/hc_opd_consultation_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3d710c8c-3b3a-448e-be28-e4c6bfe953b9",
+        "formName": "PNC2",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc2.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f4bbc44e-9b48-43cd-8dc1-fb8e83f7f0aa",
+        "formName": "nursing assessment",
+        "formUiResource": "file:configuration/htmlformentryforms/nursing_assessment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b0f31435-ddca-4ef5-a3c6-fd55e8c9126b",
+        "formName": "PNC 1-4",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc_1-4.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d1c2d494-1b4e-4e9b-852d-80b3b627d8a5",
+        "formName": "Assessment and care of women during labour",
+        "formUiResource": "file:configuration/htmlformentryforms/assessment_and_care_of_women_during_labour.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a88a041e-1e20-46c5-95d6-4e928923ac5d",
+        "formName": "intra partum followup4",
+        "formUiResource": "file:configuration/htmlformentryforms/intra_partum_followup4.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ee324e9a-c95a-483c-8b10-2d0f364c6610",
+        "formName": "PNC 0-24H",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc_0-24h.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a6756ea3-8261-4eb6-bd1d-ebec2df75d59",
+        "formName": "Neo Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/neo_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "79298484-1db6-4356-992a-32240c6da72c",
+        "formName": "IMNCI Follow-up",
+        "formUiResource": "file:configuration/htmlformentryforms/imnci_follow-up.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d618ffc1-6f20-4ac0-a205-5d21ccac48ef",
+        "formName": "IMNCI1W 0-7 Day Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/imnci1w_0-7_day_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3e7bfdba-8646-40fa-a522-50708d7175af",
+        "formName": "RMNCH-GMP final (under 6) History and follow up",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gmp_final_(under_6)_history_and_follow_up.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "9ca79280-aca8-4e51-9c6f-6751b129a3fe",
+        "formName": "RMNCH-GMP final under 6 to 59M history and follow up",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gmp_final_under_6_to_59m_history_and_follow_up.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "9d24f8dd-5d87-473e-9ed9-55bdffa8eeb1",
+        "formName": "RMNCH-GMP final  under 5 to 9 Y History and followup",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gmp_final__under_5_to_9_y_history_and_followup.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "52edf74b-adf6-40a7-8e0c-37f6ddc4137e",
+        "formName": "RMNCH-GMP final (10-18 Y) History and follow up",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gmp_final_(10-18_y)_history_and_follow_up.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "34a68750-36b8-42f0-adb1-025042e38bc9",
+        "formName": "RMNCH-GBV final enrolment Child",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gbv_final_enrolment_child.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "fa35fd5f-8bd2-499a-9384-2e5eb83dbd35",
+        "formName": "RMNCH-GBV final enrolment adult",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gbv_final_enrolment_adult.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f588e9f5-9ba7-4541-994a-488806ebc089",
+        "formName": "RMNCH-GBV final Follow up",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gbv_final_follow_up.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3d604488-be92-4f2d-8216-08dbbaeae873",
+        "formName": "RMNCH-FP final Enrolment",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-fp_final_enrolment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "e3c12f5d-58e7-4320-b888-e43878021869",
+        "formName": "RMNCH-FP final Monitoring",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-fp_final_monitoring.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6ca648a5-1861-48d8-ab99-f1517c985ad0",
+        "formName": "Surgical Safety Checklist",
+        "formUiResource": "file:configuration/htmlformentryforms/surgical_safety_checklist.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "4d0f73a2-ac1c-4c23-9579-03adafb0d652",
+        "formName": "NCD HYPERTENSION: Exit from Care Information",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hypertension:_exit_from_care_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "65741830-86fb-4f09-97ca-bc3ed5005596",
+        "formName": "NCD HYPERTENSION: Enrollment form",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_hypertension:_enrollment_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "235e15a9-4e73-4c2f-8288-0617ac6be404",
+        "formName": "Transfer form",
+        "formUiResource": "file:configuration/htmlformentryforms/transfer_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b65e8977-5f41-408b-90b5-a5c0f0c64f6e",
+        "formName": "OPD Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/opd_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "692856dc-1b34-4543-9154-72f5239b6175",
+        "formName": "Auto OPD consultation",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_opd_consultation.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "8d1cf399-e22b-4cd1-888c-b36b91a2e733",
+        "formName": "auto IPD gbv form",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ipd_gbv_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "45ea39d6-7429-45eb-8a43-590641671c0d",
+        "formName": "RMNCH - GBV Enrollment Adult",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch_-_gbv_enrollment_adult.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "82226bbb-40bd-4ef9-a6ec-b134715bb941",
+        "formName": "Maternal Clinical Exam",
+        "formUiResource": "file:configuration/htmlformentryforms/maternal_clinical_exam.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7045bfa0-1ef9-4017-a86c-8eeeeb132a68",
+        "formName": "Auto admission form",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_admission_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "edeb0159-0a57-4458-b46c-e7fa0d9289bb",
+        "formName": "Auto IPD Admission From",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ipd_admission_from.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "10181c49-7050-4789-8ee3-a85f1c17e20b",
+        "formName": "Auto IPD Admission From",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ipd_admission_from.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "70370910-cd6d-486e-944a-f670f2767a89",
+        "formName": "Seance medical",
+        "formUiResource": "file:configuration/htmlformentryforms/seance_medical.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d1000930-90fb-4ac2-9658-14459ebc3c33",
+        "formName": "HIV Patient Transfer Out Form",
+        "formUiResource": "file:configuration/htmlformentryforms/hiv_patient_transfer_out_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "8a3f18b2-d9fc-4edb-a541-6c441dd4713b",
+        "formName": "Exposed infant flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "08625960-0cd8-4c8a-b419-6353db0bd9f4",
+        "formName": "Exposed infant flowsheet - Accouchement",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_accouchement.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "18939f2d-8c81-481f-a468-03ba26b9130c",
+        "formName": "Exposed infant flowsheet - allergies",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_allergies.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "53e68870-40d7-4636-b56c-a10374ab012a",
+        "formName": "Exposed infant flowsheet - Anamnese Systematique",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_anamnese_systematique.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d1dcf7bb-fb16-4308-8c11-e5518af7e5e5",
+        "formName": "Exposed infant flowsheet - ARV Tritherapie (si PCR positive)",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_arv_tritherapie_(si_pcr_positive).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "23ef0938-069b-45ec-b4bc-60b46e875a29",
+        "formName": "Exposed infant flowsheet - Conclusion de suivi",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_conclusion_de_suivi.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "9ae1c0b4-ecb9-4e90-b5ce-016c5522d140",
+        "formName": "Exposed infant flowsheet - Demographics",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_demographics.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c13dc94d-544c-4638-8b5c-71a430a2b811",
+        "formName": "Exposed infant flowsheet - Examen Clinique",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_examen_clinique.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "4f99daef-1d3b-4709-ad86-a4fd2dc6d1a1",
+        "formName": "Exposed infant flowsheet - infant curative treatment",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_infant_curative_treatment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c823a23e-136f-4a70-9d8d-3e903981f8c3",
+        "formName": "Exposed infant flowsheet - prophylaxis",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_prophylaxis.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "70241588-6557-41c5-8811-d73792f7e5a6",
+        "formName": "Exposed infant flowsheet - opportunistic infection",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_opportunistic_infection.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "901a8e40-4c58-436c-a35b-fe59df3b3b44",
+        "formName": "Exposed infant flowsheet - prophylaxis (Duplicate)",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_prophylaxis_(duplicate).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "e9b286b6-3c93-46fc-9738-90414dd2e363",
+        "formName": "Exposed infant flowsheet - Serologie VIH de la famille",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_serologie_vih_de_la_famille.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d52b1f0b-bf82-465b-be7f-ae77f2f20968",
+        "formName": "Exposed infant flowsheet - Suivi Biologique",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_suivi_biologique.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "24c1a009-66b0-471c-86de-7f5e2f714b98",
+        "formName": "Exposed infant flowsheet - vaccinations",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_vaccinations.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "296d9528-9668-4973-a896-e5b1be45b1c6",
+        "formName": "Exposed infant flowsheet - visit summary",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_flowsheet_-_visit_summary.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "baab24d1-142b-4ed4-b229-008610617728",
+        "formName": "Exposed Infant RdV",
+        "formUiResource": "file:configuration/htmlformentryforms/exposed_infant_rdv.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "0b6646ed-b283-41a6-aa4d-608c35cc97e0",
+        "formName": "Neo_admission",
+        "formUiResource": "file:configuration/htmlformentryforms/neo_admission.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "79e1d4a0-a747-4431-be7f-dbad463a5c82",
+        "formName": "auto vital sings Form",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_vital_sings_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b390ce38-d400-4a39-ac2b-f2cb1c94a79e",
+        "formName": "Vital Signs for IMNCI",
+        "formUiResource": "file:configuration/htmlformentryforms/vital_signs_for_imnci.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "edceede1-f1b6-4f95-8fd6-7f27200e5602",
+        "formName": "ANC Past Medical History",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_past_medical_history.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "2714598e-3c40-436e-9476-70c3b94a5bf3",
+        "formName": "ANC Physical Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_physical_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "79f56680-63f7-4209-bb01-83bbd337b34b",
+        "formName": "ANC Investigation",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_investigation.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7febe8fd-aacd-408b-98ba-97b76a9bbf70",
+        "formName": "ANC Referral Form",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_referral_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a048c60f-f141-4c5c-87ab-008a2db1c218",
+        "formName": "ANC Referral Confirmation Form",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_referral_confirmation_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a8bb98ad-443c-43c9-bbc0-1bc8cf7da6ff",
+        "formName": "ANC Delivery Report",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_delivery_report.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5fa12f85-1ea7-4aec-960e-08ceba8d9ab6",
+        "formName": "ANC flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "4a9ff5f1-e79f-4a15-8e87-63521ffd3ce9",
+        "formName": "PNC consultation",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc_consultation.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d3b2c2ec-8c1a-4f9f-ac17-402a3dad6da2",
+        "formName": "KMC before discharge",
+        "formUiResource": "file:configuration/htmlformentryforms/kmc_before_discharge.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "75effef1-7f7f-4b87-a6fd-7b4ecc364255",
+        "formName": "newborn transfert for newborn",
+        "formUiResource": "file:configuration/htmlformentryforms/newborn_transfert_for_newborn.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "eddb84e8-982e-4516-a3a8-6a69c58cd098",
+        "formName": "KMC Management",
+        "formUiResource": "file:configuration/htmlformentryforms/kmc_management.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "78c952a2-554c-48af-981d-6b5d54e2affa",
+        "formName": "ANC ENROLLMENT",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_enrollment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f539236d-ae01-4739-99ad-73e2cfdd3b1e",
+        "formName": "ANC Emergency Assessment",
+        "formUiResource": "file:configuration/htmlformentryforms/anc_emergency_assessment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d4483501-c58c-4117-af75-b4167d7f3d54",
+        "formName": "Delivery outcome and New Born Registration",
+        "formUiResource": "file:configuration/htmlformentryforms/delivery_outcome_and_new_born_registration.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "0a3973e4-79de-4217-9f5a-5f0a10d6ae9b",
+        "formName": "PNC2 History (PNC0 24H)",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc2_history_(pnc0_24h).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "94a97259-8b19-4e2f-8a8e-1f7d24908fd6",
+        "formName": "PNC2 Examination (PNC0 24H)",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc2_examination_(pnc0_24h).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f8f7e79d-cc36-4cad-b5d6-d7c92a939405",
+        "formName": "PNC2 Examination (Befr Discharge)",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc2_examination_(befr_discharge).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c689d40d-404f-4434-bfc6-5a2b7d0c5648",
+        "formName": "PNC2 Examination (PNC 1-4)",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc2_examination_(pnc_1-4).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "72da0a9f-b67b-4bfa-8c6e-68729f64e593",
+        "formName": "PNC2 Treatment (Befr Discharge)",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc2_treatment_(befr_discharge).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "df2000f0-6e3b-45f9-a6f5-1f78ac5a0501",
+        "formName": "PNC2 Investigation (PNC1)",
+        "formUiResource": "file:configuration/htmlformentryforms/pnc2_investigation_(pnc1).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "e49f788a-a1a0-4b65-8ed8-a2d9712cf956",
+        "formName": "IMNCI 1W-2M Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/imnci_1w-2m_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a1073a70-8694-477e-9e6a-37da233307a1",
+        "formName": "IMNCI 2M-5Y Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/imnci_2m-5y_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c7301c53-9fdc-4937-b388-788cd27fd9b6",
+        "formName": "test11",
+        "formUiResource": "file:configuration/htmlformentryforms/test11.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "fc9ff9a4-a5dd-4d9e-84f9-4248fc1ddfe0",
+        "formName": "RMNCH-ECD Developement milestone",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-ecd_developement_milestone.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "bb34524c-971d-4beb-a50b-bfd4014215b1",
+        "formName": "RMNCH-EPI Vaccination Records",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-epi_vaccination_records.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "d592f791-beb9-4cf5-b050-124f5e2cebee",
+        "formName": "RMNCH-EPI Examination",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-epi_examination.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "64a859e0-4fe8-48dd-9c09-ed6040b0fa2b",
+        "formName": "RMNCH-GMP examination and History (up 18 Y)",
+        "formUiResource": "file:configuration/htmlformentryforms/rmnch-gmp_examination_and_history_(up_18_y).xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "4b987508-a305-462c-ab53-bfe5f09abbf4",
+        "formName": "Maternity Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/maternity_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "95408e68-fde1-4987-8a48-7f21a23f46f9",
+        "formName": "Neo education",
+        "formUiResource": "file:configuration/htmlformentryforms/neo_education.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a3b9b949-9f0b-4ac7-bf4a-45cc6a40dd41",
+        "formName": "HTC TESTING",
+        "formUiResource": "file:configuration/htmlformentryforms/htc_testing.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a8d4e6a6-0dab-4218-b2be-c114b9c61174",
+        "formName": "HTC RESULTS",
+        "formUiResource": "file:configuration/htmlformentryforms/htc_results.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "05cd2514-ef4b-4d78-9701-18884952f22e",
+        "formName": "HTC RECEPTION",
+        "formUiResource": "file:configuration/htmlformentryforms/htc_reception.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5009b441-9955-4b97-9e40-8bd240ea2eba",
+        "formName": "HTC PATIENT ENROLLMENT",
+        "formUiResource": "file:configuration/htmlformentryforms/htc_patient_enrollment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "8ece7f87-0b9e-4352-803a-afec25efa782",
+        "formName": "HTC flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/htc_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5f1e6f0b-a4d9-4afc-bc83-67b66560b450",
+        "formName": "Prophylaxy",
+        "formUiResource": "file:configuration/htmlformentryforms/prophylaxy.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6cdaef92-6afd-4758-aef6-ddf079b2967e",
+        "formName": "triage adult form",
+        "formUiResource": "file:configuration/htmlformentryforms/triage_adult_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "298fc43f-81b9-4bfa-a2aa-07b3db70a833",
+        "formName": "triage infant form",
+        "formUiResource": "file:configuration/htmlformentryforms/triage_infant_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "3fb1da07-39d4-4929-b0b3-34f612b13f70",
+        "formName": "triage child  form",
+        "formUiResource": "file:configuration/htmlformentryforms/triage_child__form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "61c62d90-e8e2-474f-a22f-76d3a0f5eaa1",
+        "formName": "Cause of Death Certificate",
+        "formUiResource": "file:configuration/htmlformentryforms/cause_of_death_certificate.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "adf3dbdd-5f2c-4c2d-94d1-b863f20780c1",
+        "formName": "Auto scan",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_scan.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "ff0c40c6-e436-413a-a7e1-18770abc2a44",
+        "formName": "HeightWeightTracker",
+        "formUiResource": "file:configuration/htmlformentryforms/heightweighttracker.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "b83778af-3d64-45fb-b0ed-5d4ada7bdde6",
+        "formName": "Nursing and Midwife care plan",
+        "formUiResource": "file:configuration/htmlformentryforms/nursing_and_midwife_care_plan.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "5993157e-5356-48a1-9acf-581e64317162",
+        "formName": "Progress note and Evolution",
+        "formUiResource": "file:configuration/htmlformentryforms/progress_note_and_evolution.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "0dc05f6f-5945-4c43-ab9e-95e9591e80a7",
+        "formName": "midwife assessment",
+        "formUiResource": "file:configuration/htmlformentryforms/midwife_assessment.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "302f9262-c10b-4bcc-a29a-d50d7bdcf1cc",
+        "formName": "First Admission",
+        "formUiResource": "file:configuration/htmlformentryforms/first_admission.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a6de851f-5dd5-4f75-99fc-0e0b235f4e38",
+        "formName": "IPD Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/ipd_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "56c880eb-381c-45dc-8f2a-2593808b3db2",
+        "formName": "Auto IPD Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ipd_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "475a5e11-cc7d-4b77-8b52-0d6b824fd5f7",
+        "formName": "Auto OPD Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_opd_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "386d442a-960f-4797-a4ab-0a1663433eda",
+        "formName": "Glycemia monitoring flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/glycemia_monitoring_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "778b9bc3-d13c-4d8a-8540-07ef7d6e69b1",
+        "formName": "HC_OPD_FLOWSHEET",
+        "formUiResource": "file:configuration/htmlformentryforms/hc_opd_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6092b0b3-f17a-45f3-83fa-c9cb0b8774fb",
+        "formName": "HC_IPD_FLOWSHEET",
+        "formUiResource": "file:configuration/htmlformentryforms/hc_ipd_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "9ec8c6ce-a67c-4203-b5b5-cdf9739b536e",
+        "formName": "VCT CONSELING AND TESTING",
+        "formUiResource": "file:configuration/htmlformentryforms/vct_conseling_and_testing.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "cf5f2053-e0f6-4fef-bd7e-91fb9ea6b990",
+        "formName": "NCD Asthma: Diagnosis And Problem List",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_asthma:_diagnosis_and_problem_list.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "642be66d-d7c0-4552-9688-373c317a04cf",
+        "formName": "NCD ASTHMA: Enrollment form",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_asthma:_enrollment_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "72717458-49bb-472c-b4a7-6a929ff8d944",
+        "formName": "NCD Asthma: Exit from Care Information",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_asthma:_exit_from_care_information.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "832d1420-bb75-4a2d-acf4-e6abe765adcf",
+        "formName": "NCD Asthma: Rendez-Vous",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_asthma:_rendez-vous.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "27dd3e4a-ff4f-48a3-913c-415616616ca1",
+        "formName": "NCD Asthma: other investigations",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_asthma:_other_investigations.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "6c32a9b2-0552-428f-a1e5-4211a319e2fb",
+        "formName": "NCD Asthma: medication List",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_asthma:_medication_list.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "a7020110-ae02-4435-b604-bcdaf9ea78ac",
+        "formName": "NCD Asthma: flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/ncd_asthma:_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c8abfdc7-70b9-4e61-b19d-9666b883410d",
+        "formName": "Auto kinestherapy acts",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_kinestherapy_acts.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "c4bc5817-3f76-4173-8993-995eeab561b2",
+        "formName": "Nursing and Midwives Flowsheet",
+        "formUiResource": "file:configuration/htmlformentryforms/nursing_and_midwives_flowsheet.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "e19eecb3-32d1-4506-8e9a-1ba5093c140e",
+        "formName": "auto Stomatology acts",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_stomatology_acts.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "580f3808-026d-477b-92db-7ebf829d2444",
+        "formName": "Auto IPD PRE-OPERATIVE ANAESTHESIA RECORD",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_ipd_pre-operative_anaesthesia_record.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "fd26a777-70f8-4913-94e2-fa85f24b27b0",
+        "formName": "Auto operation consent form",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_operation_consent_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "96da5765-e813-495d-9bb5-d0a97d26ebc9",
+        "formName": "patient investigation form",
+        "formUiResource": "file:configuration/htmlformentryforms/patient_investigation_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "2a4024ef-da30-4fb2-8064-1f07721b65d0",
+        "formName": "Glycemia monitoring form",
+        "formUiResource": "file:configuration/htmlformentryforms/glycemia_monitoring_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "18666b59-797f-40cc-877b-25bbb68c1ff2",
+        "formName": "HIV Patient transfer in form",
+        "formUiResource": "file:configuration/htmlformentryforms/hiv_patient_transfer_in_form.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "f005c67a-6ceb-470e-ab9d-74d074fce369",
+        "formName": "Ordonance medicale",
+        "formUiResource": "file:configuration/htmlformentryforms/ordonance_medicale.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      },
+      {
+        "formUuid": "7103db59-1792-421b-88d6-2bbcb96d0981",
+        "formName": "Auto Patient Education",
+        "formUiResource": "file:configuration/htmlformentryforms/auto_patient_education.xml",
+        "formUiPage": "enterHtmlFormWithStandardUi",
+        "formEditUiPage": "editHtmlFormWithStandardUi"
+      }
+    ],
+    "showHtmlFormEntryForms": true,
+    "formSections": [
+      {
+        "name": "RFE Forms",
+        "forms": [
+          "097eb43d-27bd-342a-9057-50fa0d90727d",
+          "5de9204c-944a-3830-ba68-6dc2a1ea7740",
+          "c0657c47-959b-3062-a88e-e3379ad09ced",
+          "09e32d3a-3d69-39f7-9991-c707b99c44ff",
+          "f5ee42df-8f8b-3f89-98c3-235220ff4dbd",
+          "3a1f6357-ed3e-3917-bdcc-7af720ac3813",
+          "221e6a43-7ebd-3d3d-bca0-ffe7a7dcb158"
+        ]
+      },
+      {
+        "name": "HFE Forms",
+        "forms": [
+          "5c3c9e94-d6a8-42aa-91c9-4e02607e4f90",
+          "41db7721-1ce0-4e6f-8875-630343652e18",
+          "4c050aba-665b-4d5e-aed9-18ae159b0784",
+          "7112c87c-b132-462b-9b46-561974a2c20d",
+          "a4d59540-9c55-4cda-8e0d-0337a743540e",
+          "510bd60d-10d9-44aa-bb16-b6ac93ed9989",
+          "41d411dc-547f-4279-8eb9-99e80767e547",
+          "a29168c1-6608-4d33-bc10-fd0909bd7413",
+          "d0321de5-0470-4326-9681-072f67668f01",
+          "8a2b4c3c-682f-47bf-b8d7-706537bb5f73",
+          "0e3869e8-40a9-4ce4-af42-3e828072cfae",
+          "d92e8d14-ff7f-454f-80ea-3dd68193c830",
+          "99db0aa2-785b-4c5c-8ec0-e549ec33c996",
+          "2395adce-a713-45ce-80df-c5d228f79a3e",
+          "4b4a0c3f-66dc-4b9a-ab16-e4ffd1aa0fb2",
+          "b1f1015e-15c9-4e31-a9ab-6a4f3916a585",
+          "21aaf714-f8de-418b-b23f-c6394b7aeb3b",
+          "aae6ea6e-d59c-452c-bb57-9f408203eeff",
+          "1259e348-0238-4e18-b951-b4db677fe7ea",
+          "de8061cb-f7cb-433a-8525-62ecbfb4e37b",
+          "c7aff454-1154-4a8f-82c2-177b5d140dbc",
+          "c7eeb0fd-bf4b-43e3-91a3-0d450f67385a",
+          "0dbac4dc-f3cb-48de-a34b-338fe4f9f12a",
+          "13694a74-d995-4088-8e67-f6d5248541a8",
+          "74b9fb5f-369e-4e12-b4b2-7d1e33889d11",
+          "5300ca0f-aeba-4fa2-98fa-9323b3981c30",
+          "a5c3e33f-c7df-491c-98ba-f41d5b233e5e",
+          "359571b4-bff1-4890-90bb-9daa4994d782",
+          "3e466f6c-85b1-4333-8a5d-2cb68e933e4b",
+          "02b009e5-f398-4cb4-b822-6c8602410c1d",
+          "d47e7a21-6842-4dcc-bec9-bb987f3fb881",
+          "45a3f074-e246-4691-aad4-bd7ea17d031d",
+          "c87121b4-c12b-4519-9d25-c9db18aa1c87",
+          "9cc2fed9-fa57-497d-abe6-c7342380128b",
+          "1d9befb4-9c2d-43c4-bed3-45afe64b1c7c",
+          "4a531f30-5ea0-4751-aaea-e3740cde235f",
+          "aead8db1-b0a8-448e-b097-d73cac09eaee",
+          "8044a84b-c013-499f-a42d-a0af49719fcd",
+          "845a3b17-82b4-4d68-86d5-e43c17e259ea",
+          "6b31ff3f-c9fb-44a7-8955-064e8993d9ee",
+          "8f564ae2-2a16-437c-b01d-d2d4d4d3ae69",
+          "3cfa4d45-7556-4c59-abdc-836452a36714",
+          "04a6da20-31cc-4aa7-a658-fd42ca2d5e9a",
+          "6e48f89d-9903-455c-8467-8d7af74c46d9",
+          "6f304bf7-0c4c-48bb-9bea-5642cc333676",
+          "7b226d48-c500-4d07-b018-340198dfe380",
+          "b7423993-f928-4320-8787-955f18e8086c",
+          "5a06e998-ed3c-4f4c-b909-f202182b14ae",
+          "f87528fb-6bdf-4145-b918-f6cb20d72e65",
+          "3ecf2354-c586-4296-b356-c6b77700145c",
+          "b4dd2801-697e-4772-806b-425949df0322",
+          "ea547162-7214-4096-9f18-d76ec5b55d00",
+          "b6b80525-af95-4a59-b254-6af295559990",
+          "cad4fef7-d937-478b-802d-6dfb8976dc8f",
+          "a4b77098-d910-4170-8744-3a34b3b4d8e2",
+          "88cdf288-7f3d-4be4-9d85-41cb13c678af",
+          "fdfd2737-6874-4a33-8dd6-12086fcee790",
+          "3529cade-a3d1-4494-b614-fc5c8f6be0f1",
+          "34c827cc-da35-485d-8a1d-f05312422f53",
+          "c9e2b656-7b79-40ca-b15b-8283045fd4a4",
+          "390134e1-9d66-49e1-9e93-de73d609f957",
+          "37ffa2f8-4698-4b32-bbab-13a49e67101b",
+          "7889be39-1f17-4c2e-8083-5b6cac2118c2",
+          "d7e4f3e6-2462-427d-83df-97d8488a53aa",
+          "c4ab7a71-0ff0-46dd-9c47-44fe5fa6509d",
+          "d1ffff6a-a11c-4128-a9d5-0485203910b9",
+          "9de98350-bc86-4012-a559-fcce13fc10c5",
+          "448e6910-8170-4377-84ac-25cda4740e7f",
+          "099c27a5-1236-47bc-9f2f-6a5fa0bc41a9",
+          "781458f9-1629-4eaa-a311-5890f59086ac",
+          "5abddc60-4981-4940-9d3c-1144b81b5fe0",
+          "ced90b95-368e-4187-92fd-8248682d90ba",
+          "b806b18a-785a-47db-a3f3-93e2c1cdfaa9",
+          "a2c7d231-e9b1-415c-808f-94c27b917ec9",
+          "e0657dfa-f74e-42b5-8e83-c2831d7b96e0",
+          "d802f168-5051-4016-a5b3-8bd2e5329869",
+          "06659b6b-1a30-4d69-a50d-50900f574dd9",
+          "009585ff-d5aa-46f1-a959-b91219684733",
+          "802fa3cd-1823-439a-b7e6-970297f8eb28",
+          "d9d135f9-7540-4b47-bf48-73c8441f58d1",
+          "f59ee986-a08f-4ddb-8f83-764481e29943",
+          "a25ee651-9616-4ddf-8bb3-332f9ceb5554",
+          "45c084b2-adff-43dd-a8e9-b25a67a7b8e3",
+          "326aad65-e28a-41ca-b61e-76c6cc673f46",
+          "442beac2-c6da-43e4-95a8-eca907610ccc",
+          "7ba52bec-c952-4b26-b71a-d7204a65cb62",
+          "5fb1cbd4-6998-49b8-9fa4-edfcf925779e",
+          "0e0eefce-8bf6-48ee-9d40-59f2c2c409eb",
+          "37b06e9d-7341-4a69-860e-278aaff902d9",
+          "1dae19e4-7a80-4fad-821e-c3728f11ac76",
+          "79cae8d0-c799-4cbb-b0f3-36c04731b4cf",
+          "1cda6620-6c2a-4ab6-8f55-4b53a782b5ff",
+          "8e43fa83-8892-4b52-9dd7-4af953661289",
+          "b4ce5d72-8d07-482f-85b9-2f3035295c21",
+          "ab813f0e-ee7f-42b4-b946-76056a703ebf",
+          "f9d920d5-fdf0-4eb2-b963-2a21957509c1",
+          "61104d11-3b09-4e67-8389-091bc6a51804",
+          "db27f8e7-8db5-4b16-96e8-85abcbc3d0d2",
+          "dac034ee-a701-46cd-85de-d1e6d29e3ea3",
+          "e287ef3c-2892-4b30-99e5-ab34969e57a4",
+          "151c5ac3-7469-40c8-be01-f035600d97b9",
+          "a2ae6e60-4152-4a3e-bb6a-196451359227",
+          "699a81d0-2e0d-4579-ac5d-3746909c054c",
+          "eb6e718c-409f-425e-b545-e1bd2bf6ef83",
+          "f8761260-3323-4bad-88fc-87edb5d7fb56",
+          "025fe228-9495-4a23-b101-e2e0cc90331b",
+          "12d57bcf-9585-4fa4-86e9-9e4b352baf27",
+          "62747162-f46a-4136-a303-e1c9e523db9c",
+          "6f0b23ed-07d6-4497-8518-247ed1246353",
+          "16caf65d-bd99-4eab-9c37-f29e951eb675",
+          "ec4e4184-c44b-416e-bf9a-c871822e156b",
+          "eb0ee4ea-0a3c-431d-a461-8b5cac492f9a",
+          "49bfb16d-0b91-42d0-a403-403e3cb916cd",
+          "bb15ac86-a604-4277-a476-2cca5a0c5dc8",
+          "36aa298d-9677-44dc-b528-90936ca43f1e",
+          "12570698-360c-4a16-8b85-4ae50a698756",
+          "ce1aa1c1-f284-45f9-b62c-b18c26bc2ef0",
+          "a13944dc-e7ec-4676-aa6a-3b85e3cd7d1e",
+          "2a400973-96db-4ba2-93c6-e32e17f5edbd",
+          "596d0e36-2468-4ce3-a0a3-940bf0751e24",
+          "2af4fdc8-4468-4541-8a3a-36317525c5ae",
+          "2d54e7bd-9ad6-449a-a15c-3a6dac2a5f5d",
+          "6bd756b6-a305-4365-b835-a874b71c430a",
+          "6d8e534a-4525-4b40-a5e1-250ea486a836",
+          "0c529945-bb56-4c30-9e38-54edf860147e",
+          "7dea265d-0803-4b05-8fdb-3617432c2f27",
+          "ae81a78d-9f9c-4ee0-ad69-544f7ac63b7b",
+          "6453a487-07c3-404b-ab12-8f0b5ee87f9a",
+          "508620f1-1f37-4910-8663-61b34af0d71c",
+          "3d710c8c-3b3a-448e-be28-e4c6bfe953b9",
+          "f4bbc44e-9b48-43cd-8dc1-fb8e83f7f0aa",
+          "b0f31435-ddca-4ef5-a3c6-fd55e8c9126b",
+          "d1c2d494-1b4e-4e9b-852d-80b3b627d8a5",
+          "a88a041e-1e20-46c5-95d6-4e928923ac5d",
+          "ee324e9a-c95a-483c-8b10-2d0f364c6610",
+          "a6756ea3-8261-4eb6-bd1d-ebec2df75d59",
+          "79298484-1db6-4356-992a-32240c6da72c",
+          "d618ffc1-6f20-4ac0-a205-5d21ccac48ef",
+          "3e7bfdba-8646-40fa-a522-50708d7175af",
+          "9ca79280-aca8-4e51-9c6f-6751b129a3fe",
+          "9d24f8dd-5d87-473e-9ed9-55bdffa8eeb1",
+          "52edf74b-adf6-40a7-8e0c-37f6ddc4137e",
+          "34a68750-36b8-42f0-adb1-025042e38bc9",
+          "fa35fd5f-8bd2-499a-9384-2e5eb83dbd35",
+          "f588e9f5-9ba7-4541-994a-488806ebc089",
+          "3d604488-be92-4f2d-8216-08dbbaeae873",
+          "e3c12f5d-58e7-4320-b888-e43878021869",
+          "6ca648a5-1861-48d8-ab99-f1517c985ad0",
+          "4d0f73a2-ac1c-4c23-9579-03adafb0d652",
+          "65741830-86fb-4f09-97ca-bc3ed5005596",
+          "235e15a9-4e73-4c2f-8288-0617ac6be404",
+          "b65e8977-5f41-408b-90b5-a5c0f0c64f6e",
+          "692856dc-1b34-4543-9154-72f5239b6175",
+          "8d1cf399-e22b-4cd1-888c-b36b91a2e733",
+          "45ea39d6-7429-45eb-8a43-590641671c0d",
+          "82226bbb-40bd-4ef9-a6ec-b134715bb941",
+          "7045bfa0-1ef9-4017-a86c-8eeeeb132a68",
+          "edeb0159-0a57-4458-b46c-e7fa0d9289bb",
+          "10181c49-7050-4789-8ee3-a85f1c17e20b",
+          "70370910-cd6d-486e-944a-f670f2767a89",
+          "d1000930-90fb-4ac2-9658-14459ebc3c33",
+          "8a3f18b2-d9fc-4edb-a541-6c441dd4713b",
+          "08625960-0cd8-4c8a-b419-6353db0bd9f4",
+          "18939f2d-8c81-481f-a468-03ba26b9130c",
+          "53e68870-40d7-4636-b56c-a10374ab012a",
+          "d1dcf7bb-fb16-4308-8c11-e5518af7e5e5",
+          "23ef0938-069b-45ec-b4bc-60b46e875a29",
+          "9ae1c0b4-ecb9-4e90-b5ce-016c5522d140",
+          "c13dc94d-544c-4638-8b5c-71a430a2b811",
+          "4f99daef-1d3b-4709-ad86-a4fd2dc6d1a1",
+          "c823a23e-136f-4a70-9d8d-3e903981f8c3",
+          "70241588-6557-41c5-8811-d73792f7e5a6",
+          "901a8e40-4c58-436c-a35b-fe59df3b3b44",
+          "e9b286b6-3c93-46fc-9738-90414dd2e363",
+          "d52b1f0b-bf82-465b-be7f-ae77f2f20968",
+          "24c1a009-66b0-471c-86de-7f5e2f714b98",
+          "296d9528-9668-4973-a896-e5b1be45b1c6",
+          "baab24d1-142b-4ed4-b229-008610617728",
+          "0b6646ed-b283-41a6-aa4d-608c35cc97e0",
+          "79e1d4a0-a747-4431-be7f-dbad463a5c82",
+          "b390ce38-d400-4a39-ac2b-f2cb1c94a79e",
+          "edceede1-f1b6-4f95-8fd6-7f27200e5602",
+          "2714598e-3c40-436e-9476-70c3b94a5bf3",
+          "79f56680-63f7-4209-bb01-83bbd337b34b",
+          "7febe8fd-aacd-408b-98ba-97b76a9bbf70",
+          "a048c60f-f141-4c5c-87ab-008a2db1c218",
+          "a8bb98ad-443c-43c9-bbc0-1bc8cf7da6ff",
+          "5fa12f85-1ea7-4aec-960e-08ceba8d9ab6",
+          "4a9ff5f1-e79f-4a15-8e87-63521ffd3ce9",
+          "d3b2c2ec-8c1a-4f9f-ac17-402a3dad6da2",
+          "75effef1-7f7f-4b87-a6fd-7b4ecc364255",
+          "eddb84e8-982e-4516-a3a8-6a69c58cd098",
+          "78c952a2-554c-48af-981d-6b5d54e2affa",
+          "f539236d-ae01-4739-99ad-73e2cfdd3b1e",
+          "d4483501-c58c-4117-af75-b4167d7f3d54",
+          "0a3973e4-79de-4217-9f5a-5f0a10d6ae9b",
+          "94a97259-8b19-4e2f-8a8e-1f7d24908fd6",
+          "f8f7e79d-cc36-4cad-b5d6-d7c92a939405",
+          "c689d40d-404f-4434-bfc6-5a2b7d0c5648",
+          "72da0a9f-b67b-4bfa-8c6e-68729f64e593",
+          "df2000f0-6e3b-45f9-a6f5-1f78ac5a0501",
+          "e49f788a-a1a0-4b65-8ed8-a2d9712cf956",
+          "a1073a70-8694-477e-9e6a-37da233307a1",
+          "c7301c53-9fdc-4937-b388-788cd27fd9b6",
+          "fc9ff9a4-a5dd-4d9e-84f9-4248fc1ddfe0",
+          "bb34524c-971d-4beb-a50b-bfd4014215b1",
+          "d592f791-beb9-4cf5-b050-124f5e2cebee",
+          "64a859e0-4fe8-48dd-9c09-ed6040b0fa2b",
+          "4b987508-a305-462c-ab53-bfe5f09abbf4",
+          "95408e68-fde1-4987-8a48-7f21a23f46f9",
+          "a3b9b949-9f0b-4ac7-bf4a-45cc6a40dd41",
+          "a8d4e6a6-0dab-4218-b2be-c114b9c61174",
+          "05cd2514-ef4b-4d78-9701-18884952f22e",
+          "5009b441-9955-4b97-9e40-8bd240ea2eba",
+          "8ece7f87-0b9e-4352-803a-afec25efa782",
+          "5f1e6f0b-a4d9-4afc-bc83-67b66560b450",
+          "6cdaef92-6afd-4758-aef6-ddf079b2967e",
+          "298fc43f-81b9-4bfa-a2aa-07b3db70a833",
+          "3fb1da07-39d4-4929-b0b3-34f612b13f70",
+          "61c62d90-e8e2-474f-a22f-76d3a0f5eaa1",
+          "adf3dbdd-5f2c-4c2d-94d1-b863f20780c1",
+          "ff0c40c6-e436-413a-a7e1-18770abc2a44",
+          "b83778af-3d64-45fb-b0ed-5d4ada7bdde6",
+          "5993157e-5356-48a1-9acf-581e64317162",
+          "0dc05f6f-5945-4c43-ab9e-95e9591e80a7",
+          "302f9262-c10b-4bcc-a29a-d50d7bdcf1cc",
+          "a6de851f-5dd5-4f75-99fc-0e0b235f4e38",
+          "56c880eb-381c-45dc-8f2a-2593808b3db2",
+          "475a5e11-cc7d-4b77-8b52-0d6b824fd5f7",
+          "386d442a-960f-4797-a4ab-0a1663433eda",
+          "778b9bc3-d13c-4d8a-8540-07ef7d6e69b1",
+          "6092b0b3-f17a-45f3-83fa-c9cb0b8774fb",
+          "9ec8c6ce-a67c-4203-b5b5-cdf9739b536e",
+          "cf5f2053-e0f6-4fef-bd7e-91fb9ea6b990",
+          "642be66d-d7c0-4552-9688-373c317a04cf",
+          "72717458-49bb-472c-b4a7-6a929ff8d944",
+          "832d1420-bb75-4a2d-acf4-e6abe765adcf",
+          "27dd3e4a-ff4f-48a3-913c-415616616ca1",
+          "6c32a9b2-0552-428f-a1e5-4211a319e2fb",
+          "a7020110-ae02-4435-b604-bcdaf9ea78ac",
+          "c8abfdc7-70b9-4e61-b19d-9666b883410d",
+          "c4bc5817-3f76-4173-8993-995eeab561b2",
+          "e19eecb3-32d1-4506-8e9a-1ba5093c140e",
+          "580f3808-026d-477b-92db-7ebf829d2444",
+          "fd26a777-70f8-4913-94e2-fa85f24b27b0",
+          "96da5765-e813-495d-9bb5-d0a97d26ebc9",
+          "2a4024ef-da30-4fb2-8064-1f07721b65d0",
+          "18666b59-797f-40cc-877b-25bbb68c1ff2",
+          "f005c67a-6ceb-470e-ab9d-74d074fce369",
+          "7103db59-1792-421b-88d6-2bbcb96d0981"
+        ]
+      }
+    ]
+  },
+  "@openmrs/esm-patient-orders-app": {
+    "orderEncounterType": "a9ef19d1-8875-11ea-8c74-7a7919290ad6",
+    "orderTypes": [
+      {
+        "label": "Procedures",
+        "orderTypeUuid": "67a92e56-0f88-11ea-8d71-362b9e155667",
+        "orderableConceptSets": ["e44f17a3-28bd-4fe1-a4e1-1bb94779a1fd"]
+      },
+      {
+        "label": "Medical Supplies",
+        "orderTypeUuid": "67a92e56-0f88-11ea-8d71-362b9e155667",
+        "orderableConceptSets": ["a9e74556-a544-4ef9-9826-09fa42fee296"]
+      }
+    ]
   }
 }
