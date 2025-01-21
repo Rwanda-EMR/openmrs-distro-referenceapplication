@@ -25,18 +25,14 @@
         "type": "person attribute",
         "uuid": "54d9edc3-c4b9-11ec-bd0f-80b65553bd85",
         "label": "Email address",
-        "validation": {
-          "matches": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
-        }
+        "validation": { "matches": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$" }
       },
       {
         "id": "religion",
         "type": "obs",
         "uuid": "8940ffb5-b52d-4bd4-a526-8b4e202f5279",
         "label": "Religion",
-        "validation": {
-          "required": false
-        },
+        "validation": { "required": false },
         "customConceptAnswers": [
           {
             "uuid": "9816f1d0-3e6e-4815-a5b7-c30228e4f04e",
@@ -54,10 +50,7 @@
             "uuid": "edd36070-bfc2-46ea-88c3-0a28baefb371",
             "label": "SDA/Adventists"
           },
-          {
-            "uuid": "978af45c-3d7a-4566-b39a-e636e1828bb5",
-            "label": "Muslim"
-          },
+          { "uuid": "978af45c-3d7a-4566-b39a-e636e1828bb5", "label": "Muslim" },
           {
             "uuid": "f67cad13-b776-40a2-86cb-434234317572",
             "label": "Traditional v2"
@@ -66,14 +59,8 @@
             "uuid": "bff60b54-20b6-46a6-8ea8-99fb543c0abe",
             "label": "Buddhist"
           },
-          {
-            "uuid": "ed151c4a-0bc0-4596-9159-b09d8337c461",
-            "label": "Hindu"
-          },
-          {
-            "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2",
-            "label": "None"
-          },
+          { "uuid": "ed151c4a-0bc0-4596-9159-b09d8337c461", "label": "Hindu" },
+          { "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2", "label": "None" },
           {
             "uuid": "3d863739-47ca-411f-9dca-f4b3b602e04e",
             "label": "Temoin de Jehova"
@@ -85,9 +72,7 @@
         "type": "obs",
         "uuid": "2e00481d-9e6e-4740-9dc0-ab6232dff21c",
         "label": "Marital status",
-        "validation": {
-          "required": true
-        },
+        "validation": { "required": true },
         "customConceptAnswers": [
           {
             "uuid": "3cee0aca-26fe-102b-80cb-0017a47871b2",
@@ -105,10 +90,7 @@
             "uuid": "3cd6e55c-26fe-102b-80cb-0017a47871b2",
             "label": "Divorced"
           },
-          {
-            "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
-            "label": "Unknown"
-          }
+          { "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2", "label": "Unknown" }
         ]
       },
       {
@@ -116,22 +98,11 @@
         "type": "obs",
         "uuid": "3cd97286-26fe-102b-80cb-0017a47871b2",
         "label": "Occupation",
-        "validation": {
-          "required": true
-        },
+        "validation": { "required": true },
         "customConceptAnswers": [
-          {
-            "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2",
-            "label": "None"
-          },
-          {
-            "uuid": "3cd9786c-26fe-102b-80cb-0017a47871b2",
-            "label": "Trader"
-          },
-          {
-            "uuid": "3cd9757e-26fe-102b-80cb-0017a47871b2",
-            "label": "Farmer"
-          },
+          { "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2", "label": "None" },
+          { "uuid": "3cd9786c-26fe-102b-80cb-0017a47871b2", "label": "Trader" },
+          { "uuid": "3cd9757e-26fe-102b-80cb-0017a47871b2", "label": "Farmer" },
           {
             "uuid": "3cd976f0-26fe-102b-80cb-0017a47871b2",
             "label": "Student"
@@ -148,10 +119,7 @@
             "uuid": "3cdcc170-26fe-102b-80cb-0017a47871b2",
             "label": "Shepherd"
           },
-          {
-            "uuid": "3cdcc2ec-26fe-102b-80cb-0017a47871b2",
-            "label": "Brewer"
-          },
+          { "uuid": "3cdcc2ec-26fe-102b-80cb-0017a47871b2", "label": "Brewer" },
           {
             "uuid": "3cdcc468-26fe-102b-80cb-0017a47871b2",
             "label": "Shop Owner"
@@ -160,10 +128,7 @@
             "uuid": "3cdcbff4-26fe-102b-80cb-0017a47871b2",
             "label": "Fruit/Veggie Seller"
           },
-          {
-            "uuid": "3cdcbd06-26fe-102b-80cb-0017a47871b2",
-            "label": "Miner"
-          },
+          { "uuid": "3cdcbd06-26fe-102b-80cb-0017a47871b2", "label": "Miner" },
           {
             "uuid": "3cdcbe78-26fe-102b-80cb-0017a47871b2",
             "label": "Factory Worker"
@@ -192,10 +157,7 @@
             "uuid": "1ed2c51d-7d4d-44df-9257-48eaf61a2f7a",
             "label": "School Age But Not In School"
           },
-          {
-            "uuid": "f15d07f0-be62-44d4-89ef-0e17e0aa480e",
-            "label": "Driver"
-          },
+          { "uuid": "f15d07f0-be62-44d4-89ef-0e17e0aa480e", "label": "Driver" },
           {
             "uuid": "907716b4-1852-404a-9ee1-beff998f9461",
             "label": "Professional"
@@ -243,9 +205,7 @@
         "type": "obs",
         "uuid": "3cdcc5e4-26fe-102b-80cb-0017a47871b2",
         "label": "Education Level",
-        "validation": {
-          "required": true
-        },
+        "validation": { "required": true },
         "customConceptAnswers": [
           {
             "uuid": "7cee1a26-5092-4373-b5cd-7bad591d0c73",
@@ -275,14 +235,8 @@
             "uuid": "3ce3e48c-26fe-102b-80cb-0017a47871b2",
             "label": "Did Not Answer"
           },
-          {
-            "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2",
-            "label": "None"
-          },
-          {
-            "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
-            "label": "Unknown"
-          }
+          { "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2", "label": "None" },
+          { "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2", "label": "Unknown" }
         ]
       }
     ],
@@ -293,16 +247,12 @@
     "fieldConfigurations": {
       "phone": {
         "personAttributeUuid": "8b908adf-c964-4959-ad43-e2c7aeaa9c67",
-        "validation": {
-          "required": true
-        }
+        "validation": { "required": true }
       }
     }
   },
   "@openmrs/esm-patient-vitals-app": {
-    "vitals": {
-      "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd"
-    },
+    "vitals": { "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd" },
     "concepts": {
       "systolicBloodPressureUuid": "3ce934fa-26fe-102b-80cb-0017a47871b2",
       "diastolicBloodPressureUuid": "3ce93694-26fe-102b-80cb-0017a47871b2",
@@ -316,9 +266,7 @@
     }
   },
   "@openmrs/esm-service-queues-app": {
-    "vitals": {
-      "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd"
-    }
+    "vitals": { "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd" }
   },
   "@openmrs/esm-patient-tests-app": {
     "concepts": [
@@ -326,9 +274,7 @@
         "conceptUuid": "3cd4a882-26fe-102b-80cb-0017a47871b2",
         "defaultOpen": false
       },
-      {
-        "conceptUuid": "3ceda710-26fe-102b-80cb-0017a47871b2"
-      }
+      { "conceptUuid": "3ceda710-26fe-102b-80cb-0017a47871b2" }
     ],
     "labTestsWithOrderReasons": [],
     "orders": {
@@ -337,9 +283,7 @@
       "labOrderTypeUuid": "89da4d80-f1a3-11e1-bf88-bc305be7bdd2"
     },
     "resultsViewerConcepts": [
-      {
-        "conceptUuid": "3cd4a882-26fe-102b-80cb-0017a47871b2"
-      }
+      { "conceptUuid": "3cd4a882-26fe-102b-80cb-0017a47871b2" }
     ]
   },
   "@openmrs/esm-patient-medications-app": {
@@ -2109,7 +2053,20 @@
           "09e32d3a-3d69-39f7-9991-c707b99c44ff",
           "f5ee42df-8f8b-3f89-98c3-235220ff4dbd",
           "3a1f6357-ed3e-3917-bdcc-7af720ac3813",
-          "221e6a43-7ebd-3d3d-bca0-ffe7a7dcb158"
+          "221e6a43-7ebd-3d3d-bca0-ffe7a7dcb158",
+          "0c536a5f-aaa7-33be-8d47-1cde8fbea812",
+          "22654a19-e02f-3a4b-a9e2-6e89ff656340",
+          "65817800-f8a1-36c7-9b76-9994ca52db95",
+          "0f4c01b6-db64-3d3d-8635-0e9abe79f49a",
+          "adfcdd32-638b-3655-993a-b5c4e42f6585",
+          "4b4f5500-05f2-38d3-becd-b11233276c2f",
+          "e0df98e5-ada4-3f15-b458-606d159bb08f",
+          "9d2c1f6b-9c96-35ac-87f7-fe9367a89936",
+          "cee8090f-232c-36a8-af5f-b832964a117a",
+          "972cc855-ac02-3a16-ba89-c9a2eba1e244",
+          "d093b5c1-42c3-3645-ae39-13efd7b1a324",
+          "064e0d3c-7e22-3f8b-979b-5b0032c05eff",
+          "244d6213-5478-3c3b-a7da-243f05d71860"
         ]
       },
       {
@@ -2369,19 +2326,39 @@
       }
     ]
   },
+  "@openmrs/esm-laboratory-app": {
+    "encounterTypeUuid": "38a350d1-ef63-4bc0-80d7-391f56b22682",
+    "laboratoryOrderTypeUuid": "89da4d80-f1a3-11e1-bf88-bc305be7bdd2"
+  },
   "@openmrs/esm-patient-orders-app": {
-    "orderEncounterType": "a9ef19d1-8875-11ea-8c74-7a7919290ad6",
-    "orderTypes": [
-      {
-        "label": "Procedures",
-        "orderTypeUuid": "67a92e56-0f88-11ea-8d71-362b9e155667",
-        "orderableConceptSets": ["e44f17a3-28bd-4fe1-a4e1-1bb94779a1fd"]
-      },
-      {
-        "label": "Medical Supplies",
-        "orderTypeUuid": "67a92e56-0f88-11ea-8d71-362b9e155667",
-        "orderableConceptSets": ["a9e74556-a544-4ef9-9826-09fa42fee296"]
-      }
-    ]
+    "orderEncounterType": "a9ef19d1-8875-11ea-8c74-7a7919290ad6"
+  },
+  "@kenyaemr/esm-imaging-orders-app": {
+    "extensionSlots": {
+      "order-basket-slot": { "remove": ["add-imaging-order"] }
+    },
+    "radiologyConceptSetUuid": "1687dfa8-15db-4ea5-82d4-956edb6491e7",
+    "orders": {
+      "radiologyOrderTypeUuid": "7f779262-de04-425b-97f7-9e5cc834eb55",
+      "labOrderTypeUuid": "89da4d80-f1a3-11e1-bf88-bc305be7bdd2",
+      "labOrderableConcepts": ["91380981-bb09-46cc-999f-533d78a8e6bc"]
+    }
+  },
+  "@kenyaemr/esm-procedure-orders-app": {
+    "procedureOrderTypeUuid": "8c5b0ff2-dfaf-4a56-a65d-1a2a6c27ab5e",
+    "procedureConceptSetUuid": "1298c736-2749-4e66-9b94-b0ffa8a95ed2",
+    "extensionSlots": {
+      "order-basket-slot": { "remove": ["add-procedures-order"] }
+    }
+  },
+  "@kenyaemr/esm-medical-supply-orders-app": {
+    "orders": {
+      "medicalSupplyOrderTypeUuid": "a9e74556-a544-4ef9-9826-09fa42fee296",
+      "medicalSupplyOrderableConcepts": ["75347386-0602-4676-81be-26e88158df50"]
+    },
+    "medicalSupplyQuantityUnitsConceptSetUuid": "162384AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "extensionSlots": {
+      "order-basket-slot": { "remove": ["add-medical-supply-order"] }
+    }
   }
 }
