@@ -315,11 +315,6 @@
       "generalPatientNoteUuid": "6602a73b-b8d3-40bc-bae8-f00ff3b9cceb"
     }
   },
-  "@openmrs/esm-service-queues-app": {
-    "vitals": {
-      "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd"
-    }
-  },
   "@openmrs/esm-patient-tests-app": {
     "concepts": [
       {
@@ -2383,5 +2378,68 @@
         "orderableConceptSets": ["a9e74556-a544-4ef9-9826-09fa42fee296"]
       }
     ]
+  },
+  "@openmrs/esm-service-queues-app": {
+    "concepts": {
+      "priorityConceptSetUuid": "3aa00fcc-2565-461b-8ac1-f4943a6ee5ac",
+      "defaultPriorityConceptUuid": "a2b31b20-13b0-415f-ad0b-4c312874173c",
+      "emergencyPriorityConceptUuid": "fe351ac8-550a-42d1-aaa4-409a2be28cb0",
+      "serviceConceptSetUuid": "d0825f1e-5199-49fe-bbb3-a64e4207b679",
+      "statusConceptSetUuid": "9484732b-bcaf-429e-86cb-d6cf3da34211",
+      "defaultStatusConceptUuid": "33c359e5-34d5-4a99-a4ce-4400340c1db7",
+      "defaultTransitionStatus": "a5d9e59d-674f-495e-89e0-6af8d812f50e",
+      "historicalObsConceptUuid": ["161643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"]
+    },
+    "priorityConfigs": [
+      {
+        "conceptUuid": "fe351ac8-550a-42d1-aaa4-409a2be28cb0",
+        "tagClassName": "tag",
+        "tagType": "red"
+      },
+      {
+        "conceptUuid": "a2b31b20-13b0-415f-ad0b-4c312874173c",
+        "tagClassName": "tag",
+        "tagType": "green"
+      },
+      {
+        "conceptUuid": "ef5718cd-d6d5-4fcf-bb82-cc4afaa90603",
+        "tagClassName": "tag",
+        "tagType": "gray"
+      }
+    ],
+    "visitQueueNumberAttributeUuid": "c61ce16f-272a-41e7-9924-4c555d0932c5",
+    "queueTables": {
+      "columnDefinitions": [
+        {
+          "id": "serve-patient",
+          "columnType": "extension",
+          "header": "Serve Patient"
+        }
+      ],
+      "tableDefinitions": [
+        {
+          "columns": [
+            "patient-name",
+            "queue-number",
+            "coming-from",
+            "priority",
+            "status",
+            "queue",
+            "wait-time",
+            "serve-patient",
+            "actions"
+          ]
+        }
+      ]
+    },
+    "showQueueTableTab": false,
+    "defaultIdentifierTypes": [
+      "05ee9cf4-7242-4a17-b4d4-00f707265c8a",
+      "f85081e2-b4be-4e48-b3a4-7994b69bb101"
+    ],
+    "defaultFacilityUrl": "/ws/rest/v1/kenyaemr/default-facility"
+  },
+  "@openmrs/esm-patient-chart-app": {
+    "showServiceQueueFields": true
   }
 }
