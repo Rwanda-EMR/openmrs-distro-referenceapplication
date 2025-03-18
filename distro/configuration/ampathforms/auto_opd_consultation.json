@@ -1,0 +1,2264 @@
+{
+    "name": "Auto OPD consultation 2.0",
+    "description": "Auto OPD consultation",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "General OPD",
+    "referencedForms": [],
+    "uuid": "a734da06-16ea-4c61-9a24-96b259604a85",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "History and Examination",
+        "sections": [
+          {
+            "label": "Anamneses and other findings",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": " Motif de Consultation/Presenting Complaints",
+                "type": "obs",
+                "required": false,
+                "id": "PresentingComplaints",
+                "questionOptions": {
+                  "rendering": "multiCheckbox",
+                  "concept": "3cd95a58-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "SYMPTOM PRESENT"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "1293"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "SYMPTOM PRESENT"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "1293"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "RWCS",
+                      "value": "1293"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "3ccdf8d4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Abdominal Pain",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "ABDOMINAL PAIN"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "151"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cf29d4c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Abdominal Swelling",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "6019"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "ABDOMINAL SWELLING"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "b694aa46-7543-46ac-ad86-80e501a82289",
+                      "label": "Agitation",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd4bc50-26fe-102b-80cb-0017a47871b2",
+                      "label": "Anorexia",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "ANOREXIA"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "868"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ce6b1ee-26fe-102b-80cb-0017a47871b2",
+                      "label": "Anxiety Disorder",
+                      "conceptMappings": [
+                        {
+                          "type": "ICD-10",
+                          "value": "F43.1"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "P74"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 4.1"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "P75"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "P82"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "F42.9"
+                        },
+                        {
+                          "type": "SNOMED CT",
+                          "value": "CT: 191736004"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "ANXIETY DISORDER"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "2719"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "F40-F48"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "P79"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "454ffc9e-67b4-4976-9db8-64c992646a64",
+                      "label": "Behavior Disorder",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "c64a7a8d-e11a-44b8-93d4-964e663e3f72",
+                      "label": "Bleeking Gums",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "17d87398-8306-4591-8ff7-b596368ed50b",
+                      "label": "Bloody Stool",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "df4e13f2-999c-42dd-9633-babe90eb90c2",
+                      "label": "Bloody Vomiting",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "5ecdc4e3-a669-4157-9bcb-ad5809452135",
+                      "label": "Brurry Vision",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd67d1a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cardiovascular Disease",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "996"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "CARDIOVASCULAR DISEASE"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "1251dd76-1be0-45e6-be91-3c07e6fd9b4c",
+                      "label": "Change Of The Voice",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "44282b8c-89d7-49af-878a-564e4efb0d9f",
+                      "label": "Cheek Swelling",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "aba63a83-d36a-4d0f-96ac-72c45d523c88",
+                      "label": "Chemosis",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3ccd2364-26fe-102b-80cb-0017a47871b2",
+                      "label": "Chest Pain",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "136"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "CHEST PAIN"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd4c100-26fe-102b-80cb-0017a47871b2",
+                      "label": "Chills",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "871"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "CHILLS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "dad8f0fe-2d49-469a-a7df-46a717d875ad",
+                      "label": "Cockerow",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "eb061310-0040-444b-9e91-89b53aa66e48",
+                      "label": "Coma",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf27e66-26fe-102b-80cb-0017a47871b2",
+                      "label": "Confusion",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "6006"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "CONFUSION"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "57e044e4-6c2b-41c5-9b15-8105932e34c5",
+                      "label": "Conjonctivitis",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cdc6504-26fe-102b-80cb-0017a47871b2",
+                      "label": "Constipation",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "CONSTIPATION"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "1628"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cce938e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Convulsions",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "N07"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "R56.8"
+                        },
+                        {
+                          "type": "RSMS",
+                          "value": "co"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "SEIZURE"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "206"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cccf632-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cough",
+                      "conceptMappings": [
+                        {
+                          "type": "ICD-10",
+                          "value": "R05"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "COUGH"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "107"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ce5b9b0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cough Lasting Greater Than Two Weeks",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "COUGH LASTING GREATER THAN TWO WEEKS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "2573"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ce5bb2c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cough Lasting Less Than Two Weeks",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "2574"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "COUGH LASTING LESS THAN TWO WEEKS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cda436e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cough Lasting More Than Three Weeks",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "1430"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "COUGH LASTING MORE THAN THREE WEEKS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "7db15d2f-8e04-4306-9683-237e5f9371f0",
+                      "label": "Coughing Up Bloody Sptutum",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "208e6a67-6e8e-419e-af24-bfc461b5efb7",
+                      "label": "Cutaneous Bleeding",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cce9514-26fe-102b-80cb-0017a47871b2",
+                      "label": "Depression",
+                      "conceptMappings": [
+                        {
+                          "type": "ICD-10",
+                          "value": "F32.9"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "207"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 4.1"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "DEPRESSION"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "P03"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ccd0a64-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dermatitis, Allergic",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "120"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "DERMATITIS, ALLERGIC"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd54256-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dermatophytosis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "DERMATOPHYTOSIS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "937"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "S74"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "B36.9"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ccc6a00-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "DIARRHEA"
+                        },
+                        {
+                          "type": "RSMS",
+                          "value": "di"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "16"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cda44ea-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea Chronic (Greater Than Or Equal To 1 Month)",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "DIARRHEA CHRONIC (GREATER THAN OR EQUAL TO 1 MONTH)"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "1431"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd65830-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea Less Than One Month",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "DIARRHEA LESS THAN ONE MONTH"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "971"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ce14aba-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea, Bloody",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "DIARRHEA, BLOODY"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "2135"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "A09.0"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 3.B.12"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 2.E.3"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "d63aa152-8731-4d59-b91a-5110918b7f46",
+                      "label": "Difficulty In Drinking",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "a03458af-357c-449f-99af-0148bf955577",
+                      "label": "Difficulty Of Sucking",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "cae556df-25a8-48d8-9e46-afe1fe612e63",
+                      "label": "Difficulty Walking",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "6f2e5810-8593-4874-8145-ad737fdb6d08",
+                      "label": "Diffuse Conjuctivale Redness",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "8292a426-3f05-4ea0-b960-4df5ccbb93f3",
+                      "label": "Dificulty Breathing",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "ba26b4ef-ed4d-4c63-a9c0-f0a8e08e908e",
+                      "label": "Dificulty Crowling",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "f8f84cef-2173-41b2-8b7b-2659bdb98a87",
+                      "label": "Dificulty Sitting",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "690b131f-dbd6-48ea-b5c2-ac162d4e203a",
+                      "label": "Disphagia",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3ce14056-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dry Cough",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "DRY COUGH"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "2128"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd4d0c8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dysphagia",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "881"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "DYSPHAGIA"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cce5f68-26fe-102b-80cb-0017a47871b2",
+                      "label": "Epistaxis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "173"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "EPISTAXIS"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "R06"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "656d0bde-c909-45dc-9976-c6bbaeace9d9",
+                      "label": "Extraction D'Une Dent Impactée",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "33fd5353-f56e-49d9-85da-f22a917f183e",
+                      "label": "Eye Bleeding",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "db63a9aa-f22c-4029-bf57-f9d05e6a4017",
+                      "label": "Facial Paralysis",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf19000-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fatigue",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "A04"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "5949"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "FATIGUE"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "R53"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "227f9870-f99d-421f-a214-767726d63113",
+                      "label": "Feeling Dizzy",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "2c287a2a-db09-4586-98c5-c4ff45b4b66a",
+                      "label": "Feeling Of The Foreign Body In The Eye",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "c55086bb-0d8f-4273-bd49-c7e8627378ad",
+                      "label": "Feet Deformity",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf1898e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fever",
+                      "conceptMappings": [
+                        {
+                          "type": "RSMS",
+                          "value": "fe"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "A03"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 3.B.20"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "FEVER"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "5945"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd4fd00-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fever Of Unknown Origin",
+                      "conceptMappings": [
+                        {
+                          "type": "ICD-10",
+                          "value": "R50.9"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "A03"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 3.B.20"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "901"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "FEVER OF UNKNOWN ORIGIN"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "8671559b-6493-4c03-ade5-c4a448a86c86",
+                      "label": "Flaccid Paralysis On One Limbs",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "1f3d0f6c-f59c-4f8e-addb-137d49af48d6",
+                      "label": "Flaccid Paralysis On Serveral Limbs",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd659ac-26fe-102b-80cb-0017a47871b2",
+                      "label": "Focal Neurological Deficit",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "972"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "FOCAL NEUROLOGICAL DEFICIT"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cce5dd8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gastritis",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "D87"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 2.E.20"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "GASTRITIS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "172"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "K29.9"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "23bf765a-30ab-45a3-b231-aa1131eddfd8",
+                      "label": "Gastritis With Hemorrhage",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "3107"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "GASTRITIS WITH HEMORRHAGE"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "d3b7db43-7ed6-42a5-86d8-1822637b48dc",
+                      "label": "Gastritis Without Hemorrhage",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "3108"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "GASTRITIS WITHOUT HEMORRHAGE"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "0d049b0e-3ce0-4f2f-853d-bc31d30a5846",
+                      "label": "Generalized Pain",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cde6656-26fe-102b-80cb-0017a47871b2",
+                      "label": "Genital Discharge",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "GENITAL DISCHARGE"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "1816"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd4b5d4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Genital Sores",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "X29,Y29"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "864"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 2.F.33"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "GENITAL SORES"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "GENITAL SORES"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "dfd88507-695f-4eb6-99e8-52d7c5f9ba2f",
+                      "label": "Genitourinary Problem",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "3111"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "GENITOURINARY PROBLEM"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "959d0afc-5378-491b-bc73-e700711289a8",
+                      "label": "Gum Bleeding",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "9719a19a-7e7e-461e-bbe0-5fac06f9abbe",
+                      "label": "Gum Swelling",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd24178-26fe-102b-80cb-0017a47871b2",
+                      "label": "Headache",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "N01"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "R51"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "HEADACHE"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "620"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd4b124-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hearing Difficulties",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "HEARING DIFFICULTIES"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "861"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd656be-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hemoptysis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "970"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "HEMOPTYSIS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "52d1da45-4832-44a9-83f8-9e9fc1b68780",
+                      "label": "Hemorrhaging Bleeding",
+                      "conceptMappings": [
+                        {
+                          "type": "RSMS",
+                          "value": "he"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "da21d7f5-0e39-448b-94f4-d7b52900a7b8",
+                      "label": "Hip Rotation & Deviation",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "f79541e4-06ff-4d78-a1e0-456e21ff1c91",
+                      "label": "Hypersalvation",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "778775f0-3e6c-4604-927c-4ee72e27b12f",
+                      "label": "Impaired Consciousness",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf2a6fc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Irritability",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "IRRITABILITY"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "6023"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ccea1bc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Jaundice",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "D13"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "215"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "R17"
+                        },
+                        {
+                          "type": "RSMS",
+                          "value": "ja"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "JAUNDICE"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "215"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "JAUNDICE"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cccc7ac-26fe-102b-80cb-0017a47871b2",
+                      "label": "Joint Pain",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "L20"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "80"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "JOINT PAIN"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "6d91ae50-80e3-4ae9-88d8-8a2211651c70",
+                      "label": "Knock Knees",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd47fce-26fe-102b-80cb-0017a47871b2",
+                      "label": "Laryngitis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "830"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "LARYNGITIS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "6a6b7aba-b779-4e37-9856-3e087a12a00a",
+                      "label": "Leg Cramps",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "6474"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "LEG CRAMPS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "c613ddd9-bf77-4d45-a26c-3942947f961d",
+                      "label": "Leg Deformity",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "473c2f4c-0111-4cd4-a90b-7f129a2ac8b8",
+                      "label": "Lethargia",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "1f0529bf-fbf3-492e-b65d-f1549a7495a2",
+                      "label": "Limited Rom",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3ce50fec-26fe-102b-80cb-0017a47871b2",
+                      "label": "Loss Of Appetite",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "2553"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "LOSS OF APPETITE"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "85949193-bd79-4155-ab3a-1b807a448c1b",
+                      "label": "Loss Of Consciousness",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "6780"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "Loss of consciousness"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ce84f90-26fe-102b-80cb-0017a47871b2",
+                      "label": "Lumbar Pain",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "2846"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "LUMBAR PAIN"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "9271f3d0-e5d6-4934-b7a7-1de53b85fe1a",
+                      "label": "Lymph Nodes Tumefaction",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd4bde0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Malaise",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "869"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "MALAISE"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "45e81d7a-b6a1-418c-8082-cb0b751e5f17",
+                      "label": "Membrane Adherent To The Nose",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "be3d5a29-2025-460c-bcf0-01dc03f78f74",
+                      "label": "Membrane Adherent To The Pharynx",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "e562ef93-2052-4782-a125-e217eab83191",
+                      "label": "Membrane Adherent To The Tonsil",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "6c531519-9c65-40a4-89f0-a283d1116ff2",
+                      "label": "Mild Dihydration",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3ccd0bf4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Myalgia",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "MYALGIA"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "121"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "24419409-48e8-4005-92ca-3dd0729661f3",
+                      "label": "Nagging Cough",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf1c610-26fe-102b-80cb-0017a47871b2",
+                      "label": "Nausea",
+                      "conceptMappings": [
+                        {
+                          "type": "RWANDA",
+                          "value": "NAUSEA"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "NAUSEA"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "5978"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "5978"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "f48fb2a9-9276-4096-b297-a41f903b8621",
+                      "label": "Neck Pain",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3ce17418-26fe-102b-80cb-0017a47871b2",
+                      "label": "Night Sweats For Greater Than 3 Weeks",
+                      "conceptMappings": [
+                        {
+                          "type": "RWANDA",
+                          "value": "2163"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "NIGHT SWEATS FOR GREATER THAN 3 WEEKS"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "NIGHT SWEATS FOR GREATER THAN 3 WEEKS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "2163"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ce17594-26fe-102b-80cb-0017a47871b2",
+                      "label": "Night Sweats For Less Than 3 Weeks",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "NIGHT SWEATS FOR LESS THAN 3 WEEKS"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "2164"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "2164"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "NIGHT SWEATS FOR LESS THAN 3 WEEKS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cf2b548-26fe-102b-80cb-0017a47871b2",
+                      "label": "Night Sweats V2",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "6029"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "NIGHT SWEATS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd9e22a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Nodular Rash",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "NODULAR RASH"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "1370"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cea18ac-26fe-102b-80cb-0017a47871b2",
+                      "label": "Nuchal Rigidity",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "NUCHAL RIGIDITY"
+                        },
+                        {
+                          "type": "RSMS",
+                          "value": "ns"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "5170"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "afd6d18b-5f0e-4fe0-a2df-426126cd1c59",
+                      "label": "Orthopnea",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "ORTHOPNEA"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "3486"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cee7fb4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Other Non-Coded",
+                      "conceptMappings": [
+                        {
+                          "type": "local",
+                          "value": "5622"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "OTHER NON-CODED"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "5622"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "OTHER NON-CODED"
+                        },
+                        {
+                          "type": "org.openmrs.module.mdrtb",
+                          "value": "OTHER"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "O80.9"
+                        },
+                        {
+                          "type": "CBS",
+                          "value": "C0015 (C0015)"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ccea66c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Otitis Externa",
+                      "conceptMappings": [
+                        {
+                          "type": "ICD-10",
+                          "value": "H60.9"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "218"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "H70"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "OTITIS EXTERNA"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "7c4d837b-5967-4ba6-902c-ca7651bebf34",
+                      "label": "Pain_",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "Pain"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "6896"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "369c061d-3738-41b2-8f63-4eece65b8aae",
+                      "label": "Painful Spasms",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf279a2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Paresthesia",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "6004"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "PARESTHESIA"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd471be-26fe-102b-80cb-0017a47871b2",
+                      "label": "Perip Neuro",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "821"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "PERIPHERAL NEUROPATHY"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "821"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "PERIPHERAL NEUROPATHY"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "a22089fd-2c00-4215-ade7-2942b3a888c3",
+                      "label": "Persistant Skin Fold",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "0cc4e943-70ec-4096-91c8-e7d699ff9804",
+                      "label": "Petechiae",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3ccdf6b8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pharyngitis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "150"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "PHARYNGITIS"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "R83"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "1903ab33-44cf-49d1-9d58-993e4c26c41d",
+                      "label": "Photophobia",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "a37ba441-9ea2-43ea-8ec6-c5563c333caf",
+                      "label": "Pins And Needles",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf1a4a0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Productive Cough V2",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "PRODUCTIVE COUGH"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "5957"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "a51a8007-236a-4052-b0d1-feb13baf695f",
+                      "label": "Projectile Vomiting",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "f31ac3e3-c80d-4e74-8821-5fa473d46b5b",
+                      "label": "Prostration",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd4cda8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pruritis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "PRURITIS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "879"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "L29.9"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "S02"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3ccea7fc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Psychosis",
+                      "conceptMappings": [
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 4.1"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "P71"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "PSYCHOSIS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "219"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3650ee91-1898-4ab6-9fc5-d15aab35336c",
+                      "label": "Quiver",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "891dbb6d-d7d0-4b75-aaf4-e75b85d0ff2a",
+                      "label": "Raging Thirst",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cd182e2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rash",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "RASH"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 3.B.32"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "512"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 2.E.23"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "R21"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "S06-07"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "8fafaf10-f287-40fa-b759-4d4500e6cee1",
+                      "label": "Redness Of An Eye",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "942bab71-e8d7-4ca7-a02e-492f2fb6a3d0",
+                      "label": "Retraction Skin Fold",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "d5e674ae-76a6-40cf-bc41-0922732ad479",
+                      "label": "Severe Dihydration",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf1a95a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Short Of Bre",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "5960"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "SHORTNESS OF BREATH"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "08090f41-eff1-4eda-96a0-5b40e14d3f67",
+                      "label": "Skin Lesion_",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "918b11a8-bbd8-44d5-9ba5-24bfac4b6a3d",
+                      "label": "Skin Rash",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "336b83ec-2f7f-42aa-ae5c-e314e0f2ce0b",
+                      "label": "Spasms",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "66d15760-b744-498e-a5ae-269ce8b94e23",
+                      "label": "Stiffness",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "f66fb64e-e13e-401c-a9a2-e76863262e39",
+                      "label": "Stool With Traces Of Blood",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "5b8bc3ef-b2c2-4acc-aac0-6cfce814f8b4",
+                      "label": "Stridor",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "b718ee7f-5909-4d1f-8475-06dbe423ec7a",
+                      "label": "Sunken Eyes",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "5420a010-7177-44b8-8c60-4c379e635f58",
+                      "label": "Sweeting",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cf1ef32-26fe-102b-80cb-0017a47871b2",
+                      "label": "Swelling",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "SWELLING"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "6001"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cdd258e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Symptom Comment",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "SYMPTOM COMMENT"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "1736"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "35261cab-f3e1-48a0-9774-b667183ad027",
+                      "label": "Tearing",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "17b603a9-dc55-4e08-b92e-6b0c64aec8b7",
+                      "label": "Teeth Cavity",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "19437918-b1f5-4211-95fb-bceae9f69a35",
+                      "label": "Teeth Cleaning",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "2889aa4d-2095-4c43-bf26-fbcbc971d788",
+                      "label": "Thoracic Pain",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "THORACIC PAIN"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "6475"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd4b76e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Throat Painful",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "THROAT PAINFUL"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "865"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cdc67f2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tinnitus",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "TINNITUS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "1630"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "81a1735d-b857-49ef-ad50-55341afa3342",
+                      "label": "Tongue Swelling",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "3cccfde4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tonsillitis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "TONSILLITIS"
+                        },
+                        {
+                          "type": "ICD-10",
+                          "value": "J03.9"
+                        },
+                        {
+                          "type": "SNOMED CT",
+                          "value": "CT: 17741008"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "R76"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "112"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "c46795c6-207a-4d31-82fb-0accf9708835",
+                      "label": "Tooth Pain",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "dc571ded-f096-47da-97c4-d02b2a1c517e",
+                      "label": "Trismus",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "9e3d7085-3d08-4585-85f0-36134d764f92",
+                      "label": "Unconciousness",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "a2a69b56-9e5a-46c3-ac93-f867e1c9df6b",
+                      "label": "Unspecified Meningitis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "3109"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "UNSPECIFIED MENINGITIS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cccf4a2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Upper Respiratory Tract Infection",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "UPPER RESPIRATORY TRACT INFECTION"
+                        },
+                        {
+                          "type": "ICPC-2",
+                          "value": "R74"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 3.B.18"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "106"
+                        },
+                        {
+                          "type": "Rwanda HMIS Report 2012 01 20",
+                          "value": "HMIS Report 2012 01 20: 2.E.18"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "0f3f27e8-949d-4ef3-9c1a-04cb2ac121ff",
+                      "label": "Vaginal Bleeding",
+                      "conceptMappings": []
+                    },
+                    {
+                      "concept": "fac0b0d9-945b-40a9-a865-2176f61f6059",
+                      "label": "Viral Meningitis",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "3110"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "VIRAL MENINGITIS"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cf19e60-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vision Difficulties",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "5953"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "VISION DIFFICULTIES"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cf1c930-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vomiting",
+                      "conceptMappings": [
+                        {
+                          "type": "RWANDA",
+                          "value": "Vomiting"
+                        },
+                        {
+                          "type": "RWANDA",
+                          "value": "5980"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "5980"
+                        },
+                        {
+                          "type": "RSMS",
+                          "value": "vo"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "VOMITING"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd482ee-26fe-102b-80cb-0017a47871b2",
+                      "label": "Weight Loss",
+                      "conceptMappings": [
+                        {
+                          "type": "ICPC-2",
+                          "value": "T08"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "WEIGHT LOSS"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "832"
+                        }
+                      ]
+                    },
+                    {
+                      "concept": "3cd9c77c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Weight Loss Greater Than Ten Percent",
+                      "conceptMappings": [
+                        {
+                          "type": "PIH",
+                          "value": "WEIGHT LOSS GREATER THAN TEN PERCENT"
+                        },
+                        {
+                          "type": "PIH",
+                          "value": "1352"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Other Motive de Consultation",
+                "type": "obs",
+                "required": false,
+                "id": "otherMotiveDeConsultation",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "3cdd258e-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "SYMPTOM COMMENT"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "1736"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "History of the present illness/Anamnese",
+                "type": "obs",
+                "required": false,
+                "id": "historyOfThePresentIllness",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "24aa74e0-a281-4031-8919-63f3eaf3a729"
+                },
+                "validators": []
+              },
+              {
+                "label": "Past medical history / Antecedents",
+                "type": "obs",
+                "required": false,
+                "id": "pastMedicalHistory",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "bc3862d8-6825-4878-8801-f1e7b0790071",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "PREVIOUS MEDICAL HISTORY"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "6178"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Physical Examination",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "General aspect / Aspect general",
+                "type": "obs",
+                "id": "physical_examination",
+                "questionOptions": {
+                  "concept": "3cd9ae0e-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Pulmonary System",
+                "type": "obs",
+                "id": "pulmonary_system",
+                "questionOptions": {
+                  "concept": "3ce15384-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Cardiovascular System",
+                "type": "obs",
+                "id": "cardiovascular_system",
+                "questionOptions": {
+                  "concept": "3ce1567c-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Abdominal System",
+                "type": "obs",
+                "id": "abdominal_system",
+                "questionOptions": {
+                  "concept": "3ce157ee-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Neurologic System",
+                "type": "obs",
+                "id": "neurologic_system",
+                "questionOptions": {
+                  "concept": "3ce1596a-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Musculoskeletal System",
+                "type": "obs",
+                "id": "musculoskeletal_system",
+                "questionOptions": {
+                  "concept": "3ce15c58-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Urogenital System",
+                "type": "obs",
+                "id": "urogenital_system",
+                "questionOptions": {
+                  "concept": "3ce15f46-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Skin,Growths,Ganglions",
+                "type": "obs",
+                "id": "skin,_growths,_ganglions",
+                "questionOptions": {
+                  "concept": "3ce1625c-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Psychomotor System",
+                "type": "obs",
+                "id": "psychomotor_system",
+                "questionOptions": {
+                  "concept": "00727a2a-821a-4d21-af08-581e04b7b279",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Head Ear Eye Nose Throat",
+                "type": "obs",
+                "id": "hd",
+                "questionOptions": {
+                  "concept": "d2aa91b1-3b54-4c9b-b70b-99451d486395",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Neck",
+                "type": "obs",
+                "id": "neck",
+                "questionOptions": {
+                  "concept": "150fb48b-574a-43c3-afb7-fcff6f06170c",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Other Physical Systems",
+                "type": "obs",
+                "required": false,
+                "id": "otherPhysicalSystems",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "e2d3493a-9db0-4c2e-9254-db41db8b0807",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "OTHER PHYSICAL SYSTEM"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "2925"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Diagnosis and Screening",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Syndromic summary / Résumé syndromique",
+                "type": "obs",
+                "required": false,
+                "id": "syndromicSummary",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "c3998372-d45f-40a0-9369-366f321067a1"
+                },
+                "validators": []
+              },
+              {
+                "label": "Visit Diagnosis",
+                "type": "obsGroup",
+                "id": "Diagnosis",
+                "questionOptions": {
+                  "concept": "08dd5ecf-b381-47ea-a0f1-cd91a65505f7",
+                  "rendering": "repeating"
+                },
+                "validators": [],
+                "hide": {},
+                "questions": [
+                  {
+                    "label": "Presumptive diagnosis or Hypothesis",
+                    "type": "obs",
+                    "id": "diagnosis",
+                    "questionOptions": {
+                      "concept": "2dce81f9-3874-4247-b441-6369ca0725c2",
+                      "rendering": "ui-select-extended"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Infectious Disease and Reproductive Health",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Pregnancy Status",
+                "type": "obs",
+                "required": false,
+                "id": "pregnancyStatus",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "3ceb4880-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "PREGNANCY STATUS"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "5272"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "5272"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "PREGNANCY STATUS"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "3ce22110-26fe-102b-80cb-0017a47871b2",
+                      "label": "Yes"
+                    },
+                    {
+                      "concept": "3ce22c50-26fe-102b-80cb-0017a47871b2",
+                      "label": "No"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "HIV status",
+                "type": "obs",
+                "required": false,
+                "id": "hivStatus",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "aec6ad18-f4dd-4cfa-b68d-3d7bb6ea908e",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "HIV STATUS"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "HIV STATUS"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "3753"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "3753"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "3cd3a7a2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Positive"
+                    },
+                    {
+                      "concept": "3cd28732-26fe-102b-80cb-0017a47871b2",
+                      "label": "Negative"
+                    },
+                    {
+                      "concept": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Unknown"
+                    },
+                    {
+                      "concept": "3cd774d6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Indeterminate"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "STI Screening",
+                "type": "obs",
+                "required": false,
+                "id": "stiScreening",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "3cd9e838-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "SEXUALLY TRANSMITTED DISEASE OTHER"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "1374"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "SEXUALLY TRANSMITTED DISEASE OTHER"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "RWANDA",
+                      "value": "1374"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "7ddfed03-0a3d-46ec-a079-05fa127ba229"
+  }

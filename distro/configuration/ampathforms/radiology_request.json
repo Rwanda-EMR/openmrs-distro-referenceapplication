@@ -1,0 +1,3997 @@
+{
+    "name": "Radiology Request_Result Form 2.0",
+    "description": "Radiology Request Result Form",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "Diagnosis",
+    "referencedForms": [],
+    "uuid": "a0359945-d724-4f63-9a5d-20d55125231a",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "**Use this form to:** request radiological examinations."
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Radiology Request",
+        "sections": [
+          {
+            "label": "Motivation",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Presentation",
+                "type": "obsGroup",
+                "id": "presentation",
+                "questionOptions": {
+                  "concept": "3cd95a58-26fe-102b-80cb-0017a47871b2",
+                  "rendering": "group"
+                },
+                "questions": [
+                  {
+                    "label": "Motive added:",
+                    "type": "obs",
+                    "id": "cons_motive",
+                    "questionOptions": {
+                      "concept": "3cd95a58-26fe-102b-80cb-0017a47871b2",
+                      "rendering": "select",
+                      "answers": [
+                        {
+                          "concept": "3ccdf8d4-26fe-102b-80cb-0017a47871b2",
+                          "label": "Abdominal Pain"
+                        },
+                        {
+                          "concept": "3cf29d4c-26fe-102b-80cb-0017a47871b2",
+                          "label": "Abdominal Swelling"
+                        },
+                        {
+                          "concept": "b694aa46-7543-46ac-ad86-80e501a82289",
+                          "label": "Agitation"
+                        },
+                        {
+                          "concept": "3cd4bc50-26fe-102b-80cb-0017a47871b2",
+                          "label": "Anorexia"
+                        },
+                        {
+                          "concept": "3ce6b1ee-26fe-102b-80cb-0017a47871b2",
+                          "label": "Anxiety Disorder"
+                        },
+                        {
+                          "concept": "454ffc9e-67b4-4976-9db8-64c992646a64",
+                          "label": "Behavior Disorder"
+                        },
+                        {
+                          "concept": "c64a7a8d-e11a-44b8-93d4-964e663e3f72",
+                          "label": "Bleeking Gums"
+                        },
+                        {
+                          "concept": "17d87398-8306-4591-8ff7-b596368ed50b",
+                          "label": "Bloody Stool"
+                        },
+                        {
+                          "concept": "df4e13f2-999c-42dd-9633-babe90eb90c2",
+                          "label": "Bloody Vomiting"
+                        },
+                        {
+                          "concept": "5ecdc4e3-a669-4157-9bcb-ad5809452135",
+                          "label": "Brurry Vision"
+                        },
+                        {
+                          "concept": "3cd67d1a-26fe-102b-80cb-0017a47871b2",
+                          "label": "Cardiovascular Disease"
+                        },
+                        {
+                          "concept": "1251dd76-1be0-45e6-be91-3c07e6fd9b4c",
+                          "label": "Change Of The Voice"
+                        },
+                        {
+                          "concept": "44282b8c-89d7-49af-878a-564e4efb0d9f",
+                          "label": "Cheek Swelling"
+                        },
+                        {
+                          "concept": "aba63a83-d36a-4d0f-96ac-72c45d523c88",
+                          "label": "Chemosis"
+                        },
+                        {
+                          "concept": "3ccd2364-26fe-102b-80cb-0017a47871b2",
+                          "label": "Chest Pain"
+                        },
+                        {
+                          "concept": "3cd4c100-26fe-102b-80cb-0017a47871b2",
+                          "label": "Chills"
+                        },
+                        {
+                          "concept": "dad8f0fe-2d49-469a-a7df-46a717d875ad",
+                          "label": "Cockerow"
+                        },
+                        {
+                          "concept": "eb061310-0040-444b-9e91-89b53aa66e48",
+                          "label": "Coma"
+                        },
+                        {
+                          "concept": "3cf27e66-26fe-102b-80cb-0017a47871b2",
+                          "label": "Confusion"
+                        },
+                        {
+                          "concept": "57e044e4-6c2b-41c5-9b15-8105932e34c5",
+                          "label": "Conjonctivitis"
+                        },
+                        {
+                          "concept": "3cdc6504-26fe-102b-80cb-0017a47871b2",
+                          "label": "Constipation"
+                        },
+                        {
+                          "concept": "3cce938e-26fe-102b-80cb-0017a47871b2",
+                          "label": "Convulsions"
+                        },
+                        {
+                          "concept": "3cccf632-26fe-102b-80cb-0017a47871b2",
+                          "label": "Cough"
+                        },
+                        {
+                          "concept": "3ce5b9b0-26fe-102b-80cb-0017a47871b2",
+                          "label": "Cough Lasting Greater Than Two Weeks"
+                        },
+                        {
+                          "concept": "3ce5bb2c-26fe-102b-80cb-0017a47871b2",
+                          "label": "Cough Lasting Less Than Two Weeks"
+                        },
+                        {
+                          "concept": "3cda436e-26fe-102b-80cb-0017a47871b2",
+                          "label": "Cough Lasting More Than Three Weeks"
+                        },
+                        {
+                          "concept": "7db15d2f-8e04-4306-9683-237e5f9371f0",
+                          "label": "Coughing Up Bloody Sptutum"
+                        },
+                        {
+                          "concept": "208e6a67-6e8e-419e-af24-bfc461b5efb7",
+                          "label": "Cutaneous Bleeding"
+                        },
+                        {
+                          "concept": "3cce9514-26fe-102b-80cb-0017a47871b2",
+                          "label": "Depression"
+                        },
+                        {
+                          "concept": "3ccd0a64-26fe-102b-80cb-0017a47871b2",
+                          "label": "Dermatitis, Allergic"
+                        },
+                        {
+                          "concept": "3cd54256-26fe-102b-80cb-0017a47871b2",
+                          "label": "Dermatophytosis"
+                        },
+                        {
+                          "concept": "3ccc6a00-26fe-102b-80cb-0017a47871b2",
+                          "label": "Diarrhea"
+                        },
+                        {
+                          "concept": "3cda44ea-26fe-102b-80cb-0017a47871b2",
+                          "label": "Diarrhea Chronic (Greater Than Or Equal To 1 Month)"
+                        },
+                        {
+                          "concept": "3cd65830-26fe-102b-80cb-0017a47871b2",
+                          "label": "Diarrhea Less Than One Month"
+                        },
+                        {
+                          "concept": "3ce14aba-26fe-102b-80cb-0017a47871b2",
+                          "label": "Diarrhea, Bloody"
+                        },
+                        {
+                          "concept": "d63aa152-8731-4d59-b91a-5110918b7f46",
+                          "label": "Difficulty In Drinking"
+                        },
+                        {
+                          "concept": "a03458af-357c-449f-99af-0148bf955577",
+                          "label": "Difficulty Of Sucking"
+                        },
+                        {
+                          "concept": "cae556df-25a8-48d8-9e46-afe1fe612e63",
+                          "label": "Difficulty Walking"
+                        },
+                        {
+                          "concept": "6f2e5810-8593-4874-8145-ad737fdb6d08",
+                          "label": "Diffuse Conjuctivale Redness"
+                        },
+                        {
+                          "concept": "8292a426-3f05-4ea0-b960-4df5ccbb93f3",
+                          "label": "Dificulty Breathing"
+                        },
+                        {
+                          "concept": "ba26b4ef-ed4d-4c63-a9c0-f0a8e08e908e",
+                          "label": "Dificulty Crowling"
+                        },
+                        {
+                          "concept": "f8f84cef-2173-41b2-8b7b-2659bdb98a87",
+                          "label": "Dificulty Sitting"
+                        },
+                        {
+                          "concept": "690b131f-dbd6-48ea-b5c2-ac162d4e203a",
+                          "label": "Disphagia"
+                        },
+                        {
+                          "concept": "3ce14056-26fe-102b-80cb-0017a47871b2",
+                          "label": "Dry Cough"
+                        },
+                        {
+                          "concept": "3cd4d0c8-26fe-102b-80cb-0017a47871b2",
+                          "label": "Dysphagia"
+                        },
+                        {
+                          "concept": "3cce5f68-26fe-102b-80cb-0017a47871b2",
+                          "label": "Epistaxis"
+                        },
+                        {
+                          "concept": "656d0bde-c909-45dc-9976-c6bbaeace9d9",
+                          "label": "Extraction D'Une Dent Impactée"
+                        },
+                        {
+                          "concept": "33fd5353-f56e-49d9-85da-f22a917f183e",
+                          "label": "Eye Bleeding"
+                        },
+                        {
+                          "concept": "db63a9aa-f22c-4029-bf57-f9d05e6a4017",
+                          "label": "Facial Paralysis"
+                        },
+                        {
+                          "concept": "3cf19000-26fe-102b-80cb-0017a47871b2",
+                          "label": "Fatigue"
+                        },
+                        {
+                          "concept": "227f9870-f99d-421f-a214-767726d63113",
+                          "label": "Feeling Dizzy"
+                        },
+                        {
+                          "concept": "2c287a2a-db09-4586-98c5-c4ff45b4b66a",
+                          "label": "Feeling Of The Foreign Body In The Eye"
+                        },
+                        {
+                          "concept": "c55086bb-0d8f-4273-bd49-c7e8627378ad",
+                          "label": "Feet Deformity"
+                        },
+                        {
+                          "concept": "3cf1898e-26fe-102b-80cb-0017a47871b2",
+                          "label": "Fever"
+                        },
+                        {
+                          "concept": "3cd4fd00-26fe-102b-80cb-0017a47871b2",
+                          "label": "Fever Of Unknown Origin"
+                        },
+                        {
+                          "concept": "8671559b-6493-4c03-ade5-c4a448a86c86",
+                          "label": "Flaccid Paralysis On One Limbs"
+                        },
+                        {
+                          "concept": "1f3d0f6c-f59c-4f8e-addb-137d49af48d6",
+                          "label": "Flaccid Paralysis On Serveral Limbs"
+                        },
+                        {
+                          "concept": "3cd659ac-26fe-102b-80cb-0017a47871b2",
+                          "label": "Focal Neurological Deficit"
+                        },
+                        {
+                          "concept": "3cce5dd8-26fe-102b-80cb-0017a47871b2",
+                          "label": "Gastritis"
+                        },
+                        {
+                          "concept": "23bf765a-30ab-45a3-b231-aa1131eddfd8",
+                          "label": "Gastritis With Hemorrhage"
+                        },
+                        {
+                          "concept": "d3b7db43-7ed6-42a5-86d8-1822637b48dc",
+                          "label": "Gastritis Without Hemorrhage"
+                        },
+                        {
+                          "concept": "0d049b0e-3ce0-4f2f-853d-bc31d30a5846",
+                          "label": "Generalized Pain"
+                        },
+                        {
+                          "concept": "3cde6656-26fe-102b-80cb-0017a47871b2",
+                          "label": "Genital Discharge"
+                        },
+                        {
+                          "concept": "3cd4b5d4-26fe-102b-80cb-0017a47871b2",
+                          "label": "Genital Sores"
+                        },
+                        {
+                          "concept": "dfd88507-695f-4eb6-99e8-52d7c5f9ba2f",
+                          "label": "Genitourinary Problem"
+                        },
+                        {
+                          "concept": "959d0afc-5378-491b-bc73-e700711289a8",
+                          "label": "Gum Bleeding"
+                        },
+                        {
+                          "concept": "9719a19a-7e7e-461e-bbe0-5fac06f9abbe",
+                          "label": "Gum Swelling"
+                        },
+                        {
+                          "concept": "3cd24178-26fe-102b-80cb-0017a47871b2",
+                          "label": "Headache"
+                        },
+                        {
+                          "concept": "3cd4b124-26fe-102b-80cb-0017a47871b2",
+                          "label": "Hearing Difficulties"
+                        },
+                        {
+                          "concept": "3cd656be-26fe-102b-80cb-0017a47871b2",
+                          "label": "Hemoptysis"
+                        },
+                        {
+                          "concept": "52d1da45-4832-44a9-83f8-9e9fc1b68780",
+                          "label": "Hemorrhaging Bleeding"
+                        },
+                        {
+                          "concept": "da21d7f5-0e39-448b-94f4-d7b52900a7b8",
+                          "label": "Hip Rotation & Deviation"
+                        },
+                        {
+                          "concept": "f79541e4-06ff-4d78-a1e0-456e21ff1c91",
+                          "label": "Hypersalvation"
+                        },
+                        {
+                          "concept": "778775f0-3e6c-4604-927c-4ee72e27b12f",
+                          "label": "Impaired Consciousness"
+                        },
+                        {
+                          "concept": "3cf2a6fc-26fe-102b-80cb-0017a47871b2",
+                          "label": "Irritability"
+                        },
+                        {
+                          "concept": "3ccea1bc-26fe-102b-80cb-0017a47871b2",
+                          "label": "Jaundice"
+                        },
+                        {
+                          "concept": "3cccc7ac-26fe-102b-80cb-0017a47871b2",
+                          "label": "Joint Pain"
+                        },
+                        {
+                          "concept": "6d91ae50-80e3-4ae9-88d8-8a2211651c70",
+                          "label": "Knock Knees"
+                        },
+                        {
+                          "concept": "3cd47fce-26fe-102b-80cb-0017a47871b2",
+                          "label": "Laryngitis"
+                        },
+                        {
+                          "concept": "6a6b7aba-b779-4e37-9856-3e087a12a00a",
+                          "label": "Leg Cramps"
+                        },
+                        {
+                          "concept": "c613ddd9-bf77-4d45-a26c-3942947f961d",
+                          "label": "Leg Deformity"
+                        },
+                        {
+                          "concept": "473c2f4c-0111-4cd4-a90b-7f129a2ac8b8",
+                          "label": "Lethargia"
+                        },
+                        {
+                          "concept": "1f0529bf-fbf3-492e-b65d-f1549a7495a2",
+                          "label": "Limited Rom"
+                        },
+                        {
+                          "concept": "3ce50fec-26fe-102b-80cb-0017a47871b2",
+                          "label": "Loss Of Appetite"
+                        },
+                        {
+                          "concept": "85949193-bd79-4155-ab3a-1b807a448c1b",
+                          "label": "Loss Of Consciousness"
+                        },
+                        {
+                          "concept": "3ce84f90-26fe-102b-80cb-0017a47871b2",
+                          "label": "Lumbar Pain"
+                        },
+                        {
+                          "concept": "9271f3d0-e5d6-4934-b7a7-1de53b85fe1a",
+                          "label": "Lymph Nodes Tumefaction"
+                        },
+                        {
+                          "concept": "3cd4bde0-26fe-102b-80cb-0017a47871b2",
+                          "label": "Malaise"
+                        },
+                        {
+                          "concept": "45e81d7a-b6a1-418c-8082-cb0b751e5f17",
+                          "label": "Membrane Adherent To The Nose"
+                        },
+                        {
+                          "concept": "be3d5a29-2025-460c-bcf0-01dc03f78f74",
+                          "label": "Membrane Adherent To The Pharynx"
+                        },
+                        {
+                          "concept": "e562ef93-2052-4782-a125-e217eab83191",
+                          "label": "Membrane Adherent To The Tonsil"
+                        },
+                        {
+                          "concept": "6c531519-9c65-40a4-89f0-a283d1116ff2",
+                          "label": "Mild Dihydration"
+                        },
+                        {
+                          "concept": "3ccd0bf4-26fe-102b-80cb-0017a47871b2",
+                          "label": "Myalgia"
+                        },
+                        {
+                          "concept": "24419409-48e8-4005-92ca-3dd0729661f3",
+                          "label": "Nagging Cough"
+                        },
+                        {
+                          "concept": "3cf1c610-26fe-102b-80cb-0017a47871b2",
+                          "label": "Nausea"
+                        },
+                        {
+                          "concept": "f48fb2a9-9276-4096-b297-a41f903b8621",
+                          "label": "Neck Pain"
+                        },
+                        {
+                          "concept": "3ce17418-26fe-102b-80cb-0017a47871b2",
+                          "label": "Night Sweats For Greater Than 3 Weeks"
+                        },
+                        {
+                          "concept": "3ce17594-26fe-102b-80cb-0017a47871b2",
+                          "label": "Night Sweats For Less Than 3 Weeks"
+                        },
+                        {
+                          "concept": "3cf2b548-26fe-102b-80cb-0017a47871b2",
+                          "label": "Night Sweats V2"
+                        },
+                        {
+                          "concept": "3cd9e22a-26fe-102b-80cb-0017a47871b2",
+                          "label": "Nodular Rash"
+                        },
+                        {
+                          "concept": "3cea18ac-26fe-102b-80cb-0017a47871b2",
+                          "label": "Nuchal Rigidity"
+                        },
+                        {
+                          "concept": "afd6d18b-5f0e-4fe0-a2df-426126cd1c59",
+                          "label": "Orthopnea"
+                        },
+                        {
+                          "concept": "3cee7fb4-26fe-102b-80cb-0017a47871b2",
+                          "label": "Other Non-Coded"
+                        },
+                        {
+                          "concept": "3ccea66c-26fe-102b-80cb-0017a47871b2",
+                          "label": "Otitis Externa"
+                        },
+                        {
+                          "concept": "7c4d837b-5967-4ba6-902c-ca7651bebf34",
+                          "label": "Pain_"
+                        },
+                        {
+                          "concept": "369c061d-3738-41b2-8f63-4eece65b8aae",
+                          "label": "Painful Spasms"
+                        },
+                        {
+                          "concept": "3cf279a2-26fe-102b-80cb-0017a47871b2",
+                          "label": "Paresthesia"
+                        },
+                        {
+                          "concept": "3cd471be-26fe-102b-80cb-0017a47871b2",
+                          "label": "Perip Neuro"
+                        },
+                        {
+                          "concept": "a22089fd-2c00-4215-ade7-2942b3a888c3",
+                          "label": "Persistant Skin Fold"
+                        },
+                        {
+                          "concept": "0cc4e943-70ec-4096-91c8-e7d699ff9804",
+                          "label": "Petechiae"
+                        },
+                        {
+                          "concept": "3ccdf6b8-26fe-102b-80cb-0017a47871b2",
+                          "label": "Pharyngitis"
+                        },
+                        {
+                          "concept": "1903ab33-44cf-49d1-9d58-993e4c26c41d",
+                          "label": "Photophobia"
+                        },
+                        {
+                          "concept": "a37ba441-9ea2-43ea-8ec6-c5563c333caf",
+                          "label": "Pins And Needles"
+                        },
+                        {
+                          "concept": "3cf1a4a0-26fe-102b-80cb-0017a47871b2",
+                          "label": "Productive Cough V2"
+                        },
+                        {
+                          "concept": "a51a8007-236a-4052-b0d1-feb13baf695f",
+                          "label": "Projectile Vomiting"
+                        },
+                        {
+                          "concept": "f31ac3e3-c80d-4e74-8821-5fa473d46b5b",
+                          "label": "Prostration"
+                        },
+                        {
+                          "concept": "3cd4cda8-26fe-102b-80cb-0017a47871b2",
+                          "label": "Pruritis"
+                        },
+                        {
+                          "concept": "3ccea7fc-26fe-102b-80cb-0017a47871b2",
+                          "label": "Psychosis"
+                        },
+                        {
+                          "concept": "3650ee91-1898-4ab6-9fc5-d15aab35336c",
+                          "label": "Quiver"
+                        },
+                        {
+                          "concept": "891dbb6d-d7d0-4b75-aaf4-e75b85d0ff2a",
+                          "label": "Raging Thirst"
+                        },
+                        {
+                          "concept": "3cd182e2-26fe-102b-80cb-0017a47871b2",
+                          "label": "Rash"
+                        },
+                        {
+                          "concept": "8fafaf10-f287-40fa-b759-4d4500e6cee1",
+                          "label": "Redness Of An Eye"
+                        },
+                        {
+                          "concept": "942bab71-e8d7-4ca7-a02e-492f2fb6a3d0",
+                          "label": "Retraction Skin Fold"
+                        },
+                        {
+                          "concept": "d5e674ae-76a6-40cf-bc41-0922732ad479",
+                          "label": "Severe Dihydration"
+                        },
+                        {
+                          "concept": "3cf1a95a-26fe-102b-80cb-0017a47871b2",
+                          "label": "Short Of Bre"
+                        },
+                        {
+                          "concept": "08090f41-eff1-4eda-96a0-5b40e14d3f67",
+                          "label": "Skin Lesion_"
+                        },
+                        {
+                          "concept": "918b11a8-bbd8-44d5-9ba5-24bfac4b6a3d",
+                          "label": "Skin Rash"
+                        },
+                        {
+                          "concept": "336b83ec-2f7f-42aa-ae5c-e314e0f2ce0b",
+                          "label": "Spasms"
+                        },
+                        {
+                          "concept": "66d15760-b744-498e-a5ae-269ce8b94e23",
+                          "label": "Stiffness"
+                        },
+                        {
+                          "concept": "f66fb64e-e13e-401c-a9a2-e76863262e39",
+                          "label": "Stool With Traces Of Blood"
+                        },
+                        {
+                          "concept": "5b8bc3ef-b2c2-4acc-aac0-6cfce814f8b4",
+                          "label": "Stridor"
+                        },
+                        {
+                          "concept": "b718ee7f-5909-4d1f-8475-06dbe423ec7a",
+                          "label": "Sunken Eyes"
+                        },
+                        {
+                          "concept": "5420a010-7177-44b8-8c60-4c379e635f58",
+                          "label": "Sweeting"
+                        },
+                        {
+                          "concept": "3cf1ef32-26fe-102b-80cb-0017a47871b2",
+                          "label": "Swelling"
+                        },
+                        {
+                          "concept": "3cdd258e-26fe-102b-80cb-0017a47871b2",
+                          "label": "Symptom Comment"
+                        },
+                        {
+                          "concept": "35261cab-f3e1-48a0-9774-b667183ad027",
+                          "label": "Tearing"
+                        },
+                        {
+                          "concept": "17b603a9-dc55-4e08-b92e-6b0c64aec8b7",
+                          "label": "Teeth Cavity"
+                        },
+                        {
+                          "concept": "19437918-b1f5-4211-95fb-bceae9f69a35",
+                          "label": "Teeth Cleaning"
+                        },
+                        {
+                          "concept": "2889aa4d-2095-4c43-bf26-fbcbc971d788",
+                          "label": "Thoracic Pain"
+                        },
+                        {
+                          "concept": "3cd4b76e-26fe-102b-80cb-0017a47871b2",
+                          "label": "Throat Painful"
+                        },
+                        {
+                          "concept": "3cdc67f2-26fe-102b-80cb-0017a47871b2",
+                          "label": "Tinnitus"
+                        },
+                        {
+                          "concept": "81a1735d-b857-49ef-ad50-55341afa3342",
+                          "label": "Tongue Swelling"
+                        },
+                        {
+                          "concept": "3cccfde4-26fe-102b-80cb-0017a47871b2",
+                          "label": "Tonsillitis"
+                        },
+                        {
+                          "concept": "c46795c6-207a-4d31-82fb-0accf9708835",
+                          "label": "Tooth Pain"
+                        },
+                        {
+                          "concept": "dc571ded-f096-47da-97c4-d02b2a1c517e",
+                          "label": "Trismus"
+                        },
+                        {
+                          "concept": "9e3d7085-3d08-4585-85f0-36134d764f92",
+                          "label": "Unconciousness"
+                        },
+                        {
+                          "concept": "a2a69b56-9e5a-46c3-ac93-f867e1c9df6b",
+                          "label": "Unspecified Meningitis"
+                        },
+                        {
+                          "concept": "3cccf4a2-26fe-102b-80cb-0017a47871b2",
+                          "label": "Upper Respiratory Tract Infection"
+                        },
+                        {
+                          "concept": "0f3f27e8-949d-4ef3-9c1a-04cb2ac121ff",
+                          "label": "Vaginal Bleeding"
+                        },
+                        {
+                          "concept": "fac0b0d9-945b-40a9-a865-2176f61f6059",
+                          "label": "Viral Meningitis"
+                        },
+                        {
+                          "concept": "3cf19e60-26fe-102b-80cb-0017a47871b2",
+                          "label": "Vision Difficulties"
+                        },
+                        {
+                          "concept": "3cf1c930-26fe-102b-80cb-0017a47871b2",
+                          "label": "Vomiting"
+                        },
+                        {
+                          "concept": "3cd482ee-26fe-102b-80cb-0017a47871b2",
+                          "label": "Weight Loss"
+                        },
+                        {
+                          "concept": "3cd9c77c-26fe-102b-80cb-0017a47871b2",
+                          "label": "Weight Loss Greater Than Ten Percent"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Other Motive",
+                    "type": "obs",
+                    "id": "symptom_comment",
+                    "questionOptions": {
+                      "concept": "3cdd258e-26fe-102b-80cb-0017a47871b2",
+                      "rendering": "textarea"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "X Ray",
+            "isExpanded": true,
+            "questions": [
+              {
+                "label": "Pneumocystosis",
+                "type": "obsGroup",
+                "id": "xray",
+                "questionOptions": {
+                  "concept": "ab7ff246-ff75-11ec-a786-0050568ccf0c",
+                  "rendering": "group"
+                },
+                "questions": [
+                  {
+                    "label": "Ankle (Cheville)",
+                    "type": "obs",
+                    "id": "AnkleAT74n",
+                    "questionOptions": {
+                      "concept": "547bbc05-9d7a-47bd-b33a-018c026a822f",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Calcaneus (L Or R)",
+                    "type": "obs",
+                    "id": "CalcaYLypI",
+                    "questionOptions": {
+                      "concept": "741e2fff-8465-44f6-90ff-6f0865c8335e",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Calcaneus (L Or R)",
+                    "type": "obs",
+                    "id": "CalcampLQz",
+                    "questionOptions": {
+                      "concept": "f5a27b3c-89f6-4c68-ba87-22ea8b467867",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Cervical Spine",
+                    "type": "obs",
+                    "id": "CerviIH5dv",
+                    "questionOptions": {
+                      "concept": "ebe1d6f8-917c-41f8-8994-fe8f90ac5121",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Chest X- Ray",
+                    "type": "obs",
+                    "id": "Chestzno0P",
+                    "questionOptions": {
+                      "concept": "db5dd9c3-2bb0-427d-9e03-07fd0ae62c64",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Clavicle (L Or R)",
+                    "type": "obs",
+                    "id": "ClaviPBeMd",
+                    "questionOptions": {
+                      "concept": "ba11077f-9738-4994-b18e-f801b0e4ac56",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Clavicle (L Or R)",
+                    "type": "obs",
+                    "id": "ClaviIUZhs",
+                    "questionOptions": {
+                      "concept": "a240b1dc-df3b-4546-84e1-acff514bc464",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Elbow (Coude)",
+                    "type": "obs",
+                    "id": "ElbowChx8N",
+                    "questionOptions": {
+                      "concept": "17fc5ad9-9d94-45b3-8c35-3629ae2a9609",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Femur (L Or R)",
+                    "type": "obs",
+                    "id": "FemurP3ZL9",
+                    "questionOptions": {
+                      "concept": "e1a5d12e-2df7-4138-93f0-401abdb46ce3",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Femur (L Or R)",
+                    "type": "obs",
+                    "id": "FemurUhY4X",
+                    "questionOptions": {
+                      "concept": "84465ef6-92ae-4b0e-9dda-bb18beabde04",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Foot (L Or R)",
+                    "type": "obs",
+                    "id": "FootLV0slg",
+                    "questionOptions": {
+                      "concept": "ad2868d4-f5f7-4865-8ee4-9160fee1165d",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Foot (L Or R)",
+                    "type": "obs",
+                    "id": "FootL0TCUL",
+                    "questionOptions": {
+                      "concept": "a240b1dc-df3b-4546-84e1-acff514bc464",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Forearm (L Or R)",
+                    "type": "obs",
+                    "id": "Foreaer6ed",
+                    "questionOptions": {
+                      "concept": "a3f9ef9d-8d26-4dee-bda6-5282cb974edd",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Forearm (L Or R)",
+                    "type": "obs",
+                    "id": "ForeaiGzDJ",
+                    "questionOptions": {
+                      "concept": "a9ab32e3-31f4-4825-83b3-47fb1ea0d37c",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Hand (L Or R) Fingers",
+                    "type": "obs",
+                    "id": "HandL34vLr",
+                    "questionOptions": {
+                      "concept": "3d51f5d0-6d98-42e5-8b60-25eaddcc377c",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Hand (L Or R) Fingers",
+                    "type": "obs",
+                    "id": "HandL8UTe9",
+                    "questionOptions": {
+                      "concept": "c005a523-cfce-49ab-a162-87dd2d29ec7f",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Hip (L Or R )",
+                    "type": "obs",
+                    "id": "HipLO2LSBJ",
+                    "questionOptions": {
+                      "concept": "6f839f30-4afe-4141-a0d0-9737c3c662a1",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Hip (L Or R )",
+                    "type": "obs",
+                    "id": "HipLOL9br5",
+                    "questionOptions": {
+                      "concept": "1b328307-1b79-4f6f-9acb-84b15a337cd6",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Humerus (L Or R)",
+                    "type": "obs",
+                    "id": "Humer09tfy",
+                    "questionOptions": {
+                      "concept": "b1fd5744-62a2-4384-b099-4b16189e1131",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Humerus (L Or R)",
+                    "type": "obs",
+                    "id": "Humer79cfk",
+                    "questionOptions": {
+                      "concept": "97a65043-0faa-4c68-9dfb-e607b0be1816",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Hysterosalpingo Graphy (Hsg)",
+                    "type": "obs",
+                    "id": "Hyste8vV5s",
+                    "questionOptions": {
+                      "concept": "e154a184-6374-46e5-9389-fa6887c70862",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Knee (L Or R)",
+                    "type": "obs",
+                    "id": "KneeLiXZvY",
+                    "questionOptions": {
+                      "concept": "f47c44de-f6c1-4590-81ec-612f267bb3d6",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Knee (L Or R)",
+                    "type": "obs",
+                    "id": "KneeLEMKuC",
+                    "questionOptions": {
+                      "concept": "00528cd5-b0be-4f17-b431-eb3c741a7798",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Lateral Chest (Torax Profil)",
+                    "type": "obs",
+                    "id": "Later5rEaV",
+                    "questionOptions": {
+                      "concept": "7c3c1c3a-2f1c-48a6-9a82-77fb043ba6c3",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Lower Leg (R Or L)",
+                    "type": "obs",
+                    "id": "LowerdKrnC",
+                    "questionOptions": {
+                      "concept": "b58bc9c5-22cb-46cf-9748-de74ff6b2aac",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Lower Leg (R Or L)",
+                    "type": "obs",
+                    "id": "Lower4UIUV",
+                    "questionOptions": {
+                      "concept": "aaf60f13-e789-42b1-b7f4-c5c3edf5eb01",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Lumbar Spine",
+                    "type": "obs",
+                    "id": "LumbabV2lW",
+                    "questionOptions": {
+                      "concept": "a7b6de55-2114-47f1-8547-536f3f98072d",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Mandible",
+                    "type": "obs",
+                    "id": "MandizAVKw",
+                    "questionOptions": {
+                      "concept": "0cac2ce0-8db2-416f-968d-d054d4d2c29c",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Neck",
+                    "type": "obs",
+                    "id": "NeckC9VTb",
+                    "questionOptions": {
+                      "concept": "407336fa-fa4d-4528-8af3-1df4c4355682",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Paranasal Sinuses",
+                    "type": "obs",
+                    "id": "Paran3N1UZ",
+                    "questionOptions": {
+                      "concept": "2cf2fe9a-67a4-405d-9967-7602657e86b9",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Pateral (Rotule)",
+                    "type": "obs",
+                    "id": "Pater8BPYj",
+                    "questionOptions": {
+                      "concept": "5127d20d-9ade-4261-b2da-13cd86be1a15",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Pelivis",
+                    "type": "obs",
+                    "id": "PelivuDhIv",
+                    "questionOptions": {
+                      "concept": "53e4a3ba-fcd5-4479-aebe-bfc14eccb7b9",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Plain Abdomen X-Ray",
+                    "type": "obs",
+                    "id": "PlainDeWTS",
+                    "questionOptions": {
+                      "concept": "9d142715-6f33-4976-8e05-cad46e410908",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Sacrum Coccyx",
+                    "type": "obs",
+                    "id": "Sacruypm17",
+                    "questionOptions": {
+                      "concept": "089a6dfb-0a7f-4b5c-85f2-95a4bfc7303b",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Shoulder( L Or R)",
+                    "type": "obs",
+                    "id": "Shoulo7pzk",
+                    "questionOptions": {
+                      "concept": "f1363edf-b529-4983-896e-1529cbecd1c5",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Shoulder( L Or R)",
+                    "type": "obs",
+                    "id": "Shoul7OjSe",
+                    "questionOptions": {
+                      "concept": "3b327a5a-9fe9-47fb-8745-cbe28d8e7019",
+                      "rendering": "textarea"
+                    }
+                  },
+                  {
+                    "label": "Sinuses (Blondeau)",
+                    "type": "obs",
+                    "id": "Sinusd4wEC",
+                    "questionOptions": {
+                      "concept": "a0cceb48-e43d-4abb-b69a-6beef9cc0edc",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Skull",
+                    "type": "obs",
+                    "id": "SkullY6M8K",
+                    "questionOptions": {
+                      "concept": "4ffa15bb-79f4-447d-a063-f2da0195e3de",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Special Radiological",
+                    "type": "obs",
+                    "id": "SpeciwTmXX",
+                    "questionOptions": {
+                      "concept": "1e293fdc-d687-4311-9f77-11953784c1dc",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Thoracic Spine",
+                    "type": "obs",
+                    "id": "ThoraqXeMx",
+                    "questionOptions": {
+                      "concept": "a2d5ead9-2109-4f5f-855a-48042ff180b3",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Toes (Orteilles)",
+                    "type": "obs",
+                    "id": "ToesOpZdYM",
+                    "questionOptions": {
+                      "concept": "5fb81635-a4d2-44b6-9173-1c59adeee67a",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Wirst (L Or R)",
+                    "type": "obs",
+                    "id": "WirstUWJNP",
+                    "questionOptions": {
+                      "concept": "bedb12d5-e4b8-42df-ba14-7672bbc2ec93",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Wirst (L Or R)",
+                    "type": "obs",
+                    "id": "WirstV0o3y",
+                    "questionOptions": {
+                      "concept": "fb5ff448-59ec-4c48-9e4f-4b2f23377905",
+                      "rendering": "textarea"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "CT Scan",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Pulmonary pneumocystosis",
+                "type": "obsGroup",
+                "id": "ctScan",
+                "questionOptions": {
+                  "concept": "ab80b1d2-ff75-11ec-a786-0050568ccf0c",
+                  "rendering": "group"
+                },
+                "questions": [
+                  {
+                    "label": "Abdomen CT",
+                    "type": "obs",
+                    "id": "Abdom98tv5",
+                    "questionOptions": {
+                      "concept": "65afd4df-0b82-4351-8e60-7d16556dafa7",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Abdomen Multiphases",
+                    "type": "obs",
+                    "id": "Abdom8cVMm",
+                    "questionOptions": {
+                      "concept": "68742951-f6bb-4d67-963e-d20717d75193",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Ankle Joint Ll",
+                    "type": "obs",
+                    "id": "AnkleLuS0M",
+                    "questionOptions": {
+                      "concept": "06ac9350-2154-45f0-87e3-8cb09eabf052",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Brain",
+                    "type": "obs",
+                    "id": "BrainMwLf1",
+                    "questionOptions": {
+                      "concept": "d2cb5f53-104b-4767-a213-853122c177f7",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Brain CT Angiography",
+                    "type": "obs",
+                    "id": "BrainFzoG7",
+                    "questionOptions": {
+                      "concept": "1b6a3076-3d7c-49d3-ae84-8b996867d42f",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Cardiac CT Imaging",
+                    "type": "obs",
+                    "id": "Cardioj03F",
+                    "questionOptions": {
+                      "concept": "22025607-a15d-4ed4-ae08-c7461ef6e848",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Cervical Spine (Neck)",
+                    "type": "obs",
+                    "id": "CerviX8m6x",
+                    "questionOptions": {
+                      "concept": "0ba3aa18-a645-41cd-a155-6ab709157ac4",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Chest",
+                    "type": "obs",
+                    "id": "Chestayzea",
+                    "questionOptions": {
+                      "concept": "697c59ee-1d7b-4557-b817-f1f6743fc8f3",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Colonography (Virtual Colonoscopy)",
+                    "type": "obs",
+                    "id": "Coloni4MvL",
+                    "questionOptions": {
+                      "concept": "54909e53-3136-4dbe-b1c4-b7ce8eecc5f8",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Coronary Calcium Scan",
+                    "type": "obs",
+                    "id": "CorontH6iW",
+                    "questionOptions": {
+                      "concept": "004dfbb2-d55e-40c5-9bd5-eb94ff551bd2",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "CT Angiography",
+                    "type": "obs",
+                    "id": "CTAngWfgdo",
+                    "questionOptions": {
+                      "concept": "ee44245f-a136-4011-86e5-e7411c7bba3a",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "CT Angiography Chest Heart",
+                    "type": "obs",
+                    "id": "CTAng0xOFa",
+                    "questionOptions": {
+                      "concept": "aa8d36e1-14cb-497f-8348-02b3a9cec961",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "CT Anterography Abdomain",
+                    "type": "obs",
+                    "id": "CTAntDVlWC",
+                    "questionOptions": {
+                      "concept": "6eece225-196c-477c-8602-639189231c7c",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "CT Guided Biopsy",
+                    "type": "obs",
+                    "id": "CTGuiAQvEM",
+                    "questionOptions": {
+                      "concept": "001fd79a-e4c4-408a-aed2-8ee05da21fb8",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Elbow Joint UL",
+                    "type": "obs",
+                    "id": "ElbowQWBDv",
+                    "questionOptions": {
+                      "concept": "834c0500-bf7b-4a08-828a-c7f7cf16b8c1",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Facial Bones",
+                    "type": "obs",
+                    "id": "Faciah774S",
+                    "questionOptions": {
+                      "concept": "25e84f3b-f158-4513-8e14-bf8c6f38d913",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Femur LL",
+                    "type": "obs",
+                    "id": "Femur2dVr7",
+                    "questionOptions": {
+                      "concept": "633dd100-5b19-4755-9bf7-c7b5ffc38789",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Foot LL",
+                    "type": "obs",
+                    "id": "FootLVVu8X",
+                    "questionOptions": {
+                      "concept": "65a31316-8e9a-4f23-953e-8bedeb8e61f5",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Forearm UL",
+                    "type": "obs",
+                    "id": "Forea4768Z",
+                    "questionOptions": {
+                      "concept": "ba1c4768-aa1e-4ea4-83d6-9305663ea547",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Hand UL",
+                    "type": "obs",
+                    "id": "HandUE6FhA",
+                    "questionOptions": {
+                      "concept": "e7bfa9c5-c5d8-4764-8b73-17f532ee15fb",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Humerus UL",
+                    "type": "obs",
+                    "id": "HumerbMdYM",
+                    "questionOptions": {
+                      "concept": "a6b745d4-5c60-452e-866c-8594df59d68c",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Knee Joint LL",
+                    "type": "obs",
+                    "id": "KneeJhltyH",
+                    "questionOptions": {
+                      "concept": "3ef327ef-69ee-49c9-8a10-d2b71dd9ca3a",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Leg LL",
+                    "type": "obs",
+                    "id": "LegLloXBLS",
+                    "questionOptions": {
+                      "concept": "86dab23a-789f-40e9-a01c-fd6e76bbfb10",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Lumbar Spine Abdomen",
+                    "type": "obs",
+                    "id": "Lumba6fPZE",
+                    "questionOptions": {
+                      "concept": "c586e3d8-8a65-403c-8ca9-e06e747f9e7f",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Lung Sceening",
+                    "type": "obs",
+                    "id": "LungSwzK6s",
+                    "questionOptions": {
+                      "concept": "2593473b-131e-4589-a6e1-4f291c06072d",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Neck CT",
+                    "type": "obs",
+                    "id": "NeckCEGEHz",
+                    "questionOptions": {
+                      "concept": "63ec687c-e323-4ea5-92f1-d7ef36c84737",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Orbit",
+                    "type": "obs",
+                    "id": "Orbit8ubYJ",
+                    "questionOptions": {
+                      "concept": "c0be4f58-0051-46d2-a166-fe524fa2270f",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Pelvis And Hip Bone LL",
+                    "type": "obs",
+                    "id": "PelviiNhUc",
+                    "questionOptions": {
+                      "concept": "0d2d67ae-a670-4e42-93b3-b433167a291a",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Peripheral Angiography",
+                    "type": "obs",
+                    "id": "PeripTx417",
+                    "questionOptions": {
+                      "concept": "46c1d4f4-1bab-4269-9563-f66da7a85d0c",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Petrous Bone (All Ear)",
+                    "type": "obs",
+                    "id": "PetrofYHmZ",
+                    "questionOptions": {
+                      "concept": "6584f5eb-6185-4dd1-9d4c-81e77b74b509",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Shoulder UL",
+                    "type": "obs",
+                    "id": "ShoulHOIzj",
+                    "questionOptions": {
+                      "concept": "45d1c869-3133-4f81-96d9-10132322ff05",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Sinus CT",
+                    "type": "obs",
+                    "id": "SinusQ95qn",
+                    "questionOptions": {
+                      "concept": "04442b33-933c-404a-9bfc-9fb5c18dcfc3",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Thoracic Spine CT",
+                    "type": "obs",
+                    "id": "ThoraNQyfY",
+                    "questionOptions": {
+                      "concept": "d275083e-8b03-44a6-bf3e-1cc92bbfe7c0",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Wrist Joint UL",
+                    "type": "obs",
+                    "id": "Wristytngq",
+                    "questionOptions": {
+                      "concept": "d79e9cd0-255c-4529-812a-788d2d578b2a",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Ultrasound",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Pneumocystosis",
+                "type": "obsGroup",
+                "id": "ultraSound",
+                "questionOptions": {
+                  "concept": "ab816b66-ff75-11ec-a786-0050568ccf0c",
+                  "rendering": "group"
+                },
+                "questions": [
+                  {
+                    "label": "Abdominal ultrasound",
+                    "type": "obs",
+                    "id": "abdominal_ultrasound_v2",
+                    "questionOptions": {
+                      "concept": "093d3fd8-ddc9-451d-869f-983ce32baa0c",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Urological ultrasound",
+                    "type": "obs",
+                    "id": "urological_ultrasound",
+                    "questionOptions": {
+                      "concept": "6c15f993-7170-45ba-b731-ba0ee5c37979",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Gynecological ultrasound",
+                    "type": "obs",
+                    "id": "gynecological_ultrasound",
+                    "questionOptions": {
+                      "concept": "8b071a74-9398-46b3-a0c1-95a386745510",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Obstetric ultrasound",
+                    "type": "obs",
+                    "id": "obstetric_ultrasound_v2",
+                    "questionOptions": {
+                      "concept": "a280b08f-ab87-42c8-b675-0caf0aceeff5",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Thyroid ultrasound",
+                    "type": "obs",
+                    "id": "thyroid_ultrasound",
+                    "questionOptions": {
+                      "concept": "96f1653c-a2bb-4b8b-b924-b9a9f248b102",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Breast ultrasound",
+                    "type": "obs",
+                    "id": "breast_ultrasound_v2",
+                    "questionOptions": {
+                      "concept": "fce858f7-e674-476d-b6a7-4e21a7204f86",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Ultrasound,Genetic",
+                    "type": "obs",
+                    "id": "ultrasound,genetic",
+                    "questionOptions": {
+                      "concept": "10a0a0a3-9f8c-4152-a9cd-48c6ed180e8f",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Cardiac ultrasound",
+                    "type": "obs",
+                    "id": "cardiac_ultrasound_v2",
+                    "questionOptions": {
+                      "concept": "e658bacf-db59-415a-9fa9-eb8ff494f8fd",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Hepatic ultrasound",
+                    "type": "obs",
+                    "id": "hepatic_ultrasound",
+                    "questionOptions": {
+                      "concept": "da113d7e-a54f-4372-a98d-3ebf0c0850c3",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Doppler Ultrasound",
+                    "type": "obs",
+                    "id": "doppler_ultrasound",
+                    "questionOptions": {
+                      "concept": "aad401f6-d1ad-44ff-87d0-c5aef89185c2",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Electrocardiogram",
+                    "type": "obs",
+                    "id": "electrocardiogram",
+                    "questionOptions": {
+                      "concept": "dcde6b8a-01cd-43ab-a3b2-2e9f87f9eab0",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Electroencephalogram",
+                    "type": "obs",
+                    "id": "electroencephalogram_v1",
+                    "questionOptions": {
+                      "concept": "0222646c-649b-4f5b-9488-deea5759673f",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Prostate Ultrasound",
+                    "type": "obs",
+                    "id": "rostate_ultrasound",
+                    "questionOptions": {
+                      "concept": "d9f93556-fe71-48d4-ba6e-4d446fa3951c",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Scrotal Ultrasound",
+                    "type": "obs",
+                    "id": "scrotal_ultrasound",
+                    "questionOptions": {
+                      "concept": "57cbc8cd-66d0-43aa-93c4-62fc486d32a3",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "MSK",
+                    "type": "obs",
+                    "id": "msk",
+                    "questionOptions": {
+                      "concept": "b08a5d67-6b81-4d7a-8036-4100b556baac",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Ultrasound,Neck",
+                    "type": "obs",
+                    "id": "ultrasound,_neck",
+                    "questionOptions": {
+                      "concept": "e3d6d803-5816-468f-8af4-99a76bfe55e8",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Neonatal Head Ultrasound",
+                    "type": "obs",
+                    "id": "neonatal_head_ultrasound",
+                    "questionOptions": {
+                      "concept": "023c60dc-2756-4105-9e28-375b23598a97",
+                      "rendering": "radio",
+                      "answers": [
+                        {
+                          "concept": "3cd6f600-26fe-102b-80cb-0017a47871b2",
+                          "label": "Yes"
+                        },
+                        {
+                          "concept": "3cd6f86c-26fe-102b-80cb-0017a47871b2",
+                          "label": "No"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Results",
+        "sections": [
+          {
+            "label": "Results",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "KVC",
+                "type": "obs",
+                "id": "kvc",
+                "questionOptions": {
+                  "concept": "d3502a57-b5bf-46d4-9038-54027d15311c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "mAs",
+                "type": "obs",
+                "id": "mas_",
+                "questionOptions": {
+                  "concept": "f6306caf-b45d-424b-98f6-9fb5a5f07b70",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Films used",
+                "type": "obs",
+                "id": "filmUsed",
+                "questionOptions": {
+                  "concept": "a9e74556-a544-4ef9-9826-09fa42fee296",
+                  "rendering": "multiCheckbox",
+                  "answers": [
+                    {
+                      "concept": "e5959994-5bf8-4edc-8241-30f3de86e9b7",
+                      "label": "Films radiologiques 35 X 35 cm bte de 100 films"
+                    },
+                    {
+                      "concept": "5f080ae6-033f-4d60-b8a2-0001f9aa881a",
+                      "label": "Films radiologiques 18 X 24 cm bte de 100 films"
+                    },
+                    {
+                      "concept": "fb627297-eea3-4b26-9c28-46e4bd7a9419",
+                      "label": "Films radiologiques 24 X 30 cm bte de 100 films"
+                    },
+                    {
+                      "concept": "a966b4b6-2bf8-48d9-98d1-b4558ff407e3",
+                      "label": "Films radiologiques 30 X 40 cm bte de 100 films"
+                    },
+                    {
+                      "concept": "0556b66b-5aaf-48c3-90b4-4fa536dffc77",
+                      "label": "Films radiologiques 35 X 43 cm bte de 100 films"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Radiology Finding",
+                "type": "obs",
+                "id": "autres_antecedents_gynecologiques_et_obstetricaux",
+                "questionOptions": {
+                  "concept": "a9bee0e9-eef7-496b-8ed7-e32f74d67cb5",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Echograph Finding",
+                "type": "obs",
+                "id": "other_general_exam_findings",
+                "questionOptions": {
+                  "concept": "8d8597b4-0b54-4bc1-a35c-fa06d80e7a2b",
+                  "rendering": "textarea"
+                }
+              },
+              {
+                "label": "Conclusion",
+                "type": "obs",
+                "id": "primary_digno",
+                "questionOptions": {
+                  "concept": "f0230f4a-1b20-4a47-bce9-c5a9c01367ec",
+                  "rendering": "select",
+                  "answers": [
+                    {
+                      "concept": "3cce73b8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Abortion (Retired)"
+                    },
+                    {
+                      "concept": "3cce7548-26fe-102b-80cb-0017a47871b2",
+                      "label": "Abortion, Incomplete (Retired)"
+                    },
+                    {
+                      "concept": "6586f3aa-8052-4969-ad77-49bf970b76cd",
+                      "label": "Abortions"
+                    },
+                    {
+                      "concept": "3ccd2666-26fe-102b-80cb-0017a47871b2",
+                      "label": "Abscess"
+                    },
+                    {
+                      "concept": "8b7c3aaa-2b72-46dd-aba6-1bc40ded4607",
+                      "label": "Abscesses"
+                    },
+                    {
+                      "concept": "3cccd076-26fe-102b-80cb-0017a47871b2",
+                      "label": "Accident, Motor Vehicle"
+                    },
+                    {
+                      "concept": "3ccccd92-26fe-102b-80cb-0017a47871b2",
+                      "label": "Accident, Not Otherwise Specified"
+                    },
+                    {
+                      "concept": "3cd48c44-26fe-102b-80cb-0017a47871b2",
+                      "label": "Acne"
+                    },
+                    {
+                      "concept": "3cd4eebe-26fe-102b-80cb-0017a47871b2",
+                      "label": "Acquired Immunodeficiency Syndrome"
+                    },
+                    {
+                      "concept": "3ce5c590-26fe-102b-80cb-0017a47871b2",
+                      "label": "Acute Necrotizing Ulcerative Stomatitis, Gingivitis, Or Periodontitis"
+                    },
+                    {
+                      "concept": "3cd9c484-26fe-102b-80cb-0017a47871b2",
+                      "label": "Acute Pneumonia Presumed Bacterial"
+                    },
+                    {
+                      "concept": "3cccf196-26fe-102b-80cb-0017a47871b2",
+                      "label": "Aids (Retired)"
+                    },
+                    {
+                      "concept": "3cd12d24-26fe-102b-80cb-0017a47871b2",
+                      "label": "Allergic Rash (Retired)"
+                    },
+                    {
+                      "concept": "3ccd369c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Allergy"
+                    },
+                    {
+                      "concept": "3ccd109a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Amoebiasis"
+                    },
+                    {
+                      "concept": "bc82362d-cc86-11e8-a985-27f24ca34d9a",
+                      "label": "Anaphylaxis"
+                    },
+                    {
+                      "concept": "3ccc4764-26fe-102b-80cb-0017a47871b2",
+                      "label": "Anemia"
+                    },
+                    {
+                      "concept": "3ccc412e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Anemia, Blood Loss"
+                    },
+                    {
+                      "concept": "3ccc44ee-26fe-102b-80cb-0017a47871b2",
+                      "label": "Anemia, Hemolysis"
+                    },
+                    {
+                      "concept": "3cd85716-26fe-102b-80cb-0017a47871b2",
+                      "label": "Anemia, Iron Deficiency"
+                    },
+                    {
+                      "concept": "3cd961c4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Angio-Edema"
+                    },
+                    {
+                      "concept": "3ce5bca8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Angular Cheilitis"
+                    },
+                    {
+                      "concept": "3cceb620-26fe-102b-80cb-0017a47871b2",
+                      "label": "Antepartum Hemorrhage"
+                    },
+                    {
+                      "concept": "3ce6b1ee-26fe-102b-80cb-0017a47871b2",
+                      "label": "Anxiety Disorder"
+                    },
+                    {
+                      "concept": "3cce8bb4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Appendicitis"
+                    },
+                    {
+                      "concept": "3ccd042e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Arthritis"
+                    },
+                    {
+                      "concept": "3cce8ed4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Arthritis Rheumatoid (Retired)"
+                    },
+                    {
+                      "concept": "3cd11bd6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Arthritis, Knee (Retired)"
+                    },
+                    {
+                      "concept": "3cce642c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Assault"
+                    },
+                    {
+                      "concept": "3ccc4bf6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Asthma"
+                    },
+                    {
+                      "concept": "3ccc49bc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Asthma Exacerbation"
+                    },
+                    {
+                      "concept": "3cebab22-26fe-102b-80cb-0017a47871b2",
+                      "label": "Asymptomatic Hiv Infection"
+                    },
+                    {
+                      "concept": "3ce5ccfc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Atypical Disseminated Leishmaniasis"
+                    },
+                    {
+                      "concept": "3cd15f92-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bartholin(Apostrophe)S Gland Abscess"
+                    },
+                    {
+                      "concept": "3cccb370-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bilharzia (Retired)"
+                    },
+                    {
+                      "concept": "3ccc52d6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Biliary Tract Disease Not Otherwise Specified"
+                    },
+                    {
+                      "concept": "3cce5608-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bite, Animal"
+                    },
+                    {
+                      "concept": "3cce5478-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bite, Dog"
+                    },
+                    {
+                      "concept": "3cce578e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bite, Human"
+                    },
+                    {
+                      "concept": "ea4ec122-6195-4506-8c74-c8e6dea7fa66",
+                      "label": "Bone And Joint Disorder, Other Than Fractures"
+                    },
+                    {
+                      "concept": "3ccd40ce-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bronchitis"
+                    },
+                    {
+                      "concept": "3ccc57ae-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bronchitis, Acute"
+                    },
+                    {
+                      "concept": "3ccc59f2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bronchitis, Recurrent"
+                    },
+                    {
+                      "concept": "3cce7ed0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Bronchopneumonia"
+                    },
+                    {
+                      "concept": "3cce4ae6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Brucellosis"
+                    },
+                    {
+                      "concept": "320e9bd2-f672-4444-8180-9008180c5f8f",
+                      "label": "Bubo / Scrotal Swelling"
+                    },
+                    {
+                      "concept": "3ccd21e8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Burn"
+                    },
+                    {
+                      "concept": "3cce906e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Candidiasis"
+                    },
+                    {
+                      "concept": "3cebb5fe-26fe-102b-80cb-0017a47871b2",
+                      "label": "Candidiasis, Oral"
+                    },
+                    {
+                      "concept": "3ccf3d70-26fe-102b-80cb-0017a47871b2",
+                      "label": "Candidiasis, Vaginal"
+                    },
+                    {
+                      "concept": "e5046364-627a-4cf2-8f1e-f6a128a6016b",
+                      "label": "Cardio Vascular Disease Other"
+                    },
+                    {
+                      "concept": "3ce8c3d0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cardiomyopathy"
+                    },
+                    {
+                      "concept": "3cd67d1a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cardiovascular Disease"
+                    },
+                    {
+                      "concept": "3cccb938-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cataract"
+                    },
+                    {
+                      "concept": "3ccd206c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cellulitis"
+                    },
+                    {
+                      "concept": "3ce5c888-26fe-102b-80cb-0017a47871b2",
+                      "label": "Central Nervous System Toxoplasmosis"
+                    },
+                    {
+                      "concept": "3cd55d36-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cerebral Palsy"
+                    },
+                    {
+                      "concept": "3cd1a01a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cerumen Impaction"
+                    },
+                    {
+                      "concept": "3ccdf42e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cervicitis"
+                    },
+                    {
+                      "concept": "3cd4f2f6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Chalazion"
+                    },
+                    {
+                      "concept": "3cd9e518-26fe-102b-80cb-0017a47871b2",
+                      "label": "Chlamydia Trachomatis"
+                    },
+                    {
+                      "concept": "3cce7232-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cholecystitis"
+                    },
+                    {
+                      "concept": "3cce870e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cholera"
+                    },
+                    {
+                      "concept": "3ce895fe-26fe-102b-80cb-0017a47871b2",
+                      "label": "Chronic Hiv Lung Disease"
+                    },
+                    {
+                      "concept": "3ce8611a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Chronic Isosporiasis"
+                    },
+                    {
+                      "concept": "3cccbc12-26fe-102b-80cb-0017a47871b2",
+                      "label": "Circulatory Disease (Retired)"
+                    },
+                    {
+                      "concept": "2fa8e3ce-f801-4fa1-be7d-100a54f2bcf4",
+                      "label": "Congestive Cardiac Failure"
+                    },
+                    {
+                      "concept": "3ce6b374-26fe-102b-80cb-0017a47871b2",
+                      "label": "Congestive Heart Failure"
+                    },
+                    {
+                      "concept": "3ccd05be-26fe-102b-80cb-0017a47871b2",
+                      "label": "Conjunctivitis"
+                    },
+                    {
+                      "concept": "3cce938e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Convulsions"
+                    },
+                    {
+                      "concept": "3cd9e0b8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Convulsions Or Neurological Deficit Presumed Cerebral Lymphoma"
+                    },
+                    {
+                      "concept": "3cd9df3c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Convulsions Or Neurological Deficit Presumed Due To Tuberculosis"
+                    },
+                    {
+                      "concept": "3ce6b07c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Convulsions Or Neurological Deficit Presumed Malaria"
+                    },
+                    {
+                      "concept": "3cd9ddc0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Convulsions Or Neurological Deficit Presumed Toxoplasmosis"
+                    },
+                    {
+                      "concept": "88859ecc-2fc4-40e4-8343-e92890498d9d",
+                      "label": "Cough Chronic (>15 Days)"
+                    },
+                    {
+                      "concept": "3cd82dea-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cryptococcosis"
+                    },
+                    {
+                      "concept": "3cd4f508-26fe-102b-80cb-0017a47871b2",
+                      "label": "Cutaneous Abscess Not Specified (Retired)"
+                    },
+                    {
+                      "concept": "3cce322c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Deceased"
+                    },
+                    {
+                      "concept": "3ce98d06-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dementia"
+                    },
+                    {
+                      "concept": "3cd15484-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dementia, Senile"
+                    },
+                    {
+                      "concept": "3ccd1bda-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dental Caries"
+                    },
+                    {
+                      "concept": "3cce9514-26fe-102b-80cb-0017a47871b2",
+                      "label": "Depression"
+                    },
+                    {
+                      "concept": "3cd50f8e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Depressive Episode (Retired)"
+                    },
+                    {
+                      "concept": "3cd195ca-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dermatitis Nos (Retired)"
+                    },
+                    {
+                      "concept": "3ccd0a64-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dermatitis, Allergic"
+                    },
+                    {
+                      "concept": "3cd54256-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dermatophytosis"
+                    },
+                    {
+                      "concept": "3cceb170-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diabetes Insipidus"
+                    },
+                    {
+                      "concept": "3cce629c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diabetes Mellitus"
+                    },
+                    {
+                      "concept": "edf4ecc4-44f6-457a-b561-179f4426b16a",
+                      "label": "Diabetes V2"
+                    },
+                    {
+                      "concept": "3ccc6a00-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea"
+                    },
+                    {
+                      "concept": "3cd4fa1c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea And Gastroenteritis Of Presumed Infectious Origin (Retired)"
+                    },
+                    {
+                      "concept": "21f708a6-1631-4145-90b3-4b01dd6ea63c",
+                      "label": "Diarrhea Bloody (Dysentery)"
+                    },
+                    {
+                      "concept": "566a211b-9421-4f89-90b9-9b42964bb9f9",
+                      "label": "Diarrhea No Dehydration"
+                    },
+                    {
+                      "concept": "3671f13d-c27c-4b31-b815-a6705e53ef74",
+                      "label": "Diarrhea With Dehydration"
+                    },
+                    {
+                      "concept": "3ce6cb8e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea, Bacterial"
+                    },
+                    {
+                      "concept": "3ccc6884-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea, Cholera (Retired)"
+                    },
+                    {
+                      "concept": "3ce8c8b2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea, Chronic"
+                    },
+                    {
+                      "concept": "3ccc6636-26fe-102b-80cb-0017a47871b2",
+                      "label": "Diarrhea, Parasite"
+                    },
+                    {
+                      "concept": "d587746f-a560-44a2-b991-0fc2f7e4d1eb",
+                      "label": "Discharge, Urethral Male"
+                    },
+                    {
+                      "concept": "04d04ef3-3c47-4d0e-a869-c5565cae5430",
+                      "label": "Discharge, Vaginal"
+                    },
+                    {
+                      "concept": "3cccc1da-26fe-102b-80cb-0017a47871b2",
+                      "label": "Disease Of Blood And Blood Forming Organs (Retired)"
+                    },
+                    {
+                      "concept": "3cccbef6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Disease Of Puerperium And Childbirth (Retired)"
+                    },
+                    {
+                      "concept": "3cd14b24-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dislocation"
+                    },
+                    {
+                      "concept": "3ce5cb76-26fe-102b-80cb-0017a47871b2",
+                      "label": "Disseminated Non-Tuberculosis Mycobacterial Infection"
+                    },
+                    {
+                      "concept": "3cce96a4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Duodenal Ulcer"
+                    },
+                    {
+                      "concept": "3ccdfaf0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dysentery (Retired)"
+                    },
+                    {
+                      "concept": "3cd9dad2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Dysentery Bacilliary"
+                    },
+                    {
+                      "concept": "c8049cbd-c130-45a9-8ea9-37c06c9f610f",
+                      "label": "Ear Infections"
+                    },
+                    {
+                      "concept": "316ef3e4-c2a6-4bdc-8438-9b4a6a2a7898",
+                      "label": "Eclampsia /Severe Pre Eclampsia"
+                    },
+                    {
+                      "concept": "3cd47e3e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Eczema"
+                    },
+                    {
+                      "concept": "3cebc756-26fe-102b-80cb-0017a47871b2",
+                      "label": "Encephalopathy"
+                    },
+                    {
+                      "concept": "3cd9d65e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Encephalopathy Presumed Due To Hiv"
+                    },
+                    {
+                      "concept": "3cd9d7da-26fe-102b-80cb-0017a47871b2",
+                      "label": "Encephalopathy Presumed Not Due To Hiv "
+                    },
+                    {
+                      "concept": "3cd678b0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Enteropathy"
+                    },
+                    {
+                      "concept": "3cce0a90-26fe-102b-80cb-0017a47871b2",
+                      "label": "Epilepsy"
+                    },
+                    {
+                      "concept": "3ce5ca04-26fe-102b-80cb-0017a47871b2",
+                      "label": "Extrapulmonary Cryptococcosis Including Meningitis"
+                    },
+                    {
+                      "concept": "3ce89a68-26fe-102b-80cb-0017a47871b2",
+                      "label": "Extrapulmonary Tuberculosis Without Lymphadenopathy"
+                    },
+                    {
+                      "concept": "3cccb7bc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Eye Infections (Retired)"
+                    },
+                    {
+                      "concept": "26403608-98f9-49c2-b005-7c9b8c4d2795",
+                      "label": "Eye Problem Cataract"
+                    },
+                    {
+                      "concept": "6ad6c1fb-519a-48e8-bc71-58fcacc4d441",
+                      "label": "Eye Problem Glaucoma"
+                    },
+                    {
+                      "concept": "6fecf5ff-bc28-414c-a75e-8a4d560c5a9b",
+                      "label": "Eye Problem Other"
+                    },
+                    {
+                      "concept": "3ccd0744-26fe-102b-80cb-0017a47871b2",
+                      "label": "Eye Problem Other (Retired)"
+                    },
+                    {
+                      "concept": "c412da03-4d9a-45b2-9c3f-8bc69272df3a",
+                      "label": "Eye Problem Refractive Errors"
+                    },
+                    {
+                      "concept": "87b9e103-38bd-4414-98b4-7129faae651b",
+                      "label": "Eye Problem Trachoma"
+                    },
+                    {
+                      "concept": "7fad9e00-042f-4720-bdec-abfb47d5d094",
+                      "label": "Eye Problem Trauma"
+                    },
+                    {
+                      "concept": "11e814ff-47a5-4868-964a-d2997f9ca02f",
+                      "label": "Eye Problem Trichiasis"
+                    },
+                    {
+                      "concept": "3ce8fdfa-26fe-102b-80cb-0017a47871b2",
+                      "label": "Failure To Thrive"
+                    },
+                    {
+                      "concept": "3cd4f88c-26fe-102b-80cb-0017a47871b2",
+                      "label": "False Labor"
+                    },
+                    {
+                      "concept": "84fa8195-e631-43f4-844d-a43e96a79fb0",
+                      "label": "Fever Greater Than Four Weeks"
+                    },
+                    {
+                      "concept": "3cce1bc0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fever Nos (Retired)"
+                    },
+                    {
+                      "concept": "3cd4fd00-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fever Of Unknown Origin"
+                    },
+                    {
+                      "concept": "3cd492a2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Folliculitis"
+                    },
+                    {
+                      "concept": "3cce4fb4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Foreign Body"
+                    },
+                    {
+                      "concept": "3cce65bc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fracture"
+                    },
+                    {
+                      "concept": "3cce674c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fracture, Colles"
+                    },
+                    {
+                      "concept": "3cce5c48-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fungal Infection"
+                    },
+                    {
+                      "concept": "3cd0db44-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fungal Infection Skin (Retired)"
+                    },
+                    {
+                      "concept": "3ce5c298-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fungal Nail Infection"
+                    },
+                    {
+                      "concept": "3cd0f200-26fe-102b-80cb-0017a47871b2",
+                      "label": "Fungal Skin Infection (Retired)"
+                    },
+                    {
+                      "concept": "3cccff74-26fe-102b-80cb-0017a47871b2",
+                      "label": "Furunculosis"
+                    },
+                    {
+                      "concept": "3ccc5092-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gallstones"
+                    },
+                    {
+                      "concept": "3cce9ce4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gastric Ulcer"
+                    },
+                    {
+                      "concept": "3cce5dd8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gastritis"
+                    },
+                    {
+                      "concept": "ba4c708e-440a-4919-866b-3be34f9bbe7a",
+                      "label": "Gastritis And Duodenitis"
+                    },
+                    {
+                      "concept": "3cce8510-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gastroenteritis"
+                    },
+                    {
+                      "concept": "1ebffdf1-74e3-464e-9f65-93b8a57133de",
+                      "label": "Genital Ulcers V2"
+                    },
+                    {
+                      "concept": "3ce6ce90-26fe-102b-80cb-0017a47871b2",
+                      "label": "Genital Ulcers, Chancroid"
+                    },
+                    {
+                      "concept": "3ce6cd14-26fe-102b-80cb-0017a47871b2",
+                      "label": "Genital Ulcers, Lgv"
+                    },
+                    {
+                      "concept": "3ccd13ba-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gingivitis"
+                    },
+                    {
+                      "concept": "3ccd1ee6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Goiter"
+                    },
+                    {
+                      "concept": "3cd4eca2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gonorrhea"
+                    },
+                    {
+                      "concept": "3cce0658-26fe-102b-80cb-0017a47871b2",
+                      "label": "Gud (Retired)"
+                    },
+                    {
+                      "concept": "3ccd122a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Head Injury"
+                    },
+                    {
+                      "concept": "8187977d-cafb-4ac2-894b-29161016f6ca",
+                      "label": "Heart Disease Acute"
+                    },
+                    {
+                      "concept": "3cce889e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Helminthiasis"
+                    },
+                    {
+                      "concept": "0198eaf6-cc87-11e8-a985-27f24ca34d9a",
+                      "label": "Hepatitis"
+                    },
+                    {
+                      "concept": "3ccc7892-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hepatitis A"
+                    },
+                    {
+                      "concept": "3ccc7a0e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hepatitis B"
+                    },
+                    {
+                      "concept": "3ccc7bbc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hepatitis C"
+                    },
+                    {
+                      "concept": "3ce85b48-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hepatotoxicity"
+                    },
+                    {
+                      "concept": "3cd9e694-26fe-102b-80cb-0017a47871b2",
+                      "label": "Herpes Simplex Genital Infection"
+                    },
+                    {
+                      "concept": "3cd48924-26fe-102b-80cb-0017a47871b2",
+                      "label": "Herpes Zoster"
+                    },
+                    {
+                      "concept": "3cd7adb6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hiv Infected"
+                    },
+                    {
+                      "concept": "3cd4dca8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Human Immunodeficiency Virus"
+                    },
+                    {
+                      "concept": "3cd80b44-26fe-102b-80cb-0017a47871b2",
+                      "label": "Human Papillomavirus"
+                    },
+                    {
+                      "concept": "3cd15934-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hyperemesis Gravidarum"
+                    },
+                    {
+                      "concept": "3cd50188-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hypertension"
+                    },
+                    {
+                      "concept": "3cce6f08-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hypertension Retired (Retired)"
+                    },
+                    {
+                      "concept": "3ce60226-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hypokalemia"
+                    },
+                    {
+                      "concept": "3cce8380-26fe-102b-80cb-0017a47871b2",
+                      "label": "Infection Skin V2 (Retired)"
+                    },
+                    {
+                      "concept": "3ccde650-26fe-102b-80cb-0017a47871b2",
+                      "label": "Injury"
+                    },
+                    {
+                      "concept": "3cd5039a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Injury Of Unspecified Body Region (Retired)"
+                    },
+                    {
+                      "concept": "3cccb4d8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Intestinal Worms (Retired)"
+                    },
+                    {
+                      "concept": "3ce5d01c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Invasive Cervical Carcinoma"
+                    },
+                    {
+                      "concept": "3ce8ecde-26fe-102b-80cb-0017a47871b2",
+                      "label": "Kaposi Sarcoma - Old (Retired)"
+                    },
+                    {
+                      "concept": "3cd26784-26fe-102b-80cb-0017a47871b2",
+                      "label": "Kaposi Sarcoma Oral"
+                    },
+                    {
+                      "concept": "3cd173f6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Kaposis Sarcoma"
+                    },
+                    {
+                      "concept": "3cd11d66-26fe-102b-80cb-0017a47871b2",
+                      "label": "Knee, Arthritis (Retired)"
+                    },
+                    {
+                      "concept": "3ccd3b06-26fe-102b-80cb-0017a47871b2",
+                      "label": "Labor Pain"
+                    },
+                    {
+                      "concept": "3ccd3c82-26fe-102b-80cb-0017a47871b2",
+                      "label": "Labor Pain, False (Retired)"
+                    },
+                    {
+                      "concept": "3cccfac4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Laceration"
+                    },
+                    {
+                      "concept": "3ce8d3ca-26fe-102b-80cb-0017a47871b2",
+                      "label": "Leiomyosarcoma"
+                    },
+                    {
+                      "concept": "3ccca93e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Leprosy"
+                    },
+                    {
+                      "concept": "3ccea34c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Leukemia"
+                    },
+                    {
+                      "concept": "3ce898e2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Lineal Gingival Erythema"
+                    },
+                    {
+                      "concept": "3cd4f6fc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Low Back Pain (Retired)"
+                    },
+                    {
+                      "concept": "3ce5cea0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Lymphoma Or Hiv-Associated Tumors"
+                    },
+                    {
+                      "concept": "3ccd0f0a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Malaria"
+                    },
+                    {
+                      "concept": "f45c6da0-9e41-4dd5-a347-4c2ca47a61de",
+                      "label": "Malaria Confirmed Simple"
+                    },
+                    {
+                      "concept": "f2af083c-75bc-4435-b2d1-6ccfaeb720ae",
+                      "label": "Malaria Confirmed With Minor Digestive Symptoms"
+                    },
+                    {
+                      "concept": "51681c89-6b10-4340-964c-098afbfa23d1",
+                      "label": "Malaria Presumptive"
+                    },
+                    {
+                      "concept": "3ccc8314-26fe-102b-80cb-0017a47871b2",
+                      "label": "Malaria, Mild (Retired)"
+                    },
+                    {
+                      "concept": "3ccc8602-26fe-102b-80cb-0017a47871b2",
+                      "label": "Malaria, Presumed (Retired)"
+                    },
+                    {
+                      "concept": "3cce7886-26fe-102b-80cb-0017a47871b2",
+                      "label": "Malaria, Rule Out (Retired)"
+                    },
+                    {
+                      "concept": "3ccc8486-26fe-102b-80cb-0017a47871b2",
+                      "label": "Malaria, Severe (Retired)"
+                    },
+                    {
+                      "concept": "3cccb654-26fe-102b-80cb-0017a47871b2",
+                      "label": "Malnutrition"
+                    },
+                    {
+                      "concept": "3ccd029e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Mastitis"
+                    },
+                    {
+                      "concept": "3cccaf06-26fe-102b-80cb-0017a47871b2",
+                      "label": "Measles"
+                    },
+                    {
+                      "concept": "3cccaab0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Meningitis"
+                    },
+                    {
+                      "concept": "3cd9d064-26fe-102b-80cb-0017a47871b2",
+                      "label": "Meningitis Acute Bacterial"
+                    },
+                    {
+                      "concept": "3cd9d1f4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Meningitis Sub-Acute Presumed Cryptococcus"
+                    },
+                    {
+                      "concept": "3cd9d366-26fe-102b-80cb-0017a47871b2",
+                      "label": "Meningitis Sub-Acute Presumed Tuberculosis"
+                    },
+                    {
+                      "concept": "3cb76644-006d-4ee1-9191-78eda4964598",
+                      "label": "Meningitis Suspect"
+                    },
+                    {
+                      "concept": "3ccc88f0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Menstrual Dysfunction"
+                    },
+                    {
+                      "concept": "3cd505b6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Missed Abortion"
+                    },
+                    {
+                      "concept": "3cd80928-26fe-102b-80cb-0017a47871b2",
+                      "label": "Molluscum Contagiosum"
+                    },
+                    {
+                      "concept": "3cd66fc8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Multidrug-Resistant Tb"
+                    },
+                    {
+                      "concept": "3cccb082-26fe-102b-80cb-0017a47871b2",
+                      "label": "Mumps"
+                    },
+                    {
+                      "concept": "3ce8f184-26fe-102b-80cb-0017a47871b2",
+                      "label": "Mycobacterium Tuberculosis, Extrapulmonary"
+                    },
+                    {
+                      "concept": "3cd9bff2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Mycobacterium Tuberculosis, Pulmonary"
+                    },
+                    {
+                      "concept": "c9c5c4cb-e214-4f76-badf-273d9a55615c",
+                      "label": "Needle Stick-Injuries (Or Other Health Worker Hiv Exposure)"
+                    },
+                    {
+                      "concept": "3cceb300-26fe-102b-80cb-0017a47871b2",
+                      "label": "Neonatal Sepsis"
+                    },
+                    {
+                      "concept": "3cccc068-26fe-102b-80cb-0017a47871b2",
+                      "label": "Neoplasm"
+                    },
+                    {
+                      "concept": "3ce8d6d6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Nephropathy"
+                    },
+                    {
+                      "concept": "3cd67b9e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Neurological Syndromes Other"
+                    },
+                    {
+                      "concept": "3ce8d866-26fe-102b-80cb-0017a47871b2",
+                      "label": "Nocardiosis"
+                    },
+                    {
+                      "concept": "3cd53234-26fe-102b-80cb-0017a47871b2",
+                      "label": "Open Wound Of Unspecified Body Region (Retired)"
+                    },
+                    {
+                      "concept": "3cea1bd6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Oral Candidiasis (Retired)"
+                    },
+                    {
+                      "concept": "3cebbaae-26fe-102b-80cb-0017a47871b2",
+                      "label": "Oral Hairy Leukoplakia"
+                    },
+                    {
+                      "concept": "3cd47984-26fe-102b-80cb-0017a47871b2",
+                      "label": "Oral Hairy Leukoplakia Retired (Retired)"
+                    },
+                    {
+                      "concept": "3cd50dfe-26fe-102b-80cb-0017a47871b2",
+                      "label": "Other And Unspecified Convulsions (Retired)"
+                    },
+                    {
+                      "concept": "ac9a4589-f884-48fe-b670-3833988dda98",
+                      "label": "Other Enteritis"
+                    },
+                    {
+                      "concept": "3cee7fb4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Other Non-Coded"
+                    },
+                    {
+                      "concept": "3ce85cba-26fe-102b-80cb-0017a47871b2",
+                      "label": "Other Psychiatric Or Neurological Adverse Effect"
+                    },
+                    {
+                      "concept": "3ccea66c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Otitis Externa"
+                    },
+                    {
+                      "concept": "3ccd010e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Otitis Media"
+                    },
+                    {
+                      "concept": "3ce5bfa0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Papular Pruritic Eruptions"
+                    },
+                    {
+                      "concept": "3ccffd0a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Paraphimosis"
+                    },
+                    {
+                      "concept": "3ce8f634-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pcp - Old (Retired)"
+                    },
+                    {
+                      "concept": "3cd47b1e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pcp Retired (Retired)"
+                    },
+                    {
+                      "concept": "3ccfb868-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pellagra"
+                    },
+                    {
+                      "concept": "3cd4ff6c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pelvic Inflammatory Disease"
+                    },
+                    {
+                      "concept": "3cce99c4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Peptic Ulcer"
+                    },
+                    {
+                      "concept": "2f85bc92-44af-4877-bff1-679c54a4ace7",
+                      "label": "Perineal Tear (3Rd Degree)"
+                    },
+                    {
+                      "concept": "3cd471be-26fe-102b-80cb-0017a47871b2",
+                      "label": "Perip Neuro"
+                    },
+                    {
+                      "concept": "3ce5c414-26fe-102b-80cb-0017a47871b2",
+                      "label": "Persistent Oral Candidiasis"
+                    },
+                    {
+                      "concept": "3cd4e7e8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pertussis"
+                    },
+                    {
+                      "concept": "3ccdf6b8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pharyngitis"
+                    },
+                    {
+                      "concept": "63780718-5073-4477-85b8-761b4dfe87dc",
+                      "label": "Physical Traumas, Other Than Fractures"
+                    },
+                    {
+                      "concept": "3cce26e2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pid (Retired)"
+                    },
+                    {
+                      "concept": "3cd4d262-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pneumocystic Carinii Pneumonia"
+                    },
+                    {
+                      "concept": "3ccc91c4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pneumonia"
+                    },
+                    {
+                      "concept": "3cce8060-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pneumonia Bronchial (Retired)"
+                    },
+                    {
+                      "concept": "3cd14cb4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pneumonia, Lobar"
+                    },
+                    {
+                      "concept": "3ccc905c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pneumonia, Tuberculous"
+                    },
+                    {
+                      "concept": "3cdc346c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pneumopathy"
+                    },
+                    {
+                      "concept": "3ce603a2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pneumothorax"
+                    },
+                    {
+                      "concept": "3ccfb228-26fe-102b-80cb-0017a47871b2",
+                      "label": "Poisoning, Food (Retired)"
+                    },
+                    {
+                      "concept": "3ceb32b4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Poliomyelitis"
+                    },
+                    {
+                      "concept": "3ccc9a8e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Postpartum Hemorrhage"
+                    },
+                    {
+                      "concept": "3ccc9340-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pregnancy"
+                    },
+                    {
+                      "concept": "3ccc9624-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pregnancy Ectopic"
+                    },
+                    {
+                      "concept": "3ccc97a0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pregnancy, Hypertension Associated"
+                    },
+                    {
+                      "concept": "3ccc9912-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pregnancy, Miscarriage"
+                    },
+                    {
+                      "concept": "3ccc9bf6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pregnancy, Termination"
+                    },
+                    {
+                      "concept": "3ce8f7ba-26fe-102b-80cb-0017a47871b2",
+                      "label": "Progressive Multifocal Leukoencephalopathy"
+                    },
+                    {
+                      "concept": "1d71d824-c40d-4ab2-83f7-11ddc861eb30",
+                      "label": "Prolonged Labor"
+                    },
+                    {
+                      "concept": "3ce42f3c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Psychiatric History"
+                    },
+                    {
+                      "concept": "3ccea7fc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Psychosis"
+                    },
+                    {
+                      "concept": "3cce0874-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pud (Retired)"
+                    },
+                    {
+                      "concept": "3ccd1a36-26fe-102b-80cb-0017a47871b2",
+                      "label": "Puerperal Sepsis"
+                    },
+                    {
+                      "concept": "3cd771ac-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pulmonary Effusion"
+                    },
+                    {
+                      "concept": "3cd4815e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pulmonary Tuberculosis Retired (Retired)"
+                    },
+                    {
+                      "concept": "3ccccaae-26fe-102b-80cb-0017a47871b2",
+                      "label": "Pyrexia Of Unknown Origon(Puo) (Retired)"
+                    },
+                    {
+                      "concept": "3cd285ac-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rash Allergic V2(Retired)"
+                    },
+                    {
+                      "concept": "3cce7700-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rash, Septic (Retired)"
+                    },
+                    {
+                      "concept": "3cd82084-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rectovaginal Fistula"
+                    },
+                    {
+                      "concept": "3ce89770-26fe-102b-80cb-0017a47871b2",
+                      "label": "Recurrent Bacteraemia"
+                    },
+                    {
+                      "concept": "3ce5be24-26fe-102b-80cb-0017a47871b2",
+                      "label": "Recurrent Oral Ulceration"
+                    },
+                    {
+                      "concept": "a6b43705-5299-4b0f-a4dd-4076dfb6b60a",
+                      "label": "Recurrent Severe Presumed Bacterial Infections"
+                    },
+                    {
+                      "concept": "3cccbd84-26fe-102b-80cb-0017a47871b2",
+                      "label": "Respiratory Disease Nos (Retired)"
+                    },
+                    {
+                      "concept": "2e51f36d-e26e-4736-8c5e-6a9276925942",
+                      "label": "Respiratory Infections Acute (Ari) Other"
+                    },
+                    {
+                      "concept": "3ccea98c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rhd (Retired)"
+                    },
+                    {
+                      "concept": "3cceab1c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rheumatic Heart Disease"
+                    },
+                    {
+                      "concept": "3cce8d4e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rheumatoid Arthritis"
+                    },
+                    {
+                      "concept": "3ccd1888-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rhinitis, Allergic (Retired)"
+                    },
+                    {
+                      "concept": "3ccc9d72-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rickets Diagnosis Retired (Retired)"
+                    },
+                    {
+                      "concept": "3ccea02c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Road Traffic Accident (Retired)"
+                    },
+                    {
+                      "concept": "3cce68dc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Rta (Retired)"
+                    },
+                    {
+                      "concept": "3ccd2986-26fe-102b-80cb-0017a47871b2",
+                      "label": "Scabies"
+                    },
+                    {
+                      "concept": "3ccfabb6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Schistosomiasis"
+                    },
+                    {
+                      "concept": "3cd134f4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Schizophrenia"
+                    },
+                    {
+                      "concept": "3ccc9ee4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Scurvy (Retired)"
+                    },
+                    {
+                      "concept": "3ce5c11c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Seborrhoeic Dermatitis"
+                    },
+                    {
+                      "concept": "3cd15614-26fe-102b-80cb-0017a47871b2",
+                      "label": "Senile Dementia (Retired)"
+                    },
+                    {
+                      "concept": "dec163d9-8c7c-44e3-822c-199feef0033b",
+                      "label": "Sepsis "
+                    },
+                    {
+                      "concept": "3cceb490-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sepsis Neonatal (Retired)"
+                    },
+                    {
+                      "concept": "249b4b7f-525b-4404-ae15-eca5ef1dff1b",
+                      "label": "Severe Anemia"
+                    },
+                    {
+                      "concept": "3cd9cd6c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Severe Dysphagia Presumed Invasive"
+                    },
+                    {
+                      "concept": "3cce52e8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sexual Assault"
+                    },
+                    {
+                      "concept": "3cd533ba-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sexually Transmitted Disease Unspecified (Retired)"
+                    },
+                    {
+                      "concept": "3cce6116-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sexually Transmitted Infection"
+                    },
+                    {
+                      "concept": "3cce6a6c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Shoulder Dislocation"
+                    },
+                    {
+                      "concept": "3cceaca2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sinusitis"
+                    },
+                    {
+                      "concept": "69e7c146-aeeb-4237-9a91-cbf4e8fc49b4",
+                      "label": "Skin Infection Fungal (Mycoses) Superficial "
+                    },
+                    {
+                      "concept": "3cce81f0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Skin Infection Nos (Retired)"
+                    },
+                    {
+                      "concept": "3cd0f46c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Skin Infection, Fungal (Retired)"
+                    },
+                    {
+                      "concept": "3cce8a2e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Soft Tissue Injury Retired (Retired)"
+                    },
+                    {
+                      "concept": "3cd1222a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Spondlosis (Retired)"
+                    },
+                    {
+                      "concept": "3cd546b6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Spondylosis"
+                    },
+                    {
+                      "concept": "3ccfbb88-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sti,Males (Retired)"
+                    },
+                    {
+                      "concept": "3ccd1d60-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sty (Retired)"
+                    },
+                    {
+                      "concept": "3cd9c60a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Sub-Acute Pneumonia Presumed Pcp"
+                    },
+                    {
+                      "concept": "3ce6b4f0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Symptomatic Nephropathy Or Cardiomyopathy Presumed Due To Hiv"
+                    },
+                    {
+                      "concept": "3ccfb08e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Synovitis"
+                    },
+                    {
+                      "concept": "3cceae50-26fe-102b-80cb-0017a47871b2",
+                      "label": "Syphilis"
+                    },
+                    {
+                      "concept": "3ce8948c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tb Lymphadenopathy"
+                    },
+                    {
+                      "concept": "3cda9b98-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tb Status Drug Resistance"
+                    },
+                    {
+                      "concept": "4629805f-66b2-4e99-ad15-74734fba3d3b",
+                      "label": "Teeth And Gum Infections"
+                    },
+                    {
+                      "concept": "6d06025b-0558-46a7-ba24-b4beb9346e21",
+                      "label": "Threat Of Premature Delivery"
+                    },
+                    {
+                      "concept": "3cd48dca-26fe-102b-80cb-0017a47871b2",
+                      "label": "Thrombocytopenia"
+                    },
+                    {
+                      "concept": "3ccf388e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Thrush (Retired)"
+                    },
+                    {
+                      "concept": "3ccd398a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tinea Capitis"
+                    },
+                    {
+                      "concept": "3cd4879e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tinea Corporis"
+                    },
+                    {
+                      "concept": "3cccfde4-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tonsillitis"
+                    },
+                    {
+                      "concept": "3cccecdc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Toxicity, Drug"
+                    },
+                    {
+                      "concept": "3ccfb3b8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Toxicity, Food"
+                    },
+                    {
+                      "concept": "3ccccc20-26fe-102b-80cb-0017a47871b2",
+                      "label": "Toxicity, Not Otherwise Specified"
+                    },
+                    {
+                      "concept": "3cd35c5c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Trichomonas"
+                    },
+                    {
+                      "concept": "3cd35112-26fe-102b-80cb-0017a47871b2",
+                      "label": "Trichomonas Vaginalis (Retired)"
+                    },
+                    {
+                      "concept": "3ce85e2c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tuberculoma"
+                    },
+                    {
+                      "concept": "3ccca7cc-26fe-102b-80cb-0017a47871b2",
+                      "label": "Tuberculosis"
+                    },
+                    {
+                      "concept": "3ccd2b02-26fe-102b-80cb-0017a47871b2",
+                      "label": "Typhoid Fever"
+                    },
+                    {
+                      "concept": "3cce9834-26fe-102b-80cb-0017a47871b2",
+                      "label": "Ulcer Duodenal (Retired)"
+                    },
+                    {
+                      "concept": "3cce9e9c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Ulcer Gastric (Retired)"
+                    },
+                    {
+                      "concept": "3cce9b54-26fe-102b-80cb-0017a47871b2",
+                      "label": "Ulcer Peptic Nos (Retired)"
+                    },
+                    {
+                      "concept": "61aff62b-6bad-41eb-a75a-33371b4bd413",
+                      "label": "Ulcers Of Skin"
+                    },
+                    {
+                      "concept": "3ccccf04-26fe-102b-80cb-0017a47871b2",
+                      "label": "Unclassified Diseases (Retired)"
+                    },
+                    {
+                      "concept": "3ce5c70c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Unexplained Anaemia, Neutropaenia, Or Throbocytopaenia"
+                    },
+                    {
+                      "concept": "3ce89cb6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Unexplained Persistent Hepatomegaly And Splenomegaly"
+                    },
+                    {
+                      "concept": "3cd507be-26fe-102b-80cb-0017a47871b2",
+                      "label": "Unspecified Malaria (Retired)"
+                    },
+                    {
+                      "concept": "3cccf4a2-26fe-102b-80cb-0017a47871b2",
+                      "label": "Upper Respiratory Tract Infection"
+                    },
+                    {
+                      "concept": "3cce5928-26fe-102b-80cb-0017a47871b2",
+                      "label": "Urethritis Retired (Retired)"
+                    },
+                    {
+                      "concept": "3ccca36c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Urinary Tract Infection"
+                    },
+                    {
+                      "concept": "fb6507ea-08e0-4734-ac24-99a83740b425",
+                      "label": "Uterine Rupture"
+                    },
+                    {
+                      "concept": "3cceafe0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Uti Retired (Retired)"
+                    },
+                    {
+                      "concept": "3ccf3be0-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vaginal Candidiasis (Retired)"
+                    },
+                    {
+                      "concept": "3ce85fa8-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vaginal/Urethral Discharge Non-Gc"
+                    },
+                    {
+                      "concept": "3ccd2800-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vaginitis"
+                    },
+                    {
+                      "concept": "3cd4e978-26fe-102b-80cb-0017a47871b2",
+                      "label": "Varicella"
+                    },
+                    {
+                      "concept": "3cd57c6c-26fe-102b-80cb-0017a47871b2",
+                      "label": "Varicose Leg Ulcers"
+                    },
+                    {
+                      "concept": "3cd20e24-26fe-102b-80cb-0017a47871b2",
+                      "label": "Venous Stasis"
+                    },
+                    {
+                      "concept": "3cd80702-26fe-102b-80cb-0017a47871b2",
+                      "label": "Verruca Planus"
+                    },
+                    {
+                      "concept": "7dbf5510-c94f-44d2-aba4-6942c6f8e167",
+                      "label": "Vitamin A Deficiency With Keratomalacia"
+                    },
+                    {
+                      "concept": "3cd4e4be-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vitamin C Deficiency"
+                    },
+                    {
+                      "concept": "3cd4e32e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vitamin D Deficiency"
+                    },
+                    {
+                      "concept": "3cd474de-26fe-102b-80cb-0017a47871b2",
+                      "label": "Wasting Syndrome"
+                    },
+                    {
+                      "concept": "3cccac22-26fe-102b-80cb-0017a47871b2",
+                      "label": "Whooping Cough (Retired)"
+                    },
+                    {
+                      "concept": "3cce514e-26fe-102b-80cb-0017a47871b2",
+                      "label": "Worms Nos (Retired)"
+                    },
+                    {
+                      "concept": "3cd1209a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Worms, Intestinal (Retired)"
+                    },
+                    {
+                      "concept": "3cce199a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Wound Nos (Retired)"
+                    },
+                    {
+                      "concept": "3ccd16da-26fe-102b-80cb-0017a47871b2",
+                      "label": "Wound, Deep"
+                    },
+                    {
+                      "concept": "3ccfaed6-26fe-102b-80cb-0017a47871b2",
+                      "label": "Wound, Pierce (Retired)"
+                    },
+                    {
+                      "concept": "3cccf948-26fe-102b-80cb-0017a47871b2",
+                      "label": "Wound, Septic"
+                    },
+                    {
+                      "concept": "3ccca650-26fe-102b-80cb-0017a47871b2",
+                      "label": "Yellow Fever"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "non-coded",
+                "type": "obs",
+                "id": "outpatient_diagnosis,_non-coded",
+                "questionOptions": {
+                  "concept": "a72c0d52-f25c-40f9-a2c1-1cbef67e2731",
+                  "rendering": "textarea"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Images",
+        "sections": [
+          {
+            "label": "Attach Image",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Attach Image",
+                "type": "obsGroup",
+                "required": false,
+                "id": "obsgroup",
+                "questionOptions": {
+                  "rendering": "repeating",
+                  "concept": "3d47a038-c74a-4246-a0aa-40a0db014fe7"
+                },
+                "questions": [
+                  {
+                    "label": "Upload image:",
+                    "type": "obs",
+                    "default": "",
+                    "id": "attachement",
+                    "questionOptions": {
+                      "concept": "930257d0-6ee2-451c-bef3-a1e7c20ff5ff",
+                      "rendering": "file"
+                    },
+                    "validators": []
+                  }
+                ],
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "03ed005d-a10d-46ad-94a1-e695b10b4795"
+  }

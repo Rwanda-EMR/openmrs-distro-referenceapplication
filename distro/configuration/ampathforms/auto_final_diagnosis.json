@@ -1,0 +1,541 @@
+{
+    "name": "Auto Final Diagnosis 2.0",
+    "description": "Final Diangosis",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "",
+    "referencedForms": [],
+    "uuid": "8b0356fa-3f8a-4077-bce7-d94adcc16ce1",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "**Use this form to:** Document a diagnosis"
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "label": "Department",
+                "type": "obs",
+                "required": true,
+                "id": "department",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "2cda28df-2fe7-42e0-bb2f-376c9f803537",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "PRIMARY CARE SERVICE REQUESTED"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "6702"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "1dd9fd8b-c048-4dd7-997c-85926d3204c0",
+                      "label": "Accounting Office Service"
+                    },
+                    {
+                      "concept": "3ce1e268-26fe-102b-80cb-0017a47871b2",
+                      "label": "Antenatal Clinic"
+                    },
+                    {
+                      "concept": "c4d9d107-93c6-4a45-9a87-626839e7e209",
+                      "label": "ARV Service"
+                    },
+                    {
+                      "concept": "c3eea300-843a-4b09-b5ae-a760019d3a1e",
+                      "label": "Chirurgie"
+                    },
+                    {
+                      "concept": "537344a9-4bf4-45ac-91db-4e01e4a8befb",
+                      "label": "Consultation"
+                    },
+                    {
+                      "concept": "4a625024-a362-4639-bc37-b806c1d4845a",
+                      "label": "Dental Service"
+                    },
+                    {
+                      "concept": "4c674127-a3f7-44a1-8f0e-36fc54066188",
+                      "label": "Dermatologie Service"
+                    },
+                    {
+                      "concept": "fe351ac8-550a-42d1-aaa4-409a2be28cb0",
+                      "label": "Emergency"
+                    },
+                    {
+                      "concept": "3ced003a-26fe-102b-80cb-0017a47871b2",
+                      "label": "Family Planning Services"
+                    },
+                    {
+                      "concept": "b6d900a0-bf6c-441e-b817-95b3d238e9f7",
+                      "label": "Forensic Service"
+                    },
+                    {
+                      "concept": "a848ecdb-1906-4430-a954-9dae5c16c72c",
+                      "label": "Gender Based Violence Service"
+                    },
+                    {
+                      "concept": "a653e3a3-8520-4550-8093-45cc089a85dc",
+                      "label": "Gynecology Service"
+                    },
+                    {
+                      "concept": "3ce6a514-26fe-102b-80cb-0017a47871b2",
+                      "label": "Hospital, Internal Medicine"
+                    },
+                    {
+                      "concept": "a48b0182-709d-4c00-8333-11a409f20126",
+                      "label": "Hospitalization Service"
+                    },
+                    {
+                      "concept": "ed9359b6-6d5c-4d04-b368-68c8511b3f6a",
+                      "label": "Infectious Diseases Clinic Service"
+                    },
+                    {
+                      "concept": "c7970a71-eaa4-4518-84b2-2a698fefb9ab",
+                      "label": "Integrated Management Of Adult Illness Service"
+                    },
+                    {
+                      "concept": "68ee1d12-193f-42f5-a0d1-c66aa6169c11",
+                      "label": "Integrated Management Of Childhood Illness"
+                    },
+                    {
+                      "concept": "7bbe871a-d341-412c-bdf2-3f1721748c75",
+                      "label": "Kinesitherapie"
+                    },
+                    {
+                      "concept": "4e78fc3c-7901-4687-b969-a26fcb13218b",
+                      "label": "Laboratory Services"
+                    },
+                    {
+                      "concept": "c967aea0-5eda-4eaf-8c92-142c6b9463de",
+                      "label": "Maternity Service"
+                    },
+                    {
+                      "concept": "5a67b019-02bc-492d-b60c-a93219a09b8c",
+                      "label": "Mental Health Service"
+                    },
+                    {
+                      "concept": "2fe609b9-166a-4b9b-a117-a5478382fcf5",
+                      "label": "Mutuelle Service"
+                    },
+                    {
+                      "concept": "4dbd708f-70f9-4634-aa59-47befa521210",
+                      "label": "Neonatal Service"
+                    },
+                    {
+                      "concept": "7208455d-48bb-485c-bb9e-4d12b87beaa4",
+                      "label": "Non Communicable Disease Service"
+                    },
+                    {
+                      "concept": "3cde9842-26fe-102b-80cb-0017a47871b2",
+                      "label": "Nutrition Program"
+                    },
+                    {
+                      "concept": "22be00c5-5893-4fbf-9f87-b84cd128afba",
+                      "label": "Opthalmology Service"
+                    },
+                    {
+                      "concept": "6e950bd2-09fd-437e-99b6-5149cb1966c8",
+                      "label": "Oto-Rhino-Laryngologie"
+                    },
+                    {
+                      "concept": "89665e82-9ee3-47d1-8e53-ea90854a0a0e",
+                      "label": "Outpatient Chirurgie"
+                    },
+                    {
+                      "concept": "44210904-7a6c-4717-9b82-480314f61afd",
+                      "label": "Outpatient Chirurgie Specialiste"
+                    },
+                    {
+                      "concept": "7805757b-fcd4-4722-8f1d-e5c11d09c380",
+                      "label": "Outpatient Dermatologie"
+                    },
+                    {
+                      "concept": "834012cf-a20b-4c1d-896e-c9a01ec23adb",
+                      "label": "Outpatient Gyneco-Obstetrique"
+                    },
+                    {
+                      "concept": "b6bc67d9-58b0-412f-910b-12023d4bbc26",
+                      "label": "Outpatient Gyneco-Obstetrique Specialiste"
+                    },
+                    {
+                      "concept": "126d6d2a-7003-42bc-a423-f45c9e168a08",
+                      "label": "Outpatient Medecine Interne"
+                    },
+                    {
+                      "concept": "53042605-e960-4313-bbca-a9106c76cdf0",
+                      "label": "Outpatient Medecine Interne Specialiste"
+                    },
+                    {
+                      "concept": "1edb9e48-6169-45eb-8066-d701b5ac5f9c",
+                      "label": "Outpatient Orl"
+                    },
+                    {
+                      "concept": "ba38c8ed-9111-409c-b9c5-a8468c6d2712",
+                      "label": "Outpatient Pediatrie"
+                    },
+                    {
+                      "concept": "3c8d2620-8d03-4196-8b9b-f76e2fa046c9",
+                      "label": "Outpatient Pediatrie Specialiste"
+                    },
+                    {
+                      "concept": "1ae9b7b3-9cc7-473f-971f-76f953dbd644",
+                      "label": "Outpatient Service 1"
+                    },
+                    {
+                      "concept": "ef144bdd-020e-44fb-a4f4-c21700337b29",
+                      "label": "Outpatient Service 2"
+                    },
+                    {
+                      "concept": "9b5dad16-60d1-4cea-8853-386b20aeb790",
+                      "label": "Outpatient Service 3"
+                    },
+                    {
+                      "concept": "3f5169f7-51a2-4a62-9706-ddfd0bc94855",
+                      "label": "Outpatient Service 4"
+                    },
+                    {
+                      "concept": "b7ca170f-5aa3-4f15-a18f-67491371d6c9",
+                      "label": "Outpatient Service 5"
+                    },
+                    {
+                      "concept": "98a8ae84-5396-4985-8ba3-5026e16e48d2",
+                      "label": "Pediatric Service"
+                    },
+                    {
+                      "concept": "cccb52b8-0924-453e-b9a2-b4cf33392a9c",
+                      "label": "Pharmacy Services"
+                    },
+                    {
+                      "concept": "77408f95-1aaf-4ebb-9b20-285e3984a1d4",
+                      "label": "Prevention Of Mother To Child Transmission Service"
+                    },
+                    {
+                      "concept": "107fd31f-49f0-4a2c-99e7-801c493252a6",
+                      "label": "Radiographie"
+                    },
+                    {
+                      "concept": "96f39042-ee67-47eb-8d7c-22816cd9d13a",
+                      "label": "Social Worker Service"
+                    },
+                    {
+                      "concept": "5e71b7e5-8ab7-4b16-a147-509635bad0ac",
+                      "label": "Triage Service"
+                    },
+                    {
+                      "concept": "16edb286-a2c0-4b35-a3b6-101ea2bbb231",
+                      "label": "Vaccination Service"
+                    },
+                    {
+                      "concept": "3cdc8426-26fe-102b-80cb-0017a47871b2",
+                      "label": "Vct Program"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Consultation Type",
+                "type": "obs",
+                "required": true,
+                "id": "consultationType",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "d6dafc4b-9ad8-4467-94a9-0eca78648254",
+                  "answers": [
+                    {
+                      "concept": "29ce8244-5251-4c76-8e99-bbad280be2ef",
+                      "label": "Consultation ANC"
+                    },
+                    {
+                      "concept": "7f968ad4-4030-47f4-890c-176d92779b20",
+                      "label": "Consultation candidat specialiste référé (tous les jours)"
+                    },
+                    {
+                      "concept": "888b282b-41f7-4406-a68c-24aced60f267",
+                      "label": "Consultation d'un médecin généraliste (non référé) / nuit, week end et jours fériés"
+                    },
+                    {
+                      "concept": "aee6b62b-e173-4e10-92b4-ad576ec02938",
+                      "label": "Consultation d'un médecin spécialiste (non référé) / nuit, week end et jours fériés"
+                    },
+                    {
+                      "concept": "d6413ccb-c2fd-4b71-ad58-9fc043a9555e",
+                      "label": "Consultation d'un médecin spécialiste(référé) : tous les jours"
+                    },
+                    {
+                      "concept": "2554e8da-eed3-42c9-ada5-ae304b2b5587",
+                      "label": "Consultation FP"
+                    },
+                    {
+                      "concept": "433f21dc-c3be-4dc0-9e94-1ace7c8bcc66",
+                      "label": "Consultation infirmier de garde"
+                    },
+                    {
+                      "concept": "b1ebf22b-1fa4-4538-8b07-abc33dd05ea8",
+                      "label": "Consultation infirmier spécialisé A1"
+                    },
+                    {
+                      "concept": "8fee77af-6973-4e5b-b586-7a6c3ad5226b",
+                      "label": "Consultation infirmier/nuit, weekend, jours fériés"
+                    },
+                    {
+                      "concept": "7f7d8472-cb98-4b7a-9e5e-29804ddc97ce",
+                      "label": "Consultation médecin généraliste (référé) : tous les jours"
+                    },
+                    {
+                      "concept": "6a0a452a-e9d0-415d-90e4-c799f96655e3",
+                      "label": "Consultation médicale malade (non référé)"
+                    },
+                    {
+                      "concept": "0d3517fd-891e-405d-b1d1-6669ad05aa9f",
+                      "label": "Consultation paramédicale, Spécialiste A0(non référé) /nuit, week end, jours fériés"
+                    },
+                    {
+                      "concept": "fecab067-fb65-4d0e-96bf-8c42dd123353",
+                      "label": "Consultation paramédicale, Spécialiste A0(référé) : tous les jours"
+                    },
+                    {
+                      "concept": "df54a8e3-cf9e-46c3-9efd-92bb5e4ef7f9",
+                      "label": "Consultation paramédicale, Spécialiste A1(non référé) /nuit, week end, jours fériés"
+                    },
+                    {
+                      "concept": "59bb1a32-a36a-4766-b47c-eb9c580bb0ad",
+                      "label": "Consultation paramédicale, Spécialiste A1(référé) : tous les jours"
+                    },
+                    {
+                      "concept": "995d6a5b-c3e4-4f75-9b7e-dd1ac2f7282d",
+                      "label": "Consultation pré-anesthésique par le médecin spécialiste (tous les jours)"
+                    },
+                    {
+                      "concept": "b329cf9e-c61f-49c4-bfe6-8c6b5873e8fe",
+                      "label": "Consultation/MDR-TB2"
+                    },
+                    {
+                      "concept": "ef28be91-c35b-4d28-9eb1-8afa952d54a5",
+                      "label": "Nutrition Consultation"
+                    },
+                    {
+                      "concept": "e027a13d-ee4f-48f3-88da-3ec679aee2ba",
+                      "label": "OPHTHALMOLOGUE"
+                    },
+                    {
+                      "concept": "82ce723b-1914-4e70-a66f-df40f5a56039",
+                      "label": "Visite par le medecin generaliste en hospitalisation"
+                    },
+                    {
+                      "concept": "120f4fba-06aa-4c56-9e74-eb2dcdd54404",
+                      "label": "Visite par le medecin specialiste en hospitalisation"
+                    },
+                    {
+                      "concept": "e6e56e93-7fac-44f1-a3c1-2ec8e371bd71",
+                      "label": "Visite pre anesthesique par A1"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Diagnosis",
+        "sections": [
+          {
+            "label": "Final Diagnosis",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Main Diagnosis",
+                "type": "obs",
+                "required": false,
+                "id": "mainDiagnosis",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "2dce81f9-3874-4247-b441-6369ca0725c2",
+                  "answers": []
+                }
+              },
+              {
+                "label": "Secondary Diagnosis",
+                "type": "obs",
+                "required": false,
+                "id": "secondaryDiagnosis",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "a72c0d52-f25c-40f9-a2c1-1cbef67e2731",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "OUTPATIENT DIAGNOSIS, NON-CODED"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "3106"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Is Diagnosis an HIV Opportunistic Illness",
+                "type": "obs",
+                "required": false,
+                "id": "HivOpportunisticIllness",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "5f127358-7155-4e93-9a32-be7f71426e5a",
+                  "answers": [
+                    {
+                      "concept": "3ce22110-26fe-102b-80cb-0017a47871b2",
+                      "label": "Yes"
+                    },
+                    {
+                      "concept": "3ce22c50-26fe-102b-80cb-0017a47871b2",
+                      "label": "No"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Diagnosis , NON-CODED",
+                "type": "obs",
+                "required": false,
+                "id": "diagnosis,Non-Coded",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "a72c0d52-f25c-40f9-a2c1-1cbef67e2731",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "OUTPATIENT DIAGNOSIS, NON-CODED"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "3106"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Case",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Case Status",
+                "type": "obs",
+                "required": false,
+                "id": "caseStatus",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "14183f94-59b2-4b62-bad7-2c788a21a422",
+                  "answers": [
+                    {
+                      "concept": "f7b5bf49-cb07-4fca-8c15-93ba92249344",
+                      "label": "New"
+                    },
+                    {
+                      "concept": "ae5ba489-9be2-4960-8e44-8d09071ab8ca",
+                      "label": "Old"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Plan",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Treatment/Action taken",
+                "type": "obs",
+                "required": false,
+                "id": "plan",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "3ce88a32-26fe-102b-80cb-0017a47871b2",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "2881"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "PIH",
+                      "value": "PATIENT PLAN COMMENTS"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "03ed005d-a10d-46ad-94a1-e695b10b4795"
+  }

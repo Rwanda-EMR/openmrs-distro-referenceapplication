@@ -1,0 +1,4755 @@
+{
+    "name": "Medical Acts / ICHI 2.0",
+    "description": "International Classification of Health Interventions",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "",
+    "referencedForms": [],
+    "uuid": "eb73a35b-8c82-4f67-a432-ba00c9d4fa6e",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "This is a list of billable medical procedures"
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "label": "Clinical Department",
+                "type": "obs",
+                "id": "clinicaldepartment",
+                "required": "true",
+                "questionOptions": {
+                  "concept": "9b42e3b9-c648-4025-95db-8b72757e57d1",
+                  "rendering": "select",
+                  "answers": [
+                    {
+                      "concept": "adeb8d27-726c-442d-ba3c-521514f9913c",
+                      "label": "Anesthesie"
+                    },
+                    {
+                      "concept": "3cd0032c-26fe-102b-80cb-0017a47871b2",
+                      "label": "ARV"
+                    },
+                    {
+                      "concept": "c3eea300-843a-4b09-b5ae-a760019d3a1e",
+                      "label": "Chirurgie"
+                    },
+                    {
+                      "concept": "9ffaf0b6-09a2-4f5f-a934-ac6c698b8f66",
+                      "label": "Dermatologie"
+                    },
+                    {
+                      "concept": "d47c7282-cd6c-4c25-8ad7-1a93333553a8",
+                      "label": "DCP"
+                    },
+                    {
+                      "concept": "1b9d950f-cf58-4c4a-a303-a04a6d568d5e",
+                      "label": "Echographie"
+                    },
+                    {
+                      "concept": "fe351ac8-550a-42d1-aaa4-409a2be28cb0",
+                      "label": "Emergency"
+                    },
+                    {
+                      "concept": "9f14056d-f58d-4e60-8d5f-c944a990ea9e",
+                      "label": "GBV"
+                    },
+                    {
+                      "concept": "75dc6a31-e5c5-4490-92a4-907cb8374f68",
+                      "label": "Laboratory"
+                    },
+                    {
+                      "concept": "2c143158-4444-4c8a-b9bc-dea6e9acc09e",
+                      "label": "Maternite"
+                    },
+                    {
+                      "concept": "11b815b5-1b1e-480b-ab2b-1f76051a2815",
+                      "label": "Medecine Interne"
+                    },
+                    {
+                      "concept": "dfba0519-dbf3-4c55-bb9d-2a929c801f72",
+                      "label": "Neonatologie"
+                    },
+                    {
+                      "concept": "3274bc44-60cb-444b-b6b1-0bfe6c68d89d",
+                      "label": "NCDs"
+                    },
+                    {
+                      "concept": "0b9ec1eb-49ca-48dc-9aa6-63366b2104b3",
+                      "label": "Nutrition"
+                    },
+                    {
+                      "concept": "3b3946c4-32e3-4db7-b6f3-0ec8c52c6585",
+                      "label": "Orthopedie"
+                    },
+                    {
+                      "concept": "f6dc88e5-a536-45fb-a343-8b76c9abe834",
+                      "label": "Pediatrie"
+                    },
+                    {
+                      "concept": "09c7bdef-116f-4143-a58b-452799d51032",
+                      "label": "Pharmacy"
+                    },
+                    {
+                      "concept": "f568dae5-2b47-4fb3-b823-e438e347cb00",
+                      "label": "Physiotherapy"
+                    },
+                    {
+                      "concept": "c2009d50-0ce9-4b73-9908-6de79d9b2f2e",
+                      "label": "Ophtalmology"
+                    },
+                    {
+                      "concept": "9e5e7ffc-6eb8-4d0f-a1a8-319eed6399fb",
+                      "label": "OPD"
+                    },
+                    {
+                      "concept": "1defceb5-def5-4b4e-bd7f-0d79c601169b",
+                      "label": "OPD Chirurgie"
+                    },
+                    {
+                      "concept": "1f83cbb7-3e94-41d4-a721-6a1b5a3ee6a1",
+                      "label": "Radiology"
+                    },
+                    {
+                      "concept": "dd67f196-d0bf-4323-9e08-822fe4138b8b",
+                      "label": "Sante Mentale"
+                    },
+                    {
+                      "concept": "e65de509-f9dc-4219-bba2-129e6dd65d01",
+                      "label": "Stomatologie"
+                    },
+                    {
+                      "concept": "4ba40ee0-8328-4895-8bab-912a7055aabb",
+                      "label": "TBMR"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Procedures",
+        "sections": [
+          {
+            "label": "ICHI Procedures",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "ICHI Procedure Code",
+                "type": "obs",
+                "required": false,
+                "id": "ichiProcedureCode",
+                "questionOptions": {
+                  "rendering": "ui-select-extended",
+                  "concept": "b8814549-79a7-43ef-a016-aad36ccc93ea"
+                },
+                "validators": []
+              },
+              {
+                "label": "Choose a service",
+                "type": "obs",
+                "required": false,
+                "id": "serviceToBill",
+                "questionOptions": {
+                  "rendering": "multiCheckbox",
+                  "concept": "676ad94a-b005-4354-9d49-d408432bbe5f",
+                  "answers": [
+                    {
+                      "concept": "18b66571-930a-4952-840e-67e5bd73045f",
+                      "label": "Appareillage Orthopedique"
+                    },
+                    {
+                      "concept": "c3eea300-843a-4b09-b5ae-a760019d3a1e",
+                      "label": "Chirurgie"
+                    },
+                    {
+                      "concept": "1b9d950f-cf58-4c4a-a303-a04a6d568d5e",
+                      "label": "Echographie"
+                    },
+                    {
+                      "concept": "7bbe871a-d341-412c-bdf2-3f1721748c75",
+                      "label": "Kinesitherapie"
+                    },
+                    {
+                      "concept": "20fe3a84-a8aa-4726-a905-410a885a1c61",
+                      "label": "Maternite"
+                    },
+                    {
+                      "concept": "88aa297f-c8cb-4700-baed-32af16b8a110",
+                      "label": "Ophtalmologie"
+                    },
+                    {
+                      "concept": "6e950bd2-09fd-437e-99b6-5149cb1966c8",
+                      "label": "Oto-Rhino-Laryngologie"
+                    },
+                    {
+                      "concept": "1f5599ce-106a-4b7e-b545-96adde63b581",
+                      "label": "Oxygenotherapie"
+                    },
+                    {
+                      "concept": "a837de12-9005-4af4-b147-8ea7a169ca14",
+                      "label": "Soins Infirmiers"
+                    },
+                    {
+                      "concept": "107fd31f-49f0-4a2c-99e7-801c493252a6",
+                      "label": "Radiographie"
+                    },
+                    {
+                      "concept": "e65de509-f9dc-4219-bba2-129e6dd65d01",
+                      "label": "Stomatologie"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Appareillage Orthopedique",
+        "sections": [
+          {
+            "label": "Orthopedic Equipment",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Orthopedic Equipment",
+                "type": "obsGroup",
+                "required": false,
+                "id": "OrthopedicEquipment",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "18b66571-930a-4952-840e-67e5bd73045f"
+                },
+                "questions": [
+                  {
+                    "label": "Béquille sous axillaire locale (Local axillary crutch)",
+                    "type": "obs",
+                    "id": "bequillesousaxillairelocale",
+                    "questionOptions": {
+                      "concept": "a5f8561c-3bd6-8a4d-8f4d-bbc3d5defb79",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Bequille sous axillaire locale pour enfant moins de 12 ans",
+                    "type": "obs",
+                    "id": "bequillesousaxillairelocalepourenfantmoinsde12ans",
+                    "questionOptions": {
+                      "concept": "75cfd5b3-f10a-6bc4-0664-654d2d85cbdd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Béquille sous axillaire importée (Imported axillary crutch)",
+                    "type": "obs",
+                    "id": "bequillesousaxillaireimportee",
+                    "questionOptions": {
+                      "concept": "8e8cb277-0c60-5265-b02f-8a25c96ffda1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Canne anglaise locale pour enfant moins de 12 ans",
+                    "type": "obs",
+                    "id": "canneanglaiselocalepourenfantmoinsde12ans",
+                    "questionOptions": {
+                      "concept": "dfc21726-eada-6461-1522-a7ef839e5b65",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Canne anglaise importée (Imported Elbow crutch)",
+                    "type": "obs",
+                    "id": "canneanglaiseimportee",
+                    "questionOptions": {
+                      "concept": "03071374-9d79-7ca1-ea24-6343ed2d8b5c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Déambulateur (Walking frame)",
+                    "type": "obs",
+                    "id": "deambulateur",
+                    "questionOptions": {
+                      "concept": "49eede47-8699-8173-4a4f-3e952e4fdfa8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Semelle orthopédique locale (Local Insoles)",
+                    "type": "obs",
+                    "id": "semelleorthopediquelocale",
+                    "questionOptions": {
+                      "concept": "e8e7759d-0340-6e5c-48be-4d46dca38c89",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Semelle orthopédique importée (Imported Insoles)",
+                    "type": "obs",
+                    "id": "semelleorthopediqueimportee",
+                    "questionOptions": {
+                      "concept": "942cc649-b05c-e676-acb2-e98dbe949f02",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Compensation externe en caoutchouc (1 cm d'ép.) (External compensation of rubber)",
+                    "type": "obs",
+                    "id": "compensationexternecaoutchouc",
+                    "questionOptions": {
+                      "concept": "0c73cff2-d26b-6524-915d-1482a6a111ac",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Compensation externe en liège (1 cm d'ép.) (External compensation of cork)",
+                    "type": "obs",
+                    "id": "compensationexterneliege",
+                    "questionOptions": {
+                      "concept": "6f78c3bc-b889-1973-133b-1ceab01d1b00",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Coque talonnière en polypropylène (supramalleolar foot orthosis in PPP)",
+                    "type": "obs",
+                    "id": "coquetalonnierepolypropylene",
+                    "questionOptions": {
+                      "concept": "db6ee5db-c55c-755a-f9f9-21b900a048ad",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Coque talonnière en cuir à mouler (supramalleolar foot orthosis in leather)",
+                    "type": "obs",
+                    "id": "coquetalonnierecuir",
+                    "questionOptions": {
+                      "concept": "31de92cb-7865-5ad2-3350-257b5ec9bb35",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Coque talonnière en résine (supramalleolar foot orthosis in resin)",
+                    "type": "obs",
+                    "id": "coquetalonniereresine",
+                    "questionOptions": {
+                      "concept": "36b5fd40-2043-bf1d-8fb5-a969555820c1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orthèse suro pédieuse sur tracé avec articulations de cheville à étrier locales (Traced AFO with local ankle joint)",
+                    "type": "obs",
+                    "id": "orthesesuropedieusetracelocales",
+                    "questionOptions": {
+                      "concept": "b16dc10b-0424-db2c-b704-eee94082c50f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orthèse suro pédieuse sur tracé avec articulations de cheville à étrier importées (Traced AFO with imported ankle joint) pour enfant moins de 12 ans",
+                    "type": "obs",
+                    "id": "orthesesuropedieusetraceimporteesenfant",
+                    "questionOptions": {
+                      "concept": "b2960f2c-20b1-2fad-ba94-66787c2e6c0b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orthèse suro pédieuse sur tracé avec articulations de cheville à étrier importées (Traced AFO with imported ankle joint)",
+                    "type": "obs",
+                    "id": "orthesesuropedieusetraceimportees",
+                    "questionOptions": {
+                      "concept": "6fca352d-19c2-ad01-b453-327c34adb448",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orthèse suro pédieuse sur moulage avec articulation des chevilles Oklahoma",
+                    "type": "obs",
+                    "id": "orthèsesuropédieusesurmoulageavecarticulationdeschevillesoklahoma",
+                    "questionOptions": {
+                      "concept": "cfb8dfe0-b9ca-9940-78d6-ab61253e7376",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "releveur du pied rigide en polypropylène sur moulage ( Anti drop foot splint)",
+                    "type": "obs",
+                    "id": "releveurdupiedrigideenpolypropylènesurmoulage(antidropfootsplint)",
+                    "questionOptions": {
+                      "concept": "0435de0b-017d-fa18-5bcc-8c2d25337936",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "releveur du pied rigide en polypropylène sur moulage ( Anti drop foot splint) pur enfant de 12 ans",
+                    "type": "obs",
+                    "id": "releveurdupiedrigideenpolypropylènesurmoulage(antidropfootsplint)purenfantde12ans",
+                    "questionOptions": {
+                      "concept": "24b8a2af-417d-14b9-eecf-260a37560662",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse mécanique de bras / trans humérale en résine(Ottobock)",
+                    "type": "obs",
+                    "id": "prothèsemécaniquedebras/transhuméraleenrésine(ottobock)",
+                    "questionOptions": {
+                      "concept": "404b248b-5021-dbb9-6349-3e9f1e6664cb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse esthétique de bras / trans humérale en polypropylène(CICR)",
+                    "type": "obs",
+                    "id": "prothèseesthétiquedebras/transhuméraleenpolypropylène(cicr)",
+                    "questionOptions": {
+                      "concept": "49565a52-c724-4def-9ae1-e5d9c882a309",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse mécanique d'avant bras / trans radiale en résine(Ottobock)",
+                    "type": "obs",
+                    "id": "prothèsemécaniqued'avantbras/transradialeenrésine(ottobock)",
+                    "questionOptions": {
+                      "concept": "61742d49-5136-ee89-6afd-b50d0700f082",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse esthétique d'avant bras / trans radiale en résine(Ottobock)",
+                    "type": "obs",
+                    "id": "prothèseesthétiqued'avantbras/transradialeenrésine(ottobock)",
+                    "questionOptions": {
+                      "concept": "c3505e63-f9b1-6ea1-3070-d0982036b35f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse mécanique d'avant bras / trans radiale en polypropylène avec pince crochet ou anneau (CICR)",
+                    "type": "obs",
+                    "id": "prothèsemécaniqued'avantbras/transradialeenpolypropylèneavecpincecrochetouanneau(cicr)",
+                    "questionOptions": {
+                      "concept": "595b6180-83cd-bc23-4e73-d0bd23a0ae2c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse esthétique d'avant bras / trans radiale en polypropylène (CICR)",
+                    "type": "obs",
+                    "id": "prothèseesthétiqued'avantbras/transradialeenpolypropylène(cicr)",
+                    "questionOptions": {
+                      "concept": "d8e2b790-3827-d82d-53d3-22e6581bbe8a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse mécanique de désarticulation du poignet en résine avec crochet pince(Ottobock)",
+                    "type": "obs",
+                    "id": "prothèsemécaniquededésarticulationdupoignetenrésineaveccrochetpince(ottobock)",
+                    "questionOptions": {
+                      "concept": "294d7c20-b1ef-fff9-1a7d-5a05bd46d022",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse mécanique de désarticulation du poignet en résine(Ottobock)",
+                    "type": "obs",
+                    "id": "prothèsemécaniquededésarticulationdupoignetenrésine(ottobock)",
+                    "questionOptions": {
+                      "concept": "92e7f1ae-fb4b-3e85-6f25-2b47523819ca",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse esthétique de désarticulation du poignet en résine(Ottobock)",
+                    "type": "obs",
+                    "id": "prothèseesthétiquededésarticulationdupoignetenrésine(ottobock)",
+                    "questionOptions": {
+                      "concept": "18b9b5df-d7cb-021c-663d-4446f3238ac1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse mécanique de désarticulation du poignet en polypropylène avec pince crochet",
+                    "type": "obs",
+                    "id": "prothèsemécaniquededésarticulationdupoignetenpolypropylèneavecpincecrochet",
+                    "questionOptions": {
+                      "concept": "e5633a8f-65bf-5cc6-efea-928831e6e6f8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orthèse pelvi pédieuse sur moulage avec articulations du genou local",
+                    "type": "obs",
+                    "id": "orthèsepelvipédieusesurmoulageavecarticulationsdugenoulocal",
+                    "questionOptions": {
+                      "concept": "2ca6094f-ab8e-6968-1cdb-517638ec9634",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse esthétique de désarticulation du poignet en polypropylène( CICR)",
+                    "type": "obs",
+                    "id": "prothèseesthétiquededésarticulationdupoignetenpolypropylène(cicr)",
+                    "questionOptions": {
+                      "concept": "a46301b3-f5e3-32e2-274c-f26eb689224e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prothèse de désarticulation de hanche en résine genou monoaxial et pied Sach (Ottobock)",
+                    "type": "obs",
+                    "id": "prothèsededésarticulationdehancheenrésinegenoumonoaxialetpiedsach(ottobock)",
+                    "questionOptions": {
+                      "concept": "90a4156f-9e5c-efa4-08c1-9b68c36c158a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orthèse pelvi pédieuse sur moulage avec articulations du genou local pour enfants de moins de 12ans",
+                    "type": "obs",
+                    "id": "orthèsepelvipédieusesurmoulageavecarticulationsdugenoulocalpourenfantsdemoinsde12ans",
+                    "questionOptions": {
+                      "concept": "54fefd21-3b43-6bf0-26e6-7eda459d5696",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '18b66571-930a-4952-840e-67e5bd73045f')"
+        }
+      },
+      {
+        "label": "Chirurgie",
+        "sections": [
+          {
+            "label": "Surgery",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Surgery",
+                "type": "obsGroup",
+                "required": false,
+                "id": "Surgery",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "67dc0083-a9ec-4179-b449-346ba15ba70d"
+                },
+                "questions": [
+                  {
+                    "label": "Ablation Des Fils",
+                    "type": "obs",
+                    "id": "ablat0vg7i",
+                    "questionOptions": {
+                      "concept": "5015d413-ab08-48a1-aa7e-53cd6b21a377",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ablation DIU",
+                    "type": "obs",
+                    "id": "ablatx0u6a",
+                    "questionOptions": {
+                      "concept": "fd752a01-852b-4695-8dec-59c61300c725",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "'Ablation du matériel d''ostéosynthèse'",
+                    "type": "obs",
+                    "id": "ablat8jf8f",
+                    "questionOptions": {
+                      "concept": "d6d00cb5-766a-4048-a916-6d19f73511b1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ablation Kyste De Backel (Creux Poplite)",
+                    "type": "obs",
+                    "id": "ablatr7gf4",
+                    "questionOptions": {
+                      "concept": "b8b734ae-aa52-4413-bc32-c73cd046fc23",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ablation Kyste Synovial Superficiel",
+                    "type": "obs",
+                    "id": "ablatjf3aw",
+                    "questionOptions": {
+                      "concept": "7ddea18a-2c99-4c85-9a9d-d122dcc441ad",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ablation Norplan",
+                    "type": "obs",
+                    "id": "ablat6hz9p",
+                    "questionOptions": {
+                      "concept": "12beda35-0274-454f-955c-83e36140a166",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Amputation d''un doigt",
+                    "type": "obs",
+                    "id": "amputodrax",
+                    "questionOptions": {
+                      "concept": "97686d0c-f97a-4fb2-a71f-ee3799dd74e3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Amputation d''un membre inférieur",
+                    "type": "obs",
+                    "id": "amput1xxcg",
+                    "questionOptions": {
+                      "concept": "fd48b615-e0d5-4755-a8a1-914cab3268bb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Amputation d''un membre supérieur",
+                    "type": "obs",
+                    "id": "amputdua8z",
+                    "questionOptions": {
+                      "concept": "186f98e2-8abb-4d37-9089-55339870f802",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Amygdalectomie",
+                    "type": "obs",
+                    "id": "amygdymvfq",
+                    "questionOptions": {
+                      "concept": "873cf7a4-d0ba-d107-2ae2-1d943fe07b71",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Appendicectomie",
+                    "type": "obs",
+                    "id": "appenbj971",
+                    "questionOptions": {
+                      "concept": "2cf47db9-4d1f-42a5-aedf-558d49af9d8e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Biopsie Test",
+                    "type": "obs",
+                    "id": "biopss5g4x",
+                    "questionOptions": {
+                      "concept": "96221ec6-23d9-4b66-91e8-1dc35ad511d3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Botte Plâtrée",
+                    "type": "obs",
+                    "id": "botte1iei8",
+                    "questionOptions": {
+                      "concept": "daab9e56-0d8e-4e9b-9f8f-8b1c73af2edd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cauterization Of Warts",
+                    "type": "obs",
+                    "id": "cauted02sh",
+                    "questionOptions": {
+                      "concept": "215930c0-5a79-4964-bd6a-979a141eddd2",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cerclage Du Col Utérin",
+                    "type": "obs",
+                    "id": "cercl5waf2",
+                    "questionOptions": {
+                      "concept": "74847a7b-9273-465b-a2d6-83ae3734747c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cerclage Prolapsus Rectal",
+                    "type": "obs",
+                    "id": "cercl7wgdf",
+                    "questionOptions": {
+                      "concept": "8d3571e9-ad10-4499-8deb-e5a580904cbc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cesarienne Et Ligature Des Trompes",
+                    "type": "obs",
+                    "id": "cesarlriy7",
+                    "questionOptions": {
+                      "concept": "dd891308-aa5f-4f9e-8e61-f3f366962d18",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cesarienne Seule",
+                    "type": "obs",
+                    "id": "cesarxtz6u",
+                    "questionOptions": {
+                      "concept": "e21e4595-9dae-493d-b245-9188603557ad",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cheloïdectomie",
+                    "type": "obs",
+                    "id": "chelo3gpu5",
+                    "questionOptions": {
+                      "concept": "0b371e96-0d58-43ca-818e-d1a40c7ddb8a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cholecystectomie",
+                    "type": "obs",
+                    "id": "choleo6e5y",
+                    "questionOptions": {
+                      "concept": "ccabc40a-bfbb-4b40-8c56-08e56bd175cd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Circoncision Therapeutique",
+                    "type": "obs",
+                    "id": "circoykmyg",
+                    "questionOptions": {
+                      "concept": "111a7201-74e3-4022-86c5-e0c644d92a33",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Corset Platré",
+                    "type": "obs",
+                    "id": "corsenj9kp",
+                    "questionOptions": {
+                      "concept": "52436150-d82a-40ce-92e9-6270f86e6131",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Curage Digital",
+                    "type": "obs",
+                    "id": "curagtq4xm",
+                    "questionOptions": {
+                      "concept": "dd3a9114-98f7-4d4a-9544-54751c5d45a0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cure D'éventration",
+                    "type": "obs",
+                    "id": "curegbn5f",
+                    "questionOptions": {
+                      "concept": "05219ede-8055-4012-abed-a7c91a4759e0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Curetage Évacuateur",
+                    "type": "obs",
+                    "id": "curetx3t8b",
+                    "questionOptions": {
+                      "concept": "08a03975-d880-4dbf-bd22-b9ebbbe78f54",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Curetage Osseux",
+                    "type": "obs",
+                    "id": "curetks12f",
+                    "questionOptions": {
+                      "concept": "820ca6e4-54bf-48f4-8a4e-70d236e47efb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cystostomie",
+                    "type": "obs",
+                    "id": "cystohcjst",
+                    "questionOptions": {
+                      "concept": "b9c83bd9-6fdd-4875-b40e-32af869eb008",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Corneal Debridement(Excision)",
+                    "type": "obs",
+                    "id": "corne13zbj",
+                    "questionOptions": {
+                      "concept": "e9370773-b45c-b66c-e600-236cf898dde3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "DDécollement des Petites Lèvres",
+                    "type": "obs",
+                    "id": "decolx73i2",
+                    "questionOptions": {
+                      "concept": "57d15936-73ea-4af2-812e-360cdee65ec3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Dénudation Veineuse",
+                    "type": "obs",
+                    "id": "denudsspo4",
+                    "questionOptions": {
+                      "concept": "2c7309df-a83c-4c34-81a8-15dc4a3df2dd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Drainage Thoracique",
+                    "type": "obs",
+                    "id": "draino6eh0",
+                    "questionOptions": {
+                      "concept": "8b9f75b9-91e4-4865-9b14-30800c5139c3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Exérèse De Petites Tumeures (Lipomes, Kystes)",
+                    "type": "obs",
+                    "id": "exereajpq3",
+                    "questionOptions": {
+                      "concept": "31dc102a-a0aa-41d7-855e-ee5fd6799fc1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extraction Corps Étranger",
+                    "type": "obs",
+                    "id": "extramb385",
+                    "questionOptions": {
+                      "concept": "987cb0fa-1577-4862-a95e-c9aeb052ef1f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Fixateur Externe",
+                    "type": "obs",
+                    "id": "fixat3x30e",
+                    "questionOptions": {
+                      "concept": "c5334d44-9366-4109-b9a4-b5e55fa5187c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Gastrectomie Partielle",
+                    "type": "obs",
+                    "id": "gastr7enxo",
+                    "questionOptions": {
+                      "concept": "7832d97a-6f19-424d-8ec2-a9265905b2ed",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Gastro-Entérotomie",
+                    "type": "obs",
+                    "id": "gastrsblpj",
+                    "questionOptions": {
+                      "concept": "03c33960-27f5-4917-bbbc-c8b709fb29f1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Greffe Cutanée",
+                    "type": "obs",
+                    "id": "greffqcwab",
+                    "questionOptions": {
+                      "concept": "b52219cf-5440-4e5a-a280-6a0b6133d4f1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hemicolectomie",
+                    "type": "obs",
+                    "id": "hemic6iocd",
+                    "questionOptions": {
+                      "concept": "80d4b634-e560-4f83-a41f-5a226d467a61",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hémorroidéctomie",
+                    "type": "obs",
+                    "id": "hemor6t8p8",
+                    "questionOptions": {
+                      "concept": "7c98332d-fd75-410e-845c-63a5d791811a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Herniorraphie",
+                    "type": "obs",
+                    "id": "hernidppp4",
+                    "questionOptions": {
+                      "concept": "4ca35574-f748-4873-a84e-9fb5ca53e4ef",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hydrocèle",
+                    "type": "obs",
+                    "id": "hydroyv36i",
+                    "questionOptions": {
+                      "concept": "24ce797d-849e-4eb7-9cb5-bf4a124a4f7d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hymenectomie",
+                    "type": "obs",
+                    "id": "hymenz2l3q",
+                    "questionOptions": {
+                      "concept": "7805da69-e158-45eb-9b2a-0c543d8da059",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hystérectomie",
+                    "type": "obs",
+                    "id": "hyste846wq",
+                    "questionOptions": {
+                      "concept": "aee6a7b3-a3c8-4c28-b1e9-baaad8f48ecb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hysterorrhaphie",
+                    "type": "obs",
+                    "id": "hysteqwyyn",
+                    "questionOptions": {
+                      "concept": "6118e01e-48af-4cec-b3ef-b4fc0eacb3c2",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Incision D'abcès Profond",
+                    "type": "obs",
+                    "id": "incisr6qk4",
+                    "questionOptions": {
+                      "concept": "af0cef4e-66fa-4813-9389-d1ad7c6789bd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Incision D'abcès Superficiel",
+                    "type": "obs",
+                    "id": "incisihztl",
+                    "questionOptions": {
+                      "concept": "ef49ff61-0adc-48b1-a2e4-356a73f73e21",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ingrown Toenail Removal",
+                    "type": "obs",
+                    "id": "ingro1710m",
+                    "questionOptions": {
+                      "concept": "76f3954d-a85e-4c65-811b-2307e36c527e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Injection Intra Articulaire",
+                    "type": "obs",
+                    "id": "injec68uap",
+                    "questionOptions": {
+                      "concept": "712ef7d1-febe-4c47-9914-947c7afe729d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Insertion Diu",
+                    "type": "obs",
+                    "id": "inserzhtlh",
+                    "questionOptions": {
+                      "concept": "e32bef4c-6dfc-4014-9ab4-80f0231eb3f4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Insertion Norplan",
+                    "type": "obs",
+                    "id": "inserbnld2",
+                    "questionOptions": {
+                      "concept": "9d62c339-b22b-4175-8f36-ee5a17fe7753",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Laminectomie",
+                    "type": "obs",
+                    "id": "laminnkx0b",
+                    "questionOptions": {
+                      "concept": "29ab9928-512b-4069-9a4c-b842070b4b6c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Laparotomie Exploratrice",
+                    "type": "obs",
+                    "id": "lapar2qlbl",
+                    "questionOptions": {
+                      "concept": "36662873-ef26-4d3c-b5c3-f912effba791",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Laparotomie Pour Kyste De L'ovaire",
+                    "type": "obs",
+                    "id": "laparm1i83",
+                    "questionOptions": {
+                      "concept": "b565e2c0-75c0-41e6-b9ca-23061deda729",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ligature Isolée Des Trompes",
+                    "type": "obs",
+                    "id": "ligato9p73",
+                    "questionOptions": {
+                      "concept": "caf86d37-d97f-450a-889a-28ebb1d7f8cc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Marsupialisation",
+                    "type": "obs",
+                    "id": "marsunr1wv",
+                    "questionOptions": {
+                      "concept": "9978a024-81be-457d-939a-a10a19e8933d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Mise à Plat De La Fistule Anale",
+                    "type": "obs",
+                    "id": "mise5lbdk",
+                    "questionOptions": {
+                      "concept": "09840ec7-9a72-4463-9f96-39908fdf3263",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Myoméctomie",
+                    "type": "obs",
+                    "id": "myomeqlj2j",
+                    "questionOptions": {
+                      "concept": "ea8201c8-6784-42ba-91af-e0e98fc009fb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Nephrectomie",
+                    "type": "obs",
+                    "id": "nephre0wy8",
+                    "questionOptions": {
+                      "concept": "5b7d1fbc-3a86-4cac-bcc0-34ab5ba98650",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ostéosynthèse",
+                    "type": "obs",
+                    "id": "osteok6qqy",
+                    "questionOptions": {
+                      "concept": "d15452e8-f3ad-439c-88cb-13d371276fa1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pansement Compliqué",
+                    "type": "obs",
+                    "id": "panse0s7vy",
+                    "questionOptions": {
+                      "concept": "583c01ca-4117-4105-9760-8eed22ef20d7",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Parage Chirurgicale",
+                    "type": "obs",
+                    "id": "paragz64j1",
+                    "questionOptions": {
+                      "concept": "65b273db-31da-43f0-b6e5-3142ce2900b6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plâtre",
+                    "type": "obs",
+                    "id": "platruqcr5",
+                    "questionOptions": {
+                      "concept": "3093d0cd-c83a-46dd-834d-20cc1e715605",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plâtre Curo-Pedieux",
+                    "type": "obs",
+                    "id": "platrpdxa3",
+                    "questionOptions": {
+                      "concept": "fc5129a1-302f-44d4-896b-f6f473d0f042",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plâtre De Correction Hanche Genou",
+                    "type": "obs",
+                    "id": "platry3azm",
+                    "questionOptions": {
+                      "concept": "1f2605ab-59cb-49c8-94a6-48144b0847fd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plâtre De Correction Pieds",
+                    "type": "obs",
+                    "id": "platr2wnil",
+                    "questionOptions": {
+                      "concept": "bd14381f-45e8-4e5c-8baf-37eece7d99c0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plâtre Pelvi-Pedieux",
+                    "type": "obs",
+                    "id": "platrq8abg",
+                    "questionOptions": {
+                      "concept": "9bb2ba75-62fd-4d4f-aa89-f0f53e34c68c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Poll Bladder",
+                    "type": "obs",
+                    "id": "polltjd0r",
+                    "questionOptions": {
+                      "concept": "d59086f7-b895-4231-b1fe-6326ee2d43f5",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ponction Articulaire",
+                    "type": "obs",
+                    "id": "ponctba95n",
+                    "questionOptions": {
+                      "concept": "7504b970-204f-4ee7-a96d-a9b522d0ec67",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ponction D'ascite",
+                    "type": "obs",
+                    "id": "ponctf3tfc",
+                    "questionOptions": {
+                      "concept": "3928cc0b-71be-438a-ae51-1b67edb5edb7",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ponction Lombaire",
+                    "type": "obs",
+                    "id": "ponctfz85a",
+                    "questionOptions": {
+                      "concept": "ebb2cc91-3541-486f-94ba-79d662d43ce6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ponction Pleurale",
+                    "type": "obs",
+                    "id": "ponctmyzll",
+                    "questionOptions": {
+                      "concept": "ef937571-ddb4-4bd0-a7f3-4ec2a983b7b1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pregnancy Ectopic",
+                    "type": "obs",
+                    "id": "pregntx87o",
+                    "questionOptions": {
+                      "concept": "3ccc9624-26fe-102b-80cb-0017a47871b2",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Rachis Anésthesie, Loco-Regionale, Peridurale, Générale",
+                    "type": "obs",
+                    "id": "rachiram6o",
+                    "questionOptions": {
+                      "concept": "1e203128-0b5e-4843-98a3-f870e7f6d244",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Réduction Luxation",
+                    "type": "obs",
+                    "id": "reduczlevg",
+                    "questionOptions": {
+                      "concept": "d7535a25-1b94-4f39-b5cb-835cfc384530",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Repair Of Rectovaginal Fistula",
+                    "type": "obs",
+                    "id": "repai7ta7v",
+                    "questionOptions": {
+                      "concept": "57a2854d-7374-4d6f-811f-83c288c44bba",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Réparation de Déchirure du col",
+                    "type": "obs",
+                    "id": "repari1djs",
+                    "questionOptions": {
+                      "concept": "7fae239d-1f6e-4f5d-bbd4-4e66e2bb97d9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Réparation de déchirure du périné",
+                    "type": "obs",
+                    "id": "reparhpw1e",
+                    "questionOptions": {
+                      "concept": "679b63fe-fc13-4064-9361-ff10cb8ea2ff",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Réparation de fisture vesico-vaginale",
+                    "type": "obs",
+                    "id": "reparb25o1",
+                    "questionOptions": {
+                      "concept": "d9a5a33d-e339-45d4-a595-8a5573bfc540",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Réparation de fistule recto-vesico-vaginale",
+                    "type": "obs",
+                    "id": "reparvoyo1",
+                    "questionOptions": {
+                      "concept": "5ab5021b-ae8c-42d6-b4bb-0de821e21a82",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Résection de la saphère interne",
+                    "type": "obs",
+                    "id": "resec70kjv",
+                    "questionOptions": {
+                      "concept": "0a1693d3-33df-49ce-808f-4d4076a7aa08",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Résection Intestinale",
+                    "type": "obs",
+                    "id": "resecch5jv",
+                    "questionOptions": {
+                      "concept": "572f6d31-6365-476c-8c76-4a8b38e04323",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Salpingectomie",
+                    "type": "obs",
+                    "id": "salpiu9dj5",
+                    "questionOptions": {
+                      "concept": "38d5f940-9964-4c41-a2fa-2f0993b3bb20",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Sequestrectomie",
+                    "type": "obs",
+                    "id": "sequenpy2c",
+                    "questionOptions": {
+                      "concept": "be3416d0-8642-4efc-9f93-d57303313625",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Splénectomie",
+                    "type": "obs",
+                    "id": "splen8jf8f",
+                    "questionOptions": {
+                      "concept": "d05fbe96-cd47-48bd-8752-1ca01927675f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Strapping",
+                    "type": "obs",
+                    "id": "strap2nzt1",
+                    "questionOptions": {
+                      "concept": "7cfd1cb3-1358-4665-85b3-0ab639ff51ae",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Suture Profonde Ou Multiple",
+                    "type": "obs",
+                    "id": "suturpheye",
+                    "questionOptions": {
+                      "concept": "13f11e41-b890-49e3-a2a0-3fc83205c872",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Suture Simple ",
+                    "type": "obs",
+                    "id": "suturq4xy6",
+                    "questionOptions": {
+                      "concept": "d8ed83cb-4d86-4696-ab52-7ca8318de09a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Testicular Torsion",
+                    "type": "obs",
+                    "id": "testi4nq5u",
+                    "questionOptions": {
+                      "concept": "65692d99-29a4-495b-9d4e-c3e2854d9666",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Thyroidectomie",
+                    "type": "obs",
+                    "id": "thyrorzuoe",
+                    "questionOptions": {
+                      "concept": "4ca81f70-68ed-40d9-9bba-eb04604755d8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Traction De Fractures",
+                    "type": "obs",
+                    "id": "tractf30xg",
+                    "questionOptions": {
+                      "concept": "a2aaae1c-4dcc-4058-9ddc-3826328af88a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Trepanation",
+                    "type": "obs",
+                    "id": "trepaz6tis",
+                    "questionOptions": {
+                      "concept": "e947e5a3-c112-fc7e-61e2-e5801f4d0911",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Tubage Gastrique",
+                    "type": "obs",
+                    "id": "tubagavkb4",
+                    "questionOptions": {
+                      "concept": "88a3a6ad-3c86-4ea4-9a5d-ae4df5278daa",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, 'c3eea300-843a-4b09-b5ae-a760019d3a1e')"
+        }
+      },
+      {
+        "label": "Echographie",
+        "sections": [
+          {
+            "label": "Ultrasound",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Ultrasound",
+                "type": "obsGroup",
+                "required": false,
+                "id": "Ultrasound",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "c7d688e8-be58-4282-a428-7fb4341a9ea3"
+                },
+                "questions": [
+                  {
+                    "label": "Echographie Abdominale",
+                    "type": "obs",
+                    "id": "echod36c1",
+                    "questionOptions": {
+                      "concept": "d36c1cc7-8876-4f22-8c72-d722fe804521",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Echographie Abdomino-pelvienne (Gyneco-obstetricale)",
+                    "type": "obs",
+                    "id": "echo94804",
+                    "questionOptions": {
+                      "concept": "94804134-5e97-4e34-9edc-85599a242ffd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "EGC: Electrocardiographie (en Echographie)",
+                    "type": "obs",
+                    "id": "egc3a7f8",
+                    "questionOptions": {
+                      "concept": "3a7f88d6-3173-4df4-bb38-617d1064f9d4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Echographie Générale",
+                    "type": "obs",
+                    "id": "echo20021",
+                    "questionOptions": {
+                      "concept": "2002107c-1447-4383-91bf-d070f1fe7468",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Observation",
+                    "type": "obs",
+                    "id": "echoNotes",
+                    "questionOptions": {
+                      "concept": "6602a73b-b8d3-40bc-bae8-f00ff3b9cceb",
+                      "rendering": "textarea"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '1b9d950f-cf58-4c4a-a303-a04a6d568d5e')"
+        }
+      },
+      {
+        "label": "Kinesitherapie",
+        "sections": [
+          {
+            "label": "Physiotherapy",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Kinestherapy",
+                "type": "obsGroup",
+                "required": false,
+                "id": "kinestherapy",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "5df6d146-67c1-4a88-8c20-2c41d0637af8"
+                },
+                "questions": [
+                  {
+                    "label": "Back Massage",
+                    "type": "obs",
+                    "id": "back384a2",
+                    "questionOptions": {
+                      "concept": "384a2142-240f-4045-abeb-9fd22a07cfca",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Massage Plus d'un Membre",
+                    "type": "obs",
+                    "id": "massb3ea3",
+                    "questionOptions": {
+                      "concept": "bea3ea3a-a889-47ee-80f0-732107dc7c20",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plus d'un Membre",
+                    "type": "obs",
+                    "id": "plusb3ea3",
+                    "questionOptions": {
+                      "concept": "bea3ea3a-a889-47ee-80f0-732107dc7c20",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Mobilisation of a Joint",
+                    "type": "obs",
+                    "id": "mobi0979c",
+                    "questionOptions": {
+                      "concept": "0979c14d-09a4-4e8f-9784-98852c1995a4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plus d'une Articulation",
+                    "type": "obs",
+                    "id": "plusc6816",
+                    "questionOptions": {
+                      "concept": "c6816463-6525-470e-ba56-35b263530824",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Simple Stretching",
+                    "type": "obs",
+                    "id": "simp23430",
+                    "questionOptions": {
+                      "concept": "23430731-d522-43b5-969f-1e8a29aa3a1f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Traction Complex / Lombaire",
+                    "type": "obs",
+                    "id": "tracd9bee",
+                    "questionOptions": {
+                      "concept": "d9bee796-8143-4ff8-9054-aa1f08bd3491",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Exercices Therapeutiques",
+                    "type": "obs",
+                    "id": "exer9ae63",
+                    "questionOptions": {
+                      "concept": "9ae63f45-243b-4390-92e2-f8313a7b0295",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Diadynamic",
+                    "type": "obs",
+                    "id": "diad3e38a",
+                    "questionOptions": {
+                      "concept": "3e38a5a8-ff7d-468e-b11f-4887073bb162",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Diathermie",
+                    "type": "obs",
+                    "id": "diat9b05f",
+                    "questionOptions": {
+                      "concept": "9b05f36b-d1b8-4ac2-b6f9-d85d4ffbddc4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Infra Rouge / Laser",
+                    "type": "obs",
+                    "id": "infrd3961",
+                    "questionOptions": {
+                      "concept": "d3961791-8db9-4aa5-a2f7-a01ae0587784",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ionisation",
+                    "type": "obs",
+                    "id": "ioni30344",
+                    "questionOptions": {
+                      "concept": "30344782-fa93-4994-87c8-bcc2e7575b56",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Stimulation",
+                    "type": "obs",
+                    "id": "stim649a8",
+                    "questionOptions": {
+                      "concept": "649a821a-43ff-4fe6-ae53-ef49abe77957",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "TENS",
+                    "type": "obs",
+                    "id": "tens7cb1a",
+                    "questionOptions": {
+                      "concept": "7cb1a784-ac36-4550-91d3-98a0a372ec48",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ultra Sons",
+                    "type": "obs",
+                    "id": "ultr2c578",
+                    "questionOptions": {
+                      "concept": "2c578536-5020-4b44-9ed0-7ce1f952cc38",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ultra Violet",
+                    "type": "obs",
+                    "id": "ultr2824a",
+                    "questionOptions": {
+                      "concept": "2824aa34-0d67-4007-88de-9401e80a501d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Bandage Elastique",
+                    "type": "obs",
+                    "id": "band2396b",
+                    "questionOptions": {
+                      "concept": "2396bc14-e467-474e-8612-629fb6787110",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cryotherapy",
+                    "type": "obs",
+                    "id": "cryoe48bc",
+                    "questionOptions": {
+                      "concept": "e48bc8db-8f6e-4556-9083-0a000a136e95",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Kine Respiratoire",
+                    "type": "obs",
+                    "id": "kine4ddaa",
+                    "questionOptions": {
+                      "concept": "4ddaa197-c353-4737-a3f2-c752bd89b20a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Strapping",
+                    "type": "obs",
+                    "id": "stra7cfd1",
+                    "questionOptions": {
+                      "concept": "7cfd1cb3-1358-4665-85b3-0ab639ff51ae",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Wax Bath",
+                    "type": "obs",
+                    "id": "wax71ba9",
+                    "questionOptions": {
+                      "concept": "71ba979c-adfb-4e19-bcf9-d1058c5d66d9",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '7bbe871a-d341-412c-bdf2-3f1721748c75')"
+        }
+      },
+      {
+        "label": "Maternite",
+        "sections": [
+          {
+            "label": "Maternity",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Maternity",
+                "type": "obsGroup",
+                "required": false,
+                "id": "maternity",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "27673555-f367-44d2-a4e4-a8271bb0b7c5"
+                },
+                "questions": [
+                  {
+                    "label": "Accouchement Par Ventouse Avec 4 CPN",
+                    "type": "obs",
+                    "id": "acco2bd3a",
+                    "questionOptions": {
+                      "concept": "2bd3ad9c-adc9-4041-8808-110c4f532baa",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Accouchement Par Ventouse Sans 4 CPN",
+                    "type": "obs",
+                    "id": "acco51c3c",
+                    "questionOptions": {
+                      "concept": "51c3c066-f870-4876-afbc-f5a94edd9077",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Acte D'Accouchement Avec 4 CPN Avec Episiotomie",
+                    "type": "obs",
+                    "id": "acteabdcb",
+                    "questionOptions": {
+                      "concept": "abdcb2cc-549b-45dd-b6ea-5cfc3476e199",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Acte D'Accouchement Avec 4 CPN Sans Episiotomie",
+                    "type": "obs",
+                    "id": "acte03b1c",
+                    "questionOptions": {
+                      "concept": "03b1ca32-2511-422f-8cc3-2c7fdb70440b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Acte D'Accouchement Sans 4 CPN Avec Episiotomie",
+                    "type": "obs",
+                    "id": "actecbcd3",
+                    "questionOptions": {
+                      "concept": "cbcd3095-2302-4763-9791-268cd1e51125",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Acte D'Accouchement Sans 4 CPN Sans Episiotomie",
+                    "type": "obs",
+                    "id": "acte713a7",
+                    "questionOptions": {
+                      "concept": "713a7b4c-1274-47e6-b9f4-1c9241d0bb11",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Craniotomie",
+                    "type": "obs",
+                    "id": "crandd982",
+                    "questionOptions": {
+                      "concept": "dd982a97-712b-4bed-bb86-fe7a39757488",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Photothérapie Par Jour",
+                    "type": "obs",
+                    "id": "photf86e8",
+                    "questionOptions": {
+                      "concept": "f86e8039-9a20-4859-ad7c-cf0720f276b2",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '20fe3a84-a8aa-4726-a905-410a885a1c61')"
+        }
+      },
+      {
+        "label": "Ophtalmologie",
+        "sections": [
+          {
+            "label": "Ophthalmology",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Ophtalmologie",
+                "type": "obsGroup",
+                "required": false,
+                "id": "ophtalmologie",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "daeab686-b229-43fe-8bb7-3f757a835578"
+                },
+                "questions": [
+                  {
+                    "label": "Auromideplussterile",
+                    "type": "obs",
+                    "id": "aurompfgzs",
+                    "questionOptions": {
+                      "concept": "b91b3159-99be-b73e-bce2-da8937575b23",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Autresfondd'Œil",
+                    "type": "obs",
+                    "id": "autrezn9kd",
+                    "questionOptions": {
+                      "concept": "217c5238-92fe-4587-8ff9-45d7780d9bca",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "B-Scan",
+                    "type": "obs",
+                    "id": "b-scao96qg",
+                    "questionOptions": {
+                      "concept": "59fd9eee-51cb-5eaf-7874-1e1e2db57213",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Barragelaser",
+                    "type": "obs",
+                    "id": "barramcmbd",
+                    "questionOptions": {
+                      "concept": "28a924df-8b81-b4e2-2a26-617eefb85262",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Capsulotomie(Ophtalmologie)",
+                    "type": "obs",
+                    "id": "capsuqahu3",
+                    "questionOptions": {
+                      "concept": "9b9dfcf7-9cb9-4d0b-8c39-ec693bd52237",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Conjonctivalflap",
+                    "type": "obs",
+                    "id": "conjo4rjvj",
+                    "questionOptions": {
+                      "concept": "7345fbb6-0409-eaf7-176f-c5e349890bfa",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cornealtransplant",
+                    "type": "obs",
+                    "id": "corne7czwb",
+                    "questionOptions": {
+                      "concept": "5090145c-b9ba-0c3b-9edc-73f55810f66d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Correctiontrichiasis",
+                    "type": "obs",
+                    "id": "corre4zszi",
+                    "questionOptions": {
+                      "concept": "4b6491a1-55a3-6c40-07b5-e66f95c37100",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cycloplegicrefraction",
+                    "type": "obs",
+                    "id": "cyclo2o7vl",
+                    "questionOptions": {
+                      "concept": "f9d7c0bf-0af9-c090-2e8a-9506110e3808",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ectropion/Entropioncorrectionwithgraft",
+                    "type": "obs",
+                    "id": "ectrogn0ns",
+                    "questionOptions": {
+                      "concept": "416cccfb-4e2b-6042-cbc3-8d158e9a6504",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Evacuationducorpsetranger",
+                    "type": "obs",
+                    "id": "evacu9lnn8",
+                    "questionOptions": {
+                      "concept": "0c189012-9e3d-6147-e2b0-af890fc91932",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extractioncataracte+Implant",
+                    "type": "obs",
+                    "id": "extrailbsn",
+                    "questionOptions": {
+                      "concept": "9b51319f-59e2-4bb8-812c-92c890b349c3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extractioncorpsétranger",
+                    "type": "obs",
+                    "id": "extrah9niw",
+                    "questionOptions": {
+                      "concept": "987cb0fa-1577-4862-a95e-c9aeb052ef1f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hertelexophtamometry",
+                    "type": "obs",
+                    "id": "hertelegpg",
+                    "questionOptions": {
+                      "concept": "d2eba37e-724c-a680-3b48-fde5937a88be",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Kenacort",
+                    "type": "obs",
+                    "id": "kenacl7q7d",
+                    "questionOptions": {
+                      "concept": "3c5ac447-a899-2576-d66a-7b03ba775838",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lancasterred-Greentest",
+                    "type": "obs",
+                    "id": "lanca3vz8e",
+                    "questionOptions": {
+                      "concept": "0fd1b526-8519-fe9d-25b0-7c5bd3f1eadd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Needling",
+                    "type": "obs",
+                    "id": "needl8xjyu",
+                    "questionOptions": {
+                      "concept": "99459db1-3d60-0f4e-327c-a45a38152f64",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orbitotomie",
+                    "type": "obs",
+                    "id": "orbith7r9t",
+                    "questionOptions": {
+                      "concept": "25f1b600-0d01-40b3-8a9c-39d985860dc6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Panretinaphotocoagulation",
+                    "type": "obs",
+                    "id": "panrexfoq4",
+                    "questionOptions": {
+                      "concept": "631566b1-fa2c-4463-983e-9779c51e3ad1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pars-Plana-Vitrectomy",
+                    "type": "obs",
+                    "id": "pars-vjea6",
+                    "questionOptions": {
+                      "concept": "1c3e333a-f0ec-baa8-9f90-593ceaaec999",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Phacoemulsification",
+                    "type": "obs",
+                    "id": "phacoqnowe",
+                    "questionOptions": {
+                      "concept": "897fbb87-c268-bc62-71af-b016249bc6dc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Posteriolsegmentoct",
+                    "type": "obs",
+                    "id": "posteweenn",
+                    "questionOptions": {
+                      "concept": "24862539-31ad-a9d1-cee9-6d12a965293a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Retinaphotocoagulation",
+                    "type": "obs",
+                    "id": "retin5cizv",
+                    "questionOptions": {
+                      "concept": "78017a10-e5f6-b924-6abc-f3c2a882ce2b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Retinopathyofprematurity[Rop]Screening",
+                    "type": "obs",
+                    "id": "retink65wu",
+                    "questionOptions": {
+                      "concept": "b0916f96-f208-05ae-1d22-d66a637198ef",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Stereopsistests",
+                    "type": "obs",
+                    "id": "sterewiqvr",
+                    "questionOptions": {
+                      "concept": "5e13d50c-93a4-0c7c-bde3-5d21a3e34b89",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Terapheuticcontactlensfitting",
+                    "type": "obs",
+                    "id": "terap8ornx",
+                    "questionOptions": {
+                      "concept": "dd8584e9-37f1-3113-99c2-da24a4be4ee6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ablationfils",
+                    "type": "obs",
+                    "id": "ablatv9g7j",
+                    "questionOptions": {
+                      "concept": "5015d413-ab08-48a1-aa7e-53cd6b21a377",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Angiographieetlafluorescence",
+                    "type": "obs",
+                    "id": "angio367xf",
+                    "questionOptions": {
+                      "concept": "ee38c7a2-6814-4ff1-a4cd-1de457210df1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Anteriorsegmentoct",
+                    "type": "obs",
+                    "id": "anterdf9w0",
+                    "questionOptions": {
+                      "concept": "d92200a6-a53a-2e50-65a1-186e924ccbf5",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Antibiotic",
+                    "type": "obs",
+                    "id": "antib72844",
+                    "questionOptions": {
+                      "concept": "cac2e4b9-8e0f-308b-f900-5fdd3cf6e49b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Argonlaserprp/Sitting/Eye",
+                    "type": "obs",
+                    "id": "argonbqius",
+                    "questionOptions": {
+                      "concept": "8a3710e7-6a14-d41e-d67d-cb50ba8b5184",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Argonlasertrabeculoplasty",
+                    "type": "obs",
+                    "id": "argon0sk2a",
+                    "questionOptions": {
+                      "concept": "246cbabc-2ab6-aff0-f601-e9471894fd0b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Automaticpermetry",
+                    "type": "obs",
+                    "id": "automscx2a",
+                    "questionOptions": {
+                      "concept": "55582397-1a8b-3d40-2cd2-406dae7f6026",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "B-Scanultrasound",
+                    "type": "obs",
+                    "id": "b-scah0isy",
+                    "questionOptions": {
+                      "concept": "93182fa8-b946-dd85-c0c5-ab32f18fddc6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Biométrie",
+                    "type": "obs",
+                    "id": "biomé62o6z",
+                    "questionOptions": {
+                      "concept": "c260bc42-3061-4943-b0c2-830780314a60",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Biopsie",
+                    "type": "obs",
+                    "id": "biops3517t",
+                    "questionOptions": {
+                      "concept": "96221ec6-23d9-4b66-91e8-1dc35ad511d3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Blépharoraphie",
+                    "type": "obs",
+                    "id": "bléphchi1f",
+                    "questionOptions": {
+                      "concept": "ba56e3ba-9cdf-4263-a01c-ff9cf52b5743",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Canthotomie",
+                    "type": "obs",
+                    "id": "canth5xew2",
+                    "questionOptions": {
+                      "concept": "1e2150bc-5fab-49c3-3faa-0425fb9bc85a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cerclage,Coagulationdécollement",
+                    "type": "obs",
+                    "id": "cerclt81hd",
+                    "questionOptions": {
+                      "concept": "b24055d7-13c4-4b98-aa6e-f145b75dd9db",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cerclage,Coagulationdécollement",
+                    "type": "obs",
+                    "id": "cerclqld1w",
+                    "questionOptions": {
+                      "concept": "1d084345-f4bf-86e2-a850-ea01bb0f456f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Champvisuelgoldmann",
+                    "type": "obs",
+                    "id": "champ5tbxw",
+                    "questionOptions": {
+                      "concept": "eafe13bb-db88-4673-9548-fd393493d4e0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Consultationophtamologue",
+                    "type": "obs",
+                    "id": "consu01sjq",
+                    "questionOptions": {
+                      "concept": "f20d1a26-3172-4394-df0b-1e0f68c5e3af",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cornealdebridement(Excision)",
+                    "type": "obs",
+                    "id": "corne79qen",
+                    "questionOptions": {
+                      "concept": "e9370773-b45c-b66c-e600-236cf898dde3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cornealtopography(Ref)",
+                    "type": "obs",
+                    "id": "corneuap5j",
+                    "questionOptions": {
+                      "concept": "aafa2c5b-0ee0-cf91-8369-1eeffdfacea3",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Correctionptosis",
+                    "type": "obs",
+                    "id": "corre9y2sk",
+                    "questionOptions": {
+                      "concept": "47b914f0-c2bf-4848-af84-4acc0c46dcd7",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Correctionstrabisme",
+                    "type": "obs",
+                    "id": "corresr184",
+                    "questionOptions": {
+                      "concept": "ed91433b-dbfb-4d13-93e2-d903d6276afa",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Crosslinking",
+                    "type": "obs",
+                    "id": "crossrbt7v",
+                    "questionOptions": {
+                      "concept": "ba21e49c-2eb6-c5a6-961d-48ebdfeaa4c6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cryo-Thermo-Coagulation",
+                    "type": "obs",
+                    "id": "cryo-paod3",
+                    "questionOptions": {
+                      "concept": "e9616acd-00f3-4bf0-b3bf-abd19b2332d5",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cryotherapy(Ophtalmology)",
+                    "type": "obs",
+                    "id": "cryot2loke",
+                    "questionOptions": {
+                      "concept": "acf9a32f-2f0e-87af-56da-3c59b5fc5212",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cureectropion",
+                    "type": "obs",
+                    "id": "cureeucrzx",
+                    "questionOptions": {
+                      "concept": "950c5fca-5138-492d-b788-956d7bd47868",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Curettagechalazion",
+                    "type": "obs",
+                    "id": "curetl3q74",
+                    "questionOptions": {
+                      "concept": "b1d81a19-03c3-423d-9621-a196cdf7591d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Curettagemolluscumcontag.",
+                    "type": "obs",
+                    "id": "curethq0pc",
+                    "questionOptions": {
+                      "concept": "756ba1ff-cdf7-4659-a60f-2700f6d111ea",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cyrotherapy",
+                    "type": "obs",
+                    "id": "cyrotw9ui2",
+                    "questionOptions": {
+                      "concept": "7ba0331b-4879-e9fd-e479-12b0f57a6626",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Dacryocystorhinostomie",
+                    "type": "obs",
+                    "id": "dacrys2k7z",
+                    "questionOptions": {
+                      "concept": "37403973-edb6-48c2-8c9f-0b92a19c202c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Discision,Capsulotomie",
+                    "type": "obs",
+                    "id": "discizq64g",
+                    "questionOptions": {
+                      "concept": "498e99f3-937f-460e-ba3e-692932f8c2bb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Electro-Epillation",
+                    "type": "obs",
+                    "id": "electt1y39",
+                    "questionOptions": {
+                      "concept": "624171e5-4b7b-fabe-c7c5-11cd2bd9a670",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Enucléationglobe",
+                    "type": "obs",
+                    "id": "enuclxp3nk",
+                    "questionOptions": {
+                      "concept": "44005770-d061-4c7b-8727-26758614fc2d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Evacuationdusang",
+                    "type": "obs",
+                    "id": "evacur5dme",
+                    "questionOptions": {
+                      "concept": "a174abee-496b-66d6-ac96-266ed6bfd237",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Eviscérationglobe",
+                    "type": "obs",
+                    "id": "evisc22ies",
+                    "questionOptions": {
+                      "concept": "11ada1fe-5d88-4fed-905f-163a847ce337",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Excisionkyste(Ophtalmologie)",
+                    "type": "obs",
+                    "id": "excis9hj2y",
+                    "questionOptions": {
+                      "concept": "38842937-312e-4129-a899-78c871e0bbe0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Excisionpterygion,Pinguécula",
+                    "type": "obs",
+                    "id": "excisne6h1",
+                    "questionOptions": {
+                      "concept": "206db77b-b7e5-4897-8473-7830f6ebefec",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Excisiontumeurconjonctivale",
+                    "type": "obs",
+                    "id": "excishro23",
+                    "questionOptions": {
+                      "concept": "0d4e4312-19f0-4e17-9a20-a8bcb66049e0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Exenterationorbite",
+                    "type": "obs",
+                    "id": "exent067y1",
+                    "questionOptions": {
+                      "concept": "1ff1ea95-925a-4a7a-bdbd-49f9b6119261",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extractioncataractein-Extra",
+                    "type": "obs",
+                    "id": "extratpjv6",
+                    "questionOptions": {
+                      "concept": "e43fb0a5-1c76-44f4-8fbc-0852b08d757e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extractioncataractesansimplant",
+                    "type": "obs",
+                    "id": "extraatqph",
+                    "questionOptions": {
+                      "concept": "6939266f-341f-462f-b8f5-7ef71fb9f239",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Fistulisationglaucome",
+                    "type": "obs",
+                    "id": "fistu2bkju",
+                    "questionOptions": {
+                      "concept": "5e64b75c-06cf-4823-a7da-d1ff8c2299c9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Fittingofrigidcontactlens",
+                    "type": "obs",
+                    "id": "fittirypqc",
+                    "questionOptions": {
+                      "concept": "73d4ddc3-8e37-f4c2-171a-76cd9b1883d9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Focallaser",
+                    "type": "obs",
+                    "id": "focalbjs2y",
+                    "questionOptions": {
+                      "concept": "a526890c-f3c1-93f3-07f2-8ef39913e72f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Fondd'Œilverrecontact",
+                    "type": "obs",
+                    "id": "fonddidt6f",
+                    "questionOptions": {
+                      "concept": "01b0613f-2497-43fd-8bee-0c2409052cfc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Foreignbodyextractionunderga",
+                    "type": "obs",
+                    "id": "foreiydjto",
+                    "questionOptions": {
+                      "concept": "0c523d08-0a92-e0a4-b66f-3db6d46c1d5d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Frudresceintest",
+                    "type": "obs",
+                    "id": "frudrybaf5",
+                    "questionOptions": {
+                      "concept": "8c91bb7a-636c-c3de-3ff0-bb33e3f9e7d6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Fundusphoto",
+                    "type": "obs",
+                    "id": "fundu7ac25",
+                    "questionOptions": {
+                      "concept": "a8d86c20-6a5d-86d3-0fea-a13f59ac236b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Ghrocomafittingsurgerywithshunts",
+                    "type": "obs",
+                    "id": "ghroc6a803",
+                    "questionOptions": {
+                      "concept": "f6872974-80ff-a7ca-93fb-7ea41ea846b9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Glaucomafilteringsurgeryantimetabolites",
+                    "type": "obs",
+                    "id": "glauchfoid",
+                    "questionOptions": {
+                      "concept": "7c76d659-cf7a-deed-452f-accbc76683b1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Glidlaser/Focal",
+                    "type": "obs",
+                    "id": "glidlo333t",
+                    "questionOptions": {
+                      "concept": "d9f6276b-9708-a8d5-4d6c-ae68c4444267",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Gonioscopy",
+                    "type": "obs",
+                    "id": "gonio6wg5y",
+                    "questionOptions": {
+                      "concept": "af10fbb9-b9b2-82fa-0caa-4dfc3de37d31",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Goniotomie(Enfants)",
+                    "type": "obs",
+                    "id": "gonio9a0lx",
+                    "questionOptions": {
+                      "concept": "f1bf1cce-b710-ba7f-6be8-6923f5310b3d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Grattagecorneen",
+                    "type": "obs",
+                    "id": "grattu12tg",
+                    "questionOptions": {
+                      "concept": "ff8f4cff-86c8-6986-ba08-ddc4bc3ae22e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Horizontalmusclesurgery",
+                    "type": "obs",
+                    "id": "horizpy37o",
+                    "questionOptions": {
+                      "concept": "b2ca418f-75d6-36a9-0259-8dc4a29792c6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Incisionabcès(A.Loc.)",
+                    "type": "obs",
+                    "id": "incis9jaqv",
+                    "questionOptions": {
+                      "concept": "5aa4c867-f446-400a-b668-62acef5a6a96",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Incisionabcès",
+                    "type": "obs",
+                    "id": "incista2wi",
+                    "questionOptions": {
+                      "concept": "ee0a3fb9-354a-42b7-a462-e1e1d9576cf2",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Indirectfondoscopy",
+                    "type": "obs",
+                    "id": "indir9ufyq",
+                    "questionOptions": {
+                      "concept": "9c54ef96-230f-6c3c-e5a8-c5d0475c8545",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Injectionavastin",
+                    "type": "obs",
+                    "id": "injecyzvb7",
+                    "questionOptions": {
+                      "concept": "7fb4ffb6-b9b1-19d8-d7da-62665b93f2d8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Injectionofantivegf",
+                    "type": "obs",
+                    "id": "injec5bi2v",
+                    "questionOptions": {
+                      "concept": "26f6f129-4d0e-33ff-b538-3d434806535b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Injectionretrobulbaired'Alchool(Eilaveugledouloureux)",
+                    "type": "obs",
+                    "id": "injeccbv6d",
+                    "questionOptions": {
+                      "concept": "5dd7abb2-3a66-5c92-b19b-bd9e4eb283a9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Intravitrealinjection",
+                    "type": "obs",
+                    "id": "intrabmwy1",
+                    "questionOptions": {
+                      "concept": "69cb09e7-0d62-4502-5aee-b3d3384ae67d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Iredectomie+Trabeculectomie",
+                    "type": "obs",
+                    "id": "irede9iomp",
+                    "questionOptions": {
+                      "concept": "6ab533f1-3f47-4533-82cb-0f1eb2c0b296",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Iridectomie",
+                    "type": "obs",
+                    "id": "irideflpr4",
+                    "questionOptions": {
+                      "concept": "b2429a86-47a6-4d23-9f8b-b755691d0958",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Irisrepair",
+                    "type": "obs",
+                    "id": "irisrgcepw",
+                    "questionOptions": {
+                      "concept": "c9f07095-181a-1102-9e30-242fe3147ace",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Keratometry",
+                    "type": "obs",
+                    "id": "keratp1r1k",
+                    "questionOptions": {
+                      "concept": "50609b8a-badf-e174-caa7-3b5cad64a560",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Krimskytest",
+                    "type": "obs",
+                    "id": "krimsjgw3f",
+                    "questionOptions": {
+                      "concept": "fd9f6e55-50c3-b645-62cb-c2949d480a6c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Laserphotocoagulation/Cryotherapy",
+                    "type": "obs",
+                    "id": "laser3ykc3",
+                    "questionOptions": {
+                      "concept": "6b5fed3f-56d3-ca9f-f60e-531a60d98461",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Laser/Cryotherapy",
+                    "type": "obs",
+                    "id": "laser1l0l4",
+                    "questionOptions": {
+                      "concept": "2f25e2c5-fd81-8f74-44c5-dd1a2b2a1679",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lenswashoutandanteriorvitrectomy",
+                    "type": "obs",
+                    "id": "lenswrqsi6",
+                    "questionOptions": {
+                      "concept": "d0fdff79-dfb8-7fa0-0f28-b4975a350046",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lesmedicamentspourchimiotherapie(Parsession)",
+                    "type": "obs",
+                    "id": "lesmepcd8x",
+                    "questionOptions": {
+                      "concept": "dd226dd5-2f5e-727b-7600-b2e29e7e36f4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lidconcretionsremoval",
+                    "type": "obs",
+                    "id": "lidcobj1v8",
+                    "questionOptions": {
+                      "concept": "64fc07f4-3e62-57ae-5adc-b1da5775027b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lucentis",
+                    "type": "obs",
+                    "id": "lucenj2tac",
+                    "questionOptions": {
+                      "concept": "cddbcd61-3e31-4c0a-4688-00174eeb9f3b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Obliquemusclesurgery",
+                    "type": "obs",
+                    "id": "obliqxt2dd",
+                    "questionOptions": {
+                      "concept": "64765ee0-2702-2323-e0b8-4a80cbcb1e23",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Oculoplasticptosisrepair",
+                    "type": "obs",
+                    "id": "oculo8313u",
+                    "questionOptions": {
+                      "concept": "f524144b-940d-c29d-f907-3cfec7d164c4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Opérationcataracte(Paroeil)",
+                    "type": "obs",
+                    "id": "opéramn7rh",
+                    "questionOptions": {
+                      "concept": "9618acd2-f807-4e0a-ac4a-9e3f73c20fb9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Optométrise",
+                    "type": "obs",
+                    "id": "optoms1ear",
+                    "questionOptions": {
+                      "concept": "1fcaebcc-ba70-0249-655d-79bc98a2e56a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orbitreconstruction",
+                    "type": "obs",
+                    "id": "orbituvgz8",
+                    "questionOptions": {
+                      "concept": "d4e316ce-4f5a-8d86-b34e-77281e78ddda",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orbitalx-Ray",
+                    "type": "obs",
+                    "id": "orbitxte9e",
+                    "questionOptions": {
+                      "concept": "457aca83-4a2b-6cf8-6486-f1266a4b2966",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orbitotomy",
+                    "type": "obs",
+                    "id": "orbitnxilr",
+                    "questionOptions": {
+                      "concept": "cba11e79-e390-6ffb-61f1-3b4863b96515",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pachymetrie",
+                    "type": "obs",
+                    "id": "pachy6r93i",
+                    "questionOptions": {
+                      "concept": "396c83dd-0028-9546-754a-413768d1c7cb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pansement(Ophtalmologie)",
+                    "type": "obs",
+                    "id": "pansec9y8v",
+                    "questionOptions": {
+                      "concept": "69969bca-aed3-4728-a615-7c2f0dea3cdf",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Peritomie",
+                    "type": "obs",
+                    "id": "peritk9v2s",
+                    "questionOptions": {
+                      "concept": "50518de0-a805-0e99-9cea-45403c2e4902",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Plastiepalpébrale",
+                    "type": "obs",
+                    "id": "plastihont",
+                    "questionOptions": {
+                      "concept": "a68593ea-d8c2-461c-9a50-c8c79f58578c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Posteriorchamberintraocularforeignbodyremoval",
+                    "type": "obs",
+                    "id": "postemb3o5",
+                    "questionOptions": {
+                      "concept": "89bc0b42-75c8-1c10-df80-20f2a43ccebd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Posteriorvitrectomy",
+                    "type": "obs",
+                    "id": "postedka3e",
+                    "questionOptions": {
+                      "concept": "0980324e-e659-ac4c-7aa8-6245959eb4ba",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Prosthesisfitting",
+                    "type": "obs",
+                    "id": "prostbggqq",
+                    "questionOptions": {
+                      "concept": "361c730c-53f6-08c0-68f5-9f094dacc4eb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Repairoflaceration",
+                    "type": "obs",
+                    "id": "repaihgq3c",
+                    "questionOptions": {
+                      "concept": "e9cba165-bd34-b98e-c5dd-731696cccb3a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Replantationforretinadetachment",
+                    "type": "obs",
+                    "id": "repla65vjk",
+                    "questionOptions": {
+                      "concept": "b62e54ec-ca9e-1db3-78ee-49906965d5fc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Repositionnementdel'Implant",
+                    "type": "obs",
+                    "id": "repos4e6rz",
+                    "questionOptions": {
+                      "concept": "038c1c73-73e5-80c0-8383-3b3e0ef78494",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Retinaphotocoagulation",
+                    "type": "obs",
+                    "id": "retink7s06",
+                    "questionOptions": {
+                      "concept": "6301e529-280f-928a-0494-f57064bbdd40",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Retinopathyofprematurity[Rop]Treatmentlaser",
+                    "type": "obs",
+                    "id": "retindua5q",
+                    "questionOptions": {
+                      "concept": "c5d51112-68f0-1451-8713-a49ca5b73261",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Retinopathyofprematurity[Rop]Treatment",
+                    "type": "obs",
+                    "id": "retin8lq4t",
+                    "questionOptions": {
+                      "concept": "3a78467c-ae71-7115-f200-094b128a7be7",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Saturepaupiere+Paupo-Voielacry.",
+                    "type": "obs",
+                    "id": "saturaazj5",
+                    "questionOptions": {
+                      "concept": "00427a24-86da-5cb0-2fa6-b6426af5019d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Selectivelasertrabeculoplasty",
+                    "type": "obs",
+                    "id": "selec8t8hq",
+                    "questionOptions": {
+                      "concept": "2122087d-4d3a-b9f5-1d01-b71ce91e779c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Silicomoilremoval",
+                    "type": "obs",
+                    "id": "silic44oim",
+                    "questionOptions": {
+                      "concept": "486360fa-520b-b046-1ec1-2c02de58a8a2",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Sllconintubation",
+                    "type": "obs",
+                    "id": "sllcobcnau",
+                    "questionOptions": {
+                      "concept": "94402ca0-a6c6-2fc9-680e-a7c8070cc5bd",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Sondagevoielacrymale",
+                    "type": "obs",
+                    "id": "sondadezve",
+                    "questionOptions": {
+                      "concept": "9079e86c-8ffe-4b76-9a57-34d4109df65c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Strabusmusevaluation",
+                    "type": "obs",
+                    "id": "strabjlrdp",
+                    "questionOptions": {
+                      "concept": "f57db21a-88cb-821a-6c4a-e83df7c1516b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Supratarsalinjection",
+                    "type": "obs",
+                    "id": "suprazkgnp",
+                    "questionOptions": {
+                      "concept": "8685e6cc-e5fd-416c-38ab-669c58a75ef9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Suturationdelacornee",
+                    "type": "obs",
+                    "id": "suturk2f83",
+                    "questionOptions": {
+                      "concept": "256102d1-1795-e28d-1280-dfc3f0a30a31",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Suturepaupière+Paupo-Voielacry.",
+                    "type": "obs",
+                    "id": "sutur0da8u",
+                    "questionOptions": {
+                      "concept": "81df1154-1891-4259-a6a0-fb62910149a5",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Sutureplaieperforante",
+                    "type": "obs",
+                    "id": "suturstwlk",
+                    "questionOptions": {
+                      "concept": "d0f1b8d8-db28-47fe-b2af-918cd742d764",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Symblepharonminorreconstruction",
+                    "type": "obs",
+                    "id": "symblzym0m",
+                    "questionOptions": {
+                      "concept": "3a382422-3afe-9972-2f7e-36a44262383b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Tarsalcryotherapy",
+                    "type": "obs",
+                    "id": "tarsazftks",
+                    "questionOptions": {
+                      "concept": "d3bed4b7-89c4-1f04-61c2-eacdc7436d59",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Tarsalinjection",
+                    "type": "obs",
+                    "id": "tarsalhtdx",
+                    "questionOptions": {
+                      "concept": "ed799b88-dfc4-0226-21a9-c75d8f8b047c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Tarsoraphie",
+                    "type": "obs",
+                    "id": "tarsoyd0m4",
+                    "questionOptions": {
+                      "concept": "a02bbd3f-45ee-9148-3871-9443871c5b46",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Tatouagedelacornee",
+                    "type": "obs",
+                    "id": "tatouap14j",
+                    "questionOptions": {
+                      "concept": "f218a4d6-f3e4-be45-4c53-a013c2143b29",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Testdelancaster",
+                    "type": "obs",
+                    "id": "testd8u7e1",
+                    "questionOptions": {
+                      "concept": "526c6c1c-a525-43af-b922-968bb2a28626",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Tonometrie",
+                    "type": "obs",
+                    "id": "tonomvxwrg",
+                    "questionOptions": {
+                      "concept": "34089cb6-e536-d110-0b6e-ffce6ff96766",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Topographiecorneene",
+                    "type": "obs",
+                    "id": "topogxmu9t",
+                    "questionOptions": {
+                      "concept": "99ebab09-6b91-a89b-2289-e3892246d3c8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Trabeculotomie(Enfants)",
+                    "type": "obs",
+                    "id": "trabeb80mc",
+                    "questionOptions": {
+                      "concept": "4c25f92a-a842-c4f5-41f4-ca1687369663",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Transplantationdelacornee",
+                    "type": "obs",
+                    "id": "transuvp2l",
+                    "questionOptions": {
+                      "concept": "fad1368e-8438-a716-f759-77c89fea9586",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Viscérationduglobe(Refferal)",
+                    "type": "obs",
+                    "id": "viscét0iie",
+                    "questionOptions": {
+                      "concept": "7b1dd985-c962-df26-5704-f3f2e0913f73",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Visiondescouleurs/Réfraction",
+                    "type": "obs",
+                    "id": "visiongkqr",
+                    "questionOptions": {
+                      "concept": "5b6fd6d0-3b02-42c0-a9ca-d04b05c0a4d7",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Vitrectomie",
+                    "type": "obs",
+                    "id": "vitremoy16",
+                    "questionOptions": {
+                      "concept": "7d469730-d253-47c9-88da-6aab15afc366",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Yagcapsulotomie",
+                    "type": "obs",
+                    "id": "yagcaei5mb",
+                    "questionOptions": {
+                      "concept": "8b0f6838-1cdf-515d-279b-06ab202edf73",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Yaglasercapsulotomy/Posteriorcapsulotomy",
+                    "type": "obs",
+                    "id": "yaglaghbc8",
+                    "questionOptions": {
+                      "concept": "eaf606de-dc20-80d9-b570-a67998db8dc9",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '88aa297f-c8cb-4700-baed-32af16b8a110')"
+        }
+      },
+      {
+        "label": "Otorhinolaryngology",
+        "sections": [
+          {
+            "label": "Otorhinolaryngology",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Otorhinolaryngology",
+                "type": "obsGroup",
+                "required": false,
+                "id": "otorhinolaryngology",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "db68c5d6-d361-4c36-abf5-a195118916ce"
+                },
+                "questions": [
+                  {
+                    "label": "Incision frein langue",
+                    "type": "obs",
+                    "id": "incisionfreinlangue",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "92843c8d-0eac-be22-a26a-a91844735bb9"
+                    }
+                  },
+                  {
+                    "label": "Injection sans médicaments",
+                    "type": "obs",
+                    "id": "injectionsansmedicaments",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "44d63dcf-bcf7-b517-fa12-c1ae03368d00"
+                    }
+                  },
+                  {
+                    "label": "Soins locaux",
+                    "type": "obs",
+                    "id": "soinslocaux",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "1ae5dc05-3871-1084-1edd-115b4feb4ace"
+                    }
+                  },
+                  {
+                    "label": "Suture plaie nez",
+                    "type": "obs",
+                    "id": "sutureplaienez",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "25c4c873-96ac-4e30-77e7-1bc7c9427b0a"
+                    }
+                  },
+                  {
+                    "label": "Ablation corp etranger oroph/oeso",
+                    "type": "obs",
+                    "id": "ablationcorpetrangerorophoeso",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "41f7f872-5802-2e09-afd3-261411646dee"
+                    }
+                  },
+                  {
+                    "label": "Adénoïdectomie",
+                    "type": "obs",
+                    "id": "adenoidectomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "c55837d6-7650-94be-3fe8-558ce3658f0f"
+                    }
+                  },
+                  {
+                    "label": "Amygdalectomie",
+                    "type": "obs",
+                    "id": "amygdalectomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "873cf7a4-d0ba-d107-2ae2-1d943fe07b71"
+                    }
+                  },
+                  {
+                    "label": "Antrotomie",
+                    "type": "obs",
+                    "id": "antrotomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "a7e04bc1-f98b-a63f-9edf-fabf9aedc36c"
+                    }
+                  },
+                  {
+                    "label": "Audiométrie",
+                    "type": "obs",
+                    "id": "audiometrie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "4e8c1996-9f45-64f9-26aa-245496c6700e"
+                    }
+                  },
+                  {
+                    "label": "Biopsie cavitaire",
+                    "type": "obs",
+                    "id": "biopsiecavitaire",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "4e4d652d-1bd3-1ccb-c796-a9001c0ae460"
+                    }
+                  },
+                  {
+                    "label": "Bronchoscopie",
+                    "type": "obs",
+                    "id": "bronchoscopie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "2432c8f5-8f7b-d1f3-4d68-65c02993e56d"
+                    }
+                  },
+                  {
+                    "label": "Caldwell-Luc",
+                    "type": "obs",
+                    "id": "caldwellluc",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "41e14320-0dd6-5c76-c892-1eea55ff3cac"
+                    }
+                  },
+                  {
+                    "label": "Cathetérisme tubaire",
+                    "type": "obs",
+                    "id": "catheterismetubaire",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "b94707da-ff45-aba9-1940-42fc4290c72a"
+                    }
+                  },
+                  {
+                    "label": "Cornectomie",
+                    "type": "obs",
+                    "id": "cornectomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "4a189277-fc80-f286-9285-e67833086103"
+                    }
+                  },
+                  {
+                    "label": "Deviation septum nasale",
+                    "type": "obs",
+                    "id": "deviationseptumnasale",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "23f87eb7-f794-5aa1-056c-efe49c3d7167"
+                    }
+                  },
+                  {
+                    "label": "Diathermo coagulation",
+                    "type": "obs",
+                    "id": "diathermocoagulation",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "ff75f3ad-2e5f-801a-7539-572deccaa201"
+                    }
+                  },
+                  {
+                    "label": "Drainage d'abcès temporal, furoncle ou périchondrite",
+                    "type": "obs",
+                    "id": "drainageabcestemporalfuroncleperichondrite",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "d4184fdc-84fd-e3d9-373a-fd5e22f583d3"
+                    }
+                  },
+                  {
+                    "label": "Electronystagmographie",
+                    "type": "obs",
+                    "id": "electronystagmographie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "b0ccf30a-fee8-bcf5-fc31-15ef6b41718e"
+                    }
+                  },
+                  {
+                    "label": "Evidement ganglionnaire",
+                    "type": "obs",
+                    "id": "evidementganglionnaire",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "25f90521-616b-e9a0-5aab-f3dc7b3c40fb"
+                    }
+                  },
+                  {
+                    "label": "Exc. Kyste s. lingual",
+                    "type": "obs",
+                    "id": "exckysteslingual",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "4eb5d0f0-282f-27bb-bf3d-e3be2f94a6e2"
+                    }
+                  },
+                  {
+                    "label": "Excision chéloide du pavillon",
+                    "type": "obs",
+                    "id": "excisioncheloidedupavillon",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "cf832251-42a6-d93f-a483-0d78d110d0e7"
+                    }
+                  },
+                  {
+                    "label": "Excision d'un kyste dermoïde sinusien",
+                    "type": "obs",
+                    "id": "excisionkystedermoidesinusien",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "20f812da-134c-df60-4a93-244f2f9b08a8"
+                    }
+                  },
+                  {
+                    "label": "Excision du sinus préauriculaire",
+                    "type": "obs",
+                    "id": "excisionsinuspreauriculaire",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "356e4f01-884d-0949-ec47-8583323edf99"
+                    }
+                  },
+                  {
+                    "label": "Excision fistule cervico-pharyngienne",
+                    "type": "obs",
+                    "id": "excisionfistulecervicopharyngienne",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "be8512a4-b8f5-2a3e-9ffe-f90f1b1247d8"
+                    }
+                  },
+                  {
+                    "label": "Extr. C.E. simple / AG",
+                    "type": "obs",
+                    "id": "extrcesimpleag",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "8d43cca6-e1d6-fdc0-35c3-8923eb5371aa"
+                    }
+                  },
+                  {
+                    "label": "Extraction C.E. Sans Anest.",
+                    "type": "obs",
+                    "id": "extractioncesansanest",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "b8fec555-714c-a4e7-9f57-b25ece23b82a"
+                    }
+                  },
+                  {
+                    "label": "Extraction C.E. Sous Anest. Generale",
+                    "type": "obs",
+                    "id": "extractioncesousanestgenerale",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "88e6c483-a081-9d5e-1993-65991da1c46b"
+                    }
+                  },
+                  {
+                    "label": "Extraction ou ablation d'un exostose du conduit auditif externe",
+                    "type": "obs",
+                    "id": "extractionablationexostoseconduitauditifexterne",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "24ce70a0-3bec-ad35-4052-d30db632b13b"
+                    }
+                  },
+                  {
+                    "label": "Extractions endoscopiques (corps étranger, biopsie, éradication de toute tumeur bénigne dans le larynx, œsophage)",
+                    "type": "obs",
+                    "id": "extractionsendoscopiques",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "a5f3a7dc-193d-a4c9-eeac-37ec624e128a"
+                    }
+                  },
+                  {
+                    "label": "Fermeture trachéo",
+                    "type": "obs",
+                    "id": "fermeturetracheo",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "5c45cdff-2a1b-83fe-9f8b-04e628d87b5d"
+                    }
+                  },
+                  {
+                    "label": "Fermeture trachéotomie",
+                    "type": "obs",
+                    "id": "fermeturetracheotomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "6c8d5614-4552-df56-cd11-e79cddedbd92"
+                    }
+                  },
+                  {
+                    "label": "Frein/Linguale",
+                    "type": "obs",
+                    "id": "freinlinguale",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "a6028a05-48f5-4515-c99e-51115b2ea890"
+                    }
+                  },
+                  {
+                    "label": "Incision + drainage abcès cervical",
+                    "type": "obs",
+                    "id": "incisiondrainageabcescervical",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "7b7bd24e-c7ac-b770-7644-1f3733ecd45b"
+                    }
+                  },
+                  {
+                    "label": "Incision furoncle",
+                    "type": "obs",
+                    "id": "incisionfuroncle",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "89d7145f-8c57-7eef-704b-906fcb50d1f9"
+                    }
+                  },
+                  {
+                    "label": "Incision+dr abcès nez",
+                    "type": "obs",
+                    "id": "incisiondrabcesnez",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "295c36de-ee30-4945-ae15-84ae81b46553"
+                    }
+                  },
+                  {
+                    "label": "Kyste/Linguale",
+                    "type": "obs",
+                    "id": "kystelinguale",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "b6585138-fa53-7b11-9340-cb84ff5d1ffa"
+                    }
+                  },
+                  {
+                    "label": "Laryngectomie partielle / élargie / totale",
+                    "type": "obs",
+                    "id": "laryngectomiepartielleelargietotale",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "29631e20-188f-d443-262c-cf6761a450bf"
+                    }
+                  },
+                  {
+                    "label": "Laryngo directe susp.",
+                    "type": "obs",
+                    "id": "laryngodirectesusp",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "8544dc8e-7a03-3de0-99d0-4b43cc8d2d91"
+                    }
+                  },
+                  {
+                    "label": "Laryngoctomie",
+                    "type": "obs",
+                    "id": "laryngoctomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "b97b5b9a-433f-7611-a28b-4a5085de1e53"
+                    }
+                  },
+                  {
+                    "label": "Laryngofissure",
+                    "type": "obs",
+                    "id": "laryngofissure",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "bd45ff2f-f0e4-3c92-6ec4-1b9afc27dcf9"
+                    }
+                  },
+                  {
+                    "label": "Levée de la stenose",
+                    "type": "obs",
+                    "id": "leveestenose",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "f9157d75-987e-0bbf-fffd-c01346f5a5d8"
+                    }
+                  },
+                  {
+                    "label": "Paracenthèse Sous Anest.General",
+                    "type": "obs",
+                    "id": "paracenthesesousanestgeneral",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "5fca2ecf-7afa-3e40-8ea4-9eb221bc6c0b"
+                    }
+                  },
+                  {
+                    "label": "Pharyngectomie latéale",
+                    "type": "obs",
+                    "id": "pharyngectomielateale",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "1a5390d3-6750-5eac-900b-152d31d40c16"
+                    }
+                  },
+                  {
+                    "label": "Plaies pénétrantes du larynx (suture)",
+                    "type": "obs",
+                    "id": "plaiespentrantesdularynx",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "e9dae60b-5b8e-4f69-58d7-2b470f7c9c3b"
+                    }
+                  },
+                  {
+                    "label": "Polypectomie(cfr Referal tarif)",
+                    "type": "obs",
+                    "id": "polypectomiereferaltarif",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "b044b836-3a21-9cb7-c44c-6ac8da8aafe7"
+                    }
+                  },
+                  {
+                    "label": "Polypectomie",
+                    "type": "obs",
+                    "id": "polypectomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "e16cd317-3c15-a3ea-7c2a-7567e20885a2"
+                    }
+                  },
+                  {
+                    "label": "Ponction lav. (2) sinus",
+                    "type": "obs",
+                    "id": "ponctionlav2sinus",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "6f682818-0d20-8d84-17a7-1d35f4b2fe83"
+                    }
+                  },
+                  {
+                    "label": "Pontentiels évoqués",
+                    "type": "obs",
+                    "id": "pontentielsevoques",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "831e13f9-4937-57ee-cd5a-0be2e2b03979"
+                    }
+                  },
+                  {
+                    "label": "Réduct. Malaire",
+                    "type": "obs",
+                    "id": "reductmalaire",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "b22aacd3-ff16-8213-6fba-8ac3ad41aba5"
+                    }
+                  },
+                  {
+                    "label": "Réduct. OPN",
+                    "type": "obs",
+                    "id": "reductopn",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "f8431089-37c2-b68e-3224-8fcd75990709"
+                    }
+                  },
+                  {
+                    "label": "Réduction de la différence de nez",
+                    "type": "obs",
+                    "id": "reductiondifferencenez",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "63bee977-9564-2697-a0e2-f9b2194dc86b"
+                    }
+                  },
+                  {
+                    "label": "Résection d'un fragment osseux obstruant le conduit auditif externe (réduction) en cas de traumatisme",
+                    "type": "obs",
+                    "id": "resectionfragmentosseuxconduitauditifexterne",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "2ff49b69-9685-41a8-1ec5-ca2a881b1418"
+                    }
+                  },
+                  {
+                    "label": "Sinuscopie",
+                    "type": "obs",
+                    "id": "sinuscopie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "7aba5574-fb78-c852-9e77-c10f9723af81"
+                    }
+                  },
+                  {
+                    "label": "Staphiloraphie",
+                    "type": "obs",
+                    "id": "staphiloraphie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "c736528a-7022-a476-3b4c-27df8ba57f53"
+                    }
+                  },
+                  {
+                    "label": "Suture d'une plaie nasale profonde en cas de traumatisme",
+                    "type": "obs",
+                    "id": "sutureplaienasaleprofonde",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "db4ecf3b-9507-e661-bee0-42e982b3c2a4"
+                    }
+                  },
+                  {
+                    "label": "Suture pavillon",
+                    "type": "obs",
+                    "id": "suturepavillon",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "9305c73d-6dfd-5739-5bb2-9f5bf481e8ee"
+                    }
+                  },
+                  {
+                    "label": "Tampont. ant.",
+                    "type": "obs",
+                    "id": "tampontant",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "ef536252-3073-1aad-21ae-8fef052654bc"
+                    }
+                  },
+                  {
+                    "label": "Tampont. post.",
+                    "type": "obs",
+                    "id": "tampontpost",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "4b4d8946-7ade-41af-f01d-a733561eb5d2"
+                    }
+                  },
+                  {
+                    "label": "Trachéotomie",
+                    "type": "obs",
+                    "id": "tracheotomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "3608866b-a080-5973-124a-cc6ceb94ac60"
+                    }
+                  },
+                  {
+                    "label": "Trép. sinus frontal",
+                    "type": "obs",
+                    "id": "trepsinusfrontal",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "2c9a37db-3b35-88eb-5c76-10b3da4f826e"
+                    }
+                  },
+                  {
+                    "label": "Trepanation",
+                    "type": "obs",
+                    "id": "trepanation",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "e947e5a3-c112-fc7e-61e2-e5801f4d0911"
+                    }
+                  },
+                  {
+                    "label": "Tumeur nasale+Biopsie",
+                    "type": "obs",
+                    "id": "tumeurnasalebiopsie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "2ece9128-3240-56d8-e1ef-b2585b1f956b"
+                    }
+                  },
+                  {
+                    "label": "Tympanoplasties ou réfections de la chaîne tympano-ossiculaire",
+                    "type": "obs",
+                    "id": "tympanoplastiesrefectionschainetympanoossiculaire",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "a2d81e3c-68a3-ee81-e370-b9a857d173db"
+                    }
+                  },
+                  {
+                    "label": "Uvulopalatopharyngoplastie",
+                    "type": "obs",
+                    "id": "uvulopalatopharyngoplastie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "a27aeccc-c1aa-ea15-c6a3-6c8d6c86900b"
+                    }
+                  },
+                  {
+                    "label": "Pansement",
+                    "type": "obs",
+                    "id": "pansement",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "778153d8-44da-1131-0184-5b81e87d06ce"
+                    }
+                  },
+                  {
+                    "label": "Ablation papillome",
+                    "type": "obs",
+                    "id": "ablationpapillome",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "cf1a918d-7bc9-b5c3-9557-b1c72494f21a"
+                    }
+                  },
+                  {
+                    "label": "Approche transpalatale du rhinopharynx dans les cas d'atrésie choanale osseuse",
+                    "type": "obs",
+                    "id": "approchetranspalatalerhinopharynx",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "40bb56d0-b06e-b789-d508-c45bc47803ae"
+                    }
+                  },
+                  {
+                    "label": "Asp. Caisse tympan.",
+                    "type": "obs",
+                    "id": "aspcaissetympan",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "16bc7e8c-5633-5876-69b5-de175df7089c"
+                    }
+                  },
+                  {
+                    "label": "Biopsie profonde",
+                    "type": "obs",
+                    "id": "biopsieprofonde",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "8398c80f-a935-c7c4-a8a6-ce2c445c7ff3"
+                    }
+                  },
+                  {
+                    "label": "Excision d'un kyste incisif",
+                    "type": "obs",
+                    "id": "excisionkysteincisif",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "87823d80-5121-e4e4-04e5-06efddff167b"
+                    }
+                  },
+                  {
+                    "label": "Exérèse de l'oreille externe et moyenne dans les néoplasies malignes",
+                    "type": "obs",
+                    "id": "exereseoreilleexternemoyenneneoplasiesmalignes",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "21e39778-abaa-e566-93d5-079ba689a6cb"
+                    }
+                  },
+                  {
+                    "label": "Extraction du polype choanal",
+                    "type": "obs",
+                    "id": "extractionpolypechoanal",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "5e7e41c9-ed35-543a-8678-8987325c6f59"
+                    }
+                  },
+                  {
+                    "label": "Extraction otoscopique du cholestéatome, du polype, cautérisation des granulations oreille",
+                    "type": "obs",
+                    "id": "extractionotoscopiquecholesteatome",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "f889f114-ad4b-57f8-6183-c2ee9083ff89"
+                    }
+                  },
+                  {
+                    "label": "Impédancemétrie",
+                    "type": "obs",
+                    "id": "impedancemetrie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "7f77e66f-317b-379f-fdfe-33d5b6ea2c30"
+                    }
+                  },
+                  {
+                    "label": "Incision abcès amygd., periamygdalien et cou",
+                    "type": "obs",
+                    "id": "incisionabcesamygdperiamygdaliencou",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "f0fceb52-1881-7229-7db1-5cf75e7cf64d"
+                    }
+                  },
+                  {
+                    "label": "Levée de l'imperforation choanale par perforation nasale",
+                    "type": "obs",
+                    "id": "leveeimperforationchoanale",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "162c88ee-66a8-8ad3-fbf6-6d2381671a8f"
+                    }
+                  },
+                  {
+                    "label": "Malsupialisation (Excision kyste s/lingual)",
+                    "type": "obs",
+                    "id": "malsupialisationexcisionkysteslingual",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "842970cb-094c-6f9c-748f-ef38c6ae4e4d"
+                    }
+                  },
+                  {
+                    "label": "Mastoïdectomie",
+                    "type": "obs",
+                    "id": "mastoidecomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "3b0b1100-2a3d-dcb8-2e32-57ee13497e13"
+                    }
+                  },
+                  {
+                    "label": "Paracenthèse / AG",
+                    "type": "obs",
+                    "id": "paracentheseag",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "fa55c586-94d8-603d-3f36-aad0d60eb558"
+                    }
+                  },
+                  {
+                    "label": "Parotidectomie",
+                    "type": "obs",
+                    "id": "parotidectomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "6b7c0ac4-b7a8-8416-1eb3-0b6d125cde99"
+                    }
+                  },
+                  {
+                    "label": "Ponct. Lav Sinus (1)",
+                    "type": "obs",
+                    "id": "ponctlavsinus1",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "aa0c0b0e-05ed-91f8-191b-cf6a121a1675"
+                    }
+                  },
+                  {
+                    "label": "Séringuage oreille/nez",
+                    "type": "obs",
+                    "id": "seringuageoreillenez",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "5a6cd002-fa7e-2295-c4ce-0d583e656073"
+                    }
+                  },
+                  {
+                    "label": "Sialodénectomie",
+                    "type": "obs",
+                    "id": "sialodenectomie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "8c384228-58e2-fdec-36af-4d9cd917b4d2"
+                    }
+                  },
+                  {
+                    "label": "Vestibulométrie",
+                    "type": "obs",
+                    "id": "vestibulometrie",
+                    "questionOptions": {
+                      "rendering": "number",
+                      "concept": "74f060d0-8eb5-bb3d-86b5-1e6850e7c2f5"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '6e950bd2-09fd-437e-99b6-5149cb1966c8')"
+        }
+      },
+      {
+        "label": "Oxygenotherapie",
+        "sections": [
+          {
+            "label": "Oxygen Therapy",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Oxygenotherapie",
+                "type": "obsGroup",
+                "required": false,
+                "id": "oxygenotherapiey",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "1f5599ce-106a-4b7e-b545-96adde63b581"
+                },
+                "questions": [
+                  {
+                    "label": "Formolisation Du Corps Pour Les Morts À L'Hôpital",
+                    "type": "obs",
+                    "id": "formodb626",
+                    "questionOptions": {
+                      "concept": "db6260bd-25ee-4993-97f9-b09184405466",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Formolisation Du Corps Pour Les Autres",
+                    "type": "obs",
+                    "id": "formof76c9",
+                    "questionOptions": {
+                      "concept": "f76c9262-dc14-4df1-be0d-ffda21746d0d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Incineration Par M3",
+                    "type": "obs",
+                    "id": "inci087e7",
+                    "questionOptions": {
+                      "concept": "087e74f6-d728-42b1-bcda-99be46d11a92",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Morgue Après Les 1ères 24 Heures Compartment À 1 Par Jour",
+                    "type": "obs",
+                    "id": "morgd47bd",
+                    "questionOptions": {
+                      "concept": "d47bdeba-48f6-47b2-9d31-cb10438bbcdc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Morgue Après Les 1ères 24 Heures Compartment À 3 Par Jour",
+                    "type": "obs",
+                    "id": "morgc05f6",
+                    "questionOptions": {
+                      "concept": "c05f630b-25cf-4953-9799-8180aed953ee",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Morgue Après Les 1ères 24 Heures Compartment À 4 Par Jour",
+                    "type": "obs",
+                    "id": "morg57a0b",
+                    "questionOptions": {
+                      "concept": "57a0bc93-7aef-4a09-866e-1c1039bf5729",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Morgue Après Les 1ères 24 Heures Compartment À 6 Par Jour",
+                    "type": "obs",
+                    "id": "morg4c6eb",
+                    "questionOptions": {
+                      "concept": "4c6ebd29-290b-496a-8b4e-da58d8b1b5bb",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Morgue Après Les 1ères 24 Heures Compartment À Plusieurs",
+                    "type": "obs",
+                    "id": "morgbe918",
+                    "questionOptions": {
+                      "concept": "be918505-5555-424e-aa08-8047f98a8eb9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Oxygénothérapie Avec Respirateur",
+                    "type": "obs",
+                    "id": "oxyg50738",
+                    "questionOptions": {
+                      "concept": "50738dd3-1419-45f1-8d66-69c3c4589377",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Oxygenotherapie (Par Heure)",
+                    "type": "obs",
+                    "id": "oxyg88b60",
+                    "questionOptions": {
+                      "concept": "88b60b71-74ca-4fa6-93af-0be2de43ba7b",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '1f5599ce-106a-4b7e-b545-96adde63b581')"
+        }
+      },
+      {
+        "label": "Radiographie",
+        "sections": [
+          {
+            "label": "Radiography",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Radiography",
+                "type": "obsGroup",
+                "required": false,
+                "id": "radiography",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "634df62b-fa5d-4500-927a-cfaf33249de6"
+                },
+                "questions": [
+                  {
+                    "label": "Avant-bras (F et P)",
+                    "type": "obs",
+                    "id": "avanea22e",
+                    "questionOptions": {
+                      "concept": "ea22e5a0-0479-4b17-a194-7e7b61cae2d7",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Clavicule (F et P)",
+                    "type": "obs",
+                    "id": "clav47598",
+                    "questionOptions": {
+                      "concept": "47598eb2-497c-4c24-8e4a-d784a5ee4e82",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Coude (F et P)",
+                    "type": "obs",
+                    "id": "coud786db",
+                    "questionOptions": {
+                      "concept": "786db9a4-e73b-4e92-934f-69d9822520cc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Doigt (F et P)",
+                    "type": "obs",
+                    "id": "doig93c0e",
+                    "questionOptions": {
+                      "concept": "93c0e726-687d-4264-be9b-a35ba343b71c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Epaule (F et P)",
+                    "type": "obs",
+                    "id": "epaua04d5",
+                    "questionOptions": {
+                      "concept": "a04d526d-4bde-4b7b-81ff-7c118fe614db",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Humérus (F et P)",
+                    "type": "obs",
+                    "id": "humea9638",
+                    "questionOptions": {
+                      "concept": "a96381ef-6750-44ea-8acf-b11370e9e2a5",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Main (F et P)",
+                    "type": "obs",
+                    "id": "main7764f",
+                    "questionOptions": {
+                      "concept": "7764f9f6-d7d3-4b3d-bade-d5633247ac34",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Omoplate",
+                    "type": "obs",
+                    "id": "omop501d8",
+                    "questionOptions": {
+                      "concept": "501d8859-e2a2-4b84-94ff-881481422bfa",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Poignet (F et P)",
+                    "type": "obs",
+                    "id": "poig50f65",
+                    "questionOptions": {
+                      "concept": "50f65f2b-9ef8-40ca-aa5a-22fce561f54f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Bassin (F)",
+                    "type": "obs",
+                    "id": "basse8dd8",
+                    "questionOptions": {
+                      "concept": "e8dd851b-3102-45c7-b7c4-e5d8e0a03945",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Cheville (F et P)",
+                    "type": "obs",
+                    "id": "chevc92c3",
+                    "questionOptions": {
+                      "concept": "c92c38cb-05f3-40be-8442-a85827a94641",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Fémur (F et P)",
+                    "type": "obs",
+                    "id": "femu221d6",
+                    "questionOptions": {
+                      "concept": "221d6366-4f96-431a-8b10-415a472e89be",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Genou (F et P)",
+                    "type": "obs",
+                    "id": "genob1dbb",
+                    "questionOptions": {
+                      "concept": "b1dbbe21-d680-448b-9f6e-550b57b85f72",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Hanche (F et P)",
+                    "type": "obs",
+                    "id": "hanc3a05a",
+                    "questionOptions": {
+                      "concept": "3a05a519-fa9f-4c01-aaaa-f2ca632e6e46",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Jambe (F et P)",
+                    "type": "obs",
+                    "id": "jamba693a",
+                    "questionOptions": {
+                      "concept": "a693ac9a-bcd7-47d4-b5f7-8eb9ace3579a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Orteils (F et P)",
+                    "type": "obs",
+                    "id": "orte0db46",
+                    "questionOptions": {
+                      "concept": "0db466b6-ac96-4827-ab71-89e74ea29937",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pied (F et P)",
+                    "type": "obs",
+                    "id": "pied9e76e",
+                    "questionOptions": {
+                      "concept": "9e76ebcc-c8d2-4338-ba75-65a4c4a48452",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Gril Costal F",
+                    "type": "obs",
+                    "id": "gril464e7",
+                    "questionOptions": {
+                      "concept": "464e7c68-21b9-4416-8e68-ef05d3984543",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Poumons F",
+                    "type": "obs",
+                    "id": "poumdd2e9",
+                    "questionOptions": {
+                      "concept": "dd2e9452-8233-4de8-9f8b-138732a405b9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Poumons P",
+                    "type": "obs",
+                    "id": "poum2ab67",
+                    "questionOptions": {
+                      "concept": "2ab6721f-aa99-4519-8141-980442292460",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Crâne (F et P)",
+                    "type": "obs",
+                    "id": "cran6ddad",
+                    "questionOptions": {
+                      "concept": "6ddadad2-a213-4def-9668-4571bd701860",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Rachis Cervical (F et P)",
+                    "type": "obs",
+                    "id": "rach2dea5",
+                    "questionOptions": {
+                      "concept": "2dea5a49-0edc-4a29-979f-e613131780f8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Rachis Dorsal (F et P)",
+                    "type": "obs",
+                    "id": "racha21a0",
+                    "questionOptions": {
+                      "concept": "a21a0d70-5fee-4998-9e77-651f0b75e5b4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Rachis Lombo-sacré (F et P)",
+                    "type": "obs",
+                    "id": "rach94381",
+                    "questionOptions": {
+                      "concept": "94381601-8efd-4f62-9556-7a2cebadd83d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Abdomen Sans Préparation (Asp)",
+                    "type": "obs",
+                    "id": "abdocc99b",
+                    "questionOptions": {
+                      "concept": "cc99bebc-a7ac-4ead-9d9f-2a5f0feb5c50",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lav. Baryté",
+                    "type": "obs",
+                    "id": "lav231e9",
+                    "questionOptions": {
+                      "concept": "231e9d1b-5d9d-4103-94f0-117a35fac2e5",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Histerosalpingographie",
+                    "type": "obs",
+                    "id": "hist9052b",
+                    "questionOptions": {
+                      "concept": "9052bbb8-c699-4623-aba0-f8714be41512",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, '107fd31f-49f0-4a2c-99e7-801c493252a6')"
+        }
+      },
+      {
+        "label": "Soins Infirmiers",
+        "sections": [
+          {
+            "label": "Nursing",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Soins Infirmiers",
+                "type": "obsGroup",
+                "required": false,
+                "id": "SoinsInfirmiers",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "a837de12-9005-4af4-b147-8ea7a169ca14"
+                },
+                "questions": [
+                  {
+                    "label": "Ablation Norplan",
+                    "type": "obs",
+                    "id": "abla12bed",
+                    "questionOptions": {
+                      "concept": "12beda35-0274-454f-955c-83e36140a166",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Aspiration Naso Gastrique",
+                    "type": "obs",
+                    "id": "aspi8a854",
+                    "questionOptions": {
+                      "concept": "8a854914-0b9d-43b0-adcb-8337bea2d0f7",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Implanon Insertion",
+                    "type": "obs",
+                    "id": "implab3ef",
+                    "questionOptions": {
+                      "concept": "ab3eff4a-93cf-4636-b6ad-cc08dbade0c8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Implanon Removal",
+                    "type": "obs",
+                    "id": "impl76186",
+                    "questionOptions": {
+                      "concept": "76186a33-136a-4cc2-b3eb-b7c434e7a941",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Injection IM",
+                    "type": "obs",
+                    "id": "inje9a3e4",
+                    "questionOptions": {
+                      "concept": "9a3e44c6-b0fc-46cb-a107-978b14fc39d6",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Injection IV",
+                    "type": "obs",
+                    "id": "injebf6d8",
+                    "questionOptions": {
+                      "concept": "bf6d8584-5232-4f8d-9002-3476a7471821",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Injection SC",
+                    "type": "obs",
+                    "id": "inje4b793",
+                    "questionOptions": {
+                      "concept": "4b793d53-6e65-4129-a504-d3d1b59e4633",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Insertion DIU",
+                    "type": "obs",
+                    "id": "insee32be",
+                    "questionOptions": {
+                      "concept": "e32bef4c-6dfc-4014-9ab4-80f0231eb3f4",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "IUD Insertion And Removal KIT",
+                    "type": "obs",
+                    "id": "iuda8c9a",
+                    "questionOptions": {
+                      "concept": "a8c9a66f-14e1-4e7d-a934-353984d7d204",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lavage Gastrique Vesicale",
+                    "type": "obs",
+                    "id": "lavad21ef",
+                    "questionOptions": {
+                      "concept": "d21efe36-3c3b-42b2-9f89-9af253b4a92f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Lavement Evacuateur",
+                    "type": "obs",
+                    "id": "lavee878b",
+                    "questionOptions": {
+                      "concept": "e878bf60-e1e7-4376-9887-33caae737a45",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Nebulisation",
+                    "type": "obs",
+                    "id": "nebu2b221",
+                    "questionOptions": {
+                      "concept": "2b221eb6-56f0-4079-af87-fc26791924fc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Norplant Insertion",
+                    "type": "obs",
+                    "id": "norp9d62c",
+                    "questionOptions": {
+                      "concept": "9d62c339-b22b-4175-8f36-ee5a17fe7753",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pansement Simple",
+                    "type": "obs",
+                    "id": "panse6d0a",
+                    "questionOptions": {
+                      "concept": "e6d0ada1-99bf-4320-8b7e-99cbf863bf85",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Poll Bladder",
+                    "type": "obs",
+                    "id": "polld5908",
+                    "questionOptions": {
+                      "concept": "d59086f7-b895-4231-b1fe-6326ee2d43f5",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Pose Perfusion Transfusion",
+                    "type": "obs",
+                    "id": "poseef33c",
+                    "questionOptions": {
+                      "concept": "ef33c214-95ee-4693-bfdc-99a6e3e3c99b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Réparation De Fistule Recto-Vesico-Vaginale",
+                    "type": "obs",
+                    "id": "repad9a5a",
+                    "questionOptions": {
+                      "concept": "d9a5a33d-e339-45d4-a595-8a5573bfc540",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Repair Of Rectovaginal Fistula",
+                    "type": "obs",
+                    "id": "repa57a28",
+                    "questionOptions": {
+                      "concept": "57a2854d-7374-4d6f-811f-83c288c44bba",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Seringage",
+                    "type": "obs",
+                    "id": "serif96c8",
+                    "questionOptions": {
+                      "concept": "f96c8093-b279-438e-94cd-3b821115b05a",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Sondage Nasogastrique",
+                    "type": "obs",
+                    "id": "sonda2dfa",
+                    "questionOptions": {
+                      "concept": "a2dfaefb-c3bd-4450-9469-fd0cb64fb3e0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Tubal Ligation",
+                    "type": "obs",
+                    "id": "tuba3cdcf",
+                    "questionOptions": {
+                      "concept": "3cdcf44c-26fe-102b-80cb-0017a47871b2",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, 'a837de12-9005-4af4-b147-8ea7a169ca14')"
+        }
+      },
+      {
+        "label": "Stomatologie",
+        "sections": [
+          {
+            "label": "Dentistry",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Stomatologie",
+                "type": "obsGroup",
+                "required": false,
+                "id": "Stomatologie",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "e65de509-f9dc-4219-bba2-129e6dd65d01"
+                },
+                "questions": [
+                  {
+                    "label": "Ablation Du Calcul Salivaire",
+                    "type": "obs",
+                    "id": "abla3f6f6",
+                    "questionOptions": {
+                      "concept": "3f6f6caa-ef2f-45c0-9876-cbc890f7eede",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Apicectomie",
+                    "type": "obs",
+                    "id": "apic30566",
+                    "questionOptions": {
+                      "concept": "30566ed3-fd04-4daa-afd2-aee976191ecc",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Coiffage Direct",
+                    "type": "obs",
+                    "id": "coifd8838",
+                    "questionOptions": {
+                      "concept": "d8838cec-d862-42ae-bfb9-4e032b3e4bd8",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Coiffage Indirect",
+                    "type": "obs",
+                    "id": "coif9b204",
+                    "questionOptions": {
+                      "concept": "9b204da3-5e47-41c0-9158-854436a8af4c",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Curetage Poche Parodontaire",
+                    "type": "obs",
+                    "id": "cure4f55c",
+                    "questionOptions": {
+                      "concept": "4f55c970-d24a-4c9d-91e0-031f252152f1",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Détartrage",
+                    "type": "obs",
+                    "id": "deta8d73e",
+                    "questionOptions": {
+                      "concept": "8d73e8bd-48d2-4e6d-9bd6-95f55d8f0a09",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Déviation D'incisive Et Canine",
+                    "type": "obs",
+                    "id": "devi22965",
+                    "questionOptions": {
+                      "concept": "22965f0c-9752-4473-9988-b319010f9c2e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Dévitalisation",
+                    "type": "obs",
+                    "id": "devi6ca93",
+                    "questionOptions": {
+                      "concept": "6ca939c5-bc4d-4828-9b8c-ff873ec6be11",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extraction Chirurgicale D'une Dent Incluse Ou Impacte",
+                    "type": "obs",
+                    "id": "extr9164d",
+                    "questionOptions": {
+                      "concept": "9164deeb-3fbf-457d-94f4-62b111400eea",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extraction Dent Definitive",
+                    "type": "obs",
+                    "id": "extr6a926",
+                    "questionOptions": {
+                      "concept": "6a926380-0ec1-4378-b825-c8d2ae349f7b",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extraction Dent De Lait",
+                    "type": "obs",
+                    "id": "extr8506b",
+                    "questionOptions": {
+                      "concept": "8506ba95-4cbb-4c5a-9e97-8d8ac7d1283e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Extraction Des Restes Radiculaires",
+                    "type": "obs",
+                    "id": "extr0d602",
+                    "questionOptions": {
+                      "concept": "0d602c96-ba3d-4d4a-93e7-e2d52e3f067f",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Frenectomie Labiale",
+                    "type": "obs",
+                    "id": "fren373ee",
+                    "questionOptions": {
+                      "concept": "373eedac-33bd-4585-ab8f-94d6639db7a0",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Gingivectomie",
+                    "type": "obs",
+                    "id": "ginge498d",
+                    "questionOptions": {
+                      "concept": "e498d5ad-6ff5-48ce-9626-faa5e5081552",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Kystectomie",
+                    "type": "obs",
+                    "id": "kystc8633",
+                    "questionOptions": {
+                      "concept": "c8633881-22f6-4b37-b299-9a8d384945a9",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Obturation Définitive",
+                    "type": "obs",
+                    "id": "obtu0a397",
+                    "questionOptions": {
+                      "concept": "0a39713a-867a-49f6-8ca9-beddd2607a8d",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Obturation Provisoire",
+                    "type": "obs",
+                    "id": "obtu95e02",
+                    "questionOptions": {
+                      "concept": "95e02e16-e2e0-4ef8-bf6e-12b80bf503bf",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Operculectomie",
+                    "type": "obs",
+                    "id": "oper6b94a",
+                    "questionOptions": {
+                      "concept": "6b94afce-d442-4b51-8289-d6edeae7394e",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Réduction Dento-Alvéolaire Et Fixation",
+                    "type": "obs",
+                    "id": "reducf64b",
+                    "questionOptions": {
+                      "concept": "cf64b864-1fc1-47ca-b2f4-385fb72f3615",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "Reduction De L'ATM",
+                    "type": "obs",
+                    "id": "redu943bd",
+                    "questionOptions": {
+                      "concept": "943bdfa1-e56d-4b6b-8d84-932726265591",
+                      "rendering": "number"
+                    }
+                  },
+                  {
+                    "label": "RX Rétro-Alvéolaire",
+                    "type": "obs",
+                    "id": "rxbe80e",
+                    "questionOptions": {
+                      "concept": "be80e77c-faae-4307-9c26-79c2bde2c29c",
+                      "rendering": "number"
+                    }
+                  }
+                ],
+                "hide": {
+                  "hideWhenExpression": ""
+                }
+              }
+            ]
+          }
+        ],
+        "hide": {
+          "hideWhenExpression": "!arrayContains(serviceToBill, 'e65de509-f9dc-4219-bba2-129e6dd65d01')"
+        }
+      }
+    ],
+    "encounterType": "75caca4e-33ca-4b0a-aa63-5ed29f3000f0"
+  }
