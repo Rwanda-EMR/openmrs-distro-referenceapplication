@@ -1,0 +1,30 @@
+Uuid,Void/Retire,Name,Description
+8d491c7a-c2cc-11de-8d13-0010c6dffd0f,0.0,Anatomy,Anatomic sites / descriptors
+8d4923b4-c2cc-11de-8d13-0010c6dffd0f,0.0,Consumable,Term to describe consumables
+8d492594-c2cc-11de-8d13-0010c6dffd0f,0.0,ConvSet,Term to describe convenience sets
+8d4918b0-c2cc-11de-8d13-0010c6dffd0f,0.0,Diagnosis,Conclusion drawn through findings
+8d490dfc-c2cc-11de-8d13-0010c6dffd0f,0.0,Drug,Drug
+de359f23-2bfc-4e8d-96d8-25b7526d6070,,Drug form,Medication form for prescribing
+8d491a9a-c2cc-11de-8d13-0010c6dffd0f,0.0,Finding,Practitioner observation/finding
+8e071bfe-520c-44c0-a89b-538e9129b42a,0.0,Frequency,A class for order frequencies
+3e11e810-c6e4-4fd2-8591-cede14b85953,0.0,ICD,ICD
+5f1edb2f-81f8-433b-8c79-7b5724c83684,0.0,ICHI,ICHI Based Concepts
+896d8b8c-603b-421f-959e-8d305cbeeb82,,Indicator,An indicator calculated from certain measures
+e2c52f55-c7b4-49f7-9f82-1ffa2fe6023f,,InteractSet,Set of drugs that interact with parent drug
+31a46753-7864-4590-8e2a-275845c223e1,0.0,LOINC,To hold LOINC Info
+8d492026-c2cc-11de-8d13-0010c6dffd0f,0.0,LabSet,Term to describe laboratory sets
+0dcf23d4-3008-4d8e-b12c-4ec95d1cfd97,,Medical supply,Durable medical equipment and other supplies
+8d492774-c2cc-11de-8d13-0010c6dffd0f,0.0,Misc,Terms which don't fit other categories
+89a98300-062e-4003-8f6f-764ea23ab648,,Organism,Class of living organisms
+b4535251-9183-4175-959e-9ee67dc71e78,,Pharmacologic Drug Class,Class of medications based on pharmacologic properties as opposed to therapeutic properties
+8d490bf4-c2cc-11de-8d13-0010c6dffd0f,0.0,Procedure,Describes a clinical procedure
+3d72947a-26fe-102b-80cb-0017a47871b2,,Program,Program concept
+8d491e50-c2cc-11de-8d13-0010c6dffd0f,0.0,Question,"Question (eg, patient history, SF36 items)"
+8caa332c-efe4-4025-8b18-3398328e1323,,Radiology/Imaging Procedure,A radiology or imaging test or procedure
+8d492d0a-c2cc-11de-8d13-0010c6dffd0f,0.0,Specimen,Body or fluid specimen
+3d7297ae-26fe-102b-80cb-0017a47871b2,,State,Workflow state
+8d492954-c2cc-11de-8d13-0010c6dffd0f,0.0,Symptom,Patient-reported observation
+8d492b2a-c2cc-11de-8d13-0010c6dffd0f,0.0,Symptom/Finding,Observation that can be reported from patient or found on exam
+8d4907b2-c2cc-11de-8d13-0010c6dffd0f,0.0,Test,"Acq. during patient encounter (vitals, labs, etc.)"
+e30d8601-07f8-413a-9d11-cdfbb28196ec,,Units of Measure,For prescribing and dispensing
+3d72960a-26fe-102b-80cb-0017a47871b2,,Workflow,Workflow class

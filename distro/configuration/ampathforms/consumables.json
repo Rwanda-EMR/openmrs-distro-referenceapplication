@@ -1,0 +1,2432 @@
+{
+    "name": "Consommables 2.0",
+    "description": "Billable consommables",
+    "version": "2.0",
+    "published": true,
+    "retired": false,
+    "processor": "EncounterFormProcessor",
+    "encounter": "consommables",
+    "referencedForms": [],
+    "uuid": "09bdb2ac-b705-4a82-b3f9-7e3cbd546a3d",
+    "pages": [
+      {
+        "label": "Visit Details",
+        "sections": [
+          {
+            "label": "Visit Particulars",
+            "isExpanded": true,
+            "questions": [
+              {
+                "value": [
+                  "**This form is used to:** Capture consommables"
+                ],
+                "questionOptions": {
+                  "rendering": "markdown"
+                },
+                "id": "heading"
+              },
+              {
+                "label": "Encounter & Datetime",
+                "type": "encounterDatetime",
+                "questionOptions": {
+                  "rendering": "datetime"
+                },
+                "required": "true",
+                "default": "",
+                "id": "encDate",
+                "validators": [
+                  {
+                    "type": "date"
+                  }
+                ],
+                "questionInfo": "Date the encounter took place"
+              },
+              {
+                "type": "encounterProvider",
+                "label": "Encounter Provider:",
+                "id": "provider",
+                "required": "true",
+                "default": "",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "type": "encounterLocation",
+                "label": "Encounter Location",
+                "id": "location",
+                "required": "true",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                }
+              },
+              {
+                "label": "Department",
+                "type": "obs",
+                "id": "clinical_department",
+                "questionOptions": {
+                  "concept": "9b42e3b9-c648-4025-95db-8b72757e57d1",
+                  "rendering": "select",
+                  "answers": [
+                    {
+                      "concept": "adeb8d27-726c-442d-ba3c-521514f9913c",
+                      "label": "Anesthesie"
+                    },
+                    {
+                      "concept": "3cd0032c-26fe-102b-80cb-0017a47871b2",
+                      "label": "ARV"
+                    },
+                    {
+                      "concept": "c3eea300-843a-4b09-b5ae-a760019d3a1e",
+                      "label": "Chirurgie"
+                    },
+                    {
+                      "concept": "9ffaf0b6-09a2-4f5f-a934-ac6c698b8f66",
+                      "label": "Dermatologie"
+                    },
+                    {
+                      "concept": "d47c7282-cd6c-4c25-8ad7-1a93333553a8",
+                      "label": "DCP"
+                    },
+                    {
+                      "concept": "1b9d950f-cf58-4c4a-a303-a04a6d568d5e",
+                      "label": "Echographie"
+                    },
+                    {
+                      "concept": "fe351ac8-550a-42d1-aaa4-409a2be28cb0",
+                      "label": "Emergency"
+                    },
+                    {
+                      "concept": "9f14056d-f58d-4e60-8d5f-c944a990ea9e",
+                      "label": "GBV"
+                    },
+                    {
+                      "concept": "75dc6a31-e5c5-4490-92a4-907cb8374f68",
+                      "label": "Laboratory"
+                    },
+                    {
+                      "concept": "2c143158-4444-4c8a-b9bc-dea6e9acc09e",
+                      "label": "Maternite"
+                    },
+                    {
+                      "concept": "11b815b5-1b1e-480b-ab2b-1f76051a2815",
+                      "label": "Medecine Interne"
+                    },
+                    {
+                      "concept": "dfba0519-dbf3-4c55-bb9d-2a929c801f72",
+                      "label": "Neonatologie"
+                    },
+                    {
+                      "concept": "3274bc44-60cb-444b-b6b1-0bfe6c68d89d",
+                      "label": "NCDs"
+                    },
+                    {
+                      "concept": "0b9ec1eb-49ca-48dc-9aa6-63366b2104b3",
+                      "label": "Nutrition"
+                    },
+                    {
+                      "concept": "3b3946c4-32e3-4db7-b6f3-0ec8c52c6585",
+                      "label": "Orthopedie"
+                    },
+                    {
+                      "concept": "f6dc88e5-a536-45fb-a343-8b76c9abe834",
+                      "label": "Pediatrie"
+                    },
+                    {
+                      "concept": "09c7bdef-116f-4143-a58b-452799d51032",
+                      "label": "Pharmacy"
+                    },
+                    {
+                      "concept": "f568dae5-2b47-4fb3-b823-e438e347cb00",
+                      "label": "Physiotherapy"
+                    },
+                    {
+                      "concept": "c2009d50-0ce9-4b73-9908-6de79d9b2f2e",
+                      "label": "Ophtalmology"
+                    },
+                    {
+                      "concept": "9e5e7ffc-6eb8-4d0f-a1a8-319eed6399fb",
+                      "label": "OPD"
+                    },
+                    {
+                      "concept": "1defceb5-def5-4b4e-bd7f-0d79c601169b",
+                      "label": "OPD Chirurgie"
+                    },
+                    {
+                      "concept": "1f83cbb7-3e94-41d4-a721-6a1b5a3ee6a1",
+                      "label": "Radiology"
+                    },
+                    {
+                      "concept": "dd67f196-d0bf-4323-9e08-822fe4138b8b",
+                      "label": "Sante Mentale"
+                    },
+                    {
+                      "concept": "e65de509-f9dc-4219-bba2-129e6dd65d01",
+                      "label": "Stomatologie"
+                    },
+                    {
+                      "concept": "4ba40ee0-8328-4895-8bab-912a7055aabb",
+                      "label": "TBMR"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Consommables",
+        "sections": [
+          {
+            "label": "Department",
+            "isExpanded": true,
+            "questions": [
+              {
+                "label": "1/3 (Third) Tubular Plate 10 Holes",
+                "type": "obs",
+                "id": "13omAi7",
+                "questionOptions": {
+                  "concept": "cd406aff-4501-12f2-b0a0-b4ab48702199",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "1/3Tubular Plate Plate",
+                "type": "obs",
+                "id": "13tuWAuJb",
+                "questionOptions": {
+                  "concept": "7116431c-e290-b7b6-221b-0f971fb4d6f5",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "3.5 MM Ss 1/3 Tubular Plate",
+                "type": "obs",
+                "id": "35mmT1J7G",
+                "questionOptions": {
+                  "concept": "db48aff6-dd4c-31a3-37c8-76d159137871",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "3.5 MM cortical Screws",
+                "type": "obs",
+                "id": "35mmMBQj9",
+                "questionOptions": {
+                  "concept": "1cfc1f15-92f6-2590-544d-d15c3c29175d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "4 MM Locking Screws",
+                "type": "obs",
+                "id": "4mmlMbpeO",
+                "questionOptions": {
+                  "concept": "9277f50e-5c73-726e-eb56-db2bbd704459",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Abdomen Gauze Non Sterile 45X45Cm",
+                "type": "obs",
+                "id": "abdom3ptgQ",
+                "questionOptions": {
+                  "concept": "d86d35cf-f22b-76d0-1d4b-3c465493a517",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aiguille Dentaire Courte G26",
+                "type": "obs",
+                "id": "aiguiBqmjq",
+                "questionOptions": {
+                  "concept": "640a6268-165f-c287-ce14-2a09e8c57059",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aiguille Hypodermique Uu 21G/Needle Hypo Uu 21G",
+                "type": "obs",
+                "id": "aiguiNd6F0",
+                "questionOptions": {
+                  "concept": "51ead3e2-9217-5cec-8754-a5f1a32c051c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aiguille Pl Uu Luer 22 G/Needle Pl 22G 90 MM",
+                "type": "obs",
+                "id": "aiguigywiL",
+                "questionOptions": {
+                  "concept": "02ad58ef-3dd0-43c6-5e40-28339b9d798f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aiguilles G 23 B/100",
+                "type": "obs",
+                "id": "aiguiUWZva",
+                "questionOptions": {
+                  "concept": "73d0213c-b845-1d96-ef98-bccd705c44de",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Anatomic Distal Radius Plate",
+                "type": "obs",
+                "id": "anato9cYza",
+                "questionOptions": {
+                  "concept": "93ef02c7-e852-a95d-2d73-620769f28424",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Anatomic Proximal Humerus Plate 12 Holes",
+                "type": "obs",
+                "id": "anato2dS2O",
+                "questionOptions": {
+                  "concept": "2f67bb9a-644c-2f84-e0b2-4b9e81ebad30",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Anatomical Distal Femur Locked Plate",
+                "type": "obs",
+                "id": "anatorA800",
+                "questionOptions": {
+                  "concept": "15202659-d496-27bd-49e8-fe84599de678",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Anatomical Distal Tibia Locking Plate",
+                "type": "obs",
+                "id": "anatoyOOYC",
+                "questionOptions": {
+                  "concept": "41919dcd-69ef-50a4-14ae-7df77c884d29",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Anatomical Distal Tibia Plate",
+                "type": "obs",
+                "id": "anatocpOZ3",
+                "questionOptions": {
+                  "concept": "f67b9085-eb7c-e764-d86f-e51cf329d81f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Anatomical Lateral Proximal Tibia Plate",
+                "type": "obs",
+                "id": "anato8wmA3",
+                "questionOptions": {
+                  "concept": "bf0b6a4e-d561-3469-af80-076d234bdac7",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Anatomical Medial Proximal Tibia Plate",
+                "type": "obs",
+                "id": "anatoArveX",
+                "questionOptions": {
+                  "concept": "50223cb9-034b-2ced-411f-17ad31ebf669",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Atele Methalique Digital",
+                "type": "obs",
+                "id": "atelev0yGg",
+                "questionOptions": {
+                  "concept": "6f3dc60d-070d-c6ea-a7cc-884aebaf9e05",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens A/C 5.0 MM Power 18",
+                "type": "obs",
+                "id": "aurolDTpWF",
+                "questionOptions": {
+                  "concept": "f40473d2-514c-d349-be03-40e69bf996fd",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens A/C 5.0 MM Power 20",
+                "type": "obs",
+                "id": "aurol8t8sO",
+                "questionOptions": {
+                  "concept": "76dff668-2abe-8533-4a12-b75e2849ab34",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens A/C 5.5 MM Optic Power 18",
+                "type": "obs",
+                "id": "aurolI2qR0",
+                "questionOptions": {
+                  "concept": "f8a0d259-c794-467a-ea82-e48137b656e4",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens A/C 5.5 MM Optic Power 19",
+                "type": "obs",
+                "id": "aurolI6ok1",
+                "questionOptions": {
+                  "concept": "362d2e42-7c68-0111-ddf3-95976cf21ad7",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 16",
+                "type": "obs",
+                "id": "aurolIoA5D",
+                "questionOptions": {
+                  "concept": "0ce3e1dd-20a4-6ff7-d733-189d4444debf",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 16.5",
+                "type": "obs",
+                "id": "aurolyg2d2",
+                "questionOptions": {
+                  "concept": "73c960e3-a2b3-7f36-9001-7a460f8cd299",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 17",
+                "type": "obs",
+                "id": "aurolQKWuP",
+                "questionOptions": {
+                  "concept": "1b955ece-dd87-afaa-e0fd-6cd0319a6c71",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 18",
+                "type": "obs",
+                "id": "aurolxWIr6",
+                "questionOptions": {
+                  "concept": "2e590fcf-749d-02e2-92b4-51d5a07aa24e",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 18.5",
+                "type": "obs",
+                "id": "aurolDOJYq",
+                "questionOptions": {
+                  "concept": "f11d2b41-dce2-4249-98af-44c3d02d2dde",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 19",
+                "type": "obs",
+                "id": "aurolr485L",
+                "questionOptions": {
+                  "concept": "fc940023-ef0c-cef3-2a4e-850c46394071",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 19.5",
+                "type": "obs",
+                "id": "auroluQQu4",
+                "questionOptions": {
+                  "concept": "a03e1347-adaf-4c9e-7ae2-d1d5ddf3e049",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 20.5",
+                "type": "obs",
+                "id": "aurolGxSFI",
+                "questionOptions": {
+                  "concept": "dcc39124-6fa1-0df9-b995-b02961c06ed6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 21.5",
+                "type": "obs",
+                "id": "auroliwDdO",
+                "questionOptions": {
+                  "concept": "706f58a1-11b6-49e7-12bd-0791c9b6e087",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 22.5",
+                "type": "obs",
+                "id": "aurolYyvIe",
+                "questionOptions": {
+                  "concept": "eea1133f-c732-4148-26a8-7beed6e4e989",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 23",
+                "type": "obs",
+                "id": "aurolkTRoh",
+                "questionOptions": {
+                  "concept": "073f3be2-32b8-45c2-2929-f6e450993937",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 23.5",
+                "type": "obs",
+                "id": "aurolItxeO",
+                "questionOptions": {
+                  "concept": "46ff751a-d655-25e9-c6e7-ef391a0e223c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 24.5",
+                "type": "obs",
+                "id": "aurolkJPCM",
+                "questionOptions": {
+                  "concept": "aa0410a3-5503-f7f3-2e01-e92c238fb121",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 26",
+                "type": "obs",
+                "id": "aurolM0skq",
+                "questionOptions": {
+                  "concept": "12a57ec0-1fc9-f830-3a05-3dd1e5c2a06d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Optic Power 27",
+                "type": "obs",
+                "id": "aurolmLiuU",
+                "questionOptions": {
+                  "concept": "02d5edbe-1898-15b6-e881-6acf9bcef25e",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Power 21",
+                "type": "obs",
+                "id": "aurolOSHjh",
+                "questionOptions": {
+                  "concept": "878d216a-7099-56eb-36f5-646c23b876c6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Power 22",
+                "type": "obs",
+                "id": "aurolPJbfn",
+                "questionOptions": {
+                  "concept": "1059af96-070a-ff55-e96c-bd22a1b22f25",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurolens P/C 6.0 MM Power 24",
+                "type": "obs",
+                "id": "aurolLa6JE",
+                "questionOptions": {
+                  "concept": "f9723d46-7041-f624-b7c5-f68ed53473bc",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurosleek (Sideport 15 Degree, Straight Sterile With Handle And Tipguard ) B/L 15022Ht/15 Deg",
+                "type": "obs",
+                "id": "auroskammZ",
+                "questionOptions": {
+                  "concept": "85f2b6c6-63fc-84db-35d3-0b14a818bf09",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurosleek Crescent 2.5 MM",
+                "type": "obs",
+                "id": "auros1J5Qp",
+                "questionOptions": {
+                  "concept": "ef90753f-16b4-766d-6937-33edc8549988",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurosleek Keraton 2.8 MM",
+                "type": "obs",
+                "id": "auroskfHzW",
+                "questionOptions": {
+                  "concept": "a1720481-655c-169e-55c3-ce995aba4da2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Aurosleek Keraton 3.2 MM",
+                "type": "obs",
+                "id": "aurosA1DzR",
+                "questionOptions": {
+                  "concept": "084fd0a9-3b9f-cf78-22d7-1df41f2b4c00",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bandage Crepe 10Cmx4M B/1",
+                "type": "obs",
+                "id": "bandap86U0",
+                "questionOptions": {
+                  "concept": "69ecc012-4dce-d5e9-aa8f-bb90c7260ad9",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bandage Elastic Adhesive 10 Cm X 4 M",
+                "type": "obs",
+                "id": "bandaTkAdu",
+                "questionOptions": {
+                  "concept": "a3be4acc-3f97-e612-797e-5ce2ad9d64f1",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bandage Jersey Tub 10Cmx25M Par 1 Metre",
+                "type": "obs",
+                "id": "bandaZ6uG7",
+                "questionOptions": {
+                  "concept": "bd22be1a-76e1-c02b-a50c-a4978e45d9c6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bandage Jersey Tub 5Cmx25M Par 1 Metre",
+                "type": "obs",
+                "id": "bandabp9Yf",
+                "questionOptions": {
+                  "concept": "203adf69-1779-36f1-1fb1-b76be1ae902a",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bandage Plaster 10Cmx2.7M",
+                "type": "obs",
+                "id": "bandadeuPm",
+                "questionOptions": {
+                  "concept": "a9b9d01a-25ad-a044-694c-189722f1ce94",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bandage Plaster 15Cmx2.7M",
+                "type": "obs",
+                "id": "bandaz0zuH",
+                "questionOptions": {
+                  "concept": "33618712-50d9-593f-24e6-3c05d49b8797",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bandage Plaster 20Cmx2.7M 1/B",
+                "type": "obs",
+                "id": "bandaTBuiq",
+                "questionOptions": {
+                  "concept": "d643819e-ffc8-f2c4-a311-0b1e21c9822c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bande Gauze 7.5 Cm X 4.5M",
+                "type": "obs",
+                "id": "bande9B82o",
+                "questionOptions": {
+                  "concept": "9180ae84-a79e-64c7-472e-9de1fab5976f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bande Gaze 5Cmx4.5M Hydrophile",
+                "type": "obs",
+                "id": "bande2kYUn",
+                "questionOptions": {
+                  "concept": "c9ddba6d-73a7-31b9-7383-85d58ff46b6c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bipolar Acetabular Shell",
+                "type": "obs",
+                "id": "bipolLQfmM",
+                "questionOptions": {
+                  "concept": "4835f548-9ec1-67d8-9ac0-4de3b6ec9282",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bipolar Femoral Cup",
+                "type": "obs",
+                "id": "bipol0Z5dh",
+                "questionOptions": {
+                  "concept": "35c33c96-3ddc-aaeb-9b83-271e86845c23",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bipolar Femoral Stem",
+                "type": "obs",
+                "id": "bipol0VqFF",
+                "questionOptions": {
+                  "concept": "38fb607d-37fd-7a4a-134c-7cdda305dc82",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bistouri Nº 22",
+                "type": "obs",
+                "id": "bistoAZkRx",
+                "questionOptions": {
+                  "concept": "01eb140f-d6aa-75b9-e120-dc447c3764e6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Blaunt Staples",
+                "type": "obs",
+                "id": "blauntvqeK",
+                "questionOptions": {
+                  "concept": "84784d66-f623-8293-81c0-0d60228a15f5",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bload Plate",
+                "type": "obs",
+                "id": "bloadtU8Bq",
+                "questionOptions": {
+                  "concept": "c2d01c22-cc7a-a8b1-c2dc-f3460a637edb",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Blunt Staples",
+                "type": "obs",
+                "id": "blunt5VGPw",
+                "questionOptions": {
+                  "concept": "4a51e347-e5b8-2bb1-9c05-3a2a82368804",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bone Cement",
+                "type": "obs",
+                "id": "bonegZNU2",
+                "questionOptions": {
+                  "concept": "8471736c-c62f-c870-c29d-6339287f3433",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Bone Screws",
+                "type": "obs",
+                "id": "boneFQdW9",
+                "questionOptions": {
+                  "concept": "f743168c-eb7c-d65a-1834-358c7b40fbc9",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Broad Dcp Locked Plate",
+                "type": "obs",
+                "id": "broadLqyz2",
+                "questionOptions": {
+                  "concept": "b33b6fcc-8b03-9315-a30b-bd9ff875b783",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Buretroles Kit( Perfusion Set Pediatric)",
+                "type": "obs",
+                "id": "buret7M93Y",
+                "questionOptions": {
+                  "concept": "39139aff-ef90-238c-c874-3149d6757b21",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cancellous Locking Screws 6.5  MM",
+                "type": "obs",
+                "id": "canceWp0xJ",
+                "questionOptions": {
+                  "concept": "9ed553b8-6a6b-bffb-c840-f84e3cfe5414",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cancellous Screw 4.0  MM X 16  MM",
+                "type": "obs",
+                "id": "canceboNfm",
+                "questionOptions": {
+                  "concept": "451de686-836a-4006-900b-9822a473c662",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cancellous Screw 4.0  MM X 18  MM",
+                "type": "obs",
+                "id": "canceJaQWW",
+                "questionOptions": {
+                  "concept": "c8d37861-0143-913c-cb18-06f2315bca70",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cancellous Screw 4.0  MM X 20  MM",
+                "type": "obs",
+                "id": "cancedv1RC",
+                "questionOptions": {
+                  "concept": "9914cc77-0fc9-9092-d49c-82697a958c09",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cancellous Screws 6.5 MM",
+                "type": "obs",
+                "id": "canceu2ptj",
+                "questionOptions": {
+                  "concept": "c24cf677-dc9d-3b68-a1f8-c4e36f858494",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cancellous Screws 6.Omm",
+                "type": "obs",
+                "id": "canceKyq8o",
+                "questionOptions": {
+                  "concept": "b4011916-838f-84f0-2816-034ef6b52ecd",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Carbon Rods",
+                "type": "obs",
+                "id": "carbos5DGX",
+                "questionOptions": {
+                  "concept": "e298e22f-bb09-198c-adf6-ecb49313a259",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cataract Sics Kit",
+                "type": "obs",
+                "id": "catarEOJx5",
+                "questionOptions": {
+                  "concept": "86d0bfa6-a9fd-1238-0783-2c7d7a609f2d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Catheter Court Iv Uu 22G",
+                "type": "obs",
+                "id": "catheHHdG0",
+                "questionOptions": {
+                  "concept": "f4a8a643-e1b4-54b8-5a4d-c034d6fa59e4",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Catheter Iv 20G B/1",
+                "type": "obs",
+                "id": "catheH7552",
+                "questionOptions": {
+                  "concept": "d78e9e7e-c3bc-268d-147f-b9db149c6a39",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Catheter Iv 24 B/1",
+                "type": "obs",
+                "id": "cathe1zeKQ",
+                "questionOptions": {
+                  "concept": "0178a6ae-09a1-2ead-0cca-f3e90655a889",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Catheter Short Iv Uu 16G B/1",
+                "type": "obs",
+                "id": "catheWcoGM",
+                "questionOptions": {
+                  "concept": "f2ee848f-6a28-c038-63eb-ce4c83277f5c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Catheter Uu 18G",
+                "type": "obs",
+                "id": "cathewQIRD",
+                "questionOptions": {
+                  "concept": "fc23346d-b764-c88c-ec53-6e9fdcb947db",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Central Line Catheter 7.5",
+                "type": "obs",
+                "id": "centrY5E2L",
+                "questionOptions": {
+                  "concept": "9bce2960-cd1e-79da-496c-164a584e04af",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cerclage Wire",
+                "type": "obs",
+                "id": "cerclLpcGZ",
+                "questionOptions": {
+                  "concept": "2a8dd60d-b7a2-b442-54ab-b4c549f54ffc",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Clamps",
+                "type": "obs",
+                "id": "clampxjKBx",
+                "questionOptions": {
+                  "concept": "ac4497d3-5a56-50e0-3048-aa2fe9cce491",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Coated Polygalactin 910 Size 3/0 1/2 Curved Rb 26 MM Needle ,75Cm",
+                "type": "obs",
+                "id": "coateEsocB",
+                "questionOptions": {
+                  "concept": "9a7db8ef-cc00-d604-7bb3-3142389319ae",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Coated Polyglactin 910 3-0 2/0 1/2 Circle Reverse Cutting 37 MM Needle ,75Cm",
+                "type": "obs",
+                "id": "coateHtTyB",
+                "questionOptions": {
+                  "concept": "aabc0308-4c78-2acc-6d42-348e98a399cf",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Coated Polyglactin 910 Rapid Size 1 1/2 Curved Rb 40 MM Needle 75Cm",
+                "type": "obs",
+                "id": "coatejmnkA",
+                "questionOptions": {
+                  "concept": "298da19f-7297-d6d0-74fa-5fb5131e060d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cortex Screws ,Dia-3.5 MM Self Tapping Lenght-32 MM",
+                "type": "obs",
+                "id": "corteZvGOH",
+                "questionOptions": {
+                  "concept": "b6d27941-e081-aab3-7c3a-88db474b7760",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cortex Screws Locking",
+                "type": "obs",
+                "id": "corte631Lk",
+                "questionOptions": {
+                  "concept": "883b7184-ddda-500e-ceb7-47764f8f8735",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cortical Locking Screws",
+                "type": "obs",
+                "id": "corti9Q79Z",
+                "questionOptions": {
+                  "concept": "15a66e2b-da84-2470-b9c2-55b48dacbe6b",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Cortical Screws",
+                "type": "obs",
+                "id": "cortiBJGzt",
+                "questionOptions": {
+                  "concept": "13fd8535-736d-d0a0-c62c-f2f98b8691e9",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Crescent 2.5 MM Angled Bevel Up Sterile With Handle And Tip Guard",
+                "type": "obs",
+                "id": "crescSIpLk",
+                "questionOptions": {
+                  "concept": "29629244-ac18-3c5f-ed81-870b0bf9ceed",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Daclon Nylon 10/0",
+                "type": "obs",
+                "id": "daclodaqKc",
+                "questionOptions": {
+                  "concept": "1c1709c8-8179-3db8-fdd1-9ef177f56e15",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Daclon Nylon 8/0 30Cm 2 Needles 3/8",
+                "type": "obs",
+                "id": "daclo935DZ",
+                "questionOptions": {
+                  "concept": "ec17b60a-100e-1530-536c-e2ad1e6c5009",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Daclon Nylon Cutting 9-0 1/2 Circle",
+                "type": "obs",
+                "id": "daclolMI9k",
+                "questionOptions": {
+                  "concept": "8f84fafc-055d-1d11-6175-48ef4fee6b53",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Dcp Broad Locking Plate Of 10 Holes",
+                "type": "obs",
+                "id": "dcpbaSKKX",
+                "questionOptions": {
+                  "concept": "c4b8f360-7bda-223b-8c2f-8d66b9ee5b35",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Dcp Broad Locking Plate Of 7 Holes",
+                "type": "obs",
+                "id": "dcpbAp7nI",
+                "questionOptions": {
+                  "concept": "0f4b28a9-8008-a874-4797-7de9e0395146",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Dcp Broad Plate 8 Holes",
+                "type": "obs",
+                "id": "dcpbAlBVn",
+                "questionOptions": {
+                  "concept": "a3bd957b-cd05-7c2b-ee54-854a52654f89",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Dcp Radius Shaft",
+                "type": "obs",
+                "id": "dcprxw2k7",
+                "questionOptions": {
+                  "concept": "6df9e530-4e8e-9f13-2b3f-9fb5096925d0",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Elastic Nails 30Cm Titanium(Flexible Nails) 4.0 MM",
+                "type": "obs",
+                "id": "elastPCp1W",
+                "questionOptions": {
+                  "concept": "39295e1a-2d7f-2ede-def1-49afa0a97ec6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Elastic Nails(Titanium)2.5 MM",
+                "type": "obs",
+                "id": "elastKci4l",
+                "questionOptions": {
+                  "concept": "5dcdbe05-5ef8-5388-256a-5ef38c015400",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Elastic Nails(Titanium)3 MM",
+                "type": "obs",
+                "id": "elastyh89u",
+                "questionOptions": {
+                  "concept": "114e1fb2-6d99-5af5-113b-dc5832f6e877",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Cuffed Tube N.5.5",
+                "type": "obs",
+                "id": "endotk5Kr0",
+                "questionOptions": {
+                  "concept": "bb37bfec-d8af-5edb-fcc5-f9c0f1b82c7c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 3.5 MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endotKvvBk",
+                "questionOptions": {
+                  "concept": "cfcf4edd-0882-b3b7-c520-33c4a9c8e479",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 3 MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endotxu2IV",
+                "questionOptions": {
+                  "concept": "59bb73f3-1338-3a37-94ce-ebfd4cd9240a",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 4.5  MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endotOX5Cb",
+                "questionOptions": {
+                  "concept": "c9dd1819-9a30-af20-1afe-208e55537187",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 4 MM +Pilot Ballon",
+                "type": "obs",
+                "id": "endotMbYco",
+                "questionOptions": {
+                  "concept": "6f5cc9d3-6236-4418-b045-3ed617265eb1",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 5 MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endotl9duP",
+                "questionOptions": {
+                  "concept": "1dcb11eb-37b0-cca1-5b0b-79bf7f2bdee8",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 6.5 MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endotr0p82",
+                "questionOptions": {
+                  "concept": "698e709d-48b0-4fdc-51f3-8dea99f8d732",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 6 MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endotjcuvo",
+                "questionOptions": {
+                  "concept": "a20d96c5-846b-d2e0-b834-23100b1ae40d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 7.5 MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endotkEm3a",
+                "questionOptions": {
+                  "concept": "0ffec803-cd91-7f0e-34b9-132cf234408d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Endotracheal Tube 7 MM +Pilot Balloon",
+                "type": "obs",
+                "id": "endot6IkxW",
+                "questionOptions": {
+                  "concept": "96ceecb0-4ee9-25da-6720-34381bebcda1",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Examination Gloves Powdered Ns T 7.5(Paire)",
+                "type": "obs",
+                "id": "examiQETcN",
+                "questionOptions": {
+                  "concept": "2f149f57-d99d-f87a-cdfc-cf5f75161944",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "External Fixation Pins",
+                "type": "obs",
+                "id": "exteryTxyS",
+                "questionOptions": {
+                  "concept": "88793895-31c6-6264-fb2d-1b8e221ba6b4",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "External Fixation Rods",
+                "type": "obs",
+                "id": "extery2gf4",
+                "questionOptions": {
+                  "concept": "df9b4648-df2b-07fb-cd4f-fbf926bacdb7",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "External Fixator(Cramps)",
+                "type": "obs",
+                "id": "exterAQi7T",
+                "questionOptions": {
+                  "concept": "8e4c669c-aba3-b602-cbb6-f7ad627da596",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Eye Drapes With Bag ( 50X40Cm)",
+                "type": "obs",
+                "id": "eyedG9CL7",
+                "questionOptions": {
+                  "concept": "5e12e20b-a988-7742-54bc-228be46561cc",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Eye Pad",
+                "type": "obs",
+                "id": "eyepwmrFT",
+                "questionOptions": {
+                  "concept": "7fb74f12-4f71-ba8c-e4ff-5a7dfa8fbfdf",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Eye Shield",
+                "type": "obs",
+                "id": "eyesnU4p2",
+                "questionOptions": {
+                  "concept": "00882999-3999-359e-15d1-6dc9825679cb",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Face Mask( Masque Faciale)",
+                "type": "obs",
+                "id": "faceaBcGU",
+                "questionOptions": {
+                  "concept": "1ba89fd0-3e23-e1b3-7ac4-6df06d35eaf8",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Feeding Syringe 60Ml",
+                "type": "obs",
+                "id": "feediv4YCu",
+                "questionOptions": {
+                  "concept": "7471b1ca-9abb-9ae2-a508-daae11f00318",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Feeding Tube Ch 8",
+                "type": "obs",
+                "id": "feedigSVXp",
+                "questionOptions": {
+                  "concept": "f6d5bdfb-1f1a-841e-c16a-0d7bc7d43ce2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Feeding Tube Ch16",
+                "type": "obs",
+                "id": "feediJmmYJ",
+                "questionOptions": {
+                  "concept": "9bb95f7c-6921-8371-a991-4024c4b55acd",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Feeding Tube Uu 14",
+                "type": "obs",
+                "id": "feedikdKii",
+                "questionOptions": {
+                  "concept": "5bc681f9-6809-1674-8f1d-d85371081af5",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Feeding Tube Uu Ch5",
+                "type": "obs",
+                "id": "feedihtFix",
+                "questionOptions": {
+                  "concept": "06658324-d7b8-eb88-f7b3-74aedf000d38",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Femur Nail 11*38  MM",
+                "type": "obs",
+                "id": "femurbdPDE",
+                "questionOptions": {
+                  "concept": "66ed1c5a-d238-e133-eb32-d3a08b529c08",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Fil De Suture Catgut 2/0",
+                "type": "obs",
+                "id": "fildumoIu",
+                "questionOptions": {
+                  "concept": "53250354-1f1b-c460-a1c9-610558ce8250",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Fil Nylon 3/0",
+                "type": "obs",
+                "id": "filn2E7xH",
+                "questionOptions": {
+                  "concept": "2aab986a-2812-c8fa-fc7c-462338d385c8",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Fil Nylon R No 2/0/ Non-Absorbent",
+                "type": "obs",
+                "id": "filn1ifb5",
+                "questionOptions": {
+                  "concept": "25696202-46f1-e74d-d072-b84451881bc3",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Film Dental",
+                "type": "obs",
+                "id": "filmkb1JP",
+                "questionOptions": {
+                  "concept": "68f07a57-7da9-1313-0d6e-28eb598f16e2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Flexible Nail 2.5 MM Stainless",
+                "type": "obs",
+                "id": "flexiiBbyY",
+                "questionOptions": {
+                  "concept": "05750d90-8c7f-fa89-7780-b2464d8dc8d3",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Flexible Nail 2.5 MM Titanium",
+                "type": "obs",
+                "id": "flexih8JfR",
+                "questionOptions": {
+                  "concept": "ae78a400-7697-3bb7-97f7-fa7f8c4980b2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Flexible Nail 3.0 Titanium",
+                "type": "obs",
+                "id": "flexiaKAzU",
+                "questionOptions": {
+                  "concept": "3d6f6c46-2275-c454-3797-4026c5358ce0",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Flexible Nails",
+                "type": "obs",
+                "id": "flexiNh3iS",
+                "questionOptions": {
+                  "concept": "1400ca3f-3fe9-a9ec-6ecd-417ae39cf1c1",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Foley Catheter 2-Ways Sterile Uu Ch12",
+                "type": "obs",
+                "id": "foley2HWX3",
+                "questionOptions": {
+                  "concept": "57baee11-b6d6-dd21-b80f-9239ff4643cb",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Foley Catheter 2-Ways Sterile Uu Ch14",
+                "type": "obs",
+                "id": "foleyTqjuW",
+                "questionOptions": {
+                  "concept": "11290d79-0d89-d9ad-58c5-2de6ff553dee",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Folley Catheter Latex 2 Ways Ch16",
+                "type": "obs",
+                "id": "follegzwhQ",
+                "questionOptions": {
+                  "concept": "003a2400-73bf-89f0-589a-851d596405e6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Gloves Surgical Sterile Uu T 7",
+                "type": "obs",
+                "id": "glovezsDvx",
+                "questionOptions": {
+                  "concept": "1d4f6433-1268-0e71-9306-5fbcc5d54c0d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Gloves Surgical Sterile Uu T 7.5 B/1",
+                "type": "obs",
+                "id": "gloveiQJB7",
+                "questionOptions": {
+                  "concept": "7181fa63-6f7c-7958-a168-cb867fc3592a",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Gynecological Gloves Sterile T7.5 B/1",
+                "type": "obs",
+                "id": "gynecwGgrk",
+                "questionOptions": {
+                  "concept": "d0e94421-5b22-b5c1-a6a5-13e2bb2236f2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Hernia Mesh 6X11Cm",
+                "type": "obs",
+                "id": "herni9Nuxx",
+                "questionOptions": {
+                  "concept": "192107af-37da-87e4-5f6a-a4efa7b8e613",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Identification Bracelet Adult",
+                "type": "obs",
+                "id": "identi72TX",
+                "questionOptions": {
+                  "concept": "2581eb4d-3ef7-9fcb-4c7f-150a1bbb36b2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Identification Bracelet Children",
+                "type": "obs",
+                "id": "identJuJ9R",
+                "questionOptions": {
+                  "concept": "6fc1be7a-61a6-3c21-63dc-6fcaef2af964",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Intramedular Femur Nail",
+                "type": "obs",
+                "id": "intraU5yd2",
+                "questionOptions": {
+                  "concept": "dc5a5368-c943-4662-ce00-7f419e212703",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Intramedular Femur Nail(Universal Femur Nail)",
+                "type": "obs",
+                "id": "intraSZ8ca",
+                "questionOptions": {
+                  "concept": "b5654c2b-67ab-7409-f4b6-9155560754f4",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Intramedular Tibia Nail",
+                "type": "obs",
+                "id": "intra7sK8j",
+                "questionOptions": {
+                  "concept": "57209a94-7292-c954-ac72-0e925db657f4",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "K-Wire 1.4 MM",
+                "type": "obs",
+                "id": "kwirECexb",
+                "questionOptions": {
+                  "concept": "8a15446c-c2fa-8c8f-7f07-ad3fe1e2ff99",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "K-Wire 2.0 MM",
+                "type": "obs",
+                "id": "kwirZHfzQ",
+                "questionOptions": {
+                  "concept": "0d16ea40-dd75-2ce5-bc4d-234593ed3a59",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "K-Wire 3.0 MM",
+                "type": "obs",
+                "id": "kwirESVUr",
+                "questionOptions": {
+                  "concept": "9ca02909-d033-ebac-fb94-93e2727fc01d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "K-Wires",
+                "type": "obs",
+                "id": "kwirVdv2P",
+                "questionOptions": {
+                  "concept": "fe460a92-ca8c-11ec-a6c9-80588b5b19a3",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "K-Wires 2 MM",
+                "type": "obs",
+                "id": "kwirDKMWx",
+                "questionOptions": {
+                  "concept": "58cb6c29-4794-c27d-8f8d-7b263e961c33",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Keratone 3.2 MM Angled Bevel Up Sterile With Handle And Tip Guard",
+                "type": "obs",
+                "id": "keratlJ8Ja",
+                "questionOptions": {
+                  "concept": "992df80d-8b72-d641-e349-3287ca3d9e66",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "L-Buttress Locked Plate",
+                "type": "obs",
+                "id": "lbutmSSOv",
+                "questionOptions": {
+                  "concept": "33895b3d-6c87-a72f-9234-ad73d3ca4a82",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locked Screw",
+                "type": "obs",
+                "id": "lockeycJkJ",
+                "questionOptions": {
+                  "concept": "7247b816-3497-0999-8071-ddf290e61448",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locking Bolt",
+                "type": "obs",
+                "id": "lockihwxkp",
+                "questionOptions": {
+                  "concept": "6c0955d4-d782-af63-7227-325bac9f1fd2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locking Bolt 5.0 MM",
+                "type": "obs",
+                "id": "lockiCGlXw",
+                "questionOptions": {
+                  "concept": "4f45c936-b5d8-5bad-21b4-701df6106beb",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locking Bolt Screw 5.0",
+                "type": "obs",
+                "id": "lockicWWZ8",
+                "questionOptions": {
+                  "concept": "9b444161-bfda-bb74-0ecb-c9a094a04c20",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locking Bolt Screws",
+                "type": "obs",
+                "id": "lockiRSXwO",
+                "questionOptions": {
+                  "concept": "f1e90b14-07cb-40bf-94ee-6c5d4c943ece",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locking Broad Plate 10Holes",
+                "type": "obs",
+                "id": "lockiij344",
+                "questionOptions": {
+                  "concept": "e6edb60b-93ef-3d27-4b21-7a42c56fd68d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locking Screws",
+                "type": "obs",
+                "id": "lockiLGLET",
+                "questionOptions": {
+                  "concept": "3bcda68b-0f31-4691-1adb-9105a02f8a41",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Locking Srews 5.0  MM",
+                "type": "obs",
+                "id": "lockiyyjJo",
+                "questionOptions": {
+                  "concept": "9afdb4bf-e524-e7ff-cc6d-1c5908d602ab",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Malleoral Screws",
+                "type": "obs",
+                "id": "mallep8jH4",
+                "questionOptions": {
+                  "concept": "56c20e11-05aa-f132-9537-8e2ae6c848d1",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Malleorar Screws 4.5X40 MM",
+                "type": "obs",
+                "id": "malleBDSDc",
+                "questionOptions": {
+                  "concept": "c1f0e790-b284-0a39-510f-44ac090a51f0",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Malleorar Screws,Dia 4.5 Lengh-30 MM",
+                "type": "obs",
+                "id": "mallexFPQ2",
+                "questionOptions": {
+                  "concept": "3e29698b-3ee9-a333-a8c6-776a40462053",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Masque A Oxygene Adulte",
+                "type": "obs",
+                "id": "masquL9J6e",
+                "questionOptions": {
+                  "concept": "d67ace5a-0c69-4cee-55fe-433ddec2f0dc",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Masque Pour Nebulisation Pediatrique",
+                "type": "obs",
+                "id": "masqu9VTTl",
+                "questionOptions": {
+                  "concept": "324612b6-1378-0de1-585b-07e6dbb5d7d2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Medular Femoral Head",
+                "type": "obs",
+                "id": "meduls1cYg",
+                "questionOptions": {
+                  "concept": "da78fe66-5147-2356-3147-2fad29fde644",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Medular Line",
+                "type": "obs",
+                "id": "medulLS5vT",
+                "questionOptions": {
+                  "concept": "091b0a97-1185-f9ed-d384-a8ac56041fdd",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Medular Sheel",
+                "type": "obs",
+                "id": "medulfibHn",
+                "questionOptions": {
+                  "concept": "7f11e7f0-25be-6779-80cd-d73c153c004d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Microscope Silde",
+                "type": "obs",
+                "id": "microZQwV6",
+                "questionOptions": {
+                  "concept": "6c1dd724-dd72-c815-6fdd-5206a45bbe3f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Minerve",
+                "type": "obs",
+                "id": "minermhKrR",
+                "questionOptions": {
+                  "concept": "137347d3-1ce0-0693-040f-1623d4ef6df2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Minigrip Sachet",
+                "type": "obs",
+                "id": "minigfv4Ny",
+                "questionOptions": {
+                  "concept": "3f4222c0-5fac-066b-7407-92a89c72f9bf",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Modular Femoral Head",
+                "type": "obs",
+                "id": "modulZoVZv",
+                "questionOptions": {
+                  "concept": "c3bf07d2-f4c8-5f34-5651-4bb2924959f5",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Modular Liner",
+                "type": "obs",
+                "id": "modul5KOgQ",
+                "questionOptions": {
+                  "concept": "27d10a87-ade9-7aff-29f1-723fa4a0c2a0",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Modular Sheel",
+                "type": "obs",
+                "id": "modulPTMy3",
+                "questionOptions": {
+                  "concept": "e42d8284-181b-1ca2-8d03-0fc24fb03b4d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Monofilament Polya 1 75Cm Pt 40-48 MM 1/2C",
+                "type": "obs",
+                "id": "monofPFWgZ",
+                "questionOptions": {
+                  "concept": "59215de4-31cb-5144-cb8a-af2d4738d099",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Narrow Dcp Locked Plate",
+                "type": "obs",
+                "id": "narrofiA3k",
+                "questionOptions": {
+                  "concept": "948ba786-b58a-333c-4de7-c591d73a9717",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Narrow Dcp Locking Plate 7 Holes",
+                "type": "obs",
+                "id": "narro8ADNz",
+                "questionOptions": {
+                  "concept": "28985185-0c7e-2df6-3a32-e179ebe1bc7c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Narrow Locking Plate",
+                "type": "obs",
+                "id": "narroKmSSX",
+                "questionOptions": {
+                  "concept": "9ecb246a-2702-6031-a4aa-c26b7f4d5d14",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Narrow Locking Plate 10 Holes",
+                "type": "obs",
+                "id": "narro5YoCL",
+                "questionOptions": {
+                  "concept": "ccd56856-0682-0f3e-eec5-139829984f7f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Nasogastric Tube No:14",
+                "type": "obs",
+                "id": "nasogphbbS",
+                "questionOptions": {
+                  "concept": "955fa8c1-e031-7ce8-b71c-c2806ebfa9ca",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Needle Dental 27G B/1",
+                "type": "obs",
+                "id": "needl19R3v",
+                "questionOptions": {
+                  "concept": "4a203e6a-990e-549d-bbc5-e64616aaae79",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Needle Hypo Uu 21G",
+                "type": "obs",
+                "id": "needlIGLTo",
+                "questionOptions": {
+                  "concept": "9b116f4d-bf9a-c4e4-b18f-833710fc2680",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Needle Vacutainer 21G",
+                "type": "obs",
+                "id": "needl21NSw",
+                "questionOptions": {
+                  "concept": "a64cf365-e163-4962-6d5c-45fd8b5c59de",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Non Absorbable Monofilament Polyamide Surgical Suture Size:2-0 3/8 Circle Rc,40 MM .70Cm",
+                "type": "obs",
+                "id": "nonaXy7Mo",
+                "questionOptions": {
+                  "concept": "fc4f8c3e-9d58-3310-741e-52de0f82e594",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Non Rebreathing Oxygen Mask Adult",
+                "type": "obs",
+                "id": "nonrh0Wlu",
+                "questionOptions": {
+                  "concept": "d4acee92-c230-5df1-2cd5-b4a407c2f355",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Nylon 10/0",
+                "type": "obs",
+                "id": "nylon2tb3z",
+                "questionOptions": {
+                  "concept": "a793d5de-ab85-bc06-8a95-baaaee16a4a6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Nylon 9/0",
+                "type": "obs",
+                "id": "nylonyj0ao",
+                "questionOptions": {
+                  "concept": "533ad5fc-5636-70f1-0cdf-21be7e1ba1be",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Orthopedic Wool 50 MM",
+                "type": "obs",
+                "id": "ortho8LdCF",
+                "questionOptions": {
+                  "concept": "2c105c3e-9491-fec6-e690-e34decab7cd7",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Oxygen Biflo Nasal Canula Neonate",
+                "type": "obs",
+                "id": "oxygeUeJH9",
+                "questionOptions": {
+                  "concept": "6d038a93-5ab2-219f-1f05-de7c1cf8091a",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Oxygen Biflo Nasal Canula Pediatric",
+                "type": "obs",
+                "id": "oxygeBj8au",
+                "questionOptions": {
+                  "concept": "532fdfcc-fa1f-c828-99de-413922e72c2e",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Oxygen Biflow Nasal Canula Adult",
+                "type": "obs",
+                "id": "oxygeleOsN",
+                "questionOptions": {
+                  "concept": "a548b046-83e3-834c-0449-2046609bddc2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Oxygen Mask With Bag For Adult",
+                "type": "obs",
+                "id": "oxygeq520t",
+                "questionOptions": {
+                  "concept": "b89ed0c2-dfde-d72d-87f6-8d38825c2e38",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Oxygen Mask With Bag For New Born",
+                "type": "obs",
+                "id": "oxygeFetMn",
+                "questionOptions": {
+                  "concept": "214566a5-9a75-d6a8-c311-f8e8d7b5cd66",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Perfusion Set + Needle",
+                "type": "obs",
+                "id": "perfuDW3Dv",
+                "questionOptions": {
+                  "concept": "a70331fc-d7b8-7049-895b-caf00c4417dc",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Polycryl (5/0 ) Aurolab Pc",
+                "type": "obs",
+                "id": "polycTQ8sr",
+                "questionOptions": {
+                  "concept": "c24629eb-e4e9-5297-7d3c-e78723c9d6bd",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Polygalactin 910 1 Pr 1/2 C 37-40 MM 75Cm Round",
+                "type": "obs",
+                "id": "polygNEXMs",
+                "questionOptions": {
+                  "concept": "b8db9e07-67bc-b28b-6f47-23a2568b5acf",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Polygalactin 910 2/0 Spr 1/2 75Cm",
+                "type": "obs",
+                "id": "polyg5wXn5",
+                "questionOptions": {
+                  "concept": "12452851-5286-bee3-3832-b53b42bb9fc5",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Polygalactin 910 3/0 1/2 75Cm Pt 26 MM 3/8",
+                "type": "obs",
+                "id": "polygiijPV",
+                "questionOptions": {
+                  "concept": "78633097-c93c-fd3b-3112-fb61b72a8446",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Polyglactin 6/0",
+                "type": "obs",
+                "id": "polygF4kNt",
+                "questionOptions": {
+                  "concept": "54ce8ed9-185d-fd5e-d460-a2388d57ad7c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Polyglactine 910 Fil R (Pogal) No 1 Cutting",
+                "type": "obs",
+                "id": "polyg3joOm",
+                "questionOptions": {
+                  "concept": "4389e0d9-5058-23e2-d7a9-fe6ced6e5cb0",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Polypropylene Mesh 10X15Cm",
+                "type": "obs",
+                "id": "polypl1b1d",
+                "questionOptions": {
+                  "concept": "23c938f9-99dd-4ef1-af2f-55baa893ac6a",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Powdered Surgical Sterile Uu T 7.5",
+                "type": "obs",
+                "id": "powdeTQf2i",
+                "questionOptions": {
+                  "concept": "0896da65-c845-46d1-a684-39ce7c6ffd8f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Proximal Femur Anatomical Locked Plate",
+                "type": "obs",
+                "id": "proxiEU0XR",
+                "questionOptions": {
+                  "concept": "4bb24ec3-787c-3844-e8dc-0540a320195f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Schanz Screws(Pins)",
+                "type": "obs",
+                "id": "schanc16Al",
+                "questionOptions": {
+                  "concept": "99219e8c-bc98-62e8-2a0b-4bf71be38aea",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Seringue Gavage 20Ml Luer",
+                "type": "obs",
+                "id": "serinNOPec",
+                "questionOptions": {
+                  "concept": "2967460c-0d9b-ca25-297a-582f7886b285",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Slik Black 75Cm Usp 4/0 Needle 3/8 Cir Rev Cutting 16 MM",
+                "type": "obs",
+                "id": "slik29U7N",
+                "questionOptions": {
+                  "concept": "25df6756-b843-ecde-e51f-203491fbe582",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Foley 2 Voies S Uu Ch16",
+                "type": "obs",
+                "id": "sonde95ven",
+                "questionOptions": {
+                  "concept": "86719dd0-7c17-4852-2e51-7314a54cb68d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Foley 2 Voies S Uu Ch18",
+                "type": "obs",
+                "id": "sondePdM7x",
+                "questionOptions": {
+                  "concept": "6045f7c6-fbc6-a0eb-9050-9f666ae5a372",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Foley 2 Voies S Uu Ch20",
+                "type": "obs",
+                "id": "sondeLhQaC",
+                "questionOptions": {
+                  "concept": "0674e531-ee55-8793-6777-65de74ad2daf",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Gastrique Levin Uuch 10",
+                "type": "obs",
+                "id": "sondeRGiAo",
+                "questionOptions": {
+                  "concept": "3cdc7aa5-fbe2-f1bd-507a-1ad578c0d850",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Gastrique Levin Uuch 12",
+                "type": "obs",
+                "id": "sondeVVyVl",
+                "questionOptions": {
+                  "concept": "7cede540-ac39-1801-a817-d7c5160fe4bf",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Gastrique Levin Uuch 16 Ad",
+                "type": "obs",
+                "id": "sondeWJA1F",
+                "questionOptions": {
+                  "concept": "02ca448a-facd-4c0f-2d81-2a859a42846d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Gastrique Levin Uuch 18 Ad",
+                "type": "obs",
+                "id": "sonde3ExgB",
+                "questionOptions": {
+                  "concept": "9891d8e9-0dd4-6210-9208-916e5073b287",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Nasogastrique Ch 18",
+                "type": "obs",
+                "id": "sondeRWDq4",
+                "questionOptions": {
+                  "concept": "ef90042e-d369-be6d-f3fb-378b0d05f243",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Nasogastrique Ch 5",
+                "type": "obs",
+                "id": "sondegkres",
+                "questionOptions": {
+                  "concept": "8b9b34a9-5d44-33f5-34f5-046cdd01e9d3",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Nasogastrique Ch 8",
+                "type": "obs",
+                "id": "sondectG2F",
+                "questionOptions": {
+                  "concept": "91337c3a-fb42-c944-d0c7-0e9fec5d0e4c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Nasogastrique Ch16",
+                "type": "obs",
+                "id": "sondeA0WUK",
+                "questionOptions": {
+                  "concept": "0f03cbe5-d32c-f87c-b6e2-e867ef39c161",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Nasogastrique No 6/ Feeding Tube Ch 6",
+                "type": "obs",
+                "id": "sonde2pKS3",
+                "questionOptions": {
+                  "concept": "f7cec5ed-0e42-ab50-122b-c2abab29beb0",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Sonde Nutrition S Uu Ch 5",
+                "type": "obs",
+                "id": "sondeYo3n3",
+                "questionOptions": {
+                  "concept": "4e48b898-45de-2798-10d0-18e3a6dbfbd6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Spinal Needle Uu 25G Quincke",
+                "type": "obs",
+                "id": "spinaWrxC2",
+                "questionOptions": {
+                  "concept": "a32b4f26-e46f-01f6-07eb-c889eeed7fa9",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Stockinet Bandage 10Cmx25M Par 1 Metre",
+                "type": "obs",
+                "id": "stockjr34c",
+                "questionOptions": {
+                  "concept": "6828f432-8b0a-39dd-6445-49a1bfc43ad2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Stockinet Bandage 15Cmx25M Par 1 Metre",
+                "type": "obs",
+                "id": "stocklBep7",
+                "questionOptions": {
+                  "concept": "bae0b0e5-59b0-d033-dcbc-9266099f3004",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Stockinet Bandage 5Cmx25M Par 1 Metre",
+                "type": "obs",
+                "id": "stockHtswh",
+                "questionOptions": {
+                  "concept": "171ed113-a7d3-97f8-2b02-04b02afb5aae",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Suction Tube Uu Ch 12",
+                "type": "obs",
+                "id": "suctifiQjS",
+                "questionOptions": {
+                  "concept": "562db4df-f33c-0393-ae81-c6be27e812f3",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Suction Tube Uu Ch 14",
+                "type": "obs",
+                "id": "suctibmPAL",
+                "questionOptions": {
+                  "concept": "5003d001-0e4d-9f8d-1757-d62208a736ca",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Suction Tube Uu Ch16",
+                "type": "obs",
+                "id": "suctiwCf9s",
+                "questionOptions": {
+                  "concept": "a65ff07b-2fdd-163f-c568-42f2114661fb",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Suction Tube Uu Ch8",
+                "type": "obs",
+                "id": "suctiGyor3",
+                "questionOptions": {
+                  "concept": "2dc3c2a7-8904-6ef1-8e83-9d86798144de",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Surgical Blade No 15",
+                "type": "obs",
+                "id": "surgiv1iQm",
+                "questionOptions": {
+                  "concept": "59ff5c35-2bb6-f8bd-755b-03a206c970a6",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Surgical Blade No 23",
+                "type": "obs",
+                "id": "surgivXQQE",
+                "questionOptions": {
+                  "concept": "19ef0bd7-5368-d414-10af-eb4e73d3d411",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Surgical Bladeno 22",
+                "type": "obs",
+                "id": "surgi60tSs",
+                "questionOptions": {
+                  "concept": "52147772-6c0c-fb6c-0ff1-0593ccf7f1f5",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Swab Stick Wood Sterile Cotton",
+                "type": "obs",
+                "id": "swabE7xvj",
+                "questionOptions": {
+                  "concept": "eae82198-0979-3fc6-12d8-e80418ded625",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Syringe Insuline 100Ui+Needle B/1",
+                "type": "obs",
+                "id": "syrinkqlNq",
+                "questionOptions": {
+                  "concept": "d2151466-38ef-13d4-535b-99e468fee8a9",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Syringe Uu 10Ml + Needle 21G B/1",
+                "type": "obs",
+                "id": "syrinLTQln",
+                "questionOptions": {
+                  "concept": "87c57dd5-2418-084b-5e34-6f37ebd693e8",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Syringe Uu 2Ml + Needle 23G",
+                "type": "obs",
+                "id": "syrin7Ah8R",
+                "questionOptions": {
+                  "concept": "1389a3fd-c5f1-6ce6-e9c5-6945a8edbbf4",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Syringe Uu 50Ml B/1",
+                "type": "obs",
+                "id": "syrinfjHpK",
+                "questionOptions": {
+                  "concept": "75d1df6a-1d6b-deb4-1de9-6b7630ce4eaa",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Syringe Uu 5Ml +Needle 21G",
+                "type": "obs",
+                "id": "syrinvl5hB",
+                "questionOptions": {
+                  "concept": "d11e5079-07c6-99af-89d2-f060aedeeb8c",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "T-Buttress Locked Plate 8Holes",
+                "type": "obs",
+                "id": "tbutC1UEs",
+                "questionOptions": {
+                  "concept": "ad88956e-d3c5-4109-1ca9-509d42d5f6af",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Tape Perforated 18Cmx5M",
+                "type": "obs",
+                "id": "tapeeakNP",
+                "questionOptions": {
+                  "concept": "81210e92-184c-0f35-3f1b-b9882ed89b8f",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Tibia Nail",
+                "type": "obs",
+                "id": "tibiamp9Fs",
+                "questionOptions": {
+                  "concept": "7f5be72b-1239-fbe6-83bf-12f68e2142fe",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Tongue Depressor Wood B/1",
+                "type": "obs",
+                "id": "tongutxX8N",
+                "questionOptions": {
+                  "concept": "be0b1c54-6364-3642-3ae8-5c6bf4a81955",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Total Hip Implants",
+                "type": "obs",
+                "id": "totalSU0nr",
+                "questionOptions": {
+                  "concept": "0166dc10-1cb3-fe80-3605-33858e2fc0eb",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Total Hip Replacement",
+                "type": "obs",
+                "id": "totalqbXkC",
+                "questionOptions": {
+                  "concept": "f05675c1-3146-f06b-fe0d-474613d18fcd",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Total Hip Replacement Implants",
+                "type": "obs",
+                "id": "totalJteyr",
+                "questionOptions": {
+                  "concept": "698745e8-8fde-c85a-4861-211699cc7e85",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Tulle Gras Pqt 36X10 Compress",
+                "type": "obs",
+                "id": "tulleFylDK",
+                "questionOptions": {
+                  "concept": "a76e8329-e844-b6a5-6e1d-3c59de106a93",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Umbilical Cord Clamp Sterile",
+                "type": "obs",
+                "id": "umbilSst5x",
+                "questionOptions": {
+                  "concept": "f450d78e-3c5e-0ea8-8aa6-d7998702d750",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Uncimented Femoral Steem",
+                "type": "obs",
+                "id": "uncimUDKc8",
+                "questionOptions": {
+                  "concept": "ec8577cd-781d-52d4-94b7-989da72edc89",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Universal Femur Nail 9X340 MM",
+                "type": "obs",
+                "id": "unive9Wbgo",
+                "questionOptions": {
+                  "concept": "5b8b0bd7-2334-b61c-1c86-9c62e34cb505",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Universal Tibia Nails Canulated 10 MM x38Cm",
+                "type": "obs",
+                "id": "univeFhJTt",
+                "questionOptions": {
+                  "concept": "0657dfc2-eada-b89c-b49e-096aaa868a11",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Urine Bag 2L Sterile",
+                "type": "obs",
+                "id": "urinecSeHS",
+                "questionOptions": {
+                  "concept": "badd990f-2bbe-410d-9ba3-63f0c71f7f30",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Violet De Gentiane De Poudre/25Gr",
+                "type": "obs",
+                "id": "violendg7k",
+                "questionOptions": {
+                  "concept": "dce99133-cdea-c0d2-7fa3-0b9701664f4d",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Warfarin 5Mg Tablet",
+                "type": "obs",
+                "id": "warfaP2GoQ",
+                "questionOptions": {
+                  "concept": "03249457-4c2a-27dc-f99e-765cad936db2",
+                  "rendering": "number"
+                }
+              },
+              {
+                "label": "Water Proof Plaster / Pansement Imperméable / Gauze Impemeable",
+                "type": "obs",
+                "id": "waterSt1IZ",
+                "questionOptions": {
+                  "concept": "e3680799-79bc-3aad-528d-b391ab1e04f4",
+                  "rendering": "number"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encounterType": "6a9811d3-1022-4100-a00c-bda9eea8f44f"
+  }
