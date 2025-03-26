@@ -1,258 +1,30 @@
 {
-  "@amuj/esm-patient-registration-app": {
-    "defaultPatientIdentifierTypes": [],
-    "sections": [
-      "demographics",
-      "contact",
-      "person_attributes",
-      "relationships"
-    ],
-    "sectionDefinitions": [
-      {
-        "id": "person_attributes",
-        "name": "Person Attributes",
-        "fields": ["religion", "maritalStatus", "occupation", "education"]
-      },
-      {
-        "id": "contact",
-        "name": "Contact Details",
-        "fields": ["address", "phone", "email"]
-      }
-    ],
-    "fieldDefinitions": [
-      {
-        "id": "email",
-        "type": "person attribute",
-        "uuid": "54d9edc3-c4b9-11ec-bd0f-80b65553bd85",
-        "label": "Email address",
-        "validation": { "matches": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$" }
-      },
-      {
-        "id": "religion",
-        "type": "obs",
-        "uuid": "8940ffb5-b52d-4bd4-a526-8b4e202f5279",
-        "label": "Religion",
-        "validation": { "required": false },
-        "customConceptAnswers": [
-          {
-            "uuid": "9816f1d0-3e6e-4815-a5b7-c30228e4f04e",
-            "label": "Catholic"
-          },
-          {
-            "uuid": "cc888b7b-c6c6-4e31-bf83-13847cf91aca",
-            "label": "Christian/Other Protestants"
-          },
-          {
-            "uuid": "cc25ccdb-2b40-4d90-9fc8-af633b8470f2",
-            "label": "ADEPR/Pentecostals"
-          },
-          {
-            "uuid": "edd36070-bfc2-46ea-88c3-0a28baefb371",
-            "label": "SDA/Adventists"
-          },
-          { "uuid": "978af45c-3d7a-4566-b39a-e636e1828bb5", "label": "Muslim" },
-          {
-            "uuid": "f67cad13-b776-40a2-86cb-434234317572",
-            "label": "Traditional v2"
-          },
-          {
-            "uuid": "bff60b54-20b6-46a6-8ea8-99fb543c0abe",
-            "label": "Buddhist"
-          },
-          { "uuid": "ed151c4a-0bc0-4596-9159-b09d8337c461", "label": "Hindu" },
-          { "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2", "label": "None" },
-          {
-            "uuid": "3d863739-47ca-411f-9dca-f4b3b602e04e",
-            "label": "Temoin de Jehova"
-          }
-        ]
-      },
-      {
-        "id": "maritalStatus",
-        "type": "obs",
-        "uuid": "2e00481d-9e6e-4740-9dc0-ab6232dff21c",
-        "label": "Marital status",
-        "validation": { "required": true },
-        "customConceptAnswers": [
-          {
-            "uuid": "3cee0aca-26fe-102b-80cb-0017a47871b2",
-            "label": "Married"
-          },
-          {
-            "uuid": "df488243-d1d5-4b50-ae04-40b4ffdcf934",
-            "label": "Single/Child"
-          },
-          {
-            "uuid": "3cd6e6f6-26fe-102b-80cb-0017a47871b2",
-            "label": "Widowed"
-          },
-          {
-            "uuid": "3cd6e55c-26fe-102b-80cb-0017a47871b2",
-            "label": "Divorced"
-          },
-          { "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2", "label": "Unknown" }
-        ]
-      },
-      {
-        "id": "occupation",
-        "type": "obs",
-        "uuid": "3cd97286-26fe-102b-80cb-0017a47871b2",
-        "label": "Occupation",
-        "validation": { "required": true },
-        "customConceptAnswers": [
-          { "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2", "label": "None" },
-          { "uuid": "3cd9786c-26fe-102b-80cb-0017a47871b2", "label": "Trader" },
-          { "uuid": "3cd9757e-26fe-102b-80cb-0017a47871b2", "label": "Farmer" },
-          {
-            "uuid": "3cd976f0-26fe-102b-80cb-0017a47871b2",
-            "label": "Student"
-          },
-          {
-            "uuid": "3cd979de-26fe-102b-80cb-0017a47871b2",
-            "label": "Unemployed"
-          },
-          {
-            "uuid": "3cd995ae-26fe-102b-80cb-0017a47871b2",
-            "label": "Manual Laborer"
-          },
-          {
-            "uuid": "3cdcc170-26fe-102b-80cb-0017a47871b2",
-            "label": "Shepherd"
-          },
-          { "uuid": "3cdcc2ec-26fe-102b-80cb-0017a47871b2", "label": "Brewer" },
-          {
-            "uuid": "3cdcc468-26fe-102b-80cb-0017a47871b2",
-            "label": "Shop Owner"
-          },
-          {
-            "uuid": "3cdcbff4-26fe-102b-80cb-0017a47871b2",
-            "label": "Fruit/Veggie Seller"
-          },
-          { "uuid": "3cdcbd06-26fe-102b-80cb-0017a47871b2", "label": "Miner" },
-          {
-            "uuid": "3cdcbe78-26fe-102b-80cb-0017a47871b2",
-            "label": "Factory Worker"
-          },
-          {
-            "uuid": "3cda14e8-26fe-102b-80cb-0017a47871b2",
-            "label": "Housework"
-          },
-          {
-            "uuid": "3ce40fca-26fe-102b-80cb-0017a47871b2",
-            "label": "Housework/Fieldwork"
-          },
-          {
-            "uuid": "3ce4113c-26fe-102b-80cb-0017a47871b2",
-            "label": "Retired"
-          },
-          {
-            "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2",
-            "label": "Unknown"
-          },
-          {
-            "uuid": "a2c0bdcf-f4ba-4e10-9af4-d9ad7dcc2ca4",
-            "label": "Too Sick To Work"
-          },
-          {
-            "uuid": "1ed2c51d-7d4d-44df-9257-48eaf61a2f7a",
-            "label": "School Age But Not In School"
-          },
-          { "uuid": "f15d07f0-be62-44d4-89ef-0e17e0aa480e", "label": "Driver" },
-          {
-            "uuid": "907716b4-1852-404a-9ee1-beff998f9461",
-            "label": "Professional"
-          },
-          {
-            "uuid": "c78455ab-91e4-4dfb-8743-b7b623f258e9",
-            "label": "Teacher/assistant"
-          },
-          {
-            "uuid": "5a786df9-844c-4cd4-913f-ccea2ccaa66d",
-            "label": "Lab Worker"
-          },
-          {
-            "uuid": "3ce0d008-26fe-102b-80cb-0017a47871b2",
-            "label": "Traditional Healer"
-          },
-          {
-            "uuid": "4df79c98-c340-43b6-a028-f7e060adfff2",
-            "label": "Butcher"
-          },
-          {
-            "uuid": "4fee9b1a-0b0d-4ffd-8d66-ebe15b920772",
-            "label": "Veterinarian"
-          },
-          {
-            "uuid": "2be8ecd3-d15a-4e01-a3fc-a052030d9cfa",
-            "label": "Airline/Airport Worker"
-          },
-          {
-            "uuid": "54c51e4a-4d54-467f-b067-ca682c8f3ecc",
-            "label": "Office Worker"
-          },
-          {
-            "uuid": "57bc7645-8347-4d26-aa3a-8adb2dc8fa3c",
-            "label": "Child Care"
-          },
-          {
-            "uuid": "3ce41a38-26fe-102b-80cb-0017a47871b2",
-            "label": "Main Activity, Non-Coded"
-          }
-        ]
-      },
-      {
-        "id": "education",
-        "type": "obs",
-        "uuid": "3cdcc5e4-26fe-102b-80cb-0017a47871b2",
-        "label": "Education Level",
-        "validation": { "required": true },
-        "customConceptAnswers": [
-          {
-            "uuid": "7cee1a26-5092-4373-b5cd-7bad591d0c73",
-            "label": "University Education Complete"
-          },
-          {
-            "uuid": "10766ed0-e458-42d2-8c49-f318271d6fd5",
-            "label": "Some University Education"
-          },
-          {
-            "uuid": "2aa11f5e-6478-4ba0-b8ab-89cea5e5e66e",
-            "label": "Secondary Education Complete"
-          },
-          {
-            "uuid": "1aa2351d-c0df-4809-9ee1-885c5cbc5a70",
-            "label": "Some Secondary Education"
-          },
-          {
-            "uuid": "4e64f4b8-d71c-43e6-a603-265f7464a633",
-            "label": "Primary Education Complete"
-          },
-          {
-            "uuid": "5ad8d7bb-e54b-452e-b404-1405cb8384dc",
-            "label": "Some Primary Education"
-          },
-          {
-            "uuid": "3ce3e48c-26fe-102b-80cb-0017a47871b2",
-            "label": "Did Not Answer"
-          },
-          { "uuid": "3cd743f8-26fe-102b-80cb-0017a47871b2", "label": "None" },
-          { "uuid": "3cd6fac4-26fe-102b-80cb-0017a47871b2", "label": "Unknown" }
-        ]
-      }
-    ],
-    "registrationObs": {
-      "encounterTypeUuid": "ea69f8a2-0d0e-48db-854d-e88ef04f4acb",
-      "registrationFormUuid": "add7abdc-59d1-11e8-9c2d-fa7ae01bbebc"
-    },
-    "fieldConfigurations": {
-      "phone": {
-        "personAttributeUuid": "8b908adf-c964-4959-ad43-e2c7aeaa9c67",
-        "validation": { "required": true }
-      }
-    }
+  "@openmrs/esm-patient-chart-app": {
+    "restrictByVisitLocationTag": true,
+    "showUpcomingAppointments": true
   },
-  "@openmrs/esm-patient-vitals-app": {
-    "vitals": { "encounterTypeUuid": "b9b9d19e-3774-4951-ab68-ddd6e817d6dd" },
+  "@openmrs/esm-service-queues-app": {
+    "priorityConfigs": [
+      {
+        "conceptUuid": "04f6f7e0-e3cb-4e13-a133-4479f759574e",
+        "tagClassName": "tag",
+        "tagType": "red"
+      }
+    ],
+    "statusConfigs": [
+      {
+        "conceptUuid": "51ae5e4d-b72b-4912-bf31-a17efb690aeb",
+        "iconComponent": "InProgress"
+      },
+      {
+        "conceptUuid": "ca7494ae-437f-4fd0-8aae-b88b9a2ba47d",
+        "iconComponent": "Group"
+      },
+      {
+        "conceptUuid": "b559fb77-4e1e-4285-b9b7-1d03e0ba983f",
+        "iconComponent": "Group"
+      }
+    ],
     "concepts": {
       "systolicBloodPressureUuid": "3ce934fa-26fe-102b-80cb-0017a47871b2",
       "diastolicBloodPressureUuid": "3ce93694-26fe-102b-80cb-0017a47871b2",

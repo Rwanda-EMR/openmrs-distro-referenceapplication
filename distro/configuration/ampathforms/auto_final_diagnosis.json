@@ -6,6 +6,12 @@
     "retired": false,
     "processor": "EncounterFormProcessor",
     "encounter": "",
+    "postSubmissionActions": [
+      {
+        "actionId": "BillingSubmissionAction",
+        "enabled": "true"
+      }
+    ],
     "referencedForms": [],
     "uuid": "8b0356fa-3f8a-4077-bce7-d94adcc16ce1",
     "pages": [

@@ -7,6 +7,12 @@
   "processor": "EncounterFormProcessor",
   "encounter": "Ophthalmology acts encounter",
   "referencedForms": [],
+  "postSubmissionActions": [
+    {
+      "actionId": "BillingSubmissionAction",
+      "enabled": "true"
+    }
+  ],
   "uuid": "73fc3474-7ed2-4573-8491-4af95392330e",
   "pages": [
     {

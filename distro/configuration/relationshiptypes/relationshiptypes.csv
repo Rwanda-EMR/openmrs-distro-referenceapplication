@@ -1,0 +1,15 @@
+Uuid,Void/Retire,Name,Description,Weight,Preferred,A is to b,B is to a
+8d919b58-c2cc-11de-8d13-0010c6dffd0f,,Doctor/Patient,A relationship from a care provider to the patient,,,Clinician,Patient
+8cbc7ffa-52da-4b48-bf64-470cebeaa780,,Friend/Friend,A relationship of friendship where there is often no biological link,,,Friend,Friend
+d283d13a-2700-102b-80cb-0017a47871b2,,Accompagnateur/Patient,CHW to Patient relationship,,,Community Health Worker,Patient
+8d91a01c-c2cc-11de-8d13-0010c6dffd0f,,Sibling/Sibling,Relationship between brother/sister; brother/brother and sister/sister,,Sibling,Sibling
+8d91a210-c2cc-11de-8d13-0010c6dffd0f,,Parent/Child,A relationship between a parent and their child,,,Parent,Child
+d09a7c6c-dfbc-4e2b-b6ab-5c940eaa5718,,Husband/Wife,A relationship between a husband and his wife,,,Husband,Wife
+8cbc7ffa-52da-4b48-bf64-470cebeaa780,,Friend/Friend,A relationship of friendship where there is often no biological link,,,Friend,Friend
+99f0d7d6-e19a-4a02-b0b7-dd5dd673eb7d,,Employer/Employee,A relationship between an employer and their employee,,,Employer,Employee
+2f94359d-b429-4b13-8e90-f09d19ba8059,,Mother/Child,A relationship between a mother and her child,,,Mother,Child
+c86d9979-b8ac-4d8c-85cf-cc04e7f16315,,Uncle/Nephew,A relationship of an uncle and his nephew,,,Uncle,Nephew
+3982f469-cedc-4b2d-91ea-fe38f881e1a0,,Aunt/Niece,A relationship of an aunt and her niece,,,Aunt,Niece
+53d8a8f3-0084-4a52-8666-c655f5bd2689,,Supervisor/Supervisee,A description for supervisor to supervisee relationship,,,Supervisor,Supervisee
+057de23f-3d9c-4314-9391-4452970739c6,,Other/Other,A description for a relationship type not covered here,,,Other,Other
+dcdc30c6-5235-48c8-957b-445fdaf69363,,Home Based Care Giver/Patient,A relationship between a home based care giver and their patient,,,Home Based Care Giver,Patient

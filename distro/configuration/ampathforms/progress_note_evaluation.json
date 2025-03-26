@@ -6,6 +6,12 @@
     "retired": false,
     "processor": "EncounterFormProcessor",
     "encounter": "Vitals",
+    "postSubmissionActions": [
+      {
+        "actionId": "BillingSubmissionAction",
+        "enabled": "true"
+      }
+    ],
     "referencedForms": [],
     "uuid": "5ad71922-1645-48e3-a594-36aecab8d0e3",
     "pages": [

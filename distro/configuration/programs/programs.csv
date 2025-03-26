@@ -1,0 +1,19 @@
+Uuid,Void/Retire,Name,Description,Program concept,Outcomes concept,_order:1000,
+38ffe579-f99f-469c-99fc-5f8c847c33eb,0,PMTCT Program,The program for pmtct patients,PMTCT PROGRAM,,
+5ea0ebfb-cec3-4cce-9479-58cf2ac5b7fa,0,HIV Care and treatment,The program for HIV Care and treatment,HIV Care and treatment,,
+99a1e14b-a838-487c-8e45-d5b9c3edaf83,0,HIV EXPOSURE,People on prophylaxis post exposure,EXPOSURE TO HIV,,
+735d6fba-9e26-4f93-bc9e-0e3772207989,0,TB Program,TB Program,TUBERCULOSIS PROGRAM,,
+6b825913-ab44-4e49-9ea0-c9e5919f94af,0,Chronic respiratory disease program,Chronic respiratory disease program,Chronic respiratory disease program,Exit NCD Program
+a39cb21d-5f5e-4013-9b6b-139453ab93ec,0,Hypertension program,Program for hypertension patients,Hypertension program,Exit NCD Program
+1b48afcc-347b-4419-b481-0a6a9db1e900,0,Chronic Kidney Disease,Chronic Kidney Disease,Kidney disease,Exit NCD Program
+e60a89ad-de11-421a-b5bf-b489e264ffa6,0,HEART FAILURE PROGRAM,Heart Failure Program,HEART FAILURE PROGRAM,Exit NCD Program
+eff53c35-eaa8-4cae-9d68-78c2c21a5e6d,0,Diabetes Program,Program for diabetes patients,Diabetes Program,Exit NCD Program
+cf96655d-bcb8-4252-9db5-b7ac7bcf5f04,0,ANC Program,	ANC Program,Antenatal Care Program,,
+e55558b0-f3d8-4a2b-b837-a2f2a17f52e2,0,Adult HIV PROGRAM,Adult HIV PROGRAM,HIV PROGRAM,,
+a84591d8-3a20-4298-ad80-c4d17a0d1ba7,0,Case Based Surveillance,	Case based surveillance,CASE BASED SURVEILLANCE PROGRAM,,
+51304c8c-ecc2-4bed-818b-a5c785ad58a6,0,Mental Health,Mental Health program,MENTAL HEALTH,Mental Health exit reasons
+f5d23800-f4fc-486f-b174-ee2521f6192e,0,Epilepsy program,Program for epilepsy patients,Epilepsy program,NCD Specific Outcomes
+cf7c16e6-2700-102b-80cb-0017a47871b2,0,PEDIATRIC HIV PROGRAM,PIH Pediatric HIV program,PEDIATRIC HIV PROGRAM,,
+836fd0e5-79c5-47af-942b-1f78b7231eff,0,Post NatalCare,CPoN,CPoN constuct,,
+47ebf135-65d0-4f15-9d36-c0e72425f561,0,Intra Partum Program,Intra Partum Program,Intra Partum Program,,
+9e110c1d-01cd-4853-9668-f392d6839341,0,COVID-19 Case-based Surveillance,COVID-19 Case-based Surveillance,COVID-19 Case-based Surveillance,REASON FOR EXITING CARE

@@ -7,6 +7,12 @@
     "processor": "EncounterFormProcessor",
     "encounter": "General OPD",
     "referencedForms": [],
+    "postSubmissionActions": [
+      {
+        "actionId": "BillingSubmissionAction",
+        "enabled": "true"
+      }
+    ],
     "uuid": "a734da06-16ea-4c61-9a24-96b259604a85",
     "pages": [
       {

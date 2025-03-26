@@ -7,6 +7,12 @@
   "processor": "EncounterFormProcessor",
   "encounter": "admission Clinical and Bill",
   "referencedForms": [],
+  "postSubmissionActions": [
+    {
+      "actionId": "BillingSubmissionAction",
+      "enabled": "true"
+    }
+  ],
   "uuid": "adbbdbe6-a76a-4662-94b9-2ca220c92ca4",
   "pages": [
     {

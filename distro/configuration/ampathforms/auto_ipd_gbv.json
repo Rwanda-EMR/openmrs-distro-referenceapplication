@@ -7,6 +7,12 @@
     "processor": "EncounterFormProcessor",
     "encounter": "GBV encounter",
     "referencedForms": [],
+    "postSubmissionActions": [
+      {
+        "actionId": "BillingSubmissionAction",
+        "enabled": "true"
+      }
+    ],
     "uuid": "c40f5723-3c8a-4fc4-9395-e5c9b36a0e76",
     "pages": [
       {
