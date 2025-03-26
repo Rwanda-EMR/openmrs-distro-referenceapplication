@@ -6,6 +6,12 @@
   "retired": false,
   "processor": "EncounterFormProcessor",
   "encounter": "General Followup",
+  "postSubmissionActions": [
+    {
+      "actionId": "BillingSubmissionAction",
+      "enabled": "true"
+    }
+  ],
   "referencedForms": [],
   "uuid": "91bfdd8c-ff0e-4dd7-89bc-f080169f0742",
   "pages": [

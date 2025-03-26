@@ -9,7 +9,7 @@ UUID,Void/Retire,Name,Description,HL7 Code,Unique ID
 14ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD,,SNOMED MVP,MVP Namespace Identifier extensions to SNOMED CT,,
 18ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD,,HL7 2.x Route of Administration,Members of value set from HL7 for routes of administration,HL70162,
 19ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD,,3BT,Belgian Bilingual Bi-encoded Thesaurus (3BT),,
-0405862a-caaa-49b3-ae40-0338b468e1dc,,ICPC2,International Classification of Primary Care version 2 from WONCA.,,
+0405862a-caaa-49b3-ae40-0338b468e1dc,,ICPC-2,International Classification of Primary Care version 2 from WONCA.,,
 249b13c8-72fa-4b96-8d3d-b200efed985e,,CIEL,Columbia International eHealth Laboratory concept ID,,
 24ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD,,IMO ProblemIT,"Intelligent Medical Objects, Inc. problem/disease/finding datasource",,
 25ADDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD,,IMO ProcedureIT,"Intelligent Medical Objects, Inc. procedure/test datasource",,

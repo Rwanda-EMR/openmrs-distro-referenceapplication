@@ -7,6 +7,12 @@
     "processor": "EncounterFormProcessor",
     "encounter": "kinestherapy acts encounter",
     "referencedForms": [],
+    "postSubmissionActions": [
+      {
+        "actionId": "BillingSubmissionAction",
+        "enabled": "true"
+      }
+    ],
     "uuid": "719d0cef-9ffe-421f-b7de-a5713f391ab0",
     "pages": [
       {

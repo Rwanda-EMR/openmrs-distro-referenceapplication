@@ -6,6 +6,12 @@
   "retired": false,
   "processor": "EncounterFormProcessor",
   "encounter": "Stomatology acts encounter",
+  "postSubmissionActions": [
+    {
+      "actionId": "BillingSubmissionAction",
+      "enabled": "true"
+    }
+  ],
   "referencedForms": [],
   "uuid": "7fe25fb3-686b-419f-97b1-08243ef53ee5",
   "pages": [
